@@ -21,8 +21,7 @@
 
 <body class="antialiased font-lato">
     <!-- Loader Component -->
-    <div id="loader"
-        class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black transition-opacity duration-700">
+    <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
         <div class="loader-bg absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
             style="background-image: url('/assets/img/loading-bg.png');">
         </div>
@@ -112,15 +111,15 @@
                 </div>
             </main>
             <footer class="relative z-10 w-full pb-12 flex flex-col items-center text-white/60">
-                <div class="scroll-indicator opacity-0 flex flex-col items-center cursor-pointer group">
+                <a href="#about" class="scroll-indicator opacity-0 flex flex-col items-center cursor-pointer group">
                     <div class="mouse-icon w-[22px] h-[36px] border border-white/40 rounded-full relative mb-3 p-1">
                         <div class="mouse-dot w-1.5 h-1.5 bg-white rounded-full absolute left-1/2 -translate-x-1/2">
                         </div>
                     </div>
                     <span
-                        class="text-[10px] md:text-xs font-radley tracking-[0.2em] uppercase group-hover:text-white transition-colors">Scroll
+                        class="text-[10px] md:text-xs font-lato tracking-[0.2em] uppercase group-hover:text-white transition-colors">Scroll
                         for more</span>
-                </div>
+                </a>
             </footer>
         </section>
 
@@ -128,26 +127,53 @@
         <section id="about" class="relative overflow-hidden bg-white" style="z-index: 2;">
             <div id="about-pin-wrapper"
                 class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 z-0">
-                    <div id="about-bg-1"
-                        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 transition-opacity duration-1000"
-                        style="background-image: url('/assets/img/about-bg-1.png');">
-                        <div class="absolute inset-0 bg-white/40"></div>
+                <!-- Premium Radial Vignette for Center Contrast -->
+                <div
+                    class="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0%,transparent_60%)] opacity-60">
+                </div>
+
+                <div class="scattered-gallery absolute inset-0 z-0 pointer-events-none">
+                    <div class="gallery-img-wrapper img-1 absolute opacity-40"
+                        style="top: 8%; left: 4%; width: 18%; transform: rotate(-2deg);">
+                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
                     </div>
-                    <div id="about-bg-2"
-                        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000"
-                        style="background-image: url('/assets/img/about-bg-2.png');">
-                        <div class="absolute inset-0 bg-white/40"></div>
+                    <div class="gallery-img-wrapper img-2 absolute opacity-40"
+                        style="top: 12%; right: 4%; width: 13%; transform: rotate(1.5deg);">
+                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-3 absolute opacity-40"
+                        style="top: 62%; left: 6%; width: 16%; transform: rotate(1deg);">
+                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-4 absolute opacity-40"
+                        style="top: 72%; right: 6%; width: 20%; transform: rotate(-1.5deg);">
+                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-5 absolute opacity-40"
+                        style="top: 4%; left: 42%; width: 10%; transform: rotate(2deg);">
+                        <img src="/assets/img/about-5.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-6 absolute opacity-40"
+                        style="bottom: 4%; left: 40%; width: 22%; transform: rotate(-1deg);">
+                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-7 absolute opacity-40"
+                        style="top: 38%; right: 12%; width: 12%; transform: rotate(-2deg);">
+                        <img src="/assets/img/about-7.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                    <div class="gallery-img-wrapper img-8 absolute opacity-40"
+                        style="bottom: 6%; right: 2%; width: 14%; transform: rotate(2deg);">
+                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto rounded-xl shadow-2xl">
                     </div>
                 </div>
-                <div class="relative z-10 w-full px-6 max-w-7xl mx-auto flex flex-col items-center">
+                <div class="relative z-10 w-full px-6 max-w-7xl mx-auto flex flex-col items-center pointer-events-none">
                     <div id="about-content-1" class="absolute flex flex-col items-center text-center">
-                        <div class="about-ornament opacity-0 mb-12 scale-90">
+                        <div class="about-ornament mb-12 scale-100">
                             <img src="/assets/img/ornament.svg" alt="" class="w-20 h-20 md:w-24 md:h-24 object-contain">
                         </div>
                         <div class="max-w-4xl mx-auto">
                             <h2
-                                class="about-title-1 opacity-0 text-4xl md:text-6xl lg:text-7xl font-serif-luxury text-[#1B1B18] leading-[1.15] font-normal">
+                                class="about-title-1 text-4xl md:text-6xl lg:text-7xl font-serif-luxury text-[#1B1B18] leading-[1.15] font-normal">
                                 Crafted in Saudi.<br>Refined Worldwide.
                             </h2>
                         </div>
@@ -181,61 +207,61 @@
                 <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-24">
                     <div class="w-full lg:w-1/2">
                         <div class="flex flex-col">
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Amenity+Production">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(01)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(01)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Hospitality Amenity Production</h4>
                             </div>
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Custom+Product">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(02)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(02)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Custom Product Development</h4>
                             </div>
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Consultation">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(03)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(03)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Material And Finish Consultation</h4>
                             </div>
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Outputs">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(04)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(04)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Design Transition Into Production Ready Outputs</h4>
                             </div>
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Packaging">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(05)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(05)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Packaging, Kits, And Curated Hospitality Terms</h4>
                             </div>
-                            <div
-                                class="service-item opacity-0 flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10">
+                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                                data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Quality+Control">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2">(06)</span>
+                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(06)</span>
                                 <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug">
+                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Quality Control And Production Alignment</h4>
                             </div>
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2">
                         <div
-                            class="services-image-container opacity-0 relative overflow-hidden rounded-2xl md:rounded-[2rem] aspect-square lg:aspect-[4/5]">
-                            <img src="/assets/img/our-services.png" alt="Our Services"
-                                class="w-full h-full object-cover">
+                            class="services-image-container opacity-0 relative overflow-hidden rounded-2xl md:rounded-[2rem] aspect-square lg:aspect-[4/5] bg-[#1B1B18]">
+                            <img src="/assets/img/our-services.png" id="service-display-image" alt="Our Services"
+                                class="w-full h-full object-cover transition-all duration-700">
                         </div>
                     </div>
                 </div>
@@ -246,57 +272,84 @@
         <section id="industries" class="relative py-12 md:py-24 px-6 md:px-12 bg-[#F5F1E8]" style="z-index: 4;">
             <div class="max-w-[1920px] mx-auto">
                 <div
-                    class="industries-container opacity-0 relative overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[4/3] md:aspect-[21/9] lg:aspect-[21/9] flex items-center justify-center group">
-                    <div class="absolute inset-0 z-0">
-                        <img src="/assets/img/bg-industries.png" alt="Industries We Serve"
-                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    </div>
-                    <div class="relative z-10 w-full px-6 flex flex-col items-center">
-                        <div class="text-center mb-8 md:mb-12">
-                            <p
-                                class="industries-label opacity-0 text-[10px] md:text-sm lg:text-base font-lato text-white/80 tracking-[0.2em] uppercase mb-4">
-                                Industries We Serve</p>
-                            <h2
-                                class="industries-main-title opacity-0 text-3xl md:text-5xl lg:text-7xl font-radley text-white leading-tight">
-                                Luxury Hospitality & Beyond</h2>
+                    class="industries-slider-wrapper opacity-0 relative overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[4/3] md:aspect-[21/9] lg:aspect-[21/9]">
+                    <!-- Slider Container -->
+                    <div class="industries-slider w-full h-full relative">
+                        <!-- Slide 1 -->
+                        <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
+                            <div class="absolute inset-0">
+                                <img src="/assets/img/bg-industries.png" alt="Luxury Hotels & Resorts"
+                                    class="slide-bg w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                            </div>
+                            <div
+                                class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
+                                <p
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    Industry We Serve</p>
+                                <div class="relative inline-block">
+                                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-serif-luxury text-white">Luxury
+                                        Hotels & Resorts</h2>
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            class="industries-list opacity-0 flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12 max-w-4xl">
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">01</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Hotels
-                                    & Resorts</span></div>
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">02</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Private
-                                    Estates</span></div>
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">03</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Yachts
-                                    & Aviation</span></div>
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">04</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Fine
-                                    Dining</span></div>
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">05</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Wellness
-                                    & Spa</span></div>
-                            <div class="flex items-center space-x-2 md:space-x-3"><span
-                                    class="text-[9px] md:text-xs font-lato text-white/40 tabular-nums">06</span><span
-                                    class="text-xs md:text-sm lg:text-base font-inter text-white tracking-widest uppercase">Corporate
-                                    Spaces</span></div>
+
+                        <!-- Slide 2 -->
+                        <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
+                            <div class="absolute inset-0">
+                                <img src="/assets/img/bg-industries-2.jpg" alt="Private Estates"
+                                    class="slide-bg w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                            </div>
+                            <div
+                                class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
+                                <p
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    Industry We Serve</p>
+                                <div class="relative inline-block">
+                                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-serif-luxury text-white">Private
+                                        Estates & Palaces</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
+                            <div class="absolute inset-0">
+                                <img src="/assets/img/bg-industries-3.jpg" alt="Yachts & Aviation"
+                                    class="slide-bg w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                            </div>
+                            <div
+                                class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
+                                <p
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    Industry We Serve</p>
+                                <div class="relative inline-block">
+                                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-serif-luxury text-white">Yachts &
+                                        Aviation</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button
-                        class="industries-arrow opacity-0 absolute right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group/arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                            class="w-6 h-6 md:w-8 md:h-8 transition-transform group-hover/arrow:translate-x-1">
-                            <path d="M5 12h14m-7-7 7 7-7 7" />
-                        </svg>
-                    </button>
+
+                    <div
+                        class="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 flex justify-between px-4 md:px-12 pointer-events-none">
+                        <button id="prev-industry"
+                            class="nav-btn transition-all duration-500 opacity-0 pointer-events-none w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-sm pointer-events-auto hover:bg-white hover:text-black">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button id="next-industry"
+                            class="nav-btn transition-all duration-500 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-sm pointer-events-auto hover:bg-white hover:text-black">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -325,47 +378,64 @@
                 <div
                     class="process-card-wrapper relative w-full h-full max-w-[1920px] mx-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden group">
                     <div class="absolute inset-0 z-0">
-                        <img src="/assets/img/bg-our-process.png" alt="Our Process Background"
-                            class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-white/20"></div>
+                        <!-- Background Slide 1 (Design) -->
+                        <div class="process-bg-wrapper absolute inset-0 overflow-hidden" style="z-index: 10;">
+                            <img src="/assets/img/bg-our-process.png" alt="Our Process Background"
+                                class="process-bg w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60"></div>
+                        </div>
+                        <!-- Background Slide 2 (Production) -->
+                        <div class="process-bg-wrapper process-bg-2 absolute inset-0 overflow-hidden"
+                            style="z-index: 20;">
+                            <img src="/assets/img/bg-our-process-2.png" alt="Production Background"
+                                class="process-bg w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60"></div>
+                        </div>
+                        <!-- Background Slide 3 (Digitalization) -->
+                        <div class="process-bg-wrapper process-bg-3 absolute inset-0 overflow-hidden"
+                            style="z-index: 30;">
+                            <img src="/assets/img/bg-our-process-3.png" alt="Digitalization Background"
+                                class="process-bg w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60"></div>
+                        </div>
                     </div>
-                    <div class="relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
+                    <div class="relative z-50 w-full h-full flex flex-col items-center justify-center text-center">
                         <div
                             class="process-phase phase-design absolute inset-0 flex flex-col items-center justify-center opacity-100">
                             <span
-                                class="text-xs md:text-sm font-lato tracking-[0.3em] text-[#3E536B]/60 uppercase mb-4 md:mb-8">01.
+                                class="text-xs md:text-sm font-lato tracking-[0.4em] text-white/50 uppercase mb-4 md:mb-8">01.
                                 Step</span>
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium text-[#3E536B] tracking-[-0.02em] uppercase">
+                                class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury text-white tracking-tight uppercase">
                                 Design</h3>
                             <div
-                                class="absolute bottom-12 px-6 flex flex-wrap justify-center gap-4 md:gap-8 text-white font-lato text-[10px] md:text-sm lg:text-base tracking-widest uppercase">
+                                class="absolute bottom-12 px-6 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 flex flex-wrap justify-center gap-4 md:gap-12 text-white/50 font-lato text-[10px] md:text-xs tracking-[0.3em] uppercase">
                                 <span>/Concept</span><span>/Standards</span><span>/Specifications</span>
                             </div>
                         </div>
                         <div
-                            class="process-phase phase-production absolute inset-0 flex flex-col items-center justify-center opacity-0 translate-y-12">
+                            class="process-phase phase-production absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <span
-                                class="text-xs md:text-sm font-lato tracking-[0.3em] text-[#3E536B]/60 uppercase mb-4 md:mb-8">02.
+                                class="text-xs md:text-sm font-lato tracking-[0.4em] text-white/50 uppercase mb-4 md:mb-8">02.
                                 Step</span>
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium text-[#3E536B] tracking-[-0.02em] uppercase">
+                                class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury text-white tracking-tight uppercase">
                                 Production</h3>
                             <div
-                                class="absolute bottom-12 px-6 flex flex-wrap justify-center gap-4 md:gap-8 text-white font-lato text-[10px] md:text-sm lg:text-base tracking-widest uppercase">
+                                class="absolute bottom-12 px-6 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 flex flex-wrap justify-center gap-4 md:gap-12 text-white/50 font-lato text-[10px] md:text-xs tracking-[0.3em] uppercase">
                                 <span>/Manufacturing</span><span>/Quality Control</span><span>/Scalability</span>
                             </div>
                         </div>
                         <div
-                            class="process-phase phase-digitalization absolute inset-0 flex flex-col items-center justify-center opacity-0 translate-y-12">
+                            class="process-phase phase-digitalization absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <span
-                                class="text-xs md:text-sm font-lato tracking-[0.3em] text-[#3E536B]/60 uppercase mb-4 md:mb-8">03.
+                                class="text-xs md:text-sm font-lato tracking-[0.4em] text-white/50 uppercase mb-4 md:mb-8">03.
                                 Step</span>
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-medium text-[#3E536B] tracking-[-0.02em] uppercase">
+                                class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-luxury text-white tracking-tight uppercase">
                                 Digitalization</h3>
                             <div
-                                class="absolute bottom-12 px-6 flex flex-wrap justify-center gap-4 md:gap-8 text-white font-lato text-[10px] md:text-sm lg:text-base tracking-widest uppercase">
+                                class="absolute bottom-12 px-6 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 flex flex-wrap justify-center gap-4 md:gap-12 text-white/50 font-lato text-[10px] md:text-xs tracking-[0.3em] uppercase">
                                 <span>/Efficiency</span><span>/Connectivity</span><span>/Traceability</span>
                             </div>
                         </div>
@@ -410,54 +480,64 @@
         </section>
 
         <!-- OSE Section -->
-        <section id="ose" class="relative overflow-hidden bg-[#F5F1E8] z-[60]">
-            <div class="ose-blue-gradient absolute inset-0 opacity-0 z-0"
-                style="background: linear-gradient(180deg, #98B9D1 0%, #083D6E 100%);"></div>
+        <section id="ose" class="relative overflow-hidden bg-black z-10 min-h-screen flex flex-col">
+            <!-- Background Layer -->
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/img/bg-ose.png" alt="" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#083D6E]/20 to-[#083D6E]/40"></div>
+            </div>
+
             <div id="ose-pin-container"
-                class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 py-20">
-                <div
-                    class="ose-final-ornament absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl md:max-w-4xl lg:max-w-6xl opacity-0 pointer-events-none z-1">
+                class="relative flex-grow flex flex-col items-center justify-center text-center px-6 md:px-12 py-32 z-10">
+
+                <!-- Ornament above title -->
+                <div class="ose-final-ornament opacity-0 mb-12 md:mb-16">
                     <img src="/assets/img/ornament.svg" alt=""
-                        class="w-full h-auto opacity-30 filter invert brightness-200">
+                        class="w-48 h-48 md:w-72 md:h-72 lg:w-[32rem] lg:h-[32rem] object-contain brightness-0 invert opacity-40">
                 </div>
-                <div class="relative z-10 max-w-5xl mx-auto">
+
+                <div class="max-w-5xl mx-auto">
                     <h2
-                        class="ose-cta-title opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif-luxury text-[#D2BB9C] leading-tight mb-8 md:mb-12">
-                        Let’s bring it to <span class="italic font-radley">life</span>, together.
+                        class="ose-cta-title opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-luxury text-[#D2BB9C] leading-[1.1] mb-12 md:mb-16">
+                        Let’s bring it to <span class="italic font-radley">life</span>,<br><span
+                            class="italic font-radley">together.</span>
                     </h2>
                     <div class="ose-cta-button opacity-0">
                         <a href="https://wa.me/628123456789" target="_blank"
-                            class="inline-block px-8 py-3 md:px-10 md:py-4 rounded-full border border-[#D2BB9C]/40 text-[#D2BB9C] font-lato text-xs sm:text-sm tracking-widest uppercase hover:bg-[#D2BB9C] hover:text-[#083D6E] transition-all duration-500">
+                            class="inline-block px-10 py-3 md:px-12 md:py-4 rounded-full border border-[#D2BB9C]/40 text-[#D2BB9C] font-lato text-xs sm:text-sm tracking-[0.3em] uppercase hover:bg-[#D2BB9C] hover:text-[#083D6E] transition-all duration-500">
                             Contact Us
                         </a>
                     </div>
                 </div>
             </div>
-            <footer class="relative z-20 bg-[#121212] py-12 md:py-16 px-6 md:px-12">
-                <div
-                    class="max-w-[1920px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-8 text-center md:text-left">
-                    <div class="flex flex-col items-center md:items-start">
-                        <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-                            class="h-5 md:h-6 w-auto object-contain brightness-0 invert mb-4 md:mb-6">
-                        <p class="text-white/40 font-lato text-[10px] md:text-xs uppercase tracking-wider">
-                            © 2026 ARKAN Technologies. All rights reserved.
-                        </p>
-                    </div>
-                    <div
-                        class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12">
-                        <a href="#"
-                            class="text-white/60 hover:text-white font-lato text-[10px] md:text-xs uppercase tracking-widest transition-colors">Help
-                            & Support</a>
-                        <a href="#"
-                            class="text-white/60 hover:text-white font-lato text-[10px] md:text-xs uppercase tracking-widest transition-colors">Terms
-                            & Conditions</a>
-                        <a href="#"
-                            class="text-white/60 hover:text-white font-lato text-[10px] md:text-xs uppercase tracking-widest transition-colors">Privacy
-                            Policy</a>
-                    </div>
-                </div>
-            </footer>
         </section>
+
+        <!-- Redefined Revealable Footer (Fixed behind main content) -->
+        <footer id="footer-reveal" class="fixed bottom-0 left-0 w-full bg-black py-8 md:py-10 px-6 md:px-12"
+            style="z-index: 1;">
+            <div
+                class="max-w-[1920px] mx-auto opacity-0 translate-y-20 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start space-y-3">
+                    <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+                        class="h-4 md:h-5 w-auto object-contain brightness-0 invert opacity-90">
+                    <p class="text-white font-lato text-[9px] md:text-[10px] uppercase tracking-widest leading-none">
+                        © 2026 ARKAN Technologies. All rights reserved.
+                    </p>
+                </div>
+
+                <div
+                    class="flex items-center gap-4 md:gap-8 flex-wrap justify-center font-lato text-[9px] md:text-[10px] uppercase tracking-widest">
+                    <a href="#" class="text-white/60 hover:text-white transition-colors">Help & Support</a>
+                    <span class="w-px h-3 bg-white/20 hidden sm:block"></span>
+                    <a href="#" class="text-white/60 hover:text-white transition-colors">Terms & Conditions</a>
+                    <span class="w-px h-3 bg-white/20 hidden sm:block"></span>
+                    <a href="#" class="text-white/60 hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Spacer to allow scroll-reveal -->
+        <div id="footer-spacer" class="relative pointer-events-none" style="z-index: 5; background: transparent;"></div>
     </div>
 
     <script>
@@ -505,16 +585,48 @@
 
             // About Scroll Logic
             const aboutTl = gsap.timeline({
-                scrollTrigger: { trigger: '#about', start: 'top top', end: '+=200%', pin: true, scrub: 1 }
+                scrollTrigger: {
+                    trigger: '#about',
+                    start: 'top top',
+                    end: '+=400%',
+                    scrub: 1.5,
+                    pin: true,
+                    anticipatePin: 1
+                }
             });
-            aboutTl.to('.about-ornament', { opacity: 1, scale: 1, duration: 1, ease: 'back.out(1.7)' })
-                .to('.about-title-1', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1, ease: 'power4.out' }, '-=0.5')
-                .to({}, { duration: 1 })
-                .to('#about-bg-1', { opacity: 0, duration: 1.5, ease: 'power2.inOut' })
-                .to('#about-bg-2', { opacity: 1, duration: 1.5, ease: 'power2.inOut' }, '-=1.5')
-                .to('#about-content-1', { opacity: 0, y: -50, duration: 1, ease: 'power2.inOut' }, '-=1.5')
-                .to('#about-content-2', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1.5, ease: 'power3.out', onStart: () => document.getElementById('about-content-2').classList.remove('pointer-events-none') }, '-=0.8')
-                .to({}, { duration: 1 });
+
+            // Initial appearance of images (soft base opacity, then more visible)
+            aboutTl.to('.gallery-img-wrapper', {
+                opacity: 0.8,
+                stagger: 0.1,
+                duration: 1,
+                ease: 'power2.out'
+            }, 0);
+
+            // Text fades out
+            aboutTl.to('#about-content-1', {
+                opacity: 0,
+                y: -100,
+                duration: 2,
+                ease: 'power2.inOut'
+            }, 1.5);
+
+            // Parallax movement for gallery items with Depth of Field (blur)
+            aboutTl.to('.img-1', { y: -180, x: -120, rotate: -5, scale: 1.1, filter: 'blur(10px)', opacity: 0.3, duration: 4 }, 0);
+            aboutTl.to('.img-2', { y: -350, x: 150, rotate: 6, filter: 'blur(8px)', opacity: 0.2, duration: 4 }, 0);
+            aboutTl.to('.img-3', { y: -120, x: -100, rotate: 4, filter: 'blur(12px)', opacity: 0.25, duration: 4 }, 0);
+            aboutTl.to('.img-4', { y: -250, x: 130, rotate: -4, scale: 0.9, filter: 'blur(6px)', opacity: 0.3, duration: 4 }, 0);
+            aboutTl.to('.img-5', { y: -450, x: 80, rotate: 8, filter: 'blur(15px)', opacity: 0.15, duration: 4 }, 0);
+            aboutTl.to('.img-6', { y: -90, x: 90, rotate: -3, filter: 'blur(4px)', opacity: 0.4, duration: 4 }, 0);
+            aboutTl.to('.img-7', { y: -280, x: -140, rotate: -7, filter: 'blur(10px)', opacity: 0.2, duration: 4 }, 0);
+            aboutTl.to('.img-8', { y: -200, x: 160, rotate: 5, filter: 'blur(8px)', opacity: 0.3, duration: 4 }, 0);
+
+            // Second text fades in
+            aboutTl.fromTo('#about-content-2',
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 2, ease: 'power2.out', onStart: () => document.getElementById('about-content-2').classList.remove('pointer-events-none') },
+                3
+            );
 
             // Services Scroll Logic
             const servicesTl = gsap.timeline({ scrollTrigger: { trigger: '#services', start: 'top 70%', toggleActions: 'play none none none' } });
@@ -522,12 +634,133 @@
                 .to('.service-item', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.6')
                 .to('.services-image-container', { opacity: 1, scale: 1, startAt: { scale: 1.05 }, duration: 1.5, ease: 'power2.out' }, '-=1');
 
-            // Industries Scroll Logic
-            const industriesTl = gsap.timeline({ scrollTrigger: { trigger: '#industries', start: 'top 70%', toggleActions: 'play none none none' } });
-            industriesTl.to('.industries-container', { opacity: 1, y: 0, startAt: { y: 40 }, duration: 1.5, ease: 'power4.out' })
-                .to('.industries-label', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'power3.out' }, '-=0.8')
-                .to('.industries-main-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' }, '-=0.8')
-                .to('.industries-list', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'power3.out' }, '-=0.8');
+            // Industries Slider Logic
+            let currentIndustry = 0;
+            const industrySlides = document.querySelectorAll('.industry-slide');
+            const totalIndustries = industrySlides.length;
+            let isTransitioning = false;
+
+            const nextBtn = document.getElementById('next-industry');
+            const prevBtn = document.getElementById('prev-industry');
+
+            function updateNavStates() {
+                if (!prevBtn || !nextBtn) return;
+
+                // Hide/Show Prev Arrow
+                if (currentIndustry === 0) {
+                    gsap.to(prevBtn, { opacity: 0, pointerEvents: 'none', duration: 0.5 });
+                } else {
+                    gsap.to(prevBtn, { opacity: 1, pointerEvents: 'auto', duration: 0.5 });
+                }
+
+                // Hide/Show Next Arrow
+                if (currentIndustry === totalIndustries - 1) {
+                    gsap.to(nextBtn, { opacity: 0, pointerEvents: 'none', duration: 0.5 });
+                } else {
+                    gsap.to(nextBtn, { opacity: 1, pointerEvents: 'auto', duration: 0.5 });
+                }
+            }
+
+            function goToSlide(index, direction) {
+                if (isTransitioning || index === currentIndustry) return;
+                isTransitioning = true;
+
+                const currentSlide = industrySlides[currentIndustry];
+                const nextSlide = industrySlides[index];
+
+                const slideWidth = 100;
+                const exitX = direction === 'next' ? -slideWidth : slideWidth;
+                const enterX = direction === 'next' ? slideWidth : -slideWidth;
+
+                const tl = gsap.timeline({
+                    onComplete: () => {
+                        currentSlide.classList.remove('z-10');
+                        currentSlide.classList.add('z-0');
+                        isTransitioning = false;
+                        updateNavStates();
+                    }
+                });
+
+                // Prepare next slide
+                gsap.set(nextSlide, { xPercent: enterX, opacity: 1, zIndex: 10 });
+                gsap.set(nextSlide.querySelector('.slide-bg'), { xPercent: -enterX * 0.3 }); // Parallax start
+                gsap.set(nextSlide.querySelectorAll('p, h2'), { y: 40, opacity: 0 });
+
+                // Animate Out
+                tl.to(currentSlide, {
+                    xPercent: exitX,
+                    duration: 1.4,
+                    ease: 'expo.inOut'
+                }, 0);
+
+                tl.to(currentSlide.querySelector('.slide-bg'), {
+                    xPercent: -exitX * 0.3,
+                    duration: 1.4,
+                    ease: 'expo.inOut'
+                }, 0);
+
+                // Animate In
+                tl.to(nextSlide, {
+                    xPercent: 0,
+                    duration: 1.4,
+                    ease: 'expo.inOut',
+                    onStart: () => {
+                        nextSlide.classList.remove('z-0');
+                        nextSlide.classList.add('z-10');
+                    }
+                }, 0);
+
+                tl.to(nextSlide.querySelector('.slide-bg'), {
+                    xPercent: 0,
+                    duration: 1.4,
+                    ease: 'expo.inOut'
+                }, 0);
+
+                // Staggered Text Reveal
+                tl.to(nextSlide.querySelectorAll('p, h2'), {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.1,
+                    ease: 'power3.out'
+                }, 0.6);
+
+                currentIndustry = index;
+            }
+
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndustry < totalIndustries - 1) {
+                        goToSlide(currentIndustry + 1, 'next');
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndustry > 0) {
+                        goToSlide(currentIndustry - 1, 'prev');
+                    }
+                });
+            }
+
+            // Initial state set
+            updateNavStates();
+            gsap.set(industrySlides[0], { opacity: 1, xPercent: 0, zIndex: 10 });
+
+            // Industries Reveal Animation
+            const industriesRevealTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#industries',
+                    start: 'top 70%',
+                    toggleActions: 'play none none none'
+                }
+            });
+            industriesRevealTl.to('.industries-slider-wrapper', {
+                opacity: 1,
+                y: 0,
+                startAt: { y: 60 },
+                duration: 1.5,
+                ease: 'power4.out'
+            });
 
             // Process Scroll Logic
             const processIntroTl = gsap.timeline({ scrollTrigger: { trigger: '#process', start: 'top 80%', toggleActions: 'play none none none' } });
@@ -535,13 +768,70 @@
                 .to('.process-header-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' }, '-=0.8')
                 .to('.process-header-text', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'power3.out' }, '-=0.8');
 
-            const processPinTl = gsap.timeline({ scrollTrigger: { trigger: '#process-pin-container', start: 'top top', end: '+=300%', pin: true, scrub: 1 } });
-            processPinTl.to('.phase-design', { opacity: 0, y: -50, duration: 2, ease: 'power2.inOut' })
-                .to('.phase-production', { opacity: 1, y: 0, duration: 2, ease: 'power2.inOut' }, '-=2')
-                .to({}, { duration: 1 })
-                .to('.phase-production', { opacity: 0, y: -50, duration: 2, ease: 'power2.inOut' })
-                .to('.phase-digitalization', { opacity: 1, y: 0, duration: 2, ease: 'power2.inOut' }, '-=2')
-                .to({}, { duration: 1 });
+            // Initial States for Process Pinnable
+            gsap.set('.process-bg-2, .process-bg-3', { xPercent: 101 }); // Small buffer
+            gsap.set('.process-bg-wrapper .process-bg', { scale: 1.2 });
+
+            const processPinTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#process-pin-container',
+                    start: 'top top',
+                    end: '+=600%', // More runway
+                    pin: true,
+                    scrub: 1.2
+                }
+            });
+
+            // Global Background Zoom-out
+            processPinTl.to('.process-bg-wrapper .process-bg',
+                { scale: 1, duration: 10, ease: 'none' }, 0);
+
+            // Phase 1 (Design) OUT
+            processPinTl.to('.phase-design span, .phase-design h3, .phase-design div', {
+                y: -50,
+                opacity: 0,
+                stagger: 0.1,
+                duration: 2,
+                ease: 'power2.in'
+            }, 0.5);
+
+            // Phase 2 (Production) IN + Background Slide
+            processPinTl.to('.process-bg-2', {
+                xPercent: 0,
+                duration: 3,
+                ease: 'expo.inOut'
+            }, 1)
+                .fromTo('.process-bg-2 .process-bg',
+                    { xPercent: 30 },
+                    { xPercent: 0, duration: 3, ease: 'expo.inOut' }, 1)
+                .to('.phase-production', { opacity: 1, duration: 0.5 }, 2)
+                .fromTo('.phase-production span, .phase-production h3, .phase-production div',
+                    { y: 50, opacity: 0 },
+                    { y: 0, opacity: 1, stagger: 0.1, duration: 1.5, ease: 'power3.out' }, 2.5)
+                .to({}, { duration: 2 }); // Pause
+
+            // Phase 2 (Production) OUT
+            processPinTl.to('.phase-production span, .phase-production h3, .phase-production div', {
+                y: -50,
+                opacity: 0,
+                stagger: 0.1,
+                duration: 2,
+                ease: 'power2.in'
+            }, 5.5);
+
+            // Phase 3 (Digitalization) IN + Background Slide
+            processPinTl.to('.process-bg-3', {
+                xPercent: 0,
+                duration: 3,
+                ease: 'expo.inOut'
+            }, 6)
+                .fromTo('.process-bg-3 .process-bg',
+                    { xPercent: 30 },
+                    { xPercent: 0, duration: 3, ease: 'expo.inOut' }, 6)
+                .to('.phase-digitalization', { opacity: 1, duration: 0.5 }, 7)
+                .fromTo('.phase-digitalization span, .phase-digitalization h3, .phase-digitalization div',
+                    { y: 50, opacity: 0 },
+                    { y: 0, opacity: 1, stagger: 0.1, duration: 1.5, ease: 'power3.out' }, 7.5);
 
             // Journal Scroll Logic
             const journalTl = gsap.timeline({ scrollTrigger: { trigger: '#journal', start: 'top 80%', toggleActions: 'play none none none' } });
@@ -558,6 +848,31 @@
             oseTl.to('.ose-final-ornament', { opacity: 0.3, scale: 1, startAt: { scale: 0.8 }, duration: 2, ease: 'power2.out' })
                 .to('.ose-cta-title', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1.5, ease: 'power3.out' }, '-=1.5')
                 .to('.ose-cta-button', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' }, '-=1');
+
+            // Footer Reveal Logic
+            const footerReveal = document.getElementById('footer-reveal');
+            const footerSpacer = document.getElementById('footer-spacer');
+
+            if (footerReveal && footerSpacer) {
+                const updateFooterSpacer = () => {
+                    footerSpacer.style.height = footerReveal.offsetHeight + 'px';
+                };
+                updateFooterSpacer();
+                window.addEventListener('resize', updateFooterSpacer);
+
+                // Reveal Animation
+                gsap.to('#footer-reveal > div', {
+                    y: 0,
+                    opacity: 1,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#footer-spacer',
+                        start: 'top bottom',
+                        end: 'bottom bottom',
+                        scrub: true
+                    }
+                });
+            }
         });
     </script>
 
@@ -621,6 +936,100 @@
             100% {
                 opacity: 0;
             }
+        }
+
+        .active-service {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gallery Styles */
+        .gallery-img-wrapper {
+            will-change: transform, opacity, filter;
+            z-index: 1;
+        }
+
+        .gallery-img-wrapper img {
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .gallery-img-wrapper:hover img {
+            transform: scale(1.03);
+            box-shadow: 0 50px 120px rgba(0, 0, 0, 0.18);
+        }
+
+        #about-content-1,
+        #about-content-2 {
+            z-index: 10;
+        }
+
+        #about-content-1 h2,
+        #about-content-2 p {
+            text-shadow: 0 0 40px rgba(255, 255, 255, 1),
+                0 0 20px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.4);
+        }
+
+        .active-service span {
+            color: #1B1B18 !important;
+        }
+
+        .active-service h4 {
+            transform: translateX(0.5rem);
+            color: #1B1B18 !important;
+        }
+
+        /* Navbar States */
+        .nav-scrolled #navbar-container {
+            padding-top: 1.25rem !important;
+            padding-bottom: 1.25rem !important;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-dark #navbar-container {
+            color: #1B1B18 !important;
+            background: rgba(245, 241, 232, 0.8);
+            border-bottom-color: rgba(27, 27, 24, 0.05);
+        }
+
+        .nav-dark .navbar-logo {
+            filter: brightness(0) !important;
+            opacity: 0.8;
+        }
+
+        .nav-dark .hamburger-inner,
+        .nav-dark .hamburger-inner-mid {
+            background-color: #1B1B18 !important;
+        }
+
+        /* Industries Slider Styles */
+        .industry-slide {
+            transition: opacity 0.8s ease, filter 0.8s ease;
+            will-change: transform, opacity, filter;
+        }
+
+        .slide-bg {
+            transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .industry-slide.z-10 .slide-bg {
+            transform: scale(1);
+        }
+
+        .industry-slide.z-0 .slide-bg {
+            transform: scale(1.1);
+        }
+
+        .nav-btn:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .nav-btn:active {
+            transform: scale(0.95);
         }
     </style>
 </body>
