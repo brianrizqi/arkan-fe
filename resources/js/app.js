@@ -56,8 +56,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 const scrollPos = st.start + (targetProgress * (st.end - st.start));
 
                 lenis.scrollTo(scrollPos, {
-                    duration: 2.2, // Slower duration for a more premium, weighted feel
-                    easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t), // Custom "luxury" glide easing
+                    duration: 3.2, // Significantly slower for an ultra-premium "glide"
+                    easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t), // Pure exponential out
                     onComplete: () => {
                         setTimeout(() => ScrollTrigger.refresh(), 100);
                     }
@@ -68,8 +68,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         lenis.scrollTo(target, {
             offset: 0,
-            duration: 1.5,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
+            duration: 2.5, // Increased from 1.5 to 2.5 for "very very smooth" feel
+            easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t),
             onComplete: () => {
                 // Force ScrollTrigger to recalculate positions after jump
                 setTimeout(() => {
