@@ -85,7 +85,7 @@ if (navbar) {
             // Set first item as active by default
             if (index === 0) item.classList.add('active-service');
 
-            item.addEventListener('click', () => {
+            item.addEventListener('mouseenter', () => {
                 const newSrc = item.getAttribute('data-service-image');
                 if (!newSrc || serviceImage.src === newSrc) return;
 
