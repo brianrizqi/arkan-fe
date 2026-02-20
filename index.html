@@ -11,15 +11,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Lato:wght@300;400;700&family=Radley:ital@0;1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
         rel="stylesheet">
 
     <!-- Styles / Scripts -->
     <script type="module" src="/resources/js/app.js"></script>
     <link rel="stylesheet" href="/resources/css/app.css">
+
+    <!-- GreenSock GSAP & Plugins (Now managed in app.js via Vite) -->
 </head>
 
-<body class="antialiased font-lato">
+<body class="antialiased font-manrope">
     <!-- Loader Component -->
     <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
         <div class="loader-bg absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
@@ -53,9 +55,9 @@
             <!-- Right Side: Contact & Hamburger -->
             <div class="flex items-center space-x-6 md:space-x-8">
                 <div class="nav-item opacity-0 hidden md:block">
-                    <a href="#"
-                        class="group text-sm tracking-widest font-radley flex items-center hover:text-white transition-colors">
-                        Contact <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                    <a href="https://wa.me/628123456789" target="_blank"
+                        class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-radley uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
+                        Contact Us
                     </a>
                 </div>
 
@@ -79,7 +81,7 @@
                 <a href="#about" class="mobile-nav-link opacity-0">About</a>
                 <a href="#services" class="mobile-nav-link opacity-0">Work</a>
                 <a href="#archive" class="mobile-nav-link opacity-0">Archive</a>
-                <a href="#" class="mobile-nav-link opacity-0">Contact</a>
+                <a href="https://wa.me/628123456789" target="_blank" class="mobile-nav-link opacity-0">Contact Us</a>
             </nav>
 
             <div class="mt-20 mobile-nav-footer opacity-0">
@@ -117,14 +119,14 @@
                         </div>
                     </div>
                     <span
-                        class="text-[10px] md:text-xs font-lato tracking-[0.2em] uppercase group-hover:text-white transition-colors">Scroll
+                        class="text-[10px] md:text-xs font-manrope tracking-[0.2em] uppercase group-hover:text-white transition-colors">Scroll
                         for more</span>
                 </a>
             </footer>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="relative overflow-hidden bg-white" style="z-index: 50;">
+        <section id="about" class="relative bg-white" style="z-index: 50;">
             <div id="about-pin-wrapper"
                 class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
                 <!-- Premium Radial Vignette for Center Contrast -->
@@ -216,7 +218,7 @@
                         class="absolute flex flex-col items-center text-center opacity-0 pointer-events-none">
                         <div class="max-w-2xl mx-auto">
                             <p
-                                class="about-text-2 text-sm md:text-base font-lato tracking-wide text-[#333333] leading-relaxed">
+                                class="about-text-2 text-sm md:text-base font-manrope tracking-wide text-[#333333] leading-relaxed">
                                 ARKAN is a Saudi based luxury hospitality company combining leading hospitality
                                 production capabilities with exceptional design talent. We craft premium amenities with
                                 a focus on quality, precision, and international standards, supported by some of the
@@ -229,9 +231,15 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="relative min-h-screen bg-[#F5F1E8] py-24 md:py-32 overflow-hidden"
-            style="z-index: 3;">
-            <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+        <section id="services" class="relative min-h-screen py-24 md:py-32 bg-[#F5F1E8]" style="z-index: 60;">
+
+            <div id="services-star-container"
+                class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                <img id="services-star" src="/assets/img/star.svg" alt="Star Ornament"
+                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] -translate-y-12 md:-translate-y-24 object-contain mix-blend-multiply">
+            </div>
+
+            <div id="services-content-wrapper" class="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <div class="text-center mb-16 md:mb-24">
                     <h2
                         class="services-title opacity-0 text-5xl md:text-7xl font-serif-luxury text-[#1B1B18] leading-[1.1]">
@@ -241,50 +249,50 @@
                 <div class="flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-24">
                     <div class="w-full xl:w-1/2">
                         <div class="flex flex-col">
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Amenity+Production">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(01)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(01)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Hospitality Amenity Production</h4>
                             </div>
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Custom+Product">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(02)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(02)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Custom Product Development</h4>
                             </div>
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Consultation">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(03)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(03)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Material And Finish Consultation</h4>
                             </div>
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Outputs">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(04)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(04)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Design Transition Into Production Ready Outputs</h4>
                             </div>
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Packaging">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(05)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(05)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Packaging, Kits, And Curated Hospitality Terms</h4>
                             </div>
-                            <div class="service-item cursor-pointer group/item opacity-0 flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Quality+Control">
                                 <span
-                                    class="text-[10px] md:text-sm font-lato text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 group-hover/item:text-[#1B1B18] transition-colors">(06)</span>
+                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(06)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
                                     Quality Control And Production Alignment</h4>
@@ -303,7 +311,7 @@
         </section>
 
         <!-- Industries Section -->
-        <section id="industries" class="relative py-12 md:py-24 px-4 md:px-8 bg-[#F5F1E8]" style="z-index: 4;">
+        <section id="industries" class="relative py-12 md:py-24 px-4 md:px-8 bg-[#F5F1E8]" style="z-index: 50;">
             <div class="max-w-[1920px] mx-auto">
                 <div
                     class="industries-slider-wrapper relative overflow-hidden rounded-xl border-4 border-[#F5F1E8] aspect-[4/3] sm:aspect-[16/9] md:aspect-[2/1] lg:aspect-[21/9]">
@@ -319,7 +327,7 @@
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
-                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
                                     Industry We Serve</p>
                                 <div class="relative inline-block">
                                     <h2
@@ -340,7 +348,7 @@
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
-                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
                                     Industry We Serve</p>
                                 <div class="relative inline-block">
                                     <h2
@@ -361,7 +369,7 @@
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
-                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-lato">
+                                    class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
                                     Industry We Serve</p>
                                 <div class="relative inline-block">
                                     <h2
@@ -405,7 +413,7 @@
                 </h2>
                 <div class="max-w-4xl mx-auto">
                     <p
-                        class="process-header-text opacity-0 text-xs md:text-sm font-lato tracking-wide text-[#1B1B18]/70 leading-relaxed uppercase">
+                        class="process-header-text opacity-0 text-xs md:text-sm font-manrope tracking-wide text-[#1B1B18]/70 leading-relaxed uppercase">
                         An integrated 5PL platform that manages hospitality OS&E from concept to site ready delivery.
                         ARKAN connects design, production, digital control, global logistics, and fulfillment into one
                         seamless system, ensuring consistency, efficiency, and reliability across every stage of
@@ -475,14 +483,16 @@
         </section>
 
         <!-- Journal Section -->
-        <section id="journal" class="relative bg-[#F5F1E8] py-16 md:py-24 px-4 md:px-8" style="z-index: 50;">
+        <section id="journal"
+            class="relative bg-[#F5F1E8] py-16 md:py-24 px-4 md:px-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+            style="z-index: 50;">
             <div class="max-w-[1920px] mx-auto">
                 <div class="flex items-end justify-between mb-8 md:mb-12">
                     <h2
                         class="journal-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-radley text-[#52422D] tracking-tight">
                         From our Journal</h2>
                     <a href="#"
-                        class="journal-view-all opacity-0 text-xs md:text-sm font-lato font-bold text-[#52422D]/70 hover:text-[#52422D] transition-colors border-b-2 border-[#1B1B18]/30 pb-1">View
+                        class="journal-view-all opacity-0 text-xs md:text-sm font-manrope font-bold text-[#52422D]/70 hover:text-[#52422D] transition-colors border-b-2 border-[#1B1B18]/30 pb-1">View
                         All</a>
                 </div>
                 <!-- Main Grid Container: gap matches the reference -->
@@ -548,12 +558,18 @@
             </div>
         </section>
 
+        <!-- Spacer to allow Journal to reveal OSE -->
+        <div id="ose-spacer" class="relative pointer-events-none"
+            style="z-index: 5; height: 150vh; background: transparent;"></div>
+
         <!-- OSE Section -->
-        <section id="ose" class="relative overflow-hidden bg-black z-50 min-h-screen flex flex-col">
+        <section id="ose" class="fixed bottom-0 left-0 w-full overflow-hidden bg-black z-20 min-h-screen flex flex-col">
             <!-- Background Layer -->
             <div class="absolute inset-0 z-0">
                 <img src="/assets/img/bg-ose.png" alt="" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#083D6E]/20 to-[#083D6E]/40"></div>
+                <div
+                    class="ose-blue-gradient absolute inset-0 bg-gradient-to-b from-transparent via-[#083D6E]/20 to-[#083D6E]/40 opacity-0">
+                </div>
             </div>
 
             <div id="ose-pin-container"
@@ -573,7 +589,7 @@
                     </h2>
                     <div class="ose-cta-button opacity-0">
                         <a href="https://wa.me/628123456789" target="_blank"
-                            class="inline-block px-10 py-3 md:px-12 md:py-4 rounded-full border border-[#D2BB9C]/40 text-[#D2BB9C] font-lato text-xs sm:text-sm tracking-[0.3em] uppercase hover:bg-[#D2BB9C] hover:text-[#083D6E] transition-all duration-500">
+                            class="inline-block px-10 py-3 md:px-12 md:py-4 rounded-full border border-[#D2BB9C]/40 text-[#D2BB9C] font-manrope text-xs sm:text-sm tracking-[0.3em] uppercase hover:bg-[#D2BB9C] hover:text-[#083D6E] transition-all duration-500">
                             Contact Us
                         </a>
                     </div>
@@ -583,19 +599,19 @@
 
         <!-- Redefined Revealable Footer (Fixed behind main content) -->
         <footer id="footer-reveal" class="fixed bottom-0 left-0 w-full bg-black py-8 md:py-10 px-6 md:px-12"
-            style="z-index: 1;">
+            style="z-index: 10;">
             <div
                 class="max-w-[1920px] mx-auto opacity-0 translate-y-20 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
                 <div class="flex flex-col items-center md:items-start space-y-3">
                     <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
                         class="h-4 md:h-5 w-auto object-contain brightness-0 invert opacity-90">
-                    <p class="text-white font-lato text-[9px] md:text-[10px] uppercase tracking-widest leading-none">
+                    <p class="text-white font-manrope text-[9px] md:text-[10px] uppercase tracking-widest leading-none">
                         © 2026 ARKAN Technologies. All rights reserved.
                     </p>
                 </div>
 
                 <div
-                    class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 flex-wrap justify-center font-lato text-[9px] md:text-[10px] uppercase tracking-widest">
+                    class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 flex-wrap justify-center font-manrope text-[9px] md:text-[10px] uppercase tracking-widest">
                     <a href="#" class="text-white/60 hover:text-white transition-colors">Help & Support</a>
                     <span class="w-px h-3 bg-white/20 hidden sm:block"></span>
                     <a href="#" class="text-white/60 hover:text-white transition-colors">Terms & Conditions</a>
@@ -609,7 +625,7 @@
         <div id="footer-spacer" class="relative pointer-events-none" style="z-index: 5; background: transparent;"></div>
     </div>
 
-    <script>
+    <script type="module">
         // Inline Scripts from Components (Flattened)
         window.initHeroEntrance = () => {
             const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.5 } });
@@ -619,7 +635,17 @@
                 .to('.scroll-indicator', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1 }, '-=0.8');
         };
 
+        // Pin Hero Section for a smooth wiping effect from the About section
         document.addEventListener('DOMContentLoaded', () => {
+            gsap.config({ force3D: true }); // Prevent jagging on high res screens
+
+            ScrollTrigger.create({
+                trigger: '#hero-section',
+                start: 'top top',
+                pin: true,
+                pinSpacing: false, // Let the next section scroll over it natively without pushing it down
+                end: 'bottom top'
+            });
             // Navbar Logic
             const trigger = document.getElementById('mobile-menu-trigger');
             const overlay = document.getElementById('mobile-menu-overlay');
@@ -627,7 +653,7 @@
             const links = document.querySelectorAll('.mobile-nav-link');
             let isMenuOpen = false;
 
-            const toggleMenu = () => {
+            window.toggleMenu = () => {
                 isMenuOpen = !isMenuOpen;
                 if (isMenuOpen) {
                     navbar.classList.add('menu-open');
@@ -649,8 +675,8 @@
                     gsap.to('.mobile-nav-footer', { opacity: 0, duration: 0.3 });
                 }
             };
-            trigger.addEventListener('click', toggleMenu);
-            links.forEach(link => link.addEventListener('click', () => isMenuOpen && toggleMenu()));
+            trigger.addEventListener('click', window.toggleMenu);
+            links.forEach(link => link.addEventListener('click', () => isMenuOpen && window.toggleMenu()));
 
             // About Scroll Logic
             const aboutTl = gsap.timeline({
@@ -658,7 +684,7 @@
                     trigger: '#about',
                     start: 'top top',
                     end: '+=700%',
-                    scrub: 2,
+                    scrub: 0.8,
                     pin: true,
                     anticipatePin: 1
                 }
@@ -703,11 +729,77 @@
             // Add empty time at the end so the user can read the text before the section unpins and scrolls away
             aboutTl.to({}, { duration: 2 });
 
-            // Services Scroll Logic
-            const servicesTl = gsap.timeline({ scrollTrigger: { trigger: '#services', start: 'top 70%', toggleActions: 'play none none none' } });
-            servicesTl.to('.services-title', { opacity: 1, y: 0, startAt: { y: 40 }, duration: 1.2, ease: 'power4.out' })
-                .to('.service-item', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.6')
-                .to('.services-image-container', { opacity: 1, scale: 1, startAt: { scale: 0.5 }, duration: 1.5, ease: 'power2.out' }, '-=1');
+            // Services Scroll Transition Logic
+            window.servicesTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#services',
+                    start: 'top top',
+                    end: '+=500%',
+                    scrub: 0.8,
+                    pin: true,
+                    anticipatePin: 1
+                }
+            });
+
+            // 1. Star fades in, scales, rotates
+            servicesTl.fromTo('#services-star',
+                { opacity: 0, scale: 0.6, rotation: 0 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    rotation: 45,
+                    ease: 'power3.out',
+                    duration: 1.5
+                }
+            );
+
+            // 2. Star pulse outward, blur, opacity drop
+            servicesTl.to('#services-star', {
+                scale: 1.2,
+                opacity: 0.15,
+                filter: 'blur(1px)',
+                ease: 'power1.inOut',
+                duration: 1
+            });
+
+            // 3. Star moves to corner
+            servicesTl.to('#services-star', {
+                x: '40vw',
+                y: '-40vh',
+                scale: 2.5,
+                opacity: 0.05,
+                duration: 1.5,
+                ease: 'power2.inOut'
+            }, 'bgTransition');
+
+            // 4. Content fade in with stagger
+            servicesTl.to('.services-title', {
+                opacity: 1,
+                y: 0,
+                startAt: { y: 40 },
+                duration: 1,
+                ease: 'expo.out'
+            }, 'contentIn');
+
+            servicesTl.to('.service-item', {
+                opacity: 1,
+                y: 0,
+                startAt: { y: 20 },
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'expo.out'
+            }, 'contentIn+=0.2');
+
+            servicesTl.to('.services-image-container', {
+                opacity: 1,
+                x: 0,
+                startAt: { x: 80 },
+                duration: 1.2,
+                ease: 'expo.out'
+            }, 'contentIn+=0.4');
+
+            // 5. Extra padding before unpinning
+            servicesTl.to({}, { duration: 2 });
 
             // Industries Slider Logic
             let currentIndustry = 0;
@@ -832,7 +924,7 @@
             });
             industriesRevealTl.fromTo('.industries-slider-wrapper',
                 { scale: 0.9, y: 100 },
-                { scale: 1, y: 0, duration: 1, ease: 'power2.out' }
+                { scale: 1, y: 0, duration: 1, ease: 'expo.out' }
             );
 
             gsap.utils.toArray('.slide-bg').forEach((bg, i) => {
@@ -853,9 +945,9 @@
 
             // Process Scroll Logic
             const processIntroTl = gsap.timeline({ scrollTrigger: { trigger: '#process', start: 'top 80%', toggleActions: 'play none none none' } });
-            processIntroTl.to('.process-ornament', { opacity: 1, scale: 1, startAt: { scale: 0.8 }, duration: 1, ease: 'power2.out' })
-                .to('.process-header-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' }, '-=0.8')
-                .to('.process-header-text', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'power3.out' }, '-=0.8');
+            processIntroTl.to('.process-ornament', { opacity: 1, scale: 1, startAt: { scale: 0.8 }, duration: 1, ease: 'expo.out' })
+                .to('.process-header-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' }, '-=0.8')
+                .to('.process-header-text', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'expo.out' }, '-=0.8');
 
             // Initial States for Process Pinnable
             gsap.set('.process-bg-2, .process-bg-3', { xPercent: 101 }); // Small buffer
@@ -867,7 +959,7 @@
                     start: 'top top',
                     end: '+=600%', // More runway
                     pin: true,
-                    scrub: 1.2
+                    scrub: 0.8
                 }
             });
 
@@ -924,32 +1016,46 @@
 
             // Journal Scroll Logic
             const journalTl = gsap.timeline({ scrollTrigger: { trigger: '#journal', start: 'top 80%', toggleActions: 'play none none none' } });
-            journalTl.to('.journal-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' })
-                .to('.journal-view-all', { opacity: 1, x: 0, startAt: { x: 20 }, duration: 1, ease: 'power3.out' }, '-=0.8')
-                .to('.journal-item', { opacity: 1, y: 0, startAt: { y: 40 }, duration: 1, stagger: 0.2, ease: 'power3.out' }, '-=0.6');
+            journalTl.to('.journal-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' })
+                .to('.journal-view-all', { opacity: 1, x: 0, startAt: { x: 20 }, duration: 1, ease: 'expo.out' }, '-=0.8')
+                .to('.journal-item', { opacity: 1, y: 0, startAt: { y: 40 }, duration: 1, stagger: 0.2, ease: 'expo.out' }, '-=0.6');
 
             // OSE Scroll Logic
             gsap.to('.ose-blue-gradient', {
                 opacity: 1, ease: 'none',
-                scrollTrigger: { trigger: '#ose', start: 'top 40%', end: 'center center', scrub: true }
+                scrollTrigger: { trigger: '#ose-spacer', start: 'top 40%', end: 'center center', scrub: true }
             });
-            const oseTl = gsap.timeline({ scrollTrigger: { trigger: '#ose-pin-container', start: 'top 40%', toggleActions: 'play none none none' } });
-            oseTl.to('.ose-final-ornament', { opacity: 0.3, scale: 1, startAt: { scale: 0.8 }, duration: 2, ease: 'power2.out' })
-                .to('.ose-cta-title', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1.5, ease: 'power3.out' }, '-=1.5')
-                .to('.ose-cta-button', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'power3.out' }, '-=1');
+            const oseTl = gsap.timeline({ scrollTrigger: { trigger: '#ose-spacer', start: 'top 40%', toggleActions: 'play none none none' } });
+            oseTl.to('.ose-final-ornament', { opacity: 0.3, scale: 1, startAt: { scale: 0.8 }, duration: 2, ease: 'expo.out' })
+                .to('.ose-cta-title', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1.5, ease: 'expo.out' }, '-=1.5')
+                .to('.ose-cta-button', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' }, '-=1');
 
             // Footer Reveal Logic
             const footerReveal = document.getElementById('footer-reveal');
             const footerSpacer = document.getElementById('footer-spacer');
+            const oseSection = document.getElementById('ose');
 
-            if (footerReveal && footerSpacer) {
+            if (footerReveal && footerSpacer && oseSection) {
                 const updateFooterSpacer = () => {
                     footerSpacer.style.height = footerReveal.offsetHeight + 'px';
                 };
                 updateFooterSpacer();
                 window.addEventListener('resize', updateFooterSpacer);
 
-                // Reveal Animation
+                // Re-parallax OSE up to reveal the Footer behind it
+                gsap.to(oseSection, {
+                    y: () => -footerReveal.offsetHeight,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#footer-spacer',
+                        start: 'top bottom',
+                        end: 'bottom bottom',
+                        scrub: true,
+                        invalidateOnRefresh: true
+                    }
+                });
+
+                // Reveal Animation for Internal Footer items
                 gsap.to('#footer-reveal > div', {
                     y: 0,
                     opacity: 1,
@@ -962,6 +1068,59 @@
                     }
                 });
             }
+
+            // Create hover interaction for Services
+            const serviceItems = document.querySelectorAll('.service-item');
+            const serviceDisplayImage = document.getElementById('service-display-image');
+
+            if (serviceItems.length > 0 && serviceDisplayImage) {
+                serviceItems.forEach(item => {
+                    item.addEventListener('mouseenter', function () {
+                        const newImgSrc = this.getAttribute('data-service-image');
+                        if (newImgSrc && serviceDisplayImage.src !== newImgSrc) {
+                            // Smooth crossfade using GSAP
+                            gsap.to(serviceDisplayImage, {
+                                opacity: 0,
+                                duration: 0.3,
+                                onComplete: () => {
+                                    serviceDisplayImage.src = newImgSrc;
+                                    gsap.to(serviceDisplayImage, { opacity: 1, duration: 0.4 });
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Smooth Scroll Setup for Anchor Links using GSAP ScrollToPlugin
+            // This is required because native hash navigation breaks when ScrollTrigger pins add phantom vertical space.
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return; // Ignore empty anchors
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+
+                        // Close mobile menu if open
+                        if (typeof isMenuOpen !== 'undefined' && isMenuOpen) {
+                            toggleMenu();
+                        }
+
+                        // Use GSAP ScrollToPlugin
+                        gsap.to(window, {
+                            duration: 1.5,
+                            ease: 'power3.inOut',
+                            scrollTo: {
+                                y: targetElement,
+                                autoKill: true
+                            }
+                        });
+                    }
+                });
+            });
+
         });
     </script>
 
@@ -969,6 +1128,19 @@
         body {
             overflow-x: hidden;
             width: 100%;
+        }
+
+        /* Performance Optimizations */
+        .gallery-img-wrapper,
+        #services-star,
+        .service-item,
+        .services-image-container,
+        .industries-slider-wrapper,
+        .process-bg,
+        .process-bg-wrapper,
+        .ose-final-ornament,
+        #loader-logo {
+            will-change: transform, opacity;
         }
 
         /* Styles from Components (Flattened) */

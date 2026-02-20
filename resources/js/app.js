@@ -2,18 +2,20 @@
 import Lenis from 'lenis'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 // Expose GSAP to window for inline scripts
 window.gsap = gsap;
 window.ScrollTrigger = ScrollTrigger;
+window.ScrollToPlugin = ScrollToPlugin;
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Initialize Lenis with smooth settings similar to refined framing
 const lenis = new Lenis({
-    lerp: 0.1, // Smoothness intensity (0-1). Lower is smoother/slower. Default is 0.1.
-    wheelMultiplier: 1, // Mouse wheel speed.
-    touchMultiplier: 2, // Touch output speed.
+    lerp: 0.08, // Balanced lerp for responsiveness and smoothness
+    wheelMultiplier: 0.9, // Slightly dampened wheel speed for precision
+    touchMultiplier: 1.5, // Natural touch responsiveness
     infinite: false,
 });
 
@@ -38,10 +40,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = this.getAttribute('href');
         if (target === '#') return;
 
+        // Close mobile menu if open (toggled via global window.toggleMenu)
+        const navbar = document.getElementById('global-navbar');
+        if (navbar && navbar.classList.contains('menu-open') && typeof window.toggleMenu === 'function') {
+            window.toggleMenu();
+        }
+
+        // Logic for #services label-aware scroll
+        if (target === '#services' && window.servicesTl) {
+            const st = window.servicesTl.scrollTrigger;
+            if (st) {
+                // Landing at 0.6 allows the final reveal animation to settle 
+                // while the scroll finishes, creating a much smoother "glide" effect.
+                const targetProgress = 0.6;
+                const scrollPos = st.start + (targetProgress * (st.end - st.start));
+
+                lenis.scrollTo(scrollPos, {
+                    duration: 2.2, // Slower duration for a more premium, weighted feel
+                    easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t), // Custom "luxury" glide easing
+                    onComplete: () => {
+                        setTimeout(() => ScrollTrigger.refresh(), 100);
+                    }
+                });
+                return;
+            }
+        }
+
         lenis.scrollTo(target, {
             offset: 0,
             duration: 1.5,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) // Custom easing
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
+            onComplete: () => {
+                // Force ScrollTrigger to recalculate positions after jump
+                setTimeout(() => {
+                    ScrollTrigger.refresh();
+                }, 100);
+            }
         });
     });
 });

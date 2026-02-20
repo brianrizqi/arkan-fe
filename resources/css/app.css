@@ -8,10 +8,10 @@
     --font-cinzel: 'Cinzel', serif;
     --font-serif-luxury: 'DM Serif Display', serif;
     --font-inter: 'Inter', sans-serif;
-    --font-lato: 'Lato', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
     --font-radley: 'Radley', serif;
     --font-helvetica: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', sans-serif;
-    --font-sans: var(--font-lato);
+    --font-sans: var(--font-manrope);
 }
 
 /* Lenis Recommended CSS */
