@@ -12,6 +12,15 @@
     --font-radley: 'Radley', serif;
     --font-helvetica: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', sans-serif;
     --font-sans: var(--font-manrope);
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    --space-7: 80px;
+    --space-8: 120px;
 }
 
 /* Lenis Recommended CSS */
@@ -52,4 +61,62 @@ html.lenis body {
 
 .service-item p {
     letter-spacing: -0.6px;
+}
+
+/* Base Section Spacing */
+section {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+.hero-section {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+}
+
+footer {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+}
+
+/* Internal Component Spacing Utilities */
+.section-title {
+    margin-bottom: var(--space-3);
+    line-height: 1.1;
+}
+
+.section-description {
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.card {
+    padding: var(--space-4);
+}
+
+.card-title {
+    margin-bottom: var(--space-2);
+}
+
+.card-text {
+    margin-bottom: var(--space-3);
+}
+
+/* Vertical rhythm helpers */
+.stack-space-1>*+* {
+    margin-top: var(--space-1);
+}
+
+.stack-space-2>*+* {
+    margin-top: var(--space-2);
+}
+
+.stack-space-3>*+* {
+    margin-top: var(--space-3);
+}
+
+.stack-space-4>*+* {
+    margin-top: var(--space-4);
 }
