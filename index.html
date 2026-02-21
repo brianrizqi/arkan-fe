@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ARKAN - Refined Hospitality</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- Styles / Scripts -->
     <script type="module" src="/resources/js/app.js"></script>
-    <link rel="stylesheet" href="/resources/css/app.css">
+    <link rel="stylesheet" href="/resources/css/app.css" />
 
     <!-- GreenSock GSAP & Plugins (Now managed in app.js via Vite) -->
 </head>
@@ -25,10 +25,9 @@
     <!-- Loader Component -->
     <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
         <div class="loader-bg absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-            style="background-image: url('/assets/img/loading-bg.png');">
-        </div>
+            style="background-image: url(&quot;/assets/img/loading-bg.png&quot;)"></div>
         <div class="relative z-10 flex flex-col items-center">
-            <img src="/assets/img/loading-logo.svg" id="loader-logo" class="w-32 md:w-48 lg:w-56" alt="Arkan Logo">
+            <img src="/assets/img/loading-logo.svg" id="loader-logo" class="w-32 md:w-48 lg:w-56" alt="Arkan Logo" />
         </div>
     </div>
 
@@ -40,7 +39,7 @@
             <div class="nav-item opacity-0">
                 <a href="#" class="block hover:opacity-70 transition-opacity">
                     <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-                        class="navbar-logo h-4 md:h-5 w-auto object-contain brightness-0 invert transition-all duration-500">
+                        class="navbar-logo h-4 md:h-5 w-auto object-contain brightness-0 invert transition-all duration-500" />
                 </a>
             </div>
 
@@ -55,7 +54,7 @@
             <!-- Right Side: Contact & Hamburger -->
             <div class="flex items-center space-x-6 md:space-x-8">
                 <div class="nav-item opacity-0 hidden md:block">
-                    <a href="https://wa.me/628123456789" target="_blank"
+                    <a href="/contact.html"
                         class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-radley uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
                         Contact Us
                     </a>
@@ -81,13 +80,15 @@
                 <a href="#about" class="mobile-nav-link opacity-0">About</a>
                 <a href="#services" class="mobile-nav-link opacity-0">Work</a>
                 <a href="#archive" class="mobile-nav-link opacity-0">Archive</a>
-                <a href="https://wa.me/628123456789" target="_blank" class="mobile-nav-link opacity-0">Contact Us</a>
+                <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
             </nav>
 
             <div class="mt-20 mobile-nav-footer opacity-0">
                 <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-                    class="h-6 w-auto mx-auto brightness-0 mb-4 opacity-30">
-                <p class="text-[10px] uppercase tracking-widest text-[#1B1B18]/40">ARKAN Standard © 2026</p>
+                    class="h-6 w-auto mx-auto brightness-0 mb-4 opacity-30" />
+                <p class="text-[10px] uppercase tracking-widest text-[#1B1B18]/40">
+                    ARKAN Standard © 2026
+                </p>
             </div>
         </div>
     </header>
@@ -96,16 +97,17 @@
         <!-- Hero Section -->
         <section id="hero-section"
             class="section-panel relative min-h-screen flex flex-col justify-between overflow-hidden bg-black"
-            style="z-index: 50;">
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-                style="background-image: url('/assets/img/hero-section.png');">
-            </div>
+            style="z-index: 50">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100" style="
+            background-image: url(&quot;/assets/img/hero-section.png&quot;);
+          "></div>
             <div class="absolute inset-0 bg-black/30"></div>
             <main
                 class="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-[var(--space-4)]">
                 <div class="hero-content stack-space-4">
                     <div class="logo-text opacity-0 scale-95">
-                        <img src="/assets/img/logo-arkan.svg" alt="Arkan Logo" class="w-full max-w-2xl mx-auto h-auto">
+                        <img src="/assets/img/logo-arkan.svg" alt="Arkan Logo"
+                            class="w-full max-w-2xl mx-auto h-auto" />
                     </div>
                     <p
                         class="tagline opacity-0 text-[10px] sm:text-xs md:text-lg font-inter tracking-[0.4em] md:tracking-[0.6em] text-white/70 uppercase">
@@ -128,7 +130,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="relative bg-[#F5F1E8]" style="z-index: 50;">
+        <section id="about" class="relative bg-[#F5F1E8]" style="z-index: 50">
             <div id="about-pin-wrapper"
                 class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
                 <!-- Premium Radial Vignette for Center Contrast -->
@@ -139,62 +141,63 @@
                 <div class="scattered-gallery absolute inset-0 z-0 pointer-events-none">
                     <!-- Top Left Area -->
                     <div class="gallery-img-wrapper img-1 absolute opacity-90 w-[35%] md:w-[22%]"
-                        style="top: -5%; left: 0%; transform: rotate(-2deg);">
-                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: -5%; left: 0%; transform: rotate(-2deg)">
+                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Top Center Area (Above Text) -->
                     <div class="gallery-img-wrapper img-5 absolute opacity-80 w-[28%] md:w-[16%]"
-                        style="top: -12%; left: 38%; transform: rotate(1.5deg);">
-                        <img src="/assets/img/about-5.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: -12%; left: 38%; transform: rotate(1.5deg)">
+                        <img src="/assets/img/about-5.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Top Right Area -->
                     <div class="gallery-img-wrapper img-4 absolute opacity-100 w-[40%] md:w-[20%]"
-                        style="top: -8%; right: 2%; transform: rotate(-2deg);">
-                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: -8%; right: 2%; transform: rotate(-2deg)">
+                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Mid Left Area (Far Edge) -->
                     <div class="gallery-img-wrapper img-3 absolute opacity-70 w-[26%] md:w-[14%]"
-                        style="top: 35%; left: -2%; transform: rotate(2deg);">
-                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: 35%; left: -2%; transform: rotate(2deg)">
+                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Mid Right Area (Far Edge) -->
                     <div class="gallery-img-wrapper img-2 absolute opacity-60 w-[28%] md:w-[15%]"
-                        style="top: 35%; right: 0%; transform: rotate(1deg);">
-                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: 35%; right: 0%; transform: rotate(1deg)">
+                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Bottom Left Area -->
                     <div class="gallery-img-wrapper img-6 absolute opacity-100 w-[45%] md:w-[24%]"
-                        style="top: 70%; left: 4%; transform: rotate(1.5deg);">
-                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: 70%; left: 4%; transform: rotate(1.5deg)">
+                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Bottom Center Area (Below Text) -->
                     <div class="gallery-img-wrapper img-7 absolute opacity-80 w-[30%] md:w-[18%]"
-                        style="top: 80%; left: 40%; transform: rotate(-1.5deg);">
-                        <img src="/assets/img/about-7.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: 80%; left: 40%; transform: rotate(-1.5deg)">
+                        <img src="/assets/img/about-7.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
 
                     <!-- Bottom Right Area -->
                     <div class="gallery-img-wrapper img-8 absolute opacity-90 w-[32%] md:w-[20%]"
-                        style="top: 65%; right: 5%; transform: rotate(-1deg);">
-                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto rounded-none shadow-xl">
+                        style="top: 65%; right: 5%; transform: rotate(-1deg)">
+                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
                     </div>
                 </div>
                 <div class="relative z-10 w-full px-6 max-w-7xl mx-auto flex flex-col items-center pointer-events-none">
                     <div id="about-content-1"
                         class="absolute flex flex-col items-center text-center w-full px-4 md:px-6">
                         <div class="about-ornament mb-8 md:mb-[var(--space-5)] scale-[0.8] md:scale-100">
-                            <img src="/assets/img/ornament.svg" alt="" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+                            <img src="/assets/img/ornament.svg" alt=""
+                                class="w-20 h-20 md:w-24 md:h-24 object-contain" />
                         </div>
                         <div class="w-full max-w-4xl mx-auto">
                             <h2
                                 class="about-title-1 section-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-radley text-[#1B1B18] font-normal leading-tight">
-                                Crafted in Saudi.<br>Refined Worldwide.
+                                Crafted in Saudi.<br />Refined Worldwide.
                             </h2>
                         </div>
                     </div>
@@ -203,10 +206,11 @@
                         <div class="w-full max-w-2xl mx-auto">
                             <p
                                 class="about-text-2 text-sm md:text-base font-manrope tracking-wide text-[#333333] leading-relaxed">
-                                ARKAN is a Saudi based luxury hospitality company combining leading hospitality
-                                production capabilities with exceptional design talent. We craft premium amenities with
-                                a focus on quality, precision, and international standards, supported by some of the
-                                strongest manufacturing expertise in the market.
+                                ARKAN is a Saudi based luxury hospitality company combining
+                                leading hospitality production capabilities with exceptional
+                                design talent. We craft premium amenities with a focus on
+                                quality, precision, and international standards, supported by
+                                some of the strongest manufacturing expertise in the market.
                             </p>
                         </div>
                     </div>
@@ -216,12 +220,11 @@
 
         <!-- Services Section -->
         <section id="services" class="relative min-h-screen py-20 flex flex-col justify-center bg-[#F5F1E8]"
-            style="z-index: 60;">
-
+            style="z-index: 60">
             <div id="services-star-container"
                 class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
                 <img id="services-star" src="/assets/img/star.svg" alt="Star Ornament"
-                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] -translate-y-12 md:-translate-y-24 object-contain mix-blend-multiply">
+                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] -translate-y-12 md:-translate-y-24 object-contain mix-blend-multiply" />
             </div>
 
             <div id="services-content-wrapper"
@@ -243,7 +246,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(01)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Hospitality Amenity Production</h4>
+                                    Hospitality Amenity Production
+                                </h4>
                             </div>
                             <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Custom+Product">
@@ -251,7 +255,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(02)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Custom Product Development</h4>
+                                    Custom Product Development
+                                </h4>
                             </div>
                             <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Consultation">
@@ -259,7 +264,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(03)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Material And Finish Consultation</h4>
+                                    Material And Finish Consultation
+                                </h4>
                             </div>
                             <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Outputs">
@@ -267,7 +273,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(04)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Design Transition Into Production Ready Outputs</h4>
+                                    Design Transition Into Production Ready Outputs
+                                </h4>
                             </div>
                             <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Packaging">
@@ -275,7 +282,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(05)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Packaging, Kits, And Curated Hospitality Terms</h4>
+                                    Packaging, Kits, And Curated Hospitality Terms
+                                </h4>
                             </div>
                             <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="https://placehold.co/800x1000/1B1B18/D2BB9C?text=Quality+Control">
@@ -283,7 +291,8 @@
                                     class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(06)</span>
                                 <h4
                                     class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Quality Control And Production Alignment</h4>
+                                    Quality Control And Production Alignment
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -292,16 +301,17 @@
                         <div
                             class="services-image-container opacity-0 relative overflow-hidden rounded-2xl md:rounded-[2rem] aspect-square lg:aspect-[4/5] bg-[#1B1B18]">
                             <img src="/assets/img/our-services.png" id="service-display-image" alt="Our Services"
-                                class="w-full h-full object-cover transition-all duration-700">
+                                class="w-full h-full object-cover transition-all duration-700" />
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Industries Section -->
         <section id="industries"
             class="relative py-[var(--space-5)] md:py-[var(--space-7)] px-[var(--space-2)] md:px-[var(--space-4)] bg-[#F5F1E8]"
-            style="z-index: 50;">
+            style="z-index: 50">
             <div class="max-w-[1920px] mx-auto">
                 <div
                     class="industries-slider-wrapper relative overflow-hidden rounded-xl border-[var(--space-1)] border-[#F5F1E8] aspect-[1/1] sm:aspect-[4/3] md:aspect-[16/9] lg:aspect-[16/10]">
@@ -311,18 +321,19 @@
                         <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
                             <div class="absolute inset-0">
                                 <img src="/assets/img/bg-industries.png" alt="Luxury Hotels & Resorts"
-                                    class="slide-bg w-full h-full object-cover">
+                                    class="slide-bg w-full h-full object-cover" />
                                 <div class="absolute inset-0 bg-black/40"></div>
                             </div>
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
                                     class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
-                                    Industry We Serve</p>
+                                    Industry We Serve
+                                </p>
                                 <div class="relative inline-block">
                                     <h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-radley text-white">
-                                        Luxury
-                                        Hotels & Resorts</h2>
+                                        Luxury Hotels & Resorts
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -331,18 +342,19 @@
                         <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
                             <div class="absolute inset-0">
                                 <img src="/assets/img/bg-industries-2.jpg" alt="Private Estates"
-                                    class="slide-bg w-full h-full object-cover">
+                                    class="slide-bg w-full h-full object-cover" />
                                 <div class="absolute inset-0 bg-black/40"></div>
                             </div>
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
                                     class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
-                                    Industry We Serve</p>
+                                    Industry We Serve
+                                </p>
                                 <div class="relative inline-block">
                                     <h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-radley text-white">
-                                        Private
-                                        Estates & Palaces</h2>
+                                        Private Estates & Palaces
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -351,18 +363,19 @@
                         <div class="industry-slide absolute inset-0 opacity-0 z-0 overflow-hidden">
                             <div class="absolute inset-0">
                                 <img src="/assets/img/bg-industries-3.jpg" alt="Yachts & Aviation"
-                                    class="slide-bg w-full h-full object-cover">
+                                    class="slide-bg w-full h-full object-cover" />
                                 <div class="absolute inset-0 bg-black/40"></div>
                             </div>
                             <div
                                 class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
                                 <p
                                     class="text-[10px] md:text-sm uppercase tracking-[0.3em] text-white/70 mb-4 font-manrope">
-                                    Industry We Serve</p>
+                                    Industry We Serve
+                                </p>
                                 <div class="relative inline-block">
                                     <h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-radley text-white">
-                                        Yachts &
-                                        Aviation</h2>
+                                        Yachts & Aviation
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -390,28 +403,27 @@
         </section>
 
         <!-- Process Section -->
-        <section id="process" class="relative bg-[#F5F1E8]" style="z-index: 50;">
+        <section id="process" class="relative bg-[#F5F1E8]" style="z-index: 50">
             <div id="process-pin-container"
                 class="relative h-screen w-full overflow-hidden flex flex-col pt-[80px] md:pt-[100px] pb-0 px-4 md:px-8">
-
                 <!-- Sticky Header -->
                 <div class="relative text-center max-w-7xl mx-auto mb-0 shrink-0">
                     <div class="process-ornament opacity-0 flex justify-center mb-1 md:mb-2">
-                        <img src="/assets/img/ornament.svg" alt="" class="w-8 h-8 md:w-10 md:h-10 object-contain">
+                        <img src="/assets/img/ornament.svg" alt="" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
                     </div>
                     <h2
                         class="process-header-title section-title opacity-0 text-3xl sm:text-4xl md:text-5xl text-[#1B1B18] mb-1 md:mb-2">
-                        <span class="italic font-radley">Our</span> <span class="font-radley">Proccess</span>
+                        <span class="italic font-radley">Our</span>
+                        <span class="font-radley">Proccess</span>
                     </h2>
                     <div class="max-w-3xl mx-auto">
                         <p
                             class="process-header-text section-description opacity-0 text-[10px] sm:text-xs font-manrope tracking-wide text-[#1B1B18]/70 leading-relaxed">
-                            An integrated 5PL platform that manages hospitality OS&E from concept to site ready
-                            delivery.
-                            ARKAN connects design, production, digital control, global logistics, and fulfillment into
-                            one
-                            seamless system, ensuring consistency, efficiency, and reliability across every stage of
-                            operations.
+                            An integrated 5PL platform that manages hospitality OS&E from
+                            concept to site ready delivery. ARKAN connects design,
+                            production, digital control, global logistics, and fulfillment
+                            into one seamless system, ensuring consistency, efficiency, and
+                            reliability across every stage of operations.
                         </p>
                     </div>
                 </div>
@@ -420,23 +432,23 @@
                 <div class="process-card-wrapper relative w-full flex-1 max-w-[1920px] mx-auto overflow-hidden group">
                     <div class="absolute inset-0 z-0">
                         <!-- Background Slide 1 (Design) -->
-                        <div class="process-bg-wrapper absolute inset-0 overflow-hidden" style="z-index: 10;">
+                        <div class="process-bg-wrapper absolute inset-0 overflow-hidden" style="z-index: 10">
                             <img src="/assets/img/bg-our-process.png" alt="Our Process Background"
-                                class="process-bg w-full h-full object-cover">
+                                class="process-bg w-full h-full object-cover" />
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                         <!-- Background Slide 2 (Production) -->
                         <div class="process-bg-wrapper process-bg-2 absolute inset-0 overflow-hidden"
-                            style="z-index: 20;">
+                            style="z-index: 20">
                             <img src="/assets/img/bg-our-process-2.png" alt="Production Background"
-                                class="process-bg w-full h-full object-cover">
+                                class="process-bg w-full h-full object-cover" />
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                         <!-- Background Slide 3 (Digitalization) -->
                         <div class="process-bg-wrapper process-bg-3 absolute inset-0 overflow-hidden"
-                            style="z-index: 30;">
+                            style="z-index: 30">
                             <img src="/assets/img/bg-our-process-3.png" alt="Digitalization Background"
-                                class="process-bg w-full h-full object-cover">
+                                class="process-bg w-full h-full object-cover" />
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                     </div>
@@ -445,7 +457,8 @@
                             class="process-phase phase-design absolute inset-0 flex flex-col items-center justify-center opacity-100">
                             <h3
                                 class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-inter font-bold text-white tracking-normal uppercase">
-                                Design</h3>
+                                Design
+                            </h3>
                             <div
                                 class="absolute bottom-16 px-6 py-2 flex flex-wrap justify-center gap-2 md:gap-4 text-white hover:text-white/80 transition-colors font-inter text-xs md:text-sm md:text-base tracking-normal">
                                 <span>/Concept</span><span>/Standards</span><span>/Specifications</span>
@@ -455,7 +468,8 @@
                             class="process-phase phase-production absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <h3
                                 class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-radley text-white tracking-normal uppercase font-bold">
-                                Production</h3>
+                                Production
+                            </h3>
                             <div
                                 class="absolute bottom-16 px-6 py-2 flex flex-wrap justify-center gap-2 md:gap-4 text-white/70 hover:text-white transition-colors font-inter font-medium text-xs md:text-[10px] tracking-[0.2em] uppercase">
                                 <span>/Manufacturing</span><span>/Quality Control</span><span>/Scalability</span>
@@ -465,7 +479,8 @@
                             class="process-phase phase-digitalization absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <h3
                                 class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-radley text-white tracking-normal uppercase font-bold">
-                                Digitalization</h3>
+                                Digitalization
+                            </h3>
                             <div
                                 class="absolute bottom-16 px-6 py-2 flex flex-wrap justify-center gap-2 md:gap-4 text-white/70 hover:text-white transition-colors font-inter font-medium text-xs md:text-[10px] tracking-[0.2em] uppercase">
                                 <span>/Efficiency</span><span>/Connectivity</span><span>/Traceability</span>
@@ -479,12 +494,13 @@
         <!-- Journal Section -->
         <section id="journal"
             class="relative bg-[#F5F1E8] py-[var(--space-6)] md:py-[var(--space-7)] px-[var(--space-2)] md:px-[var(--space-4)] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-            style="z-index: 50;">
+            style="z-index: 50">
             <div class="max-w-[1920px] mx-auto">
                 <div class="flex items-end justify-between mb-[var(--space-4)] md:mb-[var(--space-6)]">
                     <h2
                         class="journal-title section-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-radley text-[#52422D] tracking-tight">
-                        From our Journal</h2>
+                        From our Journal
+                    </h2>
                     <a href="#"
                         class="journal-view-all opacity-0 text-xs md:text-sm font-manrope font-bold text-[#52422D]/70 hover:text-[#52422D] transition-colors border-b-2 border-[#1B1B18]/30 pb-1">View
                         All</a>
@@ -495,7 +511,7 @@
                     <div class="journal-item opacity-0 md:col-span-2 group cursor-pointer overflow-hidden relative">
                         <div class="aspect-[16/10] sm:aspect-[16/8] md:aspect-[21/9] overflow-hidden">
                             <img src="/assets/img/our-jurnal-1.png" alt="Journal Entry 1"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                         </div>
                         <!-- Overlay Text -->
                         <div
@@ -515,7 +531,7 @@
                     <div class="journal-item opacity-0 group cursor-pointer overflow-hidden relative">
                         <div class="aspect-[1/1] md:aspect-[16/10] overflow-hidden">
                             <img src="/assets/img/our-jurnal-2.png" alt="Journal Entry 2"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 md:p-8 flex flex-col justify-end">
@@ -534,7 +550,7 @@
                     <div class="journal-item opacity-0 group cursor-pointer overflow-hidden relative">
                         <div class="aspect-[1/1] md:aspect-[16/10] overflow-hidden">
                             <img src="/assets/img/our-jurnal-3.png" alt="Journal Entry 3"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent p-6 md:p-8 flex flex-col justify-end">
@@ -554,13 +570,13 @@
 
         <!-- Spacer to allow Journal to reveal OSE -->
         <div id="ose-spacer" class="relative pointer-events-none"
-            style="z-index: 5; height: 150vh; background: transparent;"></div>
+            style="z-index: 5; height: 150vh; background: transparent"></div>
 
         <!-- OSE Section -->
         <section id="ose" class="fixed bottom-0 left-0 w-full overflow-hidden bg-black z-20 min-h-screen flex flex-col">
             <!-- Background Layer -->
             <div class="absolute inset-0 z-0">
-                <img src="/assets/img/bg-ose.png" alt="" class="w-full h-full object-cover opacity-60">
+                <img src="/assets/img/bg-ose.png" alt="" class="w-full h-full object-cover opacity-60" />
                 <div
                     class="ose-blue-gradient absolute inset-0 bg-gradient-to-b from-transparent via-[#083D6E]/20 to-[#083D6E]/40 opacity-0">
                 </div>
@@ -568,21 +584,21 @@
 
             <div id="ose-pin-container"
                 class="relative flex-grow flex flex-col items-center justify-center text-center px-[var(--space-4)] md:px-[var(--space-6)] py-[var(--space-8)] z-10">
-
                 <!-- Ornament above title -->
                 <div class="ose-final-ornament opacity-0 mb-[var(--space-5)] md:mb-[var(--space-6)]">
                     <img src="/assets/img/ornament.svg" alt=""
-                        class="w-48 h-48 md:w-72 md:h-72 lg:w-[32rem] lg:h-[32rem] object-contain brightness-0 invert opacity-40">
+                        class="w-48 h-48 md:w-72 md:h-72 lg:w-[32rem] lg:h-[32rem] object-contain brightness-0 invert opacity-40" />
                 </div>
 
                 <div class="max-w-5xl mx-auto stack-space-5 md:stack-space-6">
                     <h2
                         class="ose-cta-title section-title opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-radley text-[#D2BB9C]">
-                        Let’s bring it to <span class="italic font-radley">life</span>,<br><span
+                        Let’s bring it to
+                        <span class="italic font-radley">life</span>,<br /><span
                             class="italic font-radley">together.</span>
                     </h2>
                     <div class="ose-cta-button opacity-0">
-                        <a href="https://wa.me/628123456789" target="_blank"
+                        <a href="/contact.html"
                             class="inline-block px-10 py-3 md:px-12 md:py-4 rounded-full border border-[#D2BB9C]/40 text-[#D2BB9C] font-manrope text-xs sm:text-sm tracking-[0.3em] uppercase hover:bg-[#D2BB9C] hover:text-[#083D6E] transition-all duration-500">
                             Contact Us
                         </a>
@@ -594,12 +610,12 @@
         <!-- Redefined Revealable Footer (Fixed behind main content) -->
         <footer id="footer-reveal"
             class="fixed bottom-0 left-0 w-full bg-black py-[var(--space-4)] md:py-[var(--space-5)] px-[var(--space-4)] md:px-[var(--space-6)]"
-            style="z-index: 10;">
+            style="z-index: 10">
             <div
                 class="max-w-[1920px] mx-auto opacity-0 translate-y-20 flex flex-col md:flex-row items-center justify-between gap-[var(--space-4)] text-center md:text-left">
                 <div class="flex flex-col items-center md:items-start space-y-[var(--space-1)]">
                     <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-                        class="h-4 md:h-5 w-auto object-contain brightness-0 invert opacity-90">
+                        class="h-4 md:h-5 w-auto object-contain brightness-0 invert opacity-90" />
                     <p class="text-white font-manrope text-[9px] md:text-[10px] uppercase tracking-widest leading-none">
                         © 2026 ARKAN Technologies. All rights reserved.
                     </p>
@@ -617,84 +633,159 @@
         </footer>
 
         <!-- Spacer to allow scroll-reveal -->
-        <div id="footer-spacer" class="relative pointer-events-none" style="z-index: 5; background: transparent;"></div>
+        <div id="footer-spacer" class="relative pointer-events-none" style="z-index: 5; background: transparent"></div>
     </div>
 
     <script type="module">
         // Inline Scripts from Components (Flattened)
         window.initHeroEntrance = () => {
-            const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.5 } });
-            tl.to('.logo-text', { opacity: 1, y: 0, scale: 1, startAt: { y: 30, scale: 0.95 }, duration: 2 })
-                .to('.tagline', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1.2 }, '-=1.2')
-                .to('.nav-item', { opacity: 1, y: 0, startAt: { y: -20 }, stagger: 0.1, duration: 1 }, '-=1')
-                .to('.scroll-indicator', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1 }, '-=0.8');
+            const tl = gsap.timeline({
+                defaults: { ease: "power3.out", duration: 1.5 },
+            });
+            tl.to(".logo-text", {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                startAt: { y: 30, scale: 0.95 },
+                duration: 2,
+            })
+                .to(
+                    ".tagline",
+                    { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1.2 },
+                    "-=1.2",
+                )
+                .to(
+                    ".nav-item",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: -20 },
+                        stagger: 0.1,
+                        duration: 1,
+                    },
+                    "-=1",
+                )
+                .to(
+                    ".scroll-indicator",
+                    { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1 },
+                    "-=0.8",
+                );
         };
 
         // Pin Hero Section for a smooth wiping effect from the About section
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener("DOMContentLoaded", () => {
             gsap.config({ force3D: true }); // Prevent jagging on high res screens
 
             ScrollTrigger.create({
-                trigger: '#hero-section',
-                start: 'top top',
+                trigger: "#hero-section",
+                start: "top top",
                 pin: true,
                 pinSpacing: false, // Let the next section scroll over it natively without pushing it down
-                end: 'bottom top'
+                end: "bottom top",
             });
             // Navbar Logic
-            const trigger = document.getElementById('mobile-menu-trigger');
-            const overlay = document.getElementById('mobile-menu-overlay');
-            const navbar = document.getElementById('global-navbar');
-            const links = document.querySelectorAll('.mobile-nav-link');
+            const trigger = document.getElementById("mobile-menu-trigger");
+            const overlay = document.getElementById("mobile-menu-overlay");
+            const navbar = document.getElementById("global-navbar");
+            const links = document.querySelectorAll(".mobile-nav-link");
             let isMenuOpen = false;
 
             window.toggleMenu = () => {
                 isMenuOpen = !isMenuOpen;
                 if (isMenuOpen) {
-                    navbar.classList.add('menu-open');
-                    overlay.classList.remove('pointer-events-none');
-                    gsap.to(overlay, { opacity: 1, duration: 0.5, ease: 'power2.inOut' });
-                    gsap.to('.hamburger-inner-mid', { opacity: 0, duration: 0.2 });
-                    gsap.to('.hamburger-inner:first-child', { y: 7.5, rotate: 45, duration: 0.3 });
-                    gsap.to('.hamburger-inner:last-child', { y: -7.5, rotate: -45, duration: 0.3 });
-                    gsap.to(links, { opacity: 1, y: 0, startAt: { y: 20 }, stagger: 0.1, duration: 0.8, ease: 'power3.out', delay: 0.2 });
-                    gsap.to('.mobile-nav-footer', { opacity: 1, duration: 1, delay: 0.6 });
+                    navbar.classList.add("menu-open");
+                    overlay.classList.remove("pointer-events-none");
+                    gsap.to(overlay, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: "power2.inOut",
+                    });
+                    gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
+                    gsap.to(".hamburger-inner:first-child", {
+                        y: 7.5,
+                        rotate: 45,
+                        duration: 0.3,
+                    });
+                    gsap.to(".hamburger-inner:last-child", {
+                        y: -7.5,
+                        rotate: -45,
+                        duration: 0.3,
+                    });
+                    gsap.to(links, {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 20 },
+                        stagger: 0.1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        delay: 0.2,
+                    });
+                    gsap.to(".mobile-nav-footer", {
+                        opacity: 1,
+                        duration: 1,
+                        delay: 0.6,
+                    });
                 } else {
-                    navbar.classList.remove('menu-open');
-                    overlay.classList.add('pointer-events-none');
-                    gsap.to(overlay, { opacity: 0, duration: 0.5, ease: 'power2.inOut' });
-                    gsap.to('.hamburger-inner-mid', { opacity: 1, duration: 0.2, delay: 0.1 });
-                    gsap.to('.hamburger-inner:first-child', { y: 0, rotate: 0, duration: 0.3 });
-                    gsap.to('.hamburger-inner:last-child', { y: 0, rotate: 0, duration: 0.3 });
+                    navbar.classList.remove("menu-open");
+                    overlay.classList.add("pointer-events-none");
+                    gsap.to(overlay, {
+                        opacity: 0,
+                        duration: 0.5,
+                        ease: "power2.inOut",
+                    });
+                    gsap.to(".hamburger-inner-mid", {
+                        opacity: 1,
+                        duration: 0.2,
+                        delay: 0.1,
+                    });
+                    gsap.to(".hamburger-inner:first-child", {
+                        y: 0,
+                        rotate: 0,
+                        duration: 0.3,
+                    });
+                    gsap.to(".hamburger-inner:last-child", {
+                        y: 0,
+                        rotate: 0,
+                        duration: 0.3,
+                    });
                     gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
-                    gsap.to('.mobile-nav-footer', { opacity: 0, duration: 0.3 });
+                    gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
                 }
             };
-            trigger.addEventListener('click', window.toggleMenu);
-            links.forEach(link => link.addEventListener('click', () => isMenuOpen && window.toggleMenu()));
+            trigger.addEventListener("click", window.toggleMenu);
+            links.forEach((link) =>
+                link.addEventListener(
+                    "click",
+                    () => isMenuOpen && window.toggleMenu(),
+                ),
+            );
 
             // About Scroll Logic
             const aboutTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: '#about',
-                    start: 'top top',
-                    end: '+=400%', // Reduced from 700% for a snappier, more natural feel
+                    trigger: "#about",
+                    start: "top top",
+                    end: "+=400%", // Reduced from 700% for a snappier, more natural feel
                     scrub: 1, // Smoother scrub
                     pin: true,
-                    anticipatePin: 1
-                }
+                    anticipatePin: 1,
+                },
             });
 
             // Text 1 fades out quickly
-            aboutTl.to('#about-content-1', {
-                opacity: 0,
-                y: -50,
-                duration: 0.5,
-                ease: 'power2.inOut'
-            }, 0);
+            aboutTl.to(
+                "#about-content-1",
+                {
+                    opacity: 0,
+                    y: -50,
+                    duration: 0.5,
+                    ease: "power2.inOut",
+                },
+                0,
+            );
 
             // Natural vertical parallax for gallery items
-            gsap.utils.toArray('.gallery-img-wrapper').forEach((img, i) => {
+            gsap.utils.toArray(".gallery-img-wrapper").forEach((img, i) => {
                 // Determine direction and speed based on position to create depth
                 // Elements near the edges move faster to clear the center
                 const isTop = img.style.top && parseInt(img.style.top) < 20;
@@ -707,18 +798,32 @@
                 const speedModifier = 0.5 + (i % 3) * 0.3;
                 yMovement *= speedModifier;
 
-                aboutTl.to(img, {
-                    y: yMovement,
-                    duration: 2,
-                    ease: 'power1.inOut'
-                }, 0);
+                aboutTl.to(
+                    img,
+                    {
+                        y: yMovement,
+                        duration: 2,
+                        ease: "power1.inOut",
+                    },
+                    0,
+                );
             });
 
             // Second text fades in after images have moved out of the way
-            aboutTl.fromTo('#about-content-2',
+            aboutTl.fromTo(
+                "#about-content-2",
                 { opacity: 0, y: 50 },
-                { opacity: 1, y: 0, duration: 1, ease: 'power2.out', onStart: () => document.getElementById('about-content-2').classList.remove('pointer-events-none') },
-                1.5 // Start fading in as images are clearing out
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    onStart: () =>
+                        document
+                            .getElementById("about-content-2")
+                            .classList.remove("pointer-events-none"),
+                },
+                1.5, // Start fading in as images are clearing out
             );
 
             // Hold the 2nd text state before unpinning
@@ -727,99 +832,132 @@
             // Services Scroll Transition Logic
             window.servicesTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: '#services',
-                    start: 'top top',
-                    end: '+=500%',
+                    trigger: "#services",
+                    start: "top top",
+                    end: "+=500%",
                     scrub: 0.8,
                     pin: true,
-                    anticipatePin: 1
-                }
+                    anticipatePin: 1,
+                },
             });
 
             // 1. Star fades in, scales, rotates
-            servicesTl.fromTo('#services-star',
+            servicesTl.fromTo(
+                "#services-star",
                 { opacity: 0, scale: 0.6, rotation: 0 },
                 {
                     opacity: 1,
                     scale: 1,
                     rotation: 90,
-                    ease: 'power3.out',
-                    duration: 1.5
-                }
+                    ease: "power3.out",
+                    duration: 1.5,
+                },
             );
 
             // 2. Star pulse outward, blur, opacity drop
-            servicesTl.to('#services-star', {
+            servicesTl.to("#services-star", {
                 scale: 1.2,
                 opacity: 0.15,
-                filter: 'blur(1px)',
-                ease: 'power1.inOut',
-                duration: 1
+                filter: "blur(1px)",
+                ease: "power1.inOut",
+                duration: 1,
             });
 
             // 3. Star moves to corner
-            servicesTl.to('#services-star', {
-                x: '40vw',
-                y: '-40vh',
-                scale: 2.5,
-                opacity: 0.05,
-                duration: 1.5,
-                ease: 'power2.inOut'
-            }, 'bgTransition');
+            servicesTl.to(
+                "#services-star",
+                {
+                    x: "40vw",
+                    y: "-40vh",
+                    scale: 2.5,
+                    opacity: 0.05,
+                    duration: 1.5,
+                    ease: "power2.inOut",
+                },
+                "bgTransition",
+            );
 
             // 4. Content fade in with stagger
-            servicesTl.to('.services-title', {
-                opacity: 1,
-                y: 0,
-                startAt: { y: 40 },
-                duration: 1,
-                ease: 'expo.out'
-            }, 'contentIn');
+            servicesTl.to(
+                ".services-title",
+                {
+                    opacity: 1,
+                    y: 0,
+                    startAt: { y: 40 },
+                    duration: 1,
+                    ease: "expo.out",
+                },
+                "contentIn",
+            );
 
-            servicesTl.to('.service-item', {
-                opacity: 1,
-                y: 0,
-                startAt: { y: 20 },
-                duration: 0.8,
-                stagger: 0.1,
-                ease: 'expo.out'
-            }, 'contentIn+=0.2');
+            servicesTl.to(
+                ".service-item",
+                {
+                    opacity: 1,
+                    y: 0,
+                    startAt: { y: 20 },
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "expo.out",
+                },
+                "contentIn+=0.2",
+            );
 
-            servicesTl.to('.services-image-container', {
-                opacity: 1,
-                x: 0,
-                startAt: { x: 80 },
-                duration: 1.2,
-                ease: 'expo.out'
-            }, 'contentIn+=0.4');
+            servicesTl.to(
+                ".services-image-container",
+                {
+                    opacity: 1,
+                    x: 0,
+                    startAt: { x: 80 },
+                    duration: 1.2,
+                    ease: "expo.out",
+                },
+                "contentIn+=0.4",
+            );
 
             // 5. Extra padding before unpinning
             servicesTl.to({}, { duration: 2 });
 
             // Industries Slider Logic
             let currentIndustry = 0;
-            const industrySlides = document.querySelectorAll('.industry-slide');
+            const industrySlides = document.querySelectorAll(".industry-slide");
             const totalIndustries = industrySlides.length;
             let isTransitioning = false;
 
-            const nextBtn = document.getElementById('next-industry');
-            const prevBtn = document.getElementById('prev-industry');
+            const nextBtn = document.getElementById("next-industry");
+            const prevBtn = document.getElementById("prev-industry");
 
             function updateNavStates() {
                 if (!prevBtn || !nextBtn) return;
 
                 // Hide/Show Prev Arrow
                 if (currentIndustry === 0) {
-                    gsap.to(prevBtn, { opacity: 0, pointerEvents: 'none', duration: 0.5 });
+                    gsap.to(prevBtn, {
+                        opacity: 0,
+                        pointerEvents: "none",
+                        duration: 0.5,
+                    });
                 } else {
-                    gsap.to(prevBtn, { opacity: 1, pointerEvents: 'auto', duration: 0.5 });
+                    gsap.to(prevBtn, {
+                        opacity: 1,
+                        pointerEvents: "auto",
+                        duration: 0.5,
+                    });
                 }
 
                 // Hide/Show Next Arrow
                 if (currentIndustry === totalIndustries - 1) {
-                    gsap.to(nextBtn, { opacity: 0, pointerEvents: 'none', duration: 0.5 });
+                    gsap.to(nextBtn, {
+                        opacity: 0,
+                        pointerEvents: "none",
+                        duration: 0.5,
+                    });
                 } else {
-                    gsap.to(nextBtn, { opacity: 1, pointerEvents: 'auto', duration: 0.5 });
+                    gsap.to(nextBtn, {
+                        opacity: 1,
+                        pointerEvents: "auto",
+                        duration: 0.5,
+                    });
                 }
             }
 
@@ -831,75 +969,97 @@
                 const nextSlide = industrySlides[index];
 
                 const slideWidth = 100;
-                const exitX = direction === 'next' ? -slideWidth : slideWidth;
-                const enterX = direction === 'next' ? slideWidth : -slideWidth;
+                const exitX = direction === "next" ? -slideWidth : slideWidth;
+                const enterX = direction === "next" ? slideWidth : -slideWidth;
 
                 const tl = gsap.timeline({
                     onComplete: () => {
-                        currentSlide.classList.remove('z-10');
-                        currentSlide.classList.add('z-0');
+                        currentSlide.classList.remove("z-10");
+                        currentSlide.classList.add("z-0");
                         isTransitioning = false;
                         updateNavStates();
-                    }
+                    },
                 });
 
                 // Prepare next slide
                 gsap.set(nextSlide, { xPercent: enterX, opacity: 1, zIndex: 10 });
-                gsap.set(nextSlide.querySelector('.slide-bg'), { xPercent: -enterX * 0.3 }); // Parallax start
-                gsap.set(nextSlide.querySelectorAll('p, h2'), { y: 40, opacity: 0 });
+                gsap.set(nextSlide.querySelector(".slide-bg"), {
+                    xPercent: -enterX * 0.3,
+                }); // Parallax start
+                gsap.set(nextSlide.querySelectorAll("p, h2"), { y: 40, opacity: 0 });
 
                 // Animate Out
-                tl.to(currentSlide, {
-                    xPercent: exitX,
-                    duration: 1.4,
-                    ease: 'expo.inOut'
-                }, 0);
+                tl.to(
+                    currentSlide,
+                    {
+                        xPercent: exitX,
+                        duration: 1.4,
+                        ease: "expo.inOut",
+                    },
+                    0,
+                );
 
-                tl.to(currentSlide.querySelector('.slide-bg'), {
-                    xPercent: -exitX * 0.3,
-                    duration: 1.4,
-                    ease: 'expo.inOut'
-                }, 0);
+                tl.to(
+                    currentSlide.querySelector(".slide-bg"),
+                    {
+                        xPercent: -exitX * 0.3,
+                        duration: 1.4,
+                        ease: "expo.inOut",
+                    },
+                    0,
+                );
 
                 // Animate In
-                tl.to(nextSlide, {
-                    xPercent: 0,
-                    duration: 1.4,
-                    ease: 'expo.inOut',
-                    onStart: () => {
-                        nextSlide.classList.remove('z-0');
-                        nextSlide.classList.add('z-10');
-                    }
-                }, 0);
+                tl.to(
+                    nextSlide,
+                    {
+                        xPercent: 0,
+                        duration: 1.4,
+                        ease: "expo.inOut",
+                        onStart: () => {
+                            nextSlide.classList.remove("z-0");
+                            nextSlide.classList.add("z-10");
+                        },
+                    },
+                    0,
+                );
 
-                tl.to(nextSlide.querySelector('.slide-bg'), {
-                    xPercent: 0,
-                    duration: 1.4,
-                    ease: 'expo.inOut'
-                }, 0);
+                tl.to(
+                    nextSlide.querySelector(".slide-bg"),
+                    {
+                        xPercent: 0,
+                        duration: 1.4,
+                        ease: "expo.inOut",
+                    },
+                    0,
+                );
 
                 // Staggered Text Reveal
-                tl.to(nextSlide.querySelectorAll('p, h2'), {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1,
-                    stagger: 0.1,
-                    ease: 'power3.out'
-                }, 0.6);
+                tl.to(
+                    nextSlide.querySelectorAll("p, h2"),
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.1,
+                        ease: "power3.out",
+                    },
+                    0.6,
+                );
 
                 currentIndustry = index;
             }
 
             if (nextBtn && prevBtn) {
-                nextBtn.addEventListener('click', () => {
+                nextBtn.addEventListener("click", () => {
                     if (currentIndustry < totalIndustries - 1) {
-                        goToSlide(currentIndustry + 1, 'next');
+                        goToSlide(currentIndustry + 1, "next");
                     }
                 });
 
-                prevBtn.addEventListener('click', () => {
+                prevBtn.addEventListener("click", () => {
                     if (currentIndustry > 0) {
-                        goToSlide(currentIndustry - 1, 'prev');
+                        goToSlide(currentIndustry - 1, "prev");
                     }
                 });
             }
@@ -911,167 +1071,322 @@
             // Industries Reveal Animation
             const industriesRevealTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: '#industries',
-                    start: 'top bottom',
-                    end: 'bottom top',
+                    trigger: "#industries",
+                    start: "top bottom",
+                    end: "bottom top",
                     scrub: true,
-                }
+                },
             });
-            industriesRevealTl.fromTo('.industries-slider-wrapper',
+            industriesRevealTl.fromTo(
+                ".industries-slider-wrapper",
                 { scale: 0.9, y: 100 },
-                { scale: 1, y: 0, duration: 1, ease: 'expo.out' }
+                { scale: 1, y: 0, duration: 1, ease: "expo.out" },
             );
 
-            gsap.utils.toArray('.slide-bg').forEach((bg, i) => {
-                gsap.fromTo(bg,
+            gsap.utils.toArray(".slide-bg").forEach((bg, i) => {
+                gsap.fromTo(
+                    bg,
                     { scale: 1.2 },
                     {
                         scale: 1,
-                        ease: 'none',
+                        ease: "none",
                         scrollTrigger: {
-                            trigger: '#industries',
-                            start: 'top bottom',
-                            end: 'bottom top',
-                            scrub: true
-                        }
-                    }
+                            trigger: "#industries",
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: true,
+                        },
+                    },
                 );
             });
 
             // Process Scroll Logic
-            const processIntroTl = gsap.timeline({ scrollTrigger: { trigger: '#process', start: 'top 110%', toggleActions: 'play none none none' } });
-            processIntroTl.to('.process-ornament', { opacity: 1, scale: 1, startAt: { scale: 0.8 }, duration: 1, ease: 'expo.out' })
-                .to('.process-header-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' }, '-=0.8')
-                .to('.process-header-text', { opacity: 1, y: 0, startAt: { y: 20 }, duration: 1, ease: 'expo.out' }, '-=0.8');
+            const processIntroTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#process",
+                    start: "top 110%",
+                    toggleActions: "play none none none",
+                },
+            });
+            processIntroTl
+                .to(".process-ornament", {
+                    opacity: 1,
+                    scale: 1,
+                    startAt: { scale: 0.8 },
+                    duration: 1,
+                    ease: "expo.out",
+                })
+                .to(
+                    ".process-header-title",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 30 },
+                        duration: 1.2,
+                        ease: "expo.out",
+                    },
+                    "-=0.8",
+                )
+                .to(
+                    ".process-header-text",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 20 },
+                        duration: 1,
+                        ease: "expo.out",
+                    },
+                    "-=0.8",
+                );
 
             // Initial States for Process Pinnable
-            gsap.set('.process-bg-2, .process-bg-3', { xPercent: 101 }); // Small buffer
-            gsap.set('.process-bg-wrapper .process-bg', { scale: 1.2 });
+            gsap.set(".process-bg-2, .process-bg-3", { xPercent: 101 }); // Small buffer
+            gsap.set(".process-bg-wrapper .process-bg", { scale: 1.2 });
 
             const processPinTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: '#process-pin-container',
-                    start: 'top top',
-                    end: '+=600%', // More runway
+                    trigger: "#process-pin-container",
+                    start: "top top",
+                    end: "+=600%", // More runway
                     pin: true,
-                    scrub: 0.8
-                }
+                    scrub: 0.8,
+                },
             });
 
             // Global Background Zoom-out
-            processPinTl.to('.process-bg-wrapper .process-bg',
-                { scale: 1, duration: 10, ease: 'none' }, 0);
+            processPinTl.to(
+                ".process-bg-wrapper .process-bg",
+                { scale: 1, duration: 10, ease: "none" },
+                0,
+            );
 
             // Phase 1 (Design) OUT
-            processPinTl.to('.phase-design span, .phase-design h3, .phase-design div', {
-                y: -50,
-                opacity: 0,
-                stagger: 0.1,
-                duration: 2,
-                ease: 'power2.in'
-            }, 0.5);
+            processPinTl.to(
+                ".phase-design span, .phase-design h3, .phase-design div",
+                {
+                    y: -50,
+                    opacity: 0,
+                    stagger: 0.1,
+                    duration: 2,
+                    ease: "power2.in",
+                },
+                0.5,
+            );
 
             // Phase 2 (Production) IN + Background Slide
-            processPinTl.to('.process-bg-2', {
-                xPercent: 0,
-                duration: 3,
-                ease: 'expo.inOut'
-            }, 1)
-                .fromTo('.process-bg-2 .process-bg',
+            processPinTl
+                .to(
+                    ".process-bg-2",
+                    {
+                        xPercent: 0,
+                        duration: 3,
+                        ease: "expo.inOut",
+                    },
+                    1,
+                )
+                .fromTo(
+                    ".process-bg-2 .process-bg",
                     { xPercent: 30 },
-                    { xPercent: 0, duration: 3, ease: 'expo.inOut' }, 1)
-                .to('.phase-production', { opacity: 1, duration: 0.5 }, 2)
-                .fromTo('.phase-production span, .phase-production h3, .phase-production div',
+                    { xPercent: 0, duration: 3, ease: "expo.inOut" },
+                    1,
+                )
+                .to(".phase-production", { opacity: 1, duration: 0.5 }, 2)
+                .fromTo(
+                    ".phase-production span, .phase-production h3, .phase-production div",
                     { y: 50, opacity: 0 },
-                    { y: 0, opacity: 1, stagger: 0.1, duration: 1.5, ease: 'power3.out' }, 2.5)
+                    {
+                        y: 0,
+                        opacity: 1,
+                        stagger: 0.1,
+                        duration: 1.5,
+                        ease: "power3.out",
+                    },
+                    2.5,
+                )
                 .to({}, { duration: 2 }); // Pause
 
             // Phase 2 (Production) OUT
-            processPinTl.to('.phase-production span, .phase-production h3, .phase-production div', {
-                y: -50,
-                opacity: 0,
-                stagger: 0.1,
-                duration: 2,
-                ease: 'power2.in'
-            }, 5.5);
+            processPinTl.to(
+                ".phase-production span, .phase-production h3, .phase-production div",
+                {
+                    y: -50,
+                    opacity: 0,
+                    stagger: 0.1,
+                    duration: 2,
+                    ease: "power2.in",
+                },
+                5.5,
+            );
 
             // Phase 3 (Digitalization) IN + Background Slide
-            processPinTl.to('.process-bg-3', {
-                xPercent: 0,
-                duration: 3,
-                ease: 'expo.inOut'
-            }, 6)
-                .fromTo('.process-bg-3 .process-bg',
+            processPinTl
+                .to(
+                    ".process-bg-3",
+                    {
+                        xPercent: 0,
+                        duration: 3,
+                        ease: "expo.inOut",
+                    },
+                    6,
+                )
+                .fromTo(
+                    ".process-bg-3 .process-bg",
                     { xPercent: 30 },
-                    { xPercent: 0, duration: 3, ease: 'expo.inOut' }, 6)
-                .to('.phase-digitalization', { opacity: 1, duration: 0.5 }, 7)
-                .fromTo('.phase-digitalization span, .phase-digitalization h3, .phase-digitalization div',
+                    { xPercent: 0, duration: 3, ease: "expo.inOut" },
+                    6,
+                )
+                .to(".phase-digitalization", { opacity: 1, duration: 0.5 }, 7)
+                .fromTo(
+                    ".phase-digitalization span, .phase-digitalization h3, .phase-digitalization div",
                     { y: 50, opacity: 0 },
-                    { y: 0, opacity: 1, stagger: 0.1, duration: 1.5, ease: 'power3.out' }, 7.5);
+                    {
+                        y: 0,
+                        opacity: 1,
+                        stagger: 0.1,
+                        duration: 1.5,
+                        ease: "power3.out",
+                    },
+                    7.5,
+                );
 
             // Journal Scroll Logic
-            const journalTl = gsap.timeline({ scrollTrigger: { trigger: '#journal', start: 'top 80%', toggleActions: 'play none none none' } });
-            journalTl.to('.journal-title', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' })
-                .to('.journal-view-all', { opacity: 1, x: 0, startAt: { x: 20 }, duration: 1, ease: 'expo.out' }, '-=0.8')
-                .to('.journal-item', { opacity: 1, y: 0, startAt: { y: 40 }, duration: 1, stagger: 0.2, ease: 'expo.out' }, '-=0.6');
+            const journalTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#journal",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+            });
+            journalTl
+                .to(".journal-title", {
+                    opacity: 1,
+                    y: 0,
+                    startAt: { y: 30 },
+                    duration: 1.2,
+                    ease: "expo.out",
+                })
+                .to(
+                    ".journal-view-all",
+                    {
+                        opacity: 1,
+                        x: 0,
+                        startAt: { x: 20 },
+                        duration: 1,
+                        ease: "expo.out",
+                    },
+                    "-=0.8",
+                )
+                .to(
+                    ".journal-item",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 40 },
+                        duration: 1,
+                        stagger: 0.2,
+                        ease: "expo.out",
+                    },
+                    "-=0.6",
+                );
 
             // OSE Scroll Logic
-            gsap.to('.ose-blue-gradient', {
-                opacity: 1, ease: 'none',
-                scrollTrigger: { trigger: '#ose-spacer', start: 'top 40%', end: 'center center', scrub: true }
+            gsap.to(".ose-blue-gradient", {
+                opacity: 1,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#ose-spacer",
+                    start: "top 40%",
+                    end: "center center",
+                    scrub: true,
+                },
             });
-            const oseTl = gsap.timeline({ scrollTrigger: { trigger: '#ose-spacer', start: 'top 40%', toggleActions: 'play none none none' } });
-            oseTl.to('.ose-final-ornament', { opacity: 0.3, scale: 1, startAt: { scale: 0.8 }, duration: 2, ease: 'expo.out' })
-                .to('.ose-cta-title', { opacity: 1, y: 0, startAt: { y: 50 }, duration: 1.5, ease: 'expo.out' }, '-=1.5')
-                .to('.ose-cta-button', { opacity: 1, y: 0, startAt: { y: 30 }, duration: 1.2, ease: 'expo.out' }, '-=1');
+            const oseTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#ose-spacer",
+                    start: "top 40%",
+                    toggleActions: "play none none none",
+                },
+            });
+            oseTl
+                .to(".ose-final-ornament", {
+                    opacity: 0.3,
+                    scale: 1,
+                    startAt: { scale: 0.8 },
+                    duration: 2,
+                    ease: "expo.out",
+                })
+                .to(
+                    ".ose-cta-title",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 50 },
+                        duration: 1.5,
+                        ease: "expo.out",
+                    },
+                    "-=1.5",
+                )
+                .to(
+                    ".ose-cta-button",
+                    {
+                        opacity: 1,
+                        y: 0,
+                        startAt: { y: 30 },
+                        duration: 1.2,
+                        ease: "expo.out",
+                    },
+                    "-=1",
+                );
 
             // Footer Reveal Logic
-            const footerReveal = document.getElementById('footer-reveal');
-            const footerSpacer = document.getElementById('footer-spacer');
-            const oseSection = document.getElementById('ose');
+            const footerReveal = document.getElementById("footer-reveal");
+            const footerSpacer = document.getElementById("footer-spacer");
+            const oseSection = document.getElementById("ose");
 
             if (footerReveal && footerSpacer && oseSection) {
                 const updateFooterSpacer = () => {
-                    footerSpacer.style.height = footerReveal.offsetHeight + 'px';
+                    footerSpacer.style.height = footerReveal.offsetHeight + "px";
                 };
                 updateFooterSpacer();
-                window.addEventListener('resize', updateFooterSpacer);
+                window.addEventListener("resize", updateFooterSpacer);
 
                 // Re-parallax OSE up to reveal the Footer behind it
                 gsap.to(oseSection, {
                     y: () => -footerReveal.offsetHeight,
-                    ease: 'none',
+                    ease: "none",
                     scrollTrigger: {
-                        trigger: '#footer-spacer',
-                        start: 'top bottom',
-                        end: 'bottom bottom',
+                        trigger: "#footer-spacer",
+                        start: "top bottom",
+                        end: "bottom bottom",
                         scrub: true,
-                        invalidateOnRefresh: true
-                    }
+                        invalidateOnRefresh: true,
+                    },
                 });
 
                 // Reveal Animation for Internal Footer items
-                gsap.to('#footer-reveal > div', {
+                gsap.to("#footer-reveal > div", {
                     y: 0,
                     opacity: 1,
-                    ease: 'none',
+                    ease: "none",
                     scrollTrigger: {
-                        trigger: '#footer-spacer',
-                        start: 'top bottom',
-                        end: 'bottom bottom',
-                        scrub: true
-                    }
+                        trigger: "#footer-spacer",
+                        start: "top bottom",
+                        end: "bottom bottom",
+                        scrub: true,
+                    },
                 });
             }
 
             // Create hover interaction for Services
-            const serviceItems = document.querySelectorAll('.service-item');
-            const serviceDisplayImage = document.getElementById('service-display-image');
+            const serviceItems = document.querySelectorAll(".service-item");
+            const serviceDisplayImage = document.getElementById(
+                "service-display-image",
+            );
 
             if (serviceItems.length > 0 && serviceDisplayImage) {
-                serviceItems.forEach(item => {
-                    item.addEventListener('mouseenter', function () {
-                        const newImgSrc = this.getAttribute('data-service-image');
+                serviceItems.forEach((item) => {
+                    item.addEventListener("mouseenter", function () {
+                        const newImgSrc = this.getAttribute("data-service-image");
                         if (newImgSrc && serviceDisplayImage.src !== newImgSrc) {
                             // Smooth crossfade using GSAP
                             gsap.to(serviceDisplayImage, {
@@ -1080,7 +1395,7 @@
                                 onComplete: () => {
                                     serviceDisplayImage.src = newImgSrc;
                                     gsap.to(serviceDisplayImage, { opacity: 1, duration: 0.4 });
-                                }
+                                },
                             });
                         }
                     });
@@ -1090,7 +1405,6 @@
             // Smooth Scroll Setup for Anchor Links using GSAP ScrollToPlugin
             // This is required because native hash navigation breaks when ScrollTrigger pins add phantom vertical space.
             // REMOVED: Conflicting with app.js Lenis implementation
-
         });
     </script>
 
@@ -1201,18 +1515,19 @@
 
         #about-content-1 h2,
         #about-content-2 p {
-            text-shadow: 0 0 40px rgba(255, 255, 255, 1),
+            text-shadow:
+                0 0 40px rgba(255, 255, 255, 1),
                 0 0 20px rgba(255, 255, 255, 0.8),
                 0 0 10px rgba(255, 255, 255, 0.4);
         }
 
         .active-service span {
-            color: #1B1B18 !important;
+            color: #1b1b18 !important;
         }
 
         .active-service h4 {
             transform: translateX(0.5rem);
-            color: #1B1B18 !important;
+            color: #1b1b18 !important;
         }
 
         /* Navbar States */
@@ -1226,7 +1541,7 @@
         }
 
         .nav-dark #navbar-container {
-            color: #1B1B18 !important;
+            color: #1b1b18 !important;
             background: rgba(245, 241, 232, 0.8);
             border-bottom-color: rgba(27, 27, 24, 0.05);
         }
@@ -1238,12 +1553,14 @@
 
         .nav-dark .hamburger-inner,
         .nav-dark .hamburger-inner-mid {
-            background-color: #1B1B18 !important;
+            background-color: #1b1b18 !important;
         }
 
         /* Industries Slider Styles */
         .industry-slide {
-            transition: opacity 0.8s ease, filter 0.8s ease;
+            transition:
+                opacity 0.8s ease,
+                filter 0.8s ease;
             will-change: transform, opacity, filter;
         }
 
