@@ -60,7 +60,7 @@
                     </a>
                 </div>
 
-                <button id="mobile-menu-trigger" class="nav-item opacity-0 block lg:hidden focus:outline-none z-[110]">
+                <button id="mobile-menu-trigger" class="nav-item opacity-0 block lg:hidden focus:outline-none z-[120]">
                     <div class="hamburger-box w-6 h-4 relative">
                         <span
                             class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"></span>
@@ -702,15 +702,18 @@
                     });
                     gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
                     gsap.to(".hamburger-inner:first-child", {
-                        y: 7.5,
+                        y: 8,
                         rotate: 45,
                         duration: 0.3,
                     });
                     gsap.to(".hamburger-inner:last-child", {
-                        y: -7.5,
+                        y: -8,
                         rotate: -45,
                         duration: 0.3,
                     });
+                    // Change line color to dark so it's visible on light bg
+                    gsap.to(".hamburger-inner", { backgroundColor: "#111111", duration: 0.3 });
+
                     gsap.to(links, {
                         opacity: 1,
                         y: 0,
@@ -748,6 +751,8 @@
                         rotate: 0,
                         duration: 0.3,
                     });
+                    // Restore line color
+                    gsap.to(".hamburger-inner", { clearProps: "backgroundColor", duration: 0.3 });
                     gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
                     gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
                 }

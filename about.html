@@ -56,7 +56,7 @@
           </a>
         </div>
 
-        <button id="mobile-menu-trigger" class="nav-item block lg:hidden focus:outline-none z-[110]">
+        <button id="mobile-menu-trigger" class="nav-item block lg:hidden focus:outline-none z-[120]">
           <div class="hamburger-box w-6 h-4 relative text-[#023666]">
             <span
               class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"></span>
@@ -311,6 +311,94 @@
     }
   </script>
 
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const trigger = document.getElementById("mobile-menu-trigger");
+      const overlay = document.getElementById("mobile-menu-overlay");
+      const navbar = document.getElementById("global-navbar");
+      const links = document.querySelectorAll(".mobile-nav-link");
+      let isMenuOpen = false;
+
+      window.toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          navbar.classList.add("menu-open");
+          overlay.classList.remove("pointer-events-none");
+          gsap.to(overlay, {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+          gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
+          gsap.to(".hamburger-inner:first-child", {
+            y: 8,
+            rotate: 45,
+            duration: 0.3,
+          });
+          gsap.to(".hamburger-inner:last-child", {
+            y: -8,
+            rotate: -45,
+            duration: 0.3,
+          });
+          // Fix icon color for mobile overlay vs light navbar
+          gsap.to(".hamburger-inner", { backgroundColor: "#111111", duration: 0.3 });
+
+          gsap.to(links, {
+            opacity: 1,
+            y: 0,
+            startAt: { y: 20 },
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power3.out",
+            delay: 0.2,
+          });
+          gsap.to(".mobile-nav-footer", {
+            opacity: 1,
+            duration: 1,
+            delay: 0.6,
+          });
+        } else {
+          navbar.classList.remove("menu-open");
+          overlay.classList.add("pointer-events-none");
+          gsap.to(overlay, {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+          gsap.to(".hamburger-inner-mid", {
+            opacity: 1,
+            duration: 0.2,
+            delay: 0.1,
+          });
+          gsap.to(".hamburger-inner:first-child", {
+            y: 0,
+            rotate: 0,
+            duration: 0.3,
+          });
+          gsap.to(".hamburger-inner:last-child", {
+            y: 0,
+            rotate: 0,
+            duration: 0.3,
+          });
+          // Restore original icon color
+          gsap.to(".hamburger-inner", { clearProps: "backgroundColor", duration: 0.3 });
+
+          gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
+          gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
+        }
+      };
+
+      if (trigger) {
+        trigger.addEventListener("click", window.toggleMenu);
+      }
+      links.forEach((link) =>
+        link.addEventListener("click", () => {
+          if (isMenuOpen) window.toggleMenu();
+        })
+      );
+    });
+  </script>
 
   <!-- Footer -->
   <footer
