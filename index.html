@@ -47,8 +47,8 @@
             <nav
                 class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-radley uppercase hidden lg:flex">
                 <a href="/about" class="nav-item opacity-0 hover:text-white transition-colors">About</a>
-                <a href="/portfolio.html" class="nav-item opacity-0 hover:text-white transition-colors">Works</a>
-                <a href="#journal" class="nav-item opacity-0 hover:text-white transition-colors">Archive</a>
+                <a href="/portfolio" class="nav-item opacity-0 hover:text-white transition-colors">Works</a>
+                <a href="/journal" class="nav-item opacity-0 hover:text-white transition-colors">Archive</a>
             </nav>
 
             <!-- Right Side: Contact & Hamburger -->
@@ -79,8 +79,8 @@
             class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center">
             <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-radley text-[#1B1B18] uppercase">
                 <a href="/about" class="mobile-nav-link opacity-0">About</a>
-                <a href="/portfolio.html" class="mobile-nav-link opacity-0">Works</a>
-                <a href="#archive" class="mobile-nav-link opacity-0">Archive</a>
+                <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
+                <a href="/journal" class="mobile-nav-link opacity-0">Archive</a>
                 <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
             </nav>
 
@@ -132,14 +132,98 @@
 
         <!-- About Section -->
         <section id="about" class="relative bg-[#F5F1E8]" style="z-index: 50">
-            <div id="about-container" class="relative w-full min-h-[250vh]">
-                <!-- Central Content Column (Safe Zone) -->
-                <div
-                    class="about-safe-zone relative mx-auto w-full md:w-[50%] lg:w-[45%] h-full flex flex-col items-center">
+            <!-- Desktop: min 200vh, Mobile: 150vh -->
+            <div id="about-container" class="relative w-full" style="min-height: 200vh;">
 
-                    <!-- Content Block 1 -->
-                    <div
-                        class="about-content-block h-screen flex flex-col items-center justify-center text-center px-6">
+                <!-- Floating Images Container (Desktop only) -->
+                <div class="about-images-wrapper absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
+                    <!-- Left side images -->
+                    <div class="floating-img-item" data-depth="1.1" style="top: 8%; left: 3%; width: 280px;">
+                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                    <div class="floating-img-item" data-depth="0.4" style="top: 48%; left: 6%; width: 240px;">
+                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                    <div class="floating-img-item" data-depth="0.7" style="top: 82%; left: 2%; width: 260px;">
+                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                    <!-- Right side images -->
+                    <div class="floating-img-item" data-depth="0.7" style="top: 5%; right: 4%; width: 260px;">
+                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                    <div class="floating-img-item" data-depth="1.1" style="top: 42%; right: 8%; width: 240px;">
+                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                    <div class="floating-img-item" data-depth="0.4" style="top: 78%; right: 3%; width: 280px;">
+                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto shadow-2xl" />
+                    </div>
+                </div>
+
+                <!-- ══════ MOBILE ABOUT LAYOUT ══════ -->
+                <div id="about-mobile" class="md:hidden w-full px-6 py-12 space-y-10">
+                    <!-- Ornament -->
+                    <div class="flex justify-center">
+                        <svg viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 aspect-square">
+                            <g clip-path="url(#clip0_about_m)">
+                                <path d="M54.9408 38.9644H52.9609V0.000488281L54.9408 0.000488369V38.9644Z"
+                                    fill="#B99668" />
+                                <path d="M54.9408 108.9H52.9609V69.9357H54.9408V108.9Z" fill="#B99668" />
+                                <path d="M69.293 55.4491V53.4509H107.899V55.4491H69.293Z" fill="#B99668" />
+                                <path d="M0 55.4491L1.73082e-07 53.4509H38.6064V55.4491H0Z" fill="#B99668" />
+                                <path
+                                    d="M61.3003 48.4452L59.9004 47.0323L76.6997 30.0774L78.0997 31.4903L61.3003 48.4452Z"
+                                    fill="#B99668" />
+                                <path d="M31.2007 78.8225L29.8008 77.4096L46.6001 60.4547L48 61.8677L31.2007 78.8225Z"
+                                    fill="#B99668" />
+                                <path
+                                    d="M59.9004 61.8677L61.3003 60.4548L78.0997 77.4096L76.6997 78.8225L59.9004 61.8677Z"
+                                    fill="#B99668" />
+                                <path d="M29.8008 31.4902L31.2007 30.0773L48 47.0322L46.6 48.445L29.8008 31.4902Z"
+                                    fill="#B99668" />
+                                <path
+                                    d="M62.35 53.4363L53.9504 61.9137L45.5508 53.4363L53.9504 44.9589L62.35 53.4363ZM48.3506 53.4363L53.9504 59.0879L59.5502 53.4363L53.9504 47.7846L48.3506 53.4363Z"
+                                    fill="#B99668" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_about_m">
+                                    <rect width="107.9" height="108.899" fill="white"
+                                        transform="translate(0 0.000488281)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!-- Title -->
+                    <h2 class="text-3xl font-radley text-[#1B1B18] font-normal leading-tight text-center">
+                        Crafted in Saudi.<br />Refined Worldwide.
+                    </h2>
+                    <!-- Image 1 -->
+                    <img src="/assets/img/about-1.png" alt="ARKAN hospitality"
+                        class="w-full h-auto rounded-xl shadow-lg" />
+                    <!-- Description -->
+                    <p class="text-sm font-manrope tracking-wide text-[#555] leading-relaxed text-center">
+                        ARKAN is a Saudi based luxury hospitality company combining
+                        leading hospitality production capabilities with exceptional
+                        design talent. We craft premium amenities with a focus on
+                        quality, precision, and international standards.
+                    </p>
+                    <!-- Image Grid (2 side-by-side) -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="/assets/img/about-3.png" alt=""
+                            class="w-full h-48 object-cover rounded-lg shadow-md" />
+                        <img src="/assets/img/about-4.png" alt=""
+                            class="w-full h-48 object-cover rounded-lg shadow-md" />
+                    </div>
+                    <!-- Image 2 -->
+                    <img src="/assets/img/about-2.png" alt="ARKAN craftsmanship"
+                        class="w-full h-auto rounded-xl shadow-lg" />
+                </div>
+
+                <!-- ══════ DESKTOP STICKY CONTENT ══════ -->
+                <div class="about-sticky-content hidden md:block">
+                    <!-- Title (Content Block 1) -->
+                    <div id="about-content-1"
+                        class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
                         <div class="about-ornament flex justify-center items-center mb-12 scale-[0.8] md:scale-100">
                             <svg viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="w-20 md:w-24 aspect-square">
@@ -178,9 +262,10 @@
                         </h2>
                     </div>
 
-                    <!-- Content Block 2 -->
-                    <div
-                        class="about-content-block h-screen flex flex-col items-center justify-center text-center px-6">
+                    <!-- Subtitle (Content Block 2) -->
+                    <div id="about-content-2"
+                        class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
+                        style="opacity: 0;">
                         <div class="max-w-xl mx-auto">
                             <p
                                 class="about-text text-base md:text-lg font-manrope tracking-wide text-[#333333] leading-relaxed">
@@ -192,40 +277,6 @@
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Floating Images (Left Side) -->
-                <div
-                    class="about-floating-images left-zone absolute inset-y-0 left-0 w-[25%] pointer-events-none hidden md:block">
-                    <div class="floating-img-item" data-speed="0.15" style="top: 10%; left: 5%;">
-                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                    <div class="floating-img-item" data-speed="0.25" style="top: 55%; left: 15%;">
-                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                    <div class="floating-img-item" data-speed="0.2" style="top: 95%; left: 10%;">
-                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                </div>
-
-                <!-- Floating Images (Right Side) -->
-                <div
-                    class="about-floating-images right-zone absolute inset-y-0 right-0 w-[25%] pointer-events-none hidden md:block">
-                    <div class="floating-img-item" data-speed="0.25" style="top: 5%; right: 5%;">
-                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                    <div class="floating-img-item" data-speed="0.15" style="top: 45%; right: 15%;">
-                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                    <div class="floating-img-item" data-speed="0.3" style="top: 85%; right: 10%;">
-                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
-                    </div>
-                </div>
-
-                <!-- Mobile Images (Stacked) -->
-                <div class="md:hidden w-full px-6 space-y-8 py-12">
-                    <img src="/assets/img/about-1.png" alt="" class="w-full h-auto shadow-xl" />
-                    <img src="/assets/img/about-4.png" alt="" class="w-full h-auto shadow-xl" />
                 </div>
             </div>
         </section>
@@ -516,8 +567,8 @@
                             <div class="process-bg w-full h-full overflow-hidden">
                                 <div class="absolute inset-[-75%] flex items-center justify-center">
                                     <iframe
-                                        src="https://www.youtube.com/embed/2v_7UH_nLv4?autoplay=1&mute=1&loop=1&playlist=2v_7UH_nLv4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-                                        class="w-full h-full border-0 pointer-events-none"
+                                        data-src="https://www.youtube.com/embed/2v_7UH_nLv4?autoplay=1&mute=1&loop=1&playlist=2v_7UH_nLv4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                                        class="w-full h-full border-0 pointer-events-none yt-lazy" loading="lazy"
                                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
                             </div>
@@ -974,45 +1025,60 @@
                 ),
             );
 
-            // About Smooth Scroll Parallax (Vanilla JS)
-            const aboutSection = document.getElementById('about');
-            const floatingImages = document.querySelectorAll('.floating-img-item');
+            // About Section Scroll Engine (lightweight, scroll-throttled)
+            (function () {
+                const container = document.getElementById('about-container');
+                const content1 = document.getElementById('about-content-1');
+                const content2 = document.getElementById('about-content-2');
+                const floatingImgs = document.querySelectorAll('.floating-img-item');
+                const isMobile = window.innerWidth < 768;
 
-            if (aboutSection && floatingImages.length > 0) {
-                let lastScrollY = window.scrollY;
+                if (!container || !content1 || !content2) return;
+
+                // Pre-cache depth values
+                const depths = [];
+                floatingImgs.forEach(img => {
+                    depths.push((parseFloat(img.dataset.depth) || 0.7) * (isMobile ? 0.15 : 0.3));
+                });
+
                 let ticking = false;
 
-                const updateParallax = () => {
-                    const sectionRect = aboutSection.getBoundingClientRect();
-                    const sectionTop = sectionRect.top;
-                    const sectionHeight = sectionRect.height;
-                    const viewportHeight = window.innerHeight;
+                function update() {
+                    const rect = container.getBoundingClientRect();
+                    const vh = window.innerHeight;
+                    const scrollable = rect.height - vh;
 
-                    // Only run when section is visible
-                    if (sectionTop < viewportHeight && sectionTop > -sectionHeight) {
-                        const distanceScrolled = viewportHeight - sectionTop;
+                    if (scrollable <= 0) { ticking = false; return; }
 
-                        floatingImages.forEach(img => {
-                            const speed = parseFloat(img.getAttribute('data-speed')) || 0.2;
-                            // Use transform: translateY() only for performance
-                            // Offset movement based on speed and distance from viewport top
-                            const yPos = distanceScrolled * speed * -0.5;
-                            img.style.transform = `translate3d(0, ${yPos}px, 0)`;
-                        });
+                    // Scroll progress 0–1
+                    const p = Math.max(0, Math.min(1, -rect.top / scrollable));
+
+                    // Text cross-fade (30%–70%)
+                    const t = p <= 0.3 ? 0 : p >= 0.7 ? 1 : (p - 0.3) / 0.4;
+                    content1.style.opacity = 1 - t;
+                    content2.style.opacity = t;
+
+                    // Image parallax (only if visible)
+                    if (rect.top < vh && rect.bottom > 0) {
+                        const dist = vh - rect.top;
+                        for (let i = 0; i < floatingImgs.length; i++) {
+                            floatingImgs[i].style.transform = `translate3d(0,${-(dist * depths[i])}px,0)`;
+                        }
                     }
-                    ticking = false;
-                };
 
-                window.addEventListener('scroll', () => {
+                    ticking = false;
+                }
+
+                window.addEventListener('scroll', function () {
                     if (!ticking) {
-                        window.requestAnimationFrame(updateParallax);
                         ticking = true;
+                        requestAnimationFrame(update);
                     }
                 }, { passive: true });
 
-                // Initial call
-                updateParallax();
-            }
+                // Initial
+                update();
+            })();
 
 
             // Services Scroll Transition Logic
@@ -1687,8 +1753,6 @@
 
         .floating-img-item {
             position: absolute;
-            width: 80%;
-            max-width: 320px;
             will-change: transform;
         }
 
@@ -1697,26 +1761,36 @@
             height: auto;
             display: block;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-            opacity: 1 !important;
-            filter: none !important;
         }
 
-        .about-safe-zone {
-            z-index: 20;
-        }
-
-        .about-content-block {
+        .about-sticky-content {
             position: sticky;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            height: 100vh;
+            margin: 0 auto;
+            z-index: 20;
+            pointer-events: none;
         }
 
+        #about-content-1,
+        #about-content-2 {
+            will-change: opacity;
+        }
 
         #about-content-1 h2,
         #about-content-2 p {
             text-shadow:
-                0 0 40px rgba(255, 255, 255, 1),
-                0 0 20px rgba(255, 255, 255, 0.8),
-                0 0 10px rgba(255, 255, 255, 0.4);
+                0 0 40px rgba(245, 241, 232, 1),
+                0 0 20px rgba(245, 241, 232, 0.8),
+                0 0 60px rgba(245, 241, 232, 0.6);
+        }
+
+        @media (max-width: 767px) {
+            #about-container {
+                min-height: auto !important;
+            }
         }
 
         .active-service span {
