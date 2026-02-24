@@ -148,12 +148,14 @@ if (navbar) {
     }
 }
 
-// Loader Animation
+// ══════════════════════════════════════════════════════════════════════════
+// PAGE TRANSITIONS & LOADER
+// ══════════════════════════════════════════════════════════════════════════
 const loader = document.getElementById('loader');
 const loaderLogo = document.getElementById('loader-logo');
 
 if (loader && loaderLogo) {
-    // Premium Pulse Animation
+    // Pulse animation (User preferred aesthetics)
     gsap.to(loaderLogo, {
         scale: 1.05,
         filter: "brightness(1.2)",
@@ -163,7 +165,7 @@ if (loader && loaderLogo) {
         ease: "sine.inOut"
     });
 
-    // Handle Page Load
+    // Handle initial Page Load transition (Slide Out)
     window.addEventListener('load', () => {
         const tl = gsap.timeline();
 
@@ -180,18 +182,17 @@ if (loader && loaderLogo) {
             delay: 0.1,
             ease: "power2.inOut",
             onStart: () => {
-                // Pre-warm the hero section visibility
                 if (heroSection) {
                     gsap.to(heroSection, { opacity: 1, duration: 1.2, ease: "power2.inOut" });
                 }
             }
         })
             .to(loader, {
-                opacity: 0,
-                duration: 0.8,
-                ease: "power2.out",
+                yPercent: -100, // Slide the loader UP and away
+                duration: 1.2,
+                ease: "expo.inOut",
                 onStart: () => {
-                    // Trigger Hero content entrance synchronized with loader fade
+                    // Trigger Hero content entrance synchronized with loader slide
                     if (window.initHeroEntrance) {
                         window.initHeroEntrance();
                     }
@@ -200,9 +201,60 @@ if (loader && loaderLogo) {
                     }
                 },
                 onComplete: () => {
-                    loader.style.display = 'none';
+                    loader.style.visibility = 'hidden';
                     ScrollTrigger.refresh();
                 }
             });
+    });
+
+    // Page Transition OUT function (Slide In Curtain)
+    window.triggerPageTransition = function (url) {
+        if (loader.style.visibility === 'visible') return;
+
+        // Reset loader position to bottom before sliding UP to cover
+        gsap.set(loader, { visibility: 'visible', yPercent: 100, opacity: 1, display: 'flex' });
+        gsap.set(loaderLogo, { opacity: 1, scale: 1 });
+
+        const tl = gsap.timeline({
+            onComplete: () => {
+                window.location.href = url;
+            }
+        });
+
+        tl.to(loader, {
+            yPercent: 0,
+            duration: 0.8,
+            ease: "expo.inOut"
+        });
+    };
+
+    // Internal Link Interception
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || link.target === '_blank') return;
+
+        try {
+            const url = new URL(link.href, window.location.origin);
+            const isInternal = url.origin === window.location.origin;
+            const isSamePage = url.pathname === window.location.pathname;
+
+            if (isInternal && !isSamePage && !e.metaKey && !e.ctrlKey) {
+                e.preventDefault();
+                window.triggerPageTransition(link.href);
+            }
+        } catch (err) {
+            // Not a valid URL, skip
+        }
+    });
+
+    // Handle back/forward button visibility
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            loader.style.visibility = 'hidden';
+            gsap.set(loader, { yPercent: -100 });
+        }
     });
 }
