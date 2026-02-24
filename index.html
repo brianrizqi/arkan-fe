@@ -132,81 +132,58 @@
 
         <!-- About Section -->
         <section id="about" class="relative bg-[#F5F1E8]" style="z-index: 50">
-            <div id="about-pin-wrapper"
-                class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-                <!-- Premium Radial Vignette for Center Contrast -->
+            <div id="about-container" class="relative w-full min-h-[250vh]">
+                <!-- Central Content Column (Safe Zone) -->
                 <div
-                    class="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0%,transparent_60%)] opacity-60">
-                </div>
+                    class="about-safe-zone relative mx-auto w-full md:w-[50%] lg:w-[45%] h-full flex flex-col items-center">
 
-                <div class="scattered-gallery absolute inset-0 z-0 pointer-events-none">
-                    <!-- Top Left Area -->
-                    <div class="gallery-img-wrapper img-1 absolute opacity-90 w-[35%] md:w-[22%]"
-                        style="top: -5%; left: 0%; transform: rotate(-2deg)">
-                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Top Center Area (Above Text) -->
-                    <div class="gallery-img-wrapper img-5 absolute opacity-80 w-[28%] md:w-[16%]"
-                        style="top: -12%; left: 38%; transform: rotate(1.5deg)">
-                        <img src="/assets/img/about-5.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Top Right Area -->
-                    <div class="gallery-img-wrapper img-4 absolute opacity-100 w-[40%] md:w-[20%]"
-                        style="top: -8%; right: 2%; transform: rotate(-2deg)">
-                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Mid Left Area (Far Edge) -->
-                    <div class="gallery-img-wrapper img-3 absolute opacity-70 w-[26%] md:w-[14%]"
-                        style="top: 35%; left: -2%; transform: rotate(2deg)">
-                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Mid Right Area (Far Edge) -->
-                    <div class="gallery-img-wrapper img-2 absolute opacity-60 w-[28%] md:w-[15%]"
-                        style="top: 35%; right: 0%; transform: rotate(1deg)">
-                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Bottom Left Area -->
-                    <div class="gallery-img-wrapper img-6 absolute opacity-100 w-[45%] md:w-[24%]"
-                        style="top: 70%; left: 4%; transform: rotate(1.5deg)">
-                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Bottom Center Area (Below Text) -->
-                    <div class="gallery-img-wrapper img-7 absolute opacity-80 w-[30%] md:w-[18%]"
-                        style="top: 80%; left: 40%; transform: rotate(-1.5deg)">
-                        <img src="/assets/img/about-7.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-
-                    <!-- Bottom Right Area -->
-                    <div class="gallery-img-wrapper img-8 absolute opacity-90 w-[32%] md:w-[20%]"
-                        style="top: 65%; right: 5%; transform: rotate(-1deg)">
-                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto rounded-none shadow-xl" />
-                    </div>
-                </div>
-                <div class="relative z-10 w-full px-6 max-w-7xl mx-auto flex flex-col items-center pointer-events-none">
-                    <div id="about-content-1"
-                        class="absolute flex flex-col items-center text-center w-full px-4 md:px-6">
-                        <div class="about-ornament mb-8 md:mb-[var(--space-5)] scale-[0.8] md:scale-100">
-                            <img src="/assets/img/ornament.svg" alt=""
-                                class="w-20 h-20 md:w-24 md:h-24 object-contain" />
+                    <!-- Content Block 1 -->
+                    <div
+                        class="about-content-block h-screen flex flex-col items-center justify-center text-center px-6">
+                        <div class="about-ornament flex justify-center items-center mb-12 scale-[0.8] md:scale-100">
+                            <svg viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-20 md:w-24 aspect-square">
+                                <g clip-path="url(#clip0_about)">
+                                    <path d="M54.9408 38.9644H52.9609V0.000488281L54.9408 0.000488369V38.9644Z"
+                                        fill="#B99668" />
+                                    <path d="M54.9408 108.9H52.9609V69.9357H54.9408V108.9Z" fill="#B99668" />
+                                    <path d="M69.293 55.4491V53.4509H107.899V55.4491H69.293Z" fill="#B99668" />
+                                    <path d="M0 55.4491L1.73082e-07 53.4509H38.6064V55.4491H0Z" fill="#B99668" />
+                                    <path
+                                        d="M61.3003 48.4452L59.9004 47.0323L76.6997 30.0774L78.0997 31.4903L61.3003 48.4452Z"
+                                        fill="#B99668" />
+                                    <path
+                                        d="M31.2007 78.8225L29.8008 77.4096L46.6001 60.4547L48 61.8677L31.2007 78.8225Z"
+                                        fill="#B99668" />
+                                    <path
+                                        d="M59.9004 61.8677L61.3003 60.4548L78.0997 77.4096L76.6997 78.8225L59.9004 61.8677Z"
+                                        fill="#B99668" />
+                                    <path d="M29.8008 31.4902L31.2007 30.0773L48 47.0322L46.6 48.445L29.8008 31.4902Z"
+                                        fill="#B99668" />
+                                    <path
+                                        d="M62.35 53.4363L53.9504 61.9137L45.5508 53.4363L53.9504 44.9589L62.35 53.4363ZM48.3506 53.4363L53.9504 59.0879L59.5502 53.4363L53.9504 47.7846L48.3506 53.4363Z"
+                                        fill="#B99668" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_about">
+                                        <rect width="107.9" height="108.899" fill="white"
+                                            transform="translate(0 0.000488281)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </div>
-                        <div class="w-full max-w-4xl mx-auto">
-                            <h2
-                                class="about-title-1 section-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-radley text-[#1B1B18] font-normal leading-tight">
-                                Crafted in Saudi.<br />Refined Worldwide.
-                            </h2>
-                        </div>
+                        <h2
+                            class="about-title section-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-radley text-[#1B1B18] font-normal leading-tight">
+                            Crafted in Saudi.<br />Refined Worldwide.
+                        </h2>
                     </div>
-                    <div id="about-content-2"
-                        class="absolute flex flex-col items-center text-center opacity-0 pointer-events-none w-full px-4 md:px-6">
-                        <div class="w-full max-w-2xl mx-auto">
+
+                    <!-- Content Block 2 -->
+                    <div
+                        class="about-content-block h-screen flex flex-col items-center justify-center text-center px-6">
+                        <div class="max-w-xl mx-auto">
                             <p
-                                class="about-text-2 text-sm md:text-base font-manrope tracking-wide text-[#333333] leading-relaxed">
+                                class="about-text text-base md:text-lg font-manrope tracking-wide text-[#333333] leading-relaxed">
                                 ARKAN is a Saudi based luxury hospitality company combining
                                 leading hospitality production capabilities with exceptional
                                 design talent. We craft premium amenities with a focus on
@@ -216,6 +193,40 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Floating Images (Left Side) -->
+                <div
+                    class="about-floating-images left-zone absolute inset-y-0 left-0 w-[25%] pointer-events-none hidden md:block">
+                    <div class="floating-img-item" data-speed="0.15" style="top: 10%; left: 5%;">
+                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                    <div class="floating-img-item" data-speed="0.25" style="top: 55%; left: 15%;">
+                        <img src="/assets/img/about-3.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                    <div class="floating-img-item" data-speed="0.2" style="top: 95%; left: 10%;">
+                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                </div>
+
+                <!-- Floating Images (Right Side) -->
+                <div
+                    class="about-floating-images right-zone absolute inset-y-0 right-0 w-[25%] pointer-events-none hidden md:block">
+                    <div class="floating-img-item" data-speed="0.25" style="top: 5%; right: 5%;">
+                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                    <div class="floating-img-item" data-speed="0.15" style="top: 45%; right: 15%;">
+                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                    <div class="floating-img-item" data-speed="0.3" style="top: 85%; right: 10%;">
+                        <img src="/assets/img/about-8.png" alt="" class="w-full h-auto shadow-2xl opacity-100" />
+                    </div>
+                </div>
+
+                <!-- Mobile Images (Stacked) -->
+                <div class="md:hidden w-full px-6 space-y-8 py-12">
+                    <img src="/assets/img/about-1.png" alt="" class="w-full h-auto shadow-xl" />
+                    <img src="/assets/img/about-4.png" alt="" class="w-full h-auto shadow-xl" />
+                </div>
             </div>
         </section>
 
@@ -223,16 +234,42 @@
         <section id="services" class="relative min-h-screen py-20 flex flex-col justify-center bg-[#F5F1E8]"
             style="z-index: 60">
             <div id="services-star-container"
-                class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-                <img id="services-star" src="/assets/img/star.svg" alt="Star Ornament"
-                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] -translate-y-12 md:-translate-y-24 object-contain mix-blend-multiply" />
+                class="sticky top-0 left-0 w-full h-screen flex items-center justify-center z-0 pointer-events-none">
+                <div id="services-star"
+                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] flex justify-center items-center mix-blend-multiply transition-opacity duration-700">
+                    <svg viewBox="0 0 1313 1326" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-full h-full aspect-square">
+                        <g clip-path="url(#clip0_services)">
+                            <path d="M668.549 474.139H644.457V0L668.549 1.06283e-06V474.139Z" fill="#52422D" />
+                            <path d="M668.549 1325.16H644.457V851.019H668.549V1325.16Z" fill="#52422D" />
+                            <path d="M843.211 674.736V650.421H1313V674.736H843.211Z" fill="#52422D" />
+                            <path d="M0 674.736L2.10617e-06 650.421H469.789V674.736H0Z" fill="#52422D" />
+                            <path d="M745.938 589.508L728.902 572.315L933.328 365.996L950.363 383.189L745.938 589.508Z"
+                                fill="#52422D" />
+                            <path d="M379.672 959.16L362.637 941.967L567.062 735.648L584.098 752.843L379.672 959.16Z"
+                                fill="#52422D" />
+                            <path d="M728.898 752.842L745.934 735.649L950.359 941.967L933.324 959.16L728.898 752.842Z"
+                                fill="#52422D" />
+                            <path d="M362.641 383.188L379.676 365.995L584.102 572.314L567.065 589.507L362.641 383.188Z"
+                                fill="#52422D" />
+                            <path
+                                d="M758.713 650.243L656.502 753.402L554.289 650.243L656.502 547.083L758.713 650.243ZM588.36 650.243L656.502 719.015L724.643 650.243L656.502 581.47L588.36 650.243Z"
+                                fill="#52422D" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_services">
+                                <rect width="1313" height="1325.16" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
             </div>
 
             <div id="services-content-wrapper"
                 class="container mx-auto px-[var(--space-4)] md:px-[var(--space-6)] max-w-7xl relative z-10">
                 <div class="text-center mb-[var(--space-6)] md:mb-[var(--space-8)]">
                     <h2 class="services-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#1B1B18]">
-                        What we do
+                        <span class="italic">What</span> we do
                     </h2>
                 </div>
                 <!-- Centered Container -->
@@ -409,17 +446,46 @@
                 class="relative h-screen w-full overflow-hidden flex flex-col pt-[80px] md:pt-[100px] pb-0 px-4 md:px-8">
                 <!-- Sticky Header -->
                 <div class="relative text-center max-w-7xl mx-auto mb-0 shrink-0">
-                    <div class="process-ornament opacity-0 flex justify-center mb-1 md:mb-2">
-                        <img src="/assets/img/ornament.svg" alt="" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+                    <div
+                        class="process-ornament opacity-0 flex justify-center items-center mb-1 md:mb-2 text-[#1B1B18]">
+                        <svg viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="w-8 md:w-10 aspect-square">
+                            <g clip-path="url(#clip0_process)">
+                                <path d="M54.9408 38.9644H52.9609V0.000488281L54.9408 0.000488369V38.9644Z"
+                                    fill="currentColor" />
+                                <path d="M54.9408 108.9H52.9609V69.9357H54.9408V108.9Z" fill="currentColor" />
+                                <path d="M69.293 55.4491V53.4509H107.899V55.4491H69.293Z" fill="currentColor" />
+                                <path d="M0 55.4491L1.73082e-07 53.4509H38.6064V55.4491H0Z" fill="currentColor" />
+                                <path
+                                    d="M61.3003 48.4452L59.9004 47.0323L76.6997 30.0774L78.0997 31.4903L61.3003 48.4452Z"
+                                    fill="currentColor" />
+                                <path d="M31.2007 78.8225L29.8008 77.4096L46.6001 60.4547L48 61.8677L31.2007 78.8225Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M59.9004 61.8677L61.3003 60.4548L78.0997 77.4096L76.6997 78.8225L59.9004 61.8677Z"
+                                    fill="currentColor" />
+                                <path d="M29.8008 31.4902L31.2007 30.0773L48 47.0322L46.6 48.445L29.8008 31.4902Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M62.35 53.4363L53.9504 61.9137L45.5508 53.4363L53.9504 44.9589L62.35 53.4363ZM48.3506 53.4363L53.9504 59.0879L59.5502 53.4363L53.9504 47.7846L48.3506 53.4363Z"
+                                    fill="currentColor" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_process">
+                                    <rect width="107.9" height="108.899" fill="white"
+                                        transform="translate(0 0.000488281)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
                     <h2
-                        class="process-header-title section-title opacity-0 text-3xl sm:text-4xl md:text-5xl text-[#1B1B18] mb-1 md:mb-2">
+                        class="process-header-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#1B1B18] mb-1 md:mb-2">
                         <span class="italic font-radley">Our</span>
                         <span class="font-radley">Proccess</span>
                     </h2>
                     <div class="max-w-3xl mx-auto">
                         <p
-                            class="process-header-text section-description opacity-0 text-[10px] sm:text-xs font-manrope tracking-wide text-[#1B1B18]/70 leading-relaxed">
+                            class="process-header-text section-description opacity-0 text-xs md:text-sm font-manrope tracking-wide text-[#1B1B18]/70 leading-relaxed">
                             An integrated 5PL platform that manages hospitality OS&E from
                             concept to site ready delivery. ARKAN connects design,
                             production, digital control, global logistics, and fulfillment
@@ -457,7 +523,7 @@
                         <div
                             class="process-phase phase-design absolute inset-0 flex flex-col items-center justify-center opacity-100">
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-inter font-bold text-white tracking-normal uppercase">
+                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-manrope font-bold text-white tracking-normal uppercase">
                                 Design
                             </h3>
                             <div
@@ -468,7 +534,7 @@
                         <div
                             class="process-phase phase-production absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-radley text-white tracking-normal uppercase font-bold">
+                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-manrope text-white tracking-normal uppercase font-bold">
                                 Production
                             </h3>
                             <div
@@ -479,7 +545,7 @@
                         <div
                             class="process-phase phase-digitalization absolute inset-0 flex flex-col items-center justify-center opacity-0">
                             <h3
-                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-radley text-white tracking-normal uppercase font-bold">
+                                class="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-manrope text-white tracking-normal uppercase font-bold">
                                 Digitalization
                             </h3>
                             <div
@@ -574,7 +640,8 @@
             style="z-index: 5; height: 150vh; background: transparent"></div>
 
         <!-- OSE Section -->
-        <section id="ose" class="fixed bottom-0 left-0 w-full overflow-hidden bg-black z-20 min-h-screen flex flex-col">
+        <section id="ose"
+            class="fixed bottom-0 left-0 w-full overflow-hidden bg-black z-20 h-screen flex flex-col items-center justify-center">
             <!-- Background Layer -->
             <div class="absolute inset-0 z-0">
                 <img src="/assets/img/bg-ose.png" alt="" class="w-full h-full object-cover opacity-60" />
@@ -584,11 +651,37 @@
             </div>
 
             <div id="ose-pin-container"
-                class="relative flex-grow flex flex-col items-center justify-center text-center px-[var(--space-4)] md:px-[var(--space-6)] py-[var(--space-8)] z-10">
+                class="relative w-full flex flex-col items-center justify-center text-center px-[var(--space-4)] md:px-[var(--space-6)] z-10">
                 <!-- Ornament above title -->
-                <div class="ose-final-ornament opacity-0 mb-[var(--space-5)] md:mb-[var(--space-6)]">
-                    <img src="/assets/img/ornament.svg" alt=""
-                        class="w-48 h-48 md:w-72 md:h-72 lg:w-[32rem] lg:h-[32rem] object-contain brightness-0 invert opacity-40" />
+                <div
+                    class="ose-final-ornament opacity-0 flex justify-center items-center mb-[var(--space-5)] md:mb-[var(--space-6)] text-[#D2BB9C]">
+                    <svg viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-72 md:w-80 lg:w-[32rem] aspect-square opacity-40">
+                        <g clip-path="url(#clip0_ose)">
+                            <path d="M54.9408 38.9644H52.9609V0.000488281L54.9408 0.000488369V38.9644Z"
+                                fill="currentColor" />
+                            <path d="M54.9408 108.9H52.9609V69.9357H54.9408V108.9Z" fill="currentColor" />
+                            <path d="M69.293 55.4491V53.4509H107.899V55.4491H69.293Z" fill="currentColor" />
+                            <path d="M0 55.4491L1.73082e-07 53.4509H38.6064V55.4491H0Z" fill="currentColor" />
+                            <path d="M61.3003 48.4452L59.9004 47.0323L76.6997 30.0774L78.0997 31.4903L61.3003 48.4452Z"
+                                fill="currentColor" />
+                            <path d="M31.2007 78.8225L29.8008 77.4096L46.6001 60.4547L48 61.8677L31.2007 78.8225Z"
+                                fill="currentColor" />
+                            <path d="M59.9004 61.8677L61.3003 60.4548L78.0997 77.4096L76.6997 78.8225L59.9004 61.8677Z"
+                                fill="currentColor" />
+                            <path d="M29.8008 31.4902L31.2007 30.0773L48 47.0322L46.6 48.445L29.8008 31.4902Z"
+                                fill="currentColor" />
+                            <path
+                                d="M62.35 53.4363L53.9504 61.9137L45.5508 53.4363L53.9504 44.9589L62.35 53.4363ZM48.3506 53.4363L53.9504 59.0879L59.5502 53.4363L53.9504 47.7846L48.3506 53.4363Z"
+                                fill="currentColor" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_ose">
+                                <rect width="107.9" height="108.899" fill="white"
+                                    transform="translate(0 0.000488281)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
 
                 <div class="max-w-5xl mx-auto stack-space-5 md:stack-space-6">
@@ -766,74 +859,46 @@
                 ),
             );
 
-            // About Scroll Logic
-            const aboutTl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#about",
-                    start: "top top",
-                    end: "+=400%", // Reduced from 700% for a snappier, more natural feel
-                    scrub: 1, // Smoother scrub
-                    pin: true,
-                    anticipatePin: 1,
-                },
-            });
+            // About Smooth Scroll Parallax (Vanilla JS)
+            const aboutSection = document.getElementById('about');
+            const floatingImages = document.querySelectorAll('.floating-img-item');
 
-            // Text 1 fades out quickly
-            aboutTl.to(
-                "#about-content-1",
-                {
-                    opacity: 0,
-                    y: -50,
-                    duration: 0.5,
-                    ease: "power2.inOut",
-                },
-                0,
-            );
+            if (aboutSection && floatingImages.length > 0) {
+                let lastScrollY = window.scrollY;
+                let ticking = false;
 
-            // Natural vertical parallax for gallery items
-            gsap.utils.toArray(".gallery-img-wrapper").forEach((img, i) => {
-                // Determine direction and speed based on position to create depth
-                // Elements near the edges move faster to clear the center
-                const isTop = img.style.top && parseInt(img.style.top) < 20;
-                const isBottom = img.style.top && parseInt(img.style.top) > 50;
+                const updateParallax = () => {
+                    const sectionRect = aboutSection.getBoundingClientRect();
+                    const sectionTop = sectionRect.top;
+                    const sectionHeight = sectionRect.height;
+                    const viewportHeight = window.innerHeight;
 
-                // Base movement: everything moves up eventually
-                let yMovement = -window.innerHeight * 0.8;
+                    // Only run when section is visible
+                    if (sectionTop < viewportHeight && sectionTop > -sectionHeight) {
+                        const distanceScrolled = viewportHeight - sectionTop;
 
-                // Add varation for parallax depth
-                const speedModifier = 0.5 + (i % 3) * 0.3;
-                yMovement *= speedModifier;
+                        floatingImages.forEach(img => {
+                            const speed = parseFloat(img.getAttribute('data-speed')) || 0.2;
+                            // Use transform: translateY() only for performance
+                            // Offset movement based on speed and distance from viewport top
+                            const yPos = distanceScrolled * speed * -0.5;
+                            img.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                        });
+                    }
+                    ticking = false;
+                };
 
-                aboutTl.to(
-                    img,
-                    {
-                        y: yMovement,
-                        duration: 2,
-                        ease: "power1.inOut",
-                    },
-                    0,
-                );
-            });
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
+                }, { passive: true });
 
-            // Second text fades in after images have moved out of the way
-            aboutTl.fromTo(
-                "#about-content-2",
-                { opacity: 0, y: 50 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    ease: "power2.out",
-                    onStart: () =>
-                        document
-                            .getElementById("about-content-2")
-                            .classList.remove("pointer-events-none"),
-                },
-                1.5, // Start fading in as images are clearing out
-            );
+                // Initial call
+                updateParallax();
+            }
 
-            // Hold the 2nd text state before unpinning
-            aboutTl.to({}, { duration: 1 });
 
             // Services Scroll Transition Logic
             window.servicesTl = gsap.timeline({
@@ -869,14 +934,15 @@
                 duration: 1,
             });
 
-            // 3. Star moves to corner
+            // 3. Star moves to corner (Only on Desktop)
+            const isMobile = window.innerWidth < 768;
             servicesTl.to(
                 "#services-star",
                 {
-                    x: "40vw",
-                    y: "-40vh",
-                    scale: 2.5,
-                    opacity: 0.05,
+                    x: isMobile ? "0px" : "40vw",
+                    y: isMobile ? "0px" : "-40vh",
+                    scale: isMobile ? 3 : 2.5,
+                    opacity: isMobile ? 0.08 : 0.05,
                     duration: 1.5,
                     ease: "power2.inOut",
                 },
@@ -1315,9 +1381,10 @@
             });
             oseTl
                 .to(".ose-final-ornament", {
-                    opacity: 0.3,
+                    opacity: 0.5,
                     scale: 1,
-                    startAt: { scale: 0.8 },
+                    y: 0,
+                    startAt: { scale: 0.8, y: -50 },
                     duration: 2,
                     ease: "expo.out",
                 })
@@ -1326,7 +1393,7 @@
                     {
                         opacity: 1,
                         y: 0,
-                        startAt: { y: 50 },
+                        startAt: { y: 20 },
                         duration: 1.5,
                         ease: "expo.out",
                     },
@@ -1337,11 +1404,11 @@
                     {
                         opacity: 1,
                         y: 0,
-                        startAt: { y: 30 },
+                        startAt: { y: 20 },
                         duration: 1.2,
                         ease: "expo.out",
                     },
-                    "-=1",
+                    "-=1.2",
                 );
 
             // Footer Reveal Logic
@@ -1498,26 +1565,36 @@
             background-color: rgba(0, 0, 0, 0.05);
         }
 
-        /* Gallery Styles */
-        .gallery-img-wrapper {
-            will-change: transform, opacity, filter;
-            z-index: 1;
-        }
-
-        .gallery-img-wrapper img {
-            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
-            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .gallery-img-wrapper:hover img {
-            transform: scale(1.03);
-            box-shadow: 0 50px 120px rgba(0, 0, 0, 0.18);
-        }
-
-        #about-content-1,
-        #about-content-2 {
+        /* Gallery Styles Refined */
+        .about-floating-images {
             z-index: 10;
         }
+
+        .floating-img-item {
+            position: absolute;
+            width: 80%;
+            max-width: 320px;
+            will-change: transform;
+        }
+
+        .floating-img-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            opacity: 1 !important;
+            filter: none !important;
+        }
+
+        .about-safe-zone {
+            z-index: 20;
+        }
+
+        .about-content-block {
+            position: sticky;
+            top: 0;
+        }
+
 
         #about-content-1 h2,
         #about-content-2 p {

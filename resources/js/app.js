@@ -13,9 +13,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Initialize Lenis with smooth settings similar to refined framing
 const lenis = new Lenis({
-    lerp: 0.08, // Balanced lerp for responsiveness and smoothness
-    wheelMultiplier: 0.9, // Slightly dampened wheel speed for precision
-    touchMultiplier: 1.5, // Natural touch responsiveness
+    lerp: 0.05, // Slightly slower lerp for creamier smoothness
+    wheelMultiplier: 0.8, // More dampened for precision
+    touchMultiplier: 1.2, // Natural touch responsiveness
     infinite: false,
 });
 
