@@ -266,7 +266,7 @@
             </div>
 
             <div id="services-content-wrapper"
-                class="container mx-auto px-[var(--space-4)] md:px-[var(--space-6)] max-w-7xl relative z-10">
+                class="container mx-auto px-[var(--space-4)] md:px-[var(--space-6)] max-w-7xl relative z-10 -mt-[100vh]">
                 <div class="text-center mb-[var(--space-6)] md:mb-[var(--space-8)]">
                     <h2 class="services-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#1B1B18]">
                         <span class="italic">What</span> we do
@@ -1020,7 +1020,7 @@
                 scrollTrigger: {
                     trigger: "#services",
                     start: "top top",
-                    end: "+=500%",
+                    end: "+=400%",
                     scrub: 0.8,
                     pin: true,
                     anticipatePin: 1,
@@ -1036,7 +1036,7 @@
                     scale: 1,
                     rotation: 90,
                     ease: "power3.out",
-                    duration: 1.5,
+                    duration: 1,
                 },
             );
 
@@ -1046,7 +1046,7 @@
                 opacity: 0.15,
                 filter: "blur(1px)",
                 ease: "power1.inOut",
-                duration: 1,
+                duration: 0.8,
             });
 
             // 3. Star moves to corner (Only on Desktop)
@@ -1058,7 +1058,7 @@
                     y: isMobile ? "0px" : "-40vh",
                     scale: isMobile ? 3 : 2.5,
                     opacity: isMobile ? 0.08 : 0.05,
-                    duration: 1.5,
+                    duration: 1,
                     ease: "power2.inOut",
                 },
                 "bgTransition",
