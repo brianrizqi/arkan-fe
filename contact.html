@@ -45,22 +45,30 @@
 
         <!-- Desktop Navigation -->
         <nav
-          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden lg:flex">
+          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
           <a href="/#about" class="nav-item hover:text-white transition-colors">About</a>
           <a href="/portfolio.html" class="nav-item hover:text-white transition-colors">Works</a>
           <a href="/#journal" class="nav-item hover:text-white transition-colors">Archive</a>
         </nav>
 
+        <!-- Tablet Navigation (Contact Us Centered) -->
+        <div class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden">
+          <a href="/contact.html"
+            class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+
         <!-- Right Side: Contact & Hamburger -->
         <div class="flex items-center space-x-6 md:space-x-8">
-          <div class="nav-item hidden md:block">
+          <div class="nav-item hidden xl:block">
             <a href="/contact.html"
               class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
               Contact Us
             </a>
           </div>
 
-          <button id="mobile-menu-trigger" class="nav-item block lg:hidden focus:outline-none relative z-[120]">
+          <button id="mobile-menu-trigger" class="nav-item block xl:hidden focus:outline-none relative z-[120]">
             <div class="hamburger-box w-6 h-4 relative">
               <span
                 class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"></span>
