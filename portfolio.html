@@ -17,6 +17,23 @@
   <!-- Styles / Scripts -->
   <script type="module" src="/resources/js/app.js"></script>
   <link rel="stylesheet" href="/resources/css/app.css" />
+  <style>
+    /* Portfolio Hover Effects */
+    .portfolio-item h3 {
+      transform: translateY(20px);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .portfolio-item span {
+      transform: translateY(10px);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    }
+
+    .portfolio-item:hover h3,
+    .portfolio-item:hover span {
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <!-- Light Theme Body -->
@@ -140,6 +157,14 @@
               <img src="/assets/img/about-1.png" alt="Portfolio Item 1"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Hospitality
+                Manufacturing</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">The Art of Precision in
+                Luxury Hospitality Production</h3>
+            </div>
           </div>
 
           <!-- Item 2 -->
@@ -147,6 +172,14 @@
             <div class="aspect-square overflow-hidden bg-[#e8e4db]">
               <img src="/assets/img/about-2.png" alt="Portfolio Item 2"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Design
+                Excellence</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Crafting bespoke
+                architectural details</h3>
             </div>
           </div>
 
@@ -156,6 +189,14 @@
               <img src="/assets/img/about-3.png" alt="Portfolio Item 3"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Material
+                Innovation</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Refined textures for
+                premium interiors</h3>
+            </div>
           </div>
 
           <!-- Item 4 -->
@@ -163,6 +204,14 @@
             <div class="aspect-square overflow-hidden bg-[#e8e4db]">
               <img src="/assets/img/about-4.png" alt="Portfolio Item 4"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Global
+                Standards</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">International quality,
+                local soul</h3>
             </div>
           </div>
 
@@ -172,6 +221,13 @@
               <img src="/assets/img/about-5.png" alt="Portfolio Item 5"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Curation</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Bespoke amenity kits for
+                elite travel</h3>
+            </div>
           </div>
 
           <!-- Item 6 -->
@@ -179,6 +235,13 @@
             <div class="aspect-square overflow-hidden bg-[#e8e4db]">
               <img src="/assets/img/about-6.png" alt="Portfolio Item 6"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Wellness</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Soothing scents and organic
+                care</h3>
             </div>
           </div>
 
@@ -188,6 +251,13 @@
               <img src="/assets/img/about-7.png" alt="Portfolio Item 7"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Atmosphere</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Elevating guest experiences
+                with aroma</h3>
+            </div>
           </div>
 
           <!-- Item 8 -->
@@ -196,6 +266,14 @@
               <img src="/assets/img/about-8.png" alt="Portfolio Item 8"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Hospitality
+                OS&E</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Complete solutions from
+                design to site</h3>
+            </div>
           </div>
 
           <!-- Item 9 -->
@@ -203,6 +281,13 @@
             <div class="aspect-square overflow-hidden bg-[#e8e4db]">
               <img src="/assets/img/our-jurnal-1.png" alt="Portfolio Item 9"
                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Legacy</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Establishing the ARKAN
+                standard</h3>
             </div>
           </div>
 
