@@ -369,8 +369,21 @@
         <!-- Services Section -->
         <section id="services" class="relative min-h-screen py-20 flex flex-col justify-center bg-[#F5F1E8]"
             style="z-index: 60">
+            <style>
+                .service-hover-star {
+                    opacity: 0 !important;
+                    transform: scale(0.8) rotate(0deg);
+                    transition: all 0.5s ease-out;
+                }
+
+                .service-item:hover .service-hover-star,
+                .service-item.active-service .service-hover-star {
+                    opacity: 0.6 !important;
+                    transform: scale(1) rotate(90deg);
+                }
+            </style>
             <div id="services-star-container"
-                class="sticky top-0 left-0 w-full h-screen flex items-center justify-center z-0 pointer-events-none">
+                class="hidden sticky top-0 left-0 w-full h-screen flex items-center justify-center z-0 pointer-events-none">
                 <div id="services-star"
                     class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] flex justify-center items-center transition-opacity duration-500">
                     <img src="/assets/img/ARKAN STAR.svg" alt="ARKAN Star"
@@ -379,7 +392,7 @@
             </div>
 
             <div id="services-content-wrapper"
-                class="container mx-auto px-[var(--space-4)] md:px-[var(--space-6)] max-w-7xl relative z-10 -mt-[100vh]">
+                class="container mx-auto px-[var(--space-4)] md:px-[var(--space-6)] lg:px-[var(--space-8)] max-w-[1600px] relative z-10">
                 <div class="text-center mb-[var(--space-6)] md:mb-[var(--space-8)]">
                     <h2 class="services-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#1B1B18]">
                         <span class="italic">What</span> we do
@@ -387,63 +400,87 @@
                 </div>
                 <!-- Centered Container -->
                 <div
-                    class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20 max-w-6xl mx-auto">
+                    class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-24 max-w-[1400px] mx-auto">
                     <!-- Text List Area -->
                     <div class="w-full lg:w-[45%]">
                         <div class="flex flex-col">
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-1.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(01)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Hospitality Amenity Production
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(01)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Hospitality Amenity Production
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-2.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(02)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Custom Product Development
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(02)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Custom Product Development
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-3.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(03)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Material And Finish Consultation
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(03)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Material And Finish Consultation
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-4.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(04)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Design Transition Into Production Ready Outputs
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(04)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Design Transition Into Production Ready Outputs
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-5.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(05)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Packaging, Kits, And Curated Hospitality Terms
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(05)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Packaging, Kits, And Curated Hospitality Terms
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
-                            <div class="service-item opacity-0 cursor-pointer group/item flex items-start py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-colors hover:bg-black/5 px-4 -mx-4 rounded-lg"
+                            <div class="service-item opacity-0 cursor-pointer group/item flex items-center justify-between py-6 md:py-8 border-t border-b border-[#1B1B18]/10 transition-all hover:bg-black/5 px-4 -mx-4 rounded-lg"
                                 data-service-image="/assets/img/about-6.png">
-                                <span
-                                    class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(06)</span>
-                                <h4
-                                    class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
-                                    Quality Control And Production Alignment
-                                </h4>
+                                <div class="flex items-start">
+                                    <span
+                                        class="text-[10px] md:text-sm font-manrope text-[#1B1B18]/60 mr-6 md:mr-12 tabular-nums mt-1.5 md:mt-2 transition-colors">(06)</span>
+                                    <h4
+                                        class="text-xl md:text-2xl lg:text-3xl font-radley text-[#1B1B18] tracking-tight leading-snug group-hover/item:translate-x-2 transition-transform">
+                                        Quality Control And Production Alignment
+                                    </h4>
+                                </div>
+                                <img src="/assets/img/ARKAN STAR 2.svg" alt=""
+                                    class="service-hover-star w-8 h-8 md:w-10 md:h-10 shrink-0 ml-4" />
                             </div>
                         </div>
                     </div>
@@ -1228,51 +1265,16 @@
                 scrollTrigger: {
                     trigger: "#services",
                     start: "top top",
-                    end: "+=400%",
+                    end: "+=200%",
                     scrub: 0.8,
                     pin: true,
                     anticipatePin: 1,
                 },
             });
 
-            // 1. Star fades in, scales, rotates
-            servicesTl.fromTo(
-                "#services-star",
-                { opacity: 0, scale: 0.6, rotation: 0 },
-                {
-                    opacity: 1,
-                    scale: 1,
-                    rotation: 0,
-                    ease: "power3.out",
-                    duration: 1,
-                },
-            );
-
-            // 2. Star pulse outward, slight fade for depth
-            servicesTl.to("#services-star", {
-                scale: 1.2,
-                opacity: 0.5,
-                filter: "blur(1px)",
-                ease: "power1.inOut",
-                duration: 0.8,
-            });
-
-            // 3. Star moves to corner (Only on Desktop)
             const isMobile = window.innerWidth < 768;
-            servicesTl.to(
-                "#services-star",
-                {
-                    x: isMobile ? "0px" : "40vw",
-                    y: isMobile ? "0px" : "-40vh",
-                    scale: isMobile ? 3 : 2,
-                    opacity: isMobile ? 0.18 : 0.5,
-                    duration: 1,
-                    ease: "power2.inOut",
-                },
-                "bgTransition",
-            );
 
-            // 4. Content fade in with stagger
+            // Content fade in with stagger
             servicesTl.to(
                 ".services-title",
                 {
@@ -1282,7 +1284,7 @@
                     duration: 1,
                     ease: "expo.out",
                 },
-                "contentIn",
+                0,
             );
 
             servicesTl.to(
@@ -1295,7 +1297,7 @@
                     stagger: 0.1,
                     ease: "expo.out",
                 },
-                "contentIn+=0.2",
+                0.2,
             );
 
             servicesTl.to(
@@ -1307,7 +1309,7 @@
                     duration: 1.2,
                     ease: "expo.out",
                 },
-                "contentIn+=0.4",
+                0.4,
             );
 
             // 5. Extra padding before unpinning
@@ -1796,30 +1798,7 @@
                 });
             }
 
-            // Create hover interaction for Services
-            const serviceItems = document.querySelectorAll(".service-item");
-            const serviceDisplayImage = document.getElementById(
-                "service-display-image",
-            );
 
-            if (serviceItems.length > 0 && serviceDisplayImage) {
-                serviceItems.forEach((item) => {
-                    item.addEventListener("mouseenter", function () {
-                        const newImgSrc = this.getAttribute("data-service-image");
-                        if (newImgSrc && serviceDisplayImage.src !== newImgSrc) {
-                            // Smooth crossfade using GSAP
-                            gsap.to(serviceDisplayImage, {
-                                opacity: 0,
-                                duration: 0.3,
-                                onComplete: () => {
-                                    serviceDisplayImage.src = newImgSrc;
-                                    gsap.to(serviceDisplayImage, { opacity: 1, duration: 0.4 });
-                                },
-                            });
-                        }
-                    });
-                });
-            }
 
             // Smooth Scroll Setup for Anchor Links using GSAP ScrollToPlugin
             // This is required because native hash navigation breaks when ScrollTrigger pins add phantom vertical space.
