@@ -164,12 +164,26 @@
 
                 @media (max-width: 768px) {
                     #about-scroll-wrapper {
-                        height: auto !important;
+                        height: 400vh !important;
+                        /* Proper travel for mobile narrative pacing */
                     }
 
-                    #about-pin-viewport {
-                        position: relative !important;
-                        height: auto !important;
+                    .about-v-phase h2 {
+                        font-size: 3.5rem;
+                        line-height: 1.1;
+                    }
+
+                    .about-v-phase p {
+                        font-size: 1.25rem;
+                        line-height: 1.6;
+                    }
+
+                    /* Floating Cards for Mobile */
+                    .about-mobile-float {
+                        position: absolute;
+                        z-index: 5;
+                        opacity: 0.15;
+                        filter: blur(1px);
                     }
                 }
             </style>
@@ -253,18 +267,20 @@
                     </div>
                 </div>
 
-                <!-- MOBILE FALLBACK -->
-                <div id="about-mobile-view" class="md:hidden relative z-30 bg-[#F5F1E8] px-6 py-24 space-y-20">
-                    <div class="text-center space-y-8">
-                        <h2 class="text-4xl font-radley text-[#1B1B18] leading-tight">Crafted in Saudi.<br />Refined
-                            Worldwide.</h2>
-                        <p class="text-base font-manrope text-[#555] leading-relaxed">Arkan is a Saudi based luxury
-                            hospitality company combining leading hospitality production with exceptional design talent.
-                        </p>
+                <!-- MOBILE FLOATING MOMENTS (Cinematic background textures) -->
+                <div id="about-mobile-moments"
+                    class="md:hidden absolute inset-0 z-10 pointer-events-none overflow-hidden">
+                    <div class="about-mobile-float speed-up absolute top-[15%] left-[-10%] w-[60vw]">
+                        <img src="/assets/img/about-1.png" alt="" class="w-full h-auto rounded-sm" />
                     </div>
-                    <div class="grid gap-12">
-                        <img src="/assets/img/about-1.png" alt="" class="w-full rounded-sm shadow-xl" />
-                        <img src="/assets/img/about-2.png" alt="" class="w-full rounded-sm shadow-xl" />
+                    <div class="about-mobile-float speed-slow absolute top-[40%] right-[-15%] w-[55vw]">
+                        <img src="/assets/img/about-4.png" alt="" class="w-full h-auto rounded-sm" />
+                    </div>
+                    <div class="about-mobile-float speed-up absolute top-[65%] left-[-5%] w-[65vw]">
+                        <img src="/assets/img/about-6.png" alt="" class="w-full h-auto rounded-sm" />
+                    </div>
+                    <div class="about-mobile-float speed-slow absolute top-[85%] right-[-10%] w-[60vw]">
+                        <img src="/assets/img/about-2.png" alt="" class="w-full h-auto rounded-sm" />
                     </div>
                 </div>
             </div>
@@ -309,13 +325,40 @@
                             { opacity: 1, filter: "blur(0px)", scale: 1, pointerEvents: "auto", duration: 1 }, 0.45)
                         .to(v2, { opacity: 1, duration: 2 });
 
-                    // 3. Cinematic Parallax (Subtle drift while scrolling naturally)
+                    // 3. Cinematic Parallax & Refined Mobile Logic
+                    const isMobile = window.innerWidth <= 768;
+
                     gsap.utils.toArray('.speed-up').forEach(el => {
-                        gsap.to(el, { y: -150, ease: "none", scrollTrigger: { trigger: wrapper, scrub: 1 } });
+                        gsap.to(el, {
+                            y: isMobile ? -100 : -150,
+                            ease: "none",
+                            scrollTrigger: { trigger: wrapper, scrub: isMobile ? 2 : 1 }
+                        });
                     });
                     gsap.utils.toArray('.speed-slow').forEach(el => {
-                        gsap.to(el, { y: -60, ease: "none", scrollTrigger: { trigger: wrapper, scrub: 1 } });
+                        gsap.to(el, {
+                            y: isMobile ? -40 : -60,
+                            ease: "none",
+                            scrollTrigger: { trigger: wrapper, scrub: isMobile ? 2 : 1 }
+                        });
                     });
+
+                    // Extra Drift for Mobile Floating Elements
+                    if (isMobile) {
+                        gsap.utils.toArray('.about-mobile-float').forEach(el => {
+                            gsap.to(el, {
+                                x: (i) => i % 2 === 0 ? 20 : -20,
+                                rotation: (i) => i % 2 === 0 ? 2 : -2,
+                                ease: "power1.inOut",
+                                scrollTrigger: {
+                                    trigger: wrapper,
+                                    start: "top bottom",
+                                    end: "bottom top",
+                                    scrub: 2
+                                }
+                            });
+                        });
+                    }
                 });
             </script>
         </section>
