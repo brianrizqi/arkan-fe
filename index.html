@@ -192,7 +192,7 @@
             </style>
 
             <!-- Container for the 300vh scroll travel -->
-            <div id="about-scroll-wrapper" class="relative w-full h-[300vh]">
+            <div id="about-scroll-wrapper" class="relative w-full h-[250vh]">
 
                 <!-- NATURAL SCROLL IMAGES (Z-10) -->
                 <!-- These are absolute within the 300vh container, so they scroll naturally with the page -->
@@ -372,7 +372,7 @@
             <div id="services-star-container"
                 class="sticky top-0 left-0 w-full h-screen flex items-center justify-center z-0 pointer-events-none">
                 <div id="services-star"
-                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] flex justify-center items-center mix-blend-multiply transition-opacity duration-700">
+                    class="opacity-0 scale-[0.6] w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] flex justify-center items-center transition-opacity duration-500">
                     <img src="/assets/img/ARKAN STAR.svg" alt="ARKAN Star"
                         class="w-full h-full aspect-square object-contain" />
                 </div>
@@ -1248,10 +1248,10 @@
                 },
             );
 
-            // 2. Star pulse outward, blur, opacity drop
+            // 2. Star pulse outward, slight fade for depth
             servicesTl.to("#services-star", {
                 scale: 1.2,
-                opacity: 0.15,
+                opacity: 0.5,
                 filter: "blur(1px)",
                 ease: "power1.inOut",
                 duration: 0.8,
@@ -1265,7 +1265,7 @@
                     x: isMobile ? "0px" : "40vw",
                     y: isMobile ? "0px" : "-40vh",
                     scale: isMobile ? 3 : 2,
-                    opacity: isMobile ? 0.08 : 0.05,
+                    opacity: isMobile ? 0.18 : 0.5,
                     duration: 1,
                     ease: "power2.inOut",
                 },
