@@ -59,6 +59,11 @@ html.lenis body {
     }
 }
 
+/* Radley font global kerning preset (-5%) */
+.font-radley {
+    letter-spacing: -0.05em;
+}
+
 .service-item p {
     letter-spacing: -0.6px;
 }

@@ -22,12 +22,13 @@
 </head>
 
 <body class="antialiased font-manrope">
+    <script>history.scrollRestoration = 'manual'; window.scrollTo(0, 0);</script>
     <!-- Loader Component -->
     <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
-        <div class="loader-bg absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-            style="background-image: url(&quot;/assets/img/loading-bg.png&quot;)"></div>
+        <div class="loader-bg absolute inset-0 bg-cover bg-[center_87%] bg-no-repeat opacity-100"
+            style="background-image: url(&quot;/assets/img/loading-bg.jpg&quot;)"></div>
         <div class="relative z-10 flex flex-col items-center">
-            <img src="/assets/img/loading-logo.svg" id="loader-logo" class="w-32 md:w-48 lg:w-56" alt="Arkan Logo" />
+            <img src="/assets/img/loading-logo.svg" id="loader-logo" class="w-32 md:w-40 lg:w-44" alt="Arkan Logo" />
         </div>
     </div>
 
@@ -691,7 +692,7 @@
             style="z-index: 50">
             <div class="w-full max-w-5xl mx-auto px-4 md:px-8">
                 <div class="relative text-center mb-10 md:mb-32">
-                    <h2 class="text-5xl md:text-7xl font-radley text-[#1B1B18] mb-1 md:mb-2">
+                    <h2 class="text-5xl md:text-7xl font-radley text-[#333333] mb-1 md:mb-2">
                         <span class="italic font-radley">Our</span>
                         <span class="font-radley">Client</span>
                     </h2>
@@ -794,8 +795,9 @@
                         The Arkan Archive
                     </span>
                     <h2
-                        class="journal-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#52422D] tracking-tight mb-6 uppercase">
-                        Featured Projects
+                        class="journal-title section-title opacity-0 text-5xl md:text-7xl font-radley text-[#333333] mb-1 md:mb-2">
+                        <span class="italic font-radley">Featured</span>
+                        <span class="font-radley">Projects</span>
                     </h2>
                     <div class="journal-ornament opacity-0 w-12 h-[1px] bg-[#52422D]/20"></div>
                 </div>
@@ -1096,6 +1098,7 @@
 
         // Pin Hero Section for a smooth wiping effect from the About section
         document.addEventListener("DOMContentLoaded", () => {
+
             gsap.config({ force3D: true }); // Prevent jagging on high res screens
 
             ScrollTrigger.create({
@@ -1284,7 +1287,7 @@
                 {
                     x: isMobile ? "0px" : "40vw",
                     y: isMobile ? "0px" : "-40vh",
-                    scale: isMobile ? 3 : 2.5,
+                    scale: isMobile ? 3 : 2,
                     opacity: isMobile ? 0.08 : 0.05,
                     duration: 1,
                     ease: "power2.inOut",
