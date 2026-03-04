@@ -17,12 +17,62 @@
   <!-- Styles / Scripts -->
   <script type="module" src="/resources/js/app.js"></script>
   <link rel="stylesheet" href="/resources/css/app.css" />
+  <style>
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .faq-item h3.active {
+      color: #d2bb9c;
+    }
+  </style>
 </head>
 
 <!-- Light Theme Body -->
 
 <body class="antialiased font-manrope bg-[#FCFAF8]">
-  <script>history.scrollRestoration = 'manual'; window.scrollTo(0, 0);</script>
+  <script>
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
   <!-- Loader Component -->
   <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
     <div class="loader-bg absolute inset-0 bg-cover bg-[center_87%] bg-no-repeat opacity-100"
@@ -106,12 +156,12 @@
 
     <main class="w-full pt-24 lg:pt-48 pb-24 overflow-x-hidden">
       <!-- Hero Content -->
-      <div class="flex flex-col items-center text-center  max-w-5xl mx-auto mb-16 lg:mb-24">
+      <div class="flex flex-col items-center text-center max-w-5xl mx-auto mb-16 lg:mb-24 reveal">
         <!-- Ornament -->
         <img src="/assets/img/ornament.svg" alt="Star Ornament" class="h-16 md:h-[4.5rem] w-auto mb-8" style="
-            filter: invert(45%) sepia(13%) saturate(927%) hue-rotate(345deg)
-              brightness(93%) contrast(85%);
-          " />
+              filter: invert(45%) sepia(13%) saturate(927%) hue-rotate(345deg)
+                brightness(93%) contrast(85%);
+            " />
 
         <p class="font-radley text-[16px] md:text-lg text-[#6b5c49] mb-4 md:mb-6 tracking-wide">
           About Us
@@ -119,16 +169,14 @@
 
         <h1
           class="font-manrope text-[1.75rem] md:text-4xl lg:text-[2.4rem] font-medium text-[#5c4f3d] leading-[1.3] md:leading-[1.4] max-w-4xl tracking-tight">
-          We craft premium amenities with a focus on quality,
-          precision, and international standards, supported by
-          some of the strongest.
+          We craft premium amenities with a focus on quality, precision, and
+          international standards, supported by some of the strongest.
         </h1>
       </div>
 
       <!-- Image Gallery (Edge-to-Edge with Center Shadow) -->
       <div
-        class="w-full max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center mb-24 lg:mb-32 overflow-visible">
-
+        class="w-full max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center mb-24 lg:mb-32 overflow-visible reveal">
         <!-- Left Image (Bleeds to edge) -->
         <div class="hidden md:block w-[18%] lg:w-[20%] rounded-r-sm overflow-hidden flex-shrink-0"
           style="aspect-ratio: 4/5">
@@ -151,11 +199,411 @@
         </div>
       </div>
 
+      <!-- Born from the Kingdom Section -->
+      <section class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-24 pb-12 reveal">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24 md:mb-32">
+          <!-- Left: Image -->
+          <div class="w-full lg:w-5/12">
+            <div class="w-full aspect-[3/4] overflow-hidden rounded-sm">
+              <img src="/assets/img/about-2.png" alt="Arkan Craftsmanship" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Right: Text Content -->
+          <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 lg:pt-0">
+            <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18] mb-16 md:mb-24">
+              Born from the <br /><span class="italic">Kingdom</span>, built
+              <br />for the <span class="italic">World.</span>
+            </h2>
+
+            <div class="flex flex-col gap-12 md:gap-16">
+              <!-- Item 1 -->
+              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-1">
+                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+                  Beginning</span>
+                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
+                  Rooted in Saudi
+                  <span class="italic text-[#D2BB9C]">Craftsmanship</span>
+                </h3>
+                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                  <p>
+                    ARKAN was founded in Riyadh with a singular conviction:
+                    that the Kingdom possesses the talent, ambition, and
+                    cultural depth to supply the world's finest hospitality
+                    spaces. What began as a precision-driven amenity studio
+                    has grown into one of the region's most trusted OS&E
+                    partners — without ever compromising the core embedded in
+                    every product we create.
+                  </p>
+                  <p>
+                    Our Saudi roots are not incidental. They are the source of
+                    our patience, precision, and pride<br />— qualities that
+                    translate directly into the craftsmanship our clients
+                    experience at every stage of delivery.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-2">
+                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+                  Philosophy</span>
+                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
+                  Attention to detail as
+                  <span class="italic text-[#D2BB9C]">discipline</span>
+                </h3>
+                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                  <p>
+                    We believe that hospitality excellence is not built in
+                    grand gestures — it is constructed in the accumulation of
+                    considered details. The weight of a bathroom amenity. The
+                    grain of a folded textile. The precision of a label that
+                    aligns perfectly to its container.
+                  </p>
+                  <p>
+                    At ARKAN, detail is not decoration. It is our standard.
+                    Every specification we develop, every supplier we qualify,
+                    every product we ship carries the mark of that philosophy.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-3">
+                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+                  Standard</span>
+                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
+                  Global refinement,
+                  <span class="italic text-[#D2BB9C]">regional mastery</span>
+                </h3>
+                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                  <p>
+                    ARKAN operates across a curated global supply network
+                    while maintaining the intimacy and responsiveness of a
+                    regional specialist. We hold our suppliers to
+                    international hotel brand standards — auditing, sampling,
+                    and approving with the same rigour expected of the world's
+                    leading procurement houses.
+                  </p>
+                  <p>
+                    The result: a product that feels international and an
+                    experience that feels personal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Part: Vision & Mission Section -->
+        <div class="flex flex-col items-center mt-24 md:mt-32 w-full max-w-5xl mx-auto reveal">
+          <!-- Heading -->
+          <div class="text-center mb-12 md:mb-16">
+            <span
+              class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-4 block">Purpose &
+              Direction</span>
+            <h2 class="text-3xl md:text-5xl font-radley text-[#1B1B18] tracking-tight">
+              What we stand for.
+              <span class="italic text-[#D2BB9C]">Where we are going</span>
+            </h2>
+          </div>
+
+          <!-- Vision/Mission Card -->
+          <div class="w-full flex flex-col rounded-md shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden reveal">
+            <!-- Vision -->
+            <div class="w-full bg-[#0E3559] text-white p-10 md:p-16 lg:p-20 relative overflow-hidden">
+              <!-- Decorative Icon (Star) -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] opacity-20 pointer-events-none">
+                <img src="/assets/img/ornament.svg" alt="" class="w-64 md:w-96 lg:w-[32rem] h-auto"
+                  style="filter: brightness(0) invert(1)" />
+              </div>
+
+              <div class="relative z-10 max-w-2xl">
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-radley mb-6 md:mb-8 font-light">
+                  <span class="italic text-white">Our</span> Vision
+                </h3>
+                <p class="font-manrope text-[15px] md:text-lg leading-relaxed text-white/90">
+                  To set a new standard for Saudi-led luxury hospitality
+                  through
+                  <span class="italic font-medium">design, production, and quality.</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="w-full bg-[#E2D9C8] text-[#5c4f3d] p-10 md:p-16 lg:p-20">
+              <div class="max-w-3xl">
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-radley mb-6 md:mb-8 font-light text-[#5c4f3d]/50">
+                  <span class="italic">Our</span> Mission
+                </h3>
+                <p class="font-manrope text-[15px] md:text-lg leading-relaxed text-[#5c4f3d]">
+                  Unite world class production capabilities
+                  <span class="italic font-medium text-[#1B1B18]">with refined design expertise</span>
+                  to deliver
+                  <span class="italic font-medium text-[#1B1B18]">premium hospitality</span>
+                  solutions defined by consistency, precision, and attention
+                  to detail. Through a seamless process from concept to
+                  execution, we elevate guest experiences across every
+                  touchpoint, ensuring quality that endures and results that
+                  perform at the highest level, while proudly representing
+                  Saudi excellence on a global stage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Arkan Section -->
+      <section
+        class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-32 pb-16 md:pb-24 reveal">
+        <!-- Header -->
+        <div class="flex flex-col mb-16 md:mb-24">
+          <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-4 block">Why
+            Choose Arkan</span>
+          <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18]">
+            The case for <br /><span class="italic text-[#D2BB9C]">choosing differently.</span>
+          </h2>
+        </div>
+
+        <!-- 6-Grid Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E5E0D8]">
+          <!-- Item 1 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              I
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-lg">♦</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              Uncompromising <span class="italic">Quality Control</span>
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              Every supplier in our network is audited, sampled, and approved
+              against international hotel-brand standards. We do not ship what
+              we have not verified — at every stage, from production sample to
+              final delivery.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              II
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-sm">◇</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              Bespoke <span class="italic">Capability</span>
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              We do not offer catalogues. We develop custom OS&E solutions
+              built around your property's brand identity, guest profile, and
+              operational requirements — from materials to packaging to
+              placement.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              III
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-xs">●</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              Design-to-Delivery <span class="italic">Integration</span>
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              Our 5PL model eliminates the fragmentation of working with
+              multiple vendors. Design, production, digitalisation, logistics,
+              and fulfillment — managed as one system, with one point of
+              accountability.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              IV
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-xl leading-none -mt-1">+</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              Saudi-Made, <span class="italic">Internationally Refined</span>
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              Rooted in the Kingdom's growing culture of craft and precision,
+              ARKAN brings regional expertise to international standards. Our
+              Saudi identity is a point of strength — not a limitation.
+            </p>
+          </div>
+
+          <!-- Item 5 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              V
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-xs font-mono select-none border border-black p-0.5">◼</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              Reliability & Execution <span class="italic">Strength</span>
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              Pre-openings are unforgiving. Our track record of on-time
+              delivery, proactive communication, and contingency management
+              means your project timeline is protected — even when supply
+              chains are not.
+            </p>
+          </div>
+
+          <!-- Item 6 -->
+          <div
+            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+              VI
+            </div>
+            <div
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
+              <span class="text-sm">⚙</span>
+            </div>
+            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
+              <span class="italic">A Partner,</span> Not a Vendor
+            </h3>
+            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+              We invest in understanding your project before we propose a
+              solution. Long-term relationships, honest counsel, and genuine
+              accountability are the foundations of how we work — not just
+              what we promise.
+            </p>
+          </div>
+        </div>
+
+        <!-- Quote Block -->
+        <div
+          class="w-full bg-[#E2D9C8] mt-8 p-10 md:p-16 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm reveal">
+          <h3
+            class="text-2xl md:text-3xl lg:text-4xl font-radley text-[#1B1B18] max-w-3xl leading-snug text-center md:text-left">
+            "The right OS&E partner does not just supply a hotel —
+            <br class="hidden lg:block" /><span class="italic">they help define what the guest experiences."</span>
+          </h3>
+          <a href="/contact"
+            class="flex-shrink-0 inline-block px-10 py-4 rounded-full border border-[#1B1B18] text-[#1B1B18] text-sm font-radley tracking-widest hover:bg-[#1B1B18] hover:text-[#E2D9C8] transition-colors duration-300">
+            Start a Conversation
+          </a>
+        </div>
+      </section>
+
+      <!-- Arkan At a Glance Section -->
+      <section
+        class="w-full relative overflow-hidden text-white flex justify-center pb-24 mx-auto max-w-[1920px] glance-section reveal">
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full p-4 md:p-8 lg:p-12 xl:p-16 z-0">
+          <div class="w-full h-full relative overflow-hidden rounded-sm">
+            <img src="/assets/img/loading-bg.png" alt="Arkan Background"
+              class="absolute inset-0 w-full h-full object-cover rounded-sm" />
+            <!-- Dark Overlay for better contrast -->
+            <div class="absolute inset-0 bg-[#0E3559]/70 lg:bg-[#0E3559]/60 mix-blend-multiply"></div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="relative z-10 w-full max-w-5xl mx-auto px-8 md:px-12 lg:px-16 py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center">
+          <div class="text-center mb-16 md:mb-24">
+            <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-white/70 uppercase mb-4 block">Arkan
+              at a Glance</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-radley leading-[1.1]">
+              The numbers behind <span class="italic">the commitment</span>
+            </h2>
+          </div>
+
+          <!-- Stats Grid Overlay -->
+          <div
+            class="w-full grid grid-cols-1 md:grid-cols-4 shadow-2xl bg-white/10 backdrop-blur-sm border border-white/10 rounded-sm">
+            <!-- Stat 1 -->
+            <div
+              class="bg-[#FCFAF8] text-[#1B1B18] p-10 md:p-12 flex flex-col justify-center items-center text-center row-[span_2] md:col-[span_1]">
+              <h3 class="text-6xl md:text-[5rem] lg:text-[6rem] font-manrope font-light tracking-tighter mb-4">
+                <span class="counter" data-target="500">0</span><span
+                  class="text-3xl text-[#D2BB9C] italic font-radley ml-1">+</span>
+              </h3>
+              <p class="font-manrope text-xs font-bold text-[#1B1B18] mb-2">
+                Properties Supplied
+              </p>
+              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-[#8a8174] uppercase max-w-[150px]">
+                Across Luxury & Lifestyle Brands
+              </p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div
+              class="p-10 md:p-12 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/10">
+              <h3
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                <span class="counter" data-target="40">0</span><span
+                  class="text-2xl text-white/50 italic font-radley ml-1">+</span>
+              </h3>
+              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[120px]">
+                Global Markets Reached
+              </p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div
+              class="p-10 md:p-12 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/10">
+              <h3
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                <span class="counter" data-target="98">0</span><span
+                  class="text-3xl text-white/50 font-radley ml-1">%</span>
+              </h3>
+              <p class="font-manrope text-xs font-bold text-white mb-2">
+                On-Time Delivery Rate
+              </p>
+              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 uppercase max-w-[120px]">
+                Verified Across All Projects
+              </p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="p-10 md:p-12 flex flex-col justify-center items-center text-center">
+              <h3
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                <span class="counter" data-target="5">0</span><span
+                  class="text-2xl text-white/50 font-radley ml-1 uppercase">pl</span>
+              </h3>
+              <p class="font-manrope text-xs font-bold text-white mb-2">
+                Integrated Platform Layers
+              </p>
+              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 uppercase max-w-[120px]">
+                Design Through Fulfillment
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Trusted By Section -->
-      <section class="w-full max-w-5xl mx-auto px-4 md:px-8 mt-16 md:mt-24 mb-12">
+      <section class="w-full max-w-5xl mx-auto px-4 md:px-8 mt-16 md:mt-24 mb-12 reveal">
         <h2 class="text-center font-manrope font-medium text-lg md:text-xl text-[#5c4f3d] mb-10 md:mb-16">
-          Trusted <span class="font-radley italic font-normal text-[1.1em] lowercase mx-px">by</span> Our Hospitality
-          Clients
+          Trusted
+          <span class="font-radley italic font-normal text-[1.1em] lowercase mx-px">by</span>
+          Our Hospitality Clients
         </h2>
 
         <!-- Logos Container -->
@@ -195,18 +643,15 @@
       </section>
 
       <!-- FAQ Section -->
-      <section
-        class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 py-16 lg:py-32 mb-12 relative overflow-visible">
-
+      <section class="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-32 reveal">
         <!-- Background Ornament - Adjusted for Figma Positioning (Top Overlap, Hidden on Mobile) -->
         <div
           class="hidden md:block absolute top-0 right-0 z-0 pointer-events-none translate-x-[15%] lg:translate-x-[25%] -translate-y-[45%] lg:-translate-y-[35%] opacity-100">
           <img src="/assets/img/ornament.svg" alt="" class="h-[700px] md:h-[900px] lg:h-[1300px] w-auto max-w-none"
-            style="opacity: 0.15;" />
+            style="opacity: 0.15" />
         </div>
 
         <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
-
           <!-- Left Column: Title & Image -->
           <div class="w-full lg:w-5/12 flex flex-col z-10">
             <span
@@ -215,20 +660,19 @@
               Frequently Asked<br />Questions
             </h2>
             <div class="w-full aspect-[4/5] object-cover rounded-sm overflow-hidden shadow-2xl">
-              <img src="/assets/img/about-4.png" alt="FAQ Image" class="w-full h-full object-cover">
+              <img src="/assets/img/about-4.png" alt="FAQ Image" class="w-full h-full object-cover" />
             </div>
           </div>
 
           <!-- Right Column: Accordion -->
           <div class="w-full lg:w-7/12 flex flex-col justify-center z-10 lg:pl-8">
-
             <div class="w-full flex flex-col pt-8 lg:pt-32">
-
               <!-- Item 1 -->
-              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group" onclick="toggleFaq(this)">
+              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group faq-item"
+                onclick="toggleFaq(this)">
                 <div class="flex justify-between items-center text-[#5c4f3d]">
-                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">Why Was Arkan
-                    Established?
+                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">
+                    Why Was Arkan Established?
                   </h3>
                   <span
                     class="faq-icon text-xl md:text-2xl font-light font-manrope transition-transform duration-300">+</span>
@@ -236,18 +680,19 @@
                 <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0">
                   <div
                     class="pt-4 md:pt-6 text-[#8a8174] font-manrope text-[15px] md:text-base pr-8 md:pr-16 leading-relaxed">
-                    We aim to set a new standard in luxury hospitality by blending bespoke quality and scalable
-                    sustainability.
+                    We aim to set a new standard in luxury hospitality by
+                    blending bespoke quality and scalable sustainability.
                   </div>
                 </div>
               </div>
 
               <!-- Item 2 (Active by Default) -->
-              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group" onclick="toggleFaq(this)">
+              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group faq-item"
+                onclick="toggleFaq(this)">
                 <div class="flex justify-between items-center text-[#5c4f3d]">
-                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">What Types Of Clients
-                    Does
-                    Arkan Work With?</h3>
+                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">
+                    What Types Of Clients Does Arkan Work With?
+                  </h3>
                   <span
                     class="faq-icon text-xl md:text-2xl font-light font-manrope transition-transform duration-300 transform rotate-180">-</span>
                 </div>
@@ -255,45 +700,51 @@
                   class="faq-content overflow-hidden max-h-[500px] transition-all duration-500 ease-in-out opacity-100">
                   <div
                     class="pt-4 md:pt-6 text-[#8a8174] font-manrope text-[15px] md:text-base pr-8 md:pr-16 leading-relaxed">
-                    We serve a range of sectors, including government, cultural and heritage sites, hospitality,
-                    residential, retail, and commercial developments.
+                    We serve a range of sectors, including government,
+                    cultural and heritage sites, hospitality, residential,
+                    retail, and commercial developments.
                   </div>
                 </div>
               </div>
 
               <!-- Item 3 -->
-              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group" onclick="toggleFaq(this)">
+              <div class="border-t border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group faq-item"
+                onclick="toggleFaq(this)">
                 <div class="flex justify-between items-center text-[#5c4f3d]">
-                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">Question 3</h3>
+                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">
+                    Question 3
+                  </h3>
                   <span
                     class="faq-icon text-xl md:text-2xl font-light font-manrope transition-transform duration-300">+</span>
                 </div>
                 <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0">
                   <div
                     class="pt-4 md:pt-6 text-[#8a8174] font-manrope text-[15px] md:text-base pr-8 md:pr-16 leading-relaxed">
-                    We provide end-to-end bespoke solutions tailored specifically to the conceptual desires and
-                    operational necessities of each property.
+                    We provide end-to-end bespoke solutions tailored
+                    specifically to the conceptual desires and operational
+                    necessities of each property.
                   </div>
                 </div>
               </div>
 
               <!-- Item 4 -->
-              <div class="border-t border-b border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group"
+              <div class="border-t border-b border-[#5c4f3d]/30 py-6 md:py-8 cursor-pointer group faq-item"
                 onclick="toggleFaq(this)">
                 <div class="flex justify-between items-center text-[#5c4f3d]">
-                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">Question 4</h3>
+                  <h3 class="font-radley text-lg md:text-xl font-medium pr-4 transition-colors">
+                    Question 4
+                  </h3>
                   <span
                     class="faq-icon text-xl md:text-2xl font-light font-manrope transition-transform duration-300">+</span>
                 </div>
                 <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out opacity-0">
                   <div
                     class="pt-4 md:pt-6 text-[#8a8174] font-manrope text-[15px] md:text-base pr-8 md:pr-16 leading-relaxed">
-                    By carefully integrating state-of-the-art designs and robust logistics capabilities managed by our
-                    expert team.
+                    By carefully integrating state-of-the-art designs and
+                    robust logistics capabilities managed by our expert team.
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -311,10 +762,11 @@
       <div class="absolute inset-0 bg-black/40 xl:bg-black/30 z-0"></div>
 
       <!-- Content -->
-      <div class="relative z-10 flex flex-col items-center justify-center text-center ">
+      <div class="relative z-10 flex flex-col items-center justify-center text-center">
         <h2
           class="text-white font-manrope font-medium text-2xl md:text-3xl lg:text-4xl leading-snug md:leading-normal mb-8 md:mb-12">
-          We craft premium amenities with a focus on quality, precision, and<br class="hidden md:block" />
+          We craft premium amenities with a focus on quality, precision,
+          and<br class="hidden md:block" />
           international standards, supported by some of the strongest.
         </h2>
         <a href="/contact"
@@ -323,33 +775,6 @@
         </a>
       </div>
     </section>
-
-    <!-- FAQ Toggle Script -->
-    <script>
-      function toggleFaq(element) {
-        const content = element.querySelector('.faq-content');
-        const icon = element.querySelector('.faq-icon');
-
-        // Is currently collapsed
-        if (content.classList.contains('max-h-0')) {
-          // Expand
-          content.classList.remove('max-h-0', 'opacity-0');
-          content.classList.add('max-h-[500px]', 'opacity-100');
-
-          // Icon Animation (cross to minus/rotate)
-          icon.textContent = '-';
-          icon.classList.add('rotate-180');
-        } else {
-          // Collapse
-          content.classList.remove('max-h-[500px]', 'opacity-100');
-          content.classList.add('max-h-0', 'opacity-0');
-
-          // Icon Animation reset
-          icon.textContent = '+';
-          icon.classList.remove('rotate-180');
-        }
-      }
-    </script>
 
     <!-- Mobile Menu Script -->
     <script>
@@ -382,7 +807,10 @@
               duration: 0.3,
             });
             // Fix icon color for mobile overlay vs light navbar
-            gsap.to(".hamburger-inner", { backgroundColor: "#111111", duration: 0.3 });
+            gsap.to(".hamburger-inner", {
+              backgroundColor: "#111111",
+              duration: 0.3,
+            });
 
             gsap.to(links, {
               opacity: 1,
@@ -422,7 +850,10 @@
               duration: 0.3,
             });
             // Restore original icon color
-            gsap.to(".hamburger-inner", { clearProps: "backgroundColor", duration: 0.3 });
+            gsap.to(".hamburger-inner", {
+              clearProps: "backgroundColor",
+              duration: 0.3,
+            });
 
             gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
             gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
@@ -435,7 +866,7 @@
         links.forEach((link) =>
           link.addEventListener("click", () => {
             if (isMenuOpen) window.toggleMenu();
-          })
+          }),
         );
       });
     </script>
@@ -443,10 +874,8 @@
     <!-- Footer -->
     <footer class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20">
       <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
-
         <!-- Top Half: Careers Integrated -->
         <div class="flex flex-col md:flex-row w-full mb-12 md:mb-16">
-
           <!-- Left: Image -->
           <div class="w-1/2 md:w-[15%] lg:w-[12%] md:mb-0">
             <div class="relative w-full aspect-[4/5] bg-white/5 overflow-hidden">
@@ -462,8 +891,8 @@
             </h2>
             <div class="max-w-md">
               <p class="text-xs md:text-sm font-manrope text-white/90 leading-[1.6] mb-6 md:mb-8">
-                Join <span class="font-bold">ARKAN</span> and become part of a team leading<br
-                  class="hidden sm:block" />
+                Join <span class="font-bold">ARKAN</span> and become part of a
+                team leading<br class="hidden sm:block" />
                 the Saudi ultra-luxury hospitality scene
               </p>
               <a href="mailto:info@arkan365.com"
@@ -472,12 +901,10 @@
               </a>
             </div>
           </div>
-
         </div>
 
         <!-- Bottom Half: Links & Copyright -->
         <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
-
           <!-- Left: Logo & Copyright -->
           <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
             <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
@@ -489,7 +916,6 @@
 
           <!-- Right: Buttons & Links -->
           <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
-
             <!-- Contact & Socials -->
             <div class="flex items-center gap-4 mb-6 md:mb-8">
               <a href="/contact"
@@ -521,12 +947,99 @@
               <span class="text-white/30 hidden sm:inline-block">|</span>
               <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
             </div>
-
           </div>
         </div>
       </div>
     </footer>
   </div>
+  <script>
+    /* ─── SCROLL REVEAL ─── */
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach((el) => revealObserver.observe(el));
+
+    /* ─── ANIMATED COUNTERS ─── */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const duration = 2000;
+      const start = performance.now();
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.round(easeOut(progress) * target);
+        el.textContent = value.toLocaleString();
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toLocaleString();
+      }
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll(".counter");
+            counters.forEach((c) => {
+              if (!c.dataset.animated) {
+                c.dataset.animated = "true";
+                animateCounter(c);
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.25 },
+    );
+
+    const glanceSection = document.querySelector(".glance-section");
+    if (glanceSection) counterObserver.observe(glanceSection);
+
+    /* ─── FAQ TOGGLE (Smoother) ─── */
+    window.toggleFaq = function (element) {
+      const content = element.querySelector(".faq-content");
+      const icon = element.querySelector(".faq-icon");
+      const heading = element.querySelector("h3");
+      const allFaqs = document.querySelectorAll(".faq-content");
+      const allIcons = document.querySelectorAll(".faq-icon");
+      const allHeadings = document.querySelectorAll(".faq-item h3");
+
+      const isOpen = content.classList.contains("opacity-100");
+
+      // Close all
+      allFaqs.forEach((f) => {
+        f.style.maxHeight = "0";
+        f.classList.remove("opacity-100");
+        f.classList.add("opacity-0");
+      });
+      allIcons.forEach((i) => {
+        i.classList.remove("rotate-180");
+        i.textContent = "+";
+      });
+      allHeadings.forEach((h) => h.classList.remove("active"));
+
+      if (!isOpen) {
+        content.classList.remove("opacity-0");
+        content.classList.add("opacity-100");
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.classList.add("rotate-180");
+        icon.textContent = "-";
+        heading.classList.add("active");
+      }
+    };
+  </script>
 </body>
 
 </html>
