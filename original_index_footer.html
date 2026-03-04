@@ -1,0 +1,120 @@
+            }
+
+            60% {
+                transform: translate(-50%, 15px);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .active-service {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Journal Hover Effects */
+        .journal-item h3 {
+            transform: translateY(20px);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .journal-item span {
+            transform: translateY(10px);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+        }
+
+        .journal-item:hover h3,
+        .journal-item:hover span {
+            transform: translateY(0);
+        }
+
+        /* Gallery Styles Refined */
+        .about-floating-images {
+            z-index: 10;
+        }
+
+        .floating-img-item {
+            position: absolute;
+            will-change: transform;
+        }
+
+        .floating-img-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-sticky-content {
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            height: 100vh;
+            margin: 0 auto;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        #about-content-1,
+        #about-content-2 {
+            will-change: opacity;
+        }
+
+        #about-content-1 h2,
+        #about-content-2 p {
+            text-shadow:
+                0 0 40px rgba(245, 241, 232, 1),
+                0 0 20px rgba(245, 241, 232, 0.8),
+                0 0 60px rgba(245, 241, 232, 0.6);
+        }
+
+        @media (max-width: 767px) {
+            #about-container {
+                min-height: auto !important;
+            }
+        }
+
+        .active-service span {
+            color: #1b1b18 !important;
+        }
+
+        .active-service h4 {
+            transform: translateX(0.5rem);
+            color: #1b1b18 !important;
+        }
+
+        /* Industries Slider Styles */
+        .industry-slide {
+            transition:
+                opacity 0.8s ease,
+                filter 0.8s ease;
+            will-change: transform, opacity, filter;
+        }
+
+        .slide-bg {
+            transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .industry-slide.z-10 .slide-bg {
+            transform: scale(1);
+        }
+
+        .industry-slide.z-0 .slide-bg {
+            transform: scale(1.1);
+        }
+
+        .nav-btn:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</body>
+
+</html>

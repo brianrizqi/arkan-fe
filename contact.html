@@ -146,136 +146,113 @@
       });
     </script>
 
-    <main class="relative min-h-screen flex flex-col pt-32 md:pt-48 pb-20 px-6 md:px-12 xl:px-8 overflow-hidden">
+    <main class="relative min-h-screen flex flex-col pt-32 md:pt-48 pb-12 px-6 md:px-12 xl:px-16 overflow-hidden">
       <!-- Background Image -->
-      <img src="/assets/img/bg-contact-us.png"
-        class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" alt="" />
+      <img src="/assets/img/loading-bg.jpg"
+        class="absolute inset-0 w-full h-full object-cover object-[center_80%] z-0 pointer-events-none" alt="" />
 
       <div class="max-w-[1700px] mx-auto w-full relative z-10 flex-grow flex flex-col">
-        <div class="flex flex-col lg:flex-row gap-16 lg:gap-32 relative z-10 w-full">
+        <div class="flex flex-col lg:flex-row lg:justify-between h-full flex-grow gap-16 lg:gap-8">
+
           <!-- Left Column -->
-          <div class="w-full lg:w-[48%] flex flex-col pt-4">
-            <!-- Contact Us -->
-            <p class="font-radley text-lg md:text-xl mb-4 lg:mb-6 text-white">
-              Contact Us
-            </p>
-
-            <!-- Get in Touch -->
-            <h1
-              class="text-[4rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] font-radley leading-none text-white whitespace-nowrap tracking-tight mb-8 lg:mb-12">
-              Get in <span class="italic">Touch.</span>
-            </h1>
-
-            <!-- Intro Paragraph -->
-            <div class="w-full mb-16 lg:mb-24">
-              <p
-                class="font-manrope text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] xl:text-[2rem] leading-[1.4] text-white text-left indent-[6rem] md:indent-[8rem] lg:indent-[10rem] xl:indent-[12rem]">
-                If you have any<br />
-                questions or you'd like to find<br />
-                out more about our services,<br />
-                please get in touch.
+          <div class="w-full lg:w-5/12 flex flex-col h-full">
+            <div class="flex-grow">
+              <!-- Contact Us -->
+              <p class="font-radley text-lg md:text-xl mb-4 lg:mb-6 text-white">
+                Contact Us
               </p>
-            </div>
 
-            <!-- Contact Details -->
-            <div class="mb-12 lg:mb-16">
-              <h3 class="font-manrope font-bold text-lg md:text-xl mb-2 text-white">
-                Contact details :
-              </h3>
-              <p class="font-manrope text-sm md:text-base text-white/90 max-w-[20rem] leading-[1.5]">
-                Ready to discuss your project? Feel like we might be a great
-                fit? I would love to hear about it?
-              </p>
+              <!-- Get in Touch -->
+              <h1
+                class="text-[4rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] font-radley leading-none text-white tracking-tight mb-8 lg:mb-12">
+                Get in <span class="italic">Touch.</span>
+              </h1>
+
+              <!-- Intro Paragraph -->
+              <div class="mb-10 lg:mb-12 pr-4 lg:pr-12">
+                <p class="font-manrope text-[1.1rem] md:text-[1.2rem] lg:text-[1.3rem] leading-[1.5] text-white">
+                  If you have any questions or you'd like to find<br class="hidden lg:block" />
+                  out more about our services,<br class="hidden lg:block" />
+                  please get in touch.
+                </p>
+              </div>
+
+              <!-- Contact Details -->
+              <div class="mb-8 lg:mb-12">
+                <h3 class="font-manrope font-bold text-lg md:text-xl mb-4 text-white">
+                  Contact details :
+                </h3>
+                <p class="font-manrope text-sm md:text-[15px] text-white leading-[1.6] mb-8 lg:mb-10 max-w-sm">
+                  Ready to discuss your project? Feel like<br />
+                  we might be a great fit? I would love to<br />
+                  hear about it?
+                </p>
+
+                <!-- Address & Email -->
+                <div class="font-manrope text-xs md:text-sm text-white leading-[1.6]">
+                  <p class="mb-4">
+                    Email Us<br />
+                    <a href="mailto:Info@arkan365.com"
+                      class="hover:text-white/70 transition-colors">Info@arkan365.com</a>
+                  </p>
+                  <p>
+                    Abi Bakr As Siddiq Rd, An Nafal<br />
+                    Riyadh 13312<br />
+                    Saudi Arabia
+                  </p>
+                </div>
+              </div>
             </div>
 
             <!-- Socials -->
-            <div class="flex gap-4 mb-24 lg:mb-48">
+            <div class="flex gap-4 mt-8 lg:mt-auto pb-4">
               <a href="#"
-                class="px-8 py-3 rounded-full border border-white/40 text-[13px] font-radley tracking-wide hover:bg-white hover:text-[#023666] transition-all text-white">Instagram</a>
+                class="px-8 py-3 rounded-full bg-white text-[#111] text-[12px] md:text-[13px] font-radley tracking-[0.05em] hover:bg-white/90 transition-all flex items-center justify-center min-w-[120px]">Instagram</a>
               <a href="#"
-                class="px-8 py-3 rounded-full border border-white/40 text-[13px] font-radley tracking-wide hover:bg-white hover:text-[#023666] transition-all text-white">LinkedIn</a>
+                class="px-8 py-3 rounded-full bg-white text-[#111] text-[12px] md:text-[13px] font-radley tracking-[0.05em] hover:bg-white/90 transition-all flex items-center justify-center min-w-[120px]">LinkedIn</a>
             </div>
           </div>
 
           <!-- Right Column -->
-          <div class="w-full lg:w-[52%] relative flex flex-col pt-4 lg:pt-[12rem]">
-            <!-- Star Watermark Background for right column -->
-            <div
-              class="absolute top-[18rem] lg:top-[30rem] left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.1] pointer-events-none z-[-1] w-[800px] lg:w-[1300px] flex justify-center">
-              <img src="/assets/img/star.svg" alt="" class="w-full h-full object-contain brightness-0 invert" />
+          <div class="w-full lg:w-6/12 flex flex-col pt-4 lg:pt-[14rem] h-full">
+            <div class="flex-grow">
+              <!-- Form -->
+              <form class="w-full relative z-10 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+                  <div class="flex flex-col">
+                    <label class="text-[13px] md:text-[14px] font-radley mb-2 text-white">Name</label>
+                    <input type="text"
+                      class="bg-transparent border-b border-white/40 pb-2 text-base focus:outline-none focus:border-white transition-colors text-white font-radley" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="text-[13px] md:text-[14px] font-radley mb-2 text-white">Email</label>
+                    <input type="email"
+                      class="bg-transparent border-b border-white/40 pb-2 text-base focus:outline-none focus:border-white transition-colors text-white font-radley" />
+                  </div>
+                  <div class="flex flex-col md:col-span-2 mt-2">
+                    <label class="text-[13px] md:text-[14px] font-radley mb-2 text-white">Company</label>
+                    <input type="text"
+                      class="bg-transparent border-b border-white/40 pb-2 text-base focus:outline-none focus:border-white transition-colors text-white font-radley" />
+                  </div>
+                  <div class="flex flex-col md:col-span-2 mt-2">
+                    <label class="text-[13px] md:text-[14px] font-radley mb-2 text-white">Messages</label>
+                    <textarea rows="1"
+                      class="bg-transparent border-b border-white/40 pb-16 text-base focus:outline-none focus:border-white transition-colors text-white resize-none font-radley"></textarea>
+                  </div>
+                </div>
+              </form>
             </div>
 
-            <!-- Form -->
-            <form class="w-full relative z-10 mb-16 px-0 lg:px-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mb-16">
-                <div class="flex flex-col">
-                  <label class="text-[15px] font-radley mb-2 text-white">Name</label>
-                  <input type="text"
-                    class="bg-transparent border-b border-white/40 pb-2 text-lg focus:outline-none focus:border-white transition-colors text-white font-radley" />
-                </div>
-                <div class="flex flex-col">
-                  <label class="text-[15px] font-radley mb-2 text-white">Email</label>
-                  <input type="email"
-                    class="bg-transparent border-b border-white/40 pb-2 text-lg focus:outline-none focus:border-white transition-colors text-white font-radley" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                  <label class="text-[15px] font-radley mb-2 text-white mt-4">Company</label>
-                  <input type="text"
-                    class="bg-transparent border-b border-white/40 pb-2 text-lg focus:outline-none focus:border-white transition-colors text-white font-radley" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                  <label class="text-[15px] font-radley mb-2 text-white mt-4">Messages</label>
-                  <textarea rows="1"
-                    class="bg-transparent border-b border-white/40 pb-16 text-lg focus:outline-none focus:border-white transition-colors text-white resize-none font-radley"></textarea>
-                </div>
-              </div>
-            </form>
-
-            <div class="px-0 lg:px-8 mb-16 lg:mb-24 relative z-10">
+            <!-- Submit Button -->
+            <div class="mt-8 lg:mt-auto pb-4">
               <button type="button"
-                class="w-full py-4 rounded-full border border-white/40 text-[15px] font-radley tracking-wide hover:bg-white hover:text-[#023666] transition-all text-white">
+                class="w-full py-4 rounded-full bg-white text-[#111] text-[14px] md:text-[15px] font-radley tracking-wide hover:bg-white/90 transition-all">
                 Send Messages
               </button>
             </div>
           </div>
         </div>
-
-        <!-- New Bottom Contact Details & Image Section -->
-        <div class="w-full flex justify-center lg:justify-end mt-24 lg:mt-32 pb-16">
-          <div class="flex flex-col lg:flex-row items-center w-full lg:w-[85%] xl:w-[75%] gap-12 lg:gap-16">
-
-            <!-- Left: Contact Info InfoBlock -->
-            <div class="w-full lg:w-[45%] flex flex-col pt-8 lg:pt-0">
-
-              <!-- Email Us -->
-              <div class="mb-10 lg:mb-12 border-b border-white/20 pb-6 lg:pb-8 w-full">
-                <p class="font-radley text-xl md:text-2xl lg:text-3xl text-white mb-2 lg:mb-4">Email Us</p>
-                <a href="mailto:info@arkan365.com"
-                  class="font-radley text-4xl md:text-5xl lg:text-[3.5rem] italic text-white hover:opacity-70 transition-opacity tracking-wide">info@arkan365.com</a>
-              </div>
-
-              <!-- Address -->
-              <div class="border-b border-white/20 pb-6 lg:pb-8 w-full">
-                <p class="font-radley text-xl md:text-2xl lg:text-3xl text-white mb-2 lg:mb-4">Abi Bakr As Siddiq Rd, An
-                  Nafal</p>
-                <div
-                  class="font-radley text-4xl md:text-5xl lg:text-[3.5rem] italic text-white leading-[1.2] tracking-wide">
-                  <p>Riyadh 13312</p>
-                  <p>Saudi Arabia</p>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Right: Image -->
-            <div class="w-full lg:w-[55%] relative z-20">
-              <div class="relative w-full aspect-[4/5] bg-white/5 overflow-hidden">
-                <img src="/assets/img/about-7.png" alt="Arkan Detail" class="w-full h-full object-cover" />
-              </div>
-            </div>
-
-          </div>
-        </div>
+      </div>
     </main>
 
     <!-- Amenities Highlight Section -->
@@ -297,95 +274,88 @@
       </div>
     </section>
 
-    <!-- Careers Section -->
-    <section id="careers"
-      class="relative bg-[#F5F1E8] w-full flex items-center justify-center py-20 px-4 md:px-8 overflow-hidden"
-      style="z-index: 30">
-      <!-- Background Geometric Lines -->
-      <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center opacity-30">
-        <svg width="100%" height="100%" viewBox="0 0 1000 1000" fill="none"
-          class="scale-150 md:scale-110 object-cover origin-center">
-          <line x1="0" y1="500" x2="1000" y2="500" stroke="#B99668" stroke-width="1" />
-          <!-- Large Diamond -->
-          <polygon points="500,100 900,500 500,900 100,500" stroke="#B99668" stroke-width="1" fill="none" />
-          <!-- Medium Diamond -->
-          <polygon points="500,250 750,500 500,750 250,500" stroke="#B99668" stroke-width="1" fill="none" />
-          <!-- Small Diamond -->
-          <polygon points="500,350 650,500 500,650 350,500" stroke="#B99668" stroke-width="1" fill="none" />
-        </svg>
-      </div>
-
-      <div
-        class="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
-        <!-- Left Image -->
-        <div class="w-full sm:w-8/12 md:w-5/12 aspect-[3/4] relative z-10">
-          <img src="/assets/img/about-2.png" alt="Careers at Boutique Group"
-            class="w-full h-full object-cover shadow-2xl" />
-        </div>
-
-        <!-- Right Text -->
-        <div
-          class="w-full md:w-6/12 flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 md:pl-10">
-          <h2
-            class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-manrope text-[#0a1e2f] mb-8 uppercase tracking-widest font-normal">
-            Careers
-          </h2>
-          <p class="text-sm md:text-base lg:text-lg font-radley text-[#333333] max-w-sm leading-relaxed mb-6">
-            Join Boutique Group and become part of a team leading the Saudi ultra-luxury hospitality scene
-          </p>
-          <a href="mailto:info@arkan365.com"
-            class="text-sm border-b border-[#0a1e2f] pb-1 md:text-base lg:text-lg font-bold text-[#0a1e2f] tracking-wide font-serif hover:text-[#D2BB9C] hover:border-[#D2BB9C] transition-colors">
-            info@arkan365.com
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
-    <footer
-      class="bg-[#111111] py-[var(--space-4)] md:py-[var(--space-5)] px-[var(--space-4)] md:px-[var(--space-6)] relative z-20">
-      <div
-        class="max-w-[1920px] mx-auto flex flex-col md:flex-row items-center justify-between gap-[var(--space-4)] text-center md:text-left">
-        <div class="flex flex-col items-center md:items-start space-y-[var(--space-1)]">
-          <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-            class="h-4 md:h-5 w-auto object-contain text-[#D2BB9C] opacity-90" />
-          <p class="text-white/60 font-manrope text-[10px] md:text-xs uppercase tracking-widest leading-none mt-4">
-            © 2026 ARKAN Technologies. All rights reserved.
-          </p>
-        </div>
+    <footer class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20">
+      <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
 
-        <div class="flex flex-col items-center sm:items-end gap-6 mt-6 md:mt-0">
-          <!-- Social and Contact Us -->
-          <div class="flex items-center gap-4 sm:gap-6">
-            <a href="/contact"
-              class="font-manrope text-[10px] md:text-xs uppercase tracking-widest text-[#fff] border border-[#fff] px-5 py-2.5 rounded-full hover:bg-[#D2BB9C] hover:text-[#111111] transition-all duration-300">
-              Contact Us
-            </a>
-            <a href="#" aria-label="Instagram"
-              class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:bg-[#D2BB9C] hover:border-[#D2BB9C] hover:text-[#111111] transition-all duration-300">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                  clip-rule="evenodd" />
-              </svg>
-            </a>
-            <a href="#" aria-label="LinkedIn"
-              class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:bg-[#D2BB9C] hover:border-[#D2BB9C] hover:text-[#111111] transition-all duration-300">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
+        <!-- Top Half: Careers Integrated -->
+        <div class="flex flex-col md:flex-row w-full mb-12 md:mb-16">
+
+          <!-- Left: Image -->
+          <div class="w-1/2 md:w-[15%] lg:w-[12%] md:mb-0">
+            <div class="relative w-full aspect-[4/5] bg-white/5 overflow-hidden">
+              <img src="/assets/img/about-2.png" alt="Careers" class="w-full h-full object-cover" />
+            </div>
           </div>
 
-          <!-- Footer Links -->
-          <div
-            class="flex flex-col sm:flex-row items-center gap-4 sm:gap-[var(--space-4)] flex-wrap justify-center font-manrope text-[10px] md:text-xs uppercase tracking-widest text-white/80">
-            <a href="#" class="hover:text-[#D2BB9C] transition-colors">Help & Support</a>
-            <span class="w-px h-3 bg-white/20 hidden sm:block"></span>
-            <a href="#" class="hover:text-[#D2BB9C] transition-colors">Terms & Conditions</a>
-            <span class="w-px h-3 bg-white/20 hidden sm:block"></span>
-            <a href="#" class="hover:text-[#D2BB9C] transition-colors">Privacy Policy</a>
+          <!-- Right: Text Content -->
+          <div class="w-1/2 md:w-[85%] lg:w-[88%] pl-6 md:pl-8 lg:pl-10 flex flex-col justify-center">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-radley text-white mb-6 md:mb-8 font-normal tracking-tight">
+              Careers
+            </h2>
+            <div class="max-w-md">
+              <p class="text-xs md:text-sm font-manrope text-white/90 leading-[1.6] mb-6 md:mb-8">
+                Join <span class="font-bold">ARKAN</span> and become part of a team leading<br
+                  class="hidden sm:block" />
+                the Saudi ultra-luxury hospitality scene
+              </p>
+              <a href="mailto:info@arkan365.com"
+                class="text-xs md:text-sm font-manrope text-white border-b border-white pb-1 hover:text-white/70 hover:border-white/70 transition-all">
+                info@arkan365.com
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Half: Links & Copyright -->
+        <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
+
+          <!-- Left: Logo & Copyright -->
+          <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+              class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
+            <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
+              © 2026 ARKAN Technologies. All rights reserved.
+            </p>
+          </div>
+
+          <!-- Right: Buttons & Links -->
+          <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
+
+            <!-- Contact & Socials -->
+            <div class="flex items-center gap-4 mb-6 md:mb-8">
+              <a href="/contact"
+                class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
+                Contact Us
+              </a>
+              <a href="#" aria-label="Instagram"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
+              <a href="#" class="hover:text-white transition-colors">Help & Support</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+
           </div>
         </div>
       </div>
