@@ -200,3 +200,34 @@ footer {
     font-family: var(--font-radley);
     font-size: 1.25rem;
 }
+
+/* Navbar States */
+.nav-scrolled #navbar-container {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-light-theme.nav-scrolled #navbar-container {
+    background: rgba(245, 241, 232, 0.8);
+    border-bottom: 1px solid rgba(27, 27, 24, 0.05);
+}
+
+.nav-dark #navbar-container {
+    color: #1b1b18 !important;
+    background: rgba(245, 241, 232, 0.8);
+    border-bottom-color: rgba(27, 27, 24, 0.05);
+}
+
+.nav-dark .navbar-logo {
+    filter: brightness(0) !important;
+    opacity: 0.8;
+}
+
+.nav-dark .hamburger-inner,
+.nav-dark .hamburger-inner-mid {
+    background-color: #1b1b18 !important;
+}
