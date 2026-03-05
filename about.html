@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="sections-wrapper relative overflow-x-hidden">
+  <div class="sections-wrapper relative overflow-x-clip">
     <!-- Navbar Component -->
     <header id="global-navbar"
       class="navbar-light-theme fixed top-0 left-0 right-0 z-[100] transition-all duration-500">
@@ -154,7 +154,7 @@
       </div>
     </header>
 
-    <main class="w-full pt-24 lg:pt-48 pb-24 overflow-x-hidden">
+    <main class="w-full pt-24 lg:pt-48 pb-24 overflow-x-clip">
       <!-- Hero Content -->
       <div class="flex flex-col items-center text-center max-w-5xl mx-auto mb-16 lg:mb-24 reveal">
         <!-- Ornament -->
@@ -201,43 +201,53 @@
 
       <!-- Born from the Kingdom Section -->
       <section class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-24 pb-12 reveal">
-        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24 md:mb-32">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-24 md:mb-32">
           <!-- Left: Image (Sticky) -->
-          <div class="w-full lg:w-4/12 relative">
-            <div class="sticky top-32 w-full aspect-[3/4] overflow-hidden rounded-sm">
-              <img src="/assets/img/about-2.png" alt="Arkan Craftsmanship" class="w-full h-full object-cover" />
+          <div class="w-full lg:w-5/12 relative">
+            <div class="sticky top-32">
+              <div
+                class="w-full aspect-[4/5] overflow-hidden rounded-sm bg-[#E5E0D8] flex items-center justify-center reveal">
+                <img src="/assets/img/about-2.png" alt="Arkan Craftsmanship" class="w-full h-full object-cover" />
+              </div>
+              <div class="mt-4 text-[10px] font-medium tracking-[0.15em] text-[#8a8174] uppercase text-right reveal">
+                Riyadh,
+                Saudi Arabia — Est. 2018</div>
             </div>
           </div>
 
           <!-- Right: Text Content -->
-          <div class="w-full lg:w-8/12 flex flex-col justify-center pt-8 lg:pt-0">
-            <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18] mb-16 md:mb-24">
-              Born from the <br /><span class="italic">Kingdom</span>, built
-              <br />for the <span class="italic">World.</span>
+          <div class="w-full lg:w-7/12 flex flex-col pt-8 lg:pt-0">
+            <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-4 reveal">Our
+              Story</span>
+            <h2
+              class="text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] font-radley text-[#1B1B18] mb-16 md:mb-20 reveal">
+              Born from the <span class="italic text-[#D2BB9C]">Kingdom,</span><br />built for the world.
             </h2>
 
-            <div class="flex flex-col gap-12 md:gap-16">
+            <div class="flex flex-col">
               <!-- Item 1 -->
-              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-1">
-                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+              <div class="flex flex-col border-b border-[#D2BB9C]/20 pb-12 mb-12 relative reveal reveal-delay-1">
+                <div class="font-radley text-[64px] font-light text-[#D2BB9C]/10 leading-none mb-[-16px]">01</div>
+                <span
+                  class="font-manrope text-[9px] font-medium tracking-[0.4em] text-[#D2BB9C] uppercase mb-[18px]">The
                   Beginning</span>
-                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
-                  Rooted in Saudi
-                  <span class="italic text-[#D2BB9C]">Craftsmanship</span>
+                <h3 class="text-[32px] font-radley text-[#1B1B18] leading-[1.2] mb-5">
+                  Rooted in <span class="italic text-[#D2BB9C]">Saudi Craftsmanship</span>
                 </h3>
-                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                <div class="font-manrope text-[13.5px] text-[#8a8174] font-light leading-[2] space-y-4">
                   <p>
                     ARKAN was founded in Riyadh with a singular conviction:
                     that the Kingdom possesses the talent, ambition, and
                     cultural depth to supply the world's finest hospitality
                     spaces. What began as a precision-driven amenity studio
-                    has grown into one of the region's most trusted OS&E
-                    partners — without ever compromising the core embedded in
+                    has grown into one of the region's most trusted OS&amp;E
+                    partners — without ever compromising the care embedded in
                     every product we create.
                   </p>
                   <p>
                     Our Saudi roots are not incidental. They are the source of
-                    our patience, precision, and pride<br />— qualities that
+                    our <strong class="font-medium text-[#1B1B18]">patience, precision, and pride</strong> — qualities
+                    that
                     translate directly into the craftsmanship our clients
                     experience at every stage of delivery.
                   </p>
@@ -245,14 +255,15 @@
               </div>
 
               <!-- Item 2 -->
-              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-2">
-                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+              <div class="flex flex-col border-b border-[#D2BB9C]/20 pb-12 mb-12 relative reveal reveal-delay-2">
+                <div class="font-radley text-[64px] font-light text-[#D2BB9C]/10 leading-none mb-[-16px]">02</div>
+                <span
+                  class="font-manrope text-[9px] font-medium tracking-[0.4em] text-[#D2BB9C] uppercase mb-[18px]">The
                   Philosophy</span>
-                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
-                  Attention to detail as
-                  <span class="italic text-[#D2BB9C]">discipline</span>
+                <h3 class="text-[32px] font-radley text-[#1B1B18] leading-[1.2] mb-5">
+                  Attention to detail as <span class="italic text-[#D2BB9C]">a discipline</span>
                 </h3>
-                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                <div class="font-manrope text-[13.5px] text-[#8a8174] font-light leading-[2] space-y-4">
                   <p>
                     We believe that hospitality excellence is not built in
                     grand gestures — it is constructed in the accumulation of
@@ -261,7 +272,8 @@
                     aligns perfectly to its container.
                   </p>
                   <p>
-                    At ARKAN, detail is not decoration. It is our standard.
+                    At ARKAN, <strong class="font-medium text-[#1B1B18]">detail is not decoration. It is our
+                      standard.</strong>
                     Every specification we develop, every supplier we qualify,
                     every product we ship carries the mark of that philosophy.
                   </p>
@@ -269,25 +281,26 @@
               </div>
 
               <!-- Item 3 -->
-              <div class="flex flex-col border-t border-[#E5E0D8] pt-8 reveal reveal-delay-3">
-                <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-4">The
+              <div class="flex flex-col relative reveal reveal-delay-3 pb-0 mb-0 border-none">
+                <div class="font-radley text-[64px] font-light text-[#D2BB9C]/10 leading-none mb-[-16px]">03</div>
+                <span
+                  class="font-manrope text-[9px] font-medium tracking-[0.4em] text-[#D2BB9C] uppercase mb-[18px]">The
                   Standard</span>
-                <h3 class="text-xl md:text-2xl font-radley text-[#1B1B18] mb-4">
-                  Global refinement,
-                  <span class="italic text-[#D2BB9C]">regional mastery</span>
+                <h3 class="text-[32px] font-radley text-[#1B1B18] leading-[1.2] mb-5">
+                  Global refinement, <span class="italic text-[#D2BB9C]">regional mastery</span>
                 </h3>
-                <div class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed space-y-4">
+                <div class="font-manrope text-[13.5px] text-[#8a8174] font-light leading-[2] space-y-4">
                   <p>
                     ARKAN operates across a curated global supply network
                     while maintaining the intimacy and responsiveness of a
                     regional specialist. We hold our suppliers to
-                    international hotel brand standards — auditing, sampling,
+                    international hotel-brand standards — auditing, sampling,
                     and approving with the same rigour expected of the world's
                     leading procurement houses.
                   </p>
                   <p>
-                    The result: a product that feels international and an
-                    experience that feels personal.
+                    The result: <strong class="font-medium text-[#1B1B18]">a product that feels international and an
+                      experience that feels personal.</strong>
                   </p>
                 </div>
               </div>
@@ -368,31 +381,40 @@
       <section
         class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-32 pb-16 md:pb-24 reveal">
         <!-- Header -->
-        <div class="flex flex-col mb-16 md:mb-24">
-          <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-4 block">Why
-            Choose Arkan</span>
-          <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18]">
-            The case for <br /><span class="italic text-[#D2BB9C]">choosing differently.</span>
-          </h2>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20 reveal">
+          <div>
+            <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-4 block">Why
+              Choose Arkan</span>
+            <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18]">
+              The case for <br /><span class="italic text-[#D2BB9C]">choosing differently.</span>
+            </h2>
+          </div>
+          <p
+            class="font-manrope text-[13px] leading-[1.9] text-[#8a8174] max-w-[280px] text-left md:text-right flex-shrink-0">
+            Six reasons why leading hotels, developers, and designers trust ARKAN to deliver where others cannot.
+          </p>
         </div>
 
         <!-- 6-Grid Features -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E5E0D8]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[#E5E0D8]">
           <!-- Item 1 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               I
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span class="text-lg transform group-hover:rotate-45 transition-transform duration-300">♦</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">◈</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              Uncompromising <span class="italic">Quality Control</span>
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              Uncompromising Quality Control
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
               Every supplier in our network is audited, sampled, and approved
               against international hotel-brand standards. We do not ship what
               we have not verified — at every stage, from production sample to
@@ -402,20 +424,23 @@
 
           <!-- Item 2 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-1 cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               II
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span class="text-sm transform group-hover:rotate-45 transition-transform duration-300">◇</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">◇</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              Bespoke <span class="italic">Capability</span>
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              Bespoke Capability
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
-              We do not offer catalogues. We develop custom OS&E solutions
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
+              We do not offer catalogues. We develop custom OS&amp;E solutions
               built around your property's brand identity, guest profile, and
               operational requirements — from materials to packaging to
               placement.
@@ -424,19 +449,22 @@
 
           <!-- Item 3 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-2 cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               III
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span class="text-xs transform group-hover:rotate-45 transition-transform duration-300">●</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">◉</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              Design-to-Delivery <span class="italic">Integration</span>
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              Design-to-Delivery Integration
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
               Our 5PL model eliminates the fragmentation of working with
               multiple vendors. Design, production, digitalisation, logistics,
               and fulfillment — managed as one system, with one point of
@@ -446,20 +474,22 @@
 
           <!-- Item 4 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-1 cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               IV
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span
-                class="text-xl leading-none -mt-1 transform group-hover:rotate-45 transition-transform duration-300">+</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">✦</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              Saudi-Made, <span class="italic">Internationally Refined</span>
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              Saudi-Made, Internationally Refined
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
               Rooted in the Kingdom's growing culture of craft and precision,
               ARKAN brings regional expertise to international standards. Our
               Saudi identity is a point of strength — not a limitation.
@@ -468,20 +498,22 @@
 
           <!-- Item 5 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-2 cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               V
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span
-                class="text-xs font-mono select-none border border-black group-hover:border-[#D2BB9C] transition-colors p-0.5 transform group-hover:rotate-45 duration-300">◼</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">▣</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              Reliability & Execution <span class="italic">Strength</span>
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              Reliability &amp; Execution Strength
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
               Pre-openings are unforgiving. Our track record of on-time
               delivery, proactive communication, and contingency management
               means your project timeline is protected — even when supply
@@ -491,19 +523,22 @@
 
           <!-- Item 6 -->
           <div
-            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-3 cursor-default overflow-hidden">
             <div
-              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
+              class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+            </div>
+            <div
+              class="absolute top-7 right-7 text-[#1B1B18] font-radley text-[52px] font-light opacity-[0.07] select-none group-hover:opacity-[0.14] transition-opacity duration-400 leading-none">
               VI
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
-              <span class="text-sm transform group-hover:rotate-45 transition-transform duration-300">⚙</span>
+              class="w-[52px] h-[52px] border border-[#E5E0D8] group-hover:border-[#D2BB9C] flex items-center justify-center mb-8 bg-transparent text-[#1B1B18] group-hover:text-[#1B1B18] transition-all duration-400 transform group-hover:rotate-45">
+              <span class="text-[20px] transform group-hover:-rotate-45 transition-transform duration-400">◎</span>
             </div>
-            <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
-              <span class="italic">A Partner,</span> Not a Vendor
+            <h3 class="text-[24px] font-radley leading-[1.25] text-[#1B1B18] mb-[14px]">
+              A Partner, Not a Vendor
             </h3>
-            <p class="font-manrope text-[13px] md:text-sm text-[#8a8174] leading-relaxed mt-auto">
+            <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.95] mt-auto">
               We invest in understanding your project before we propose a
               solution. Long-term relationships, honest counsel, and genuine
               accountability are the foundations of how we work — not just
@@ -514,9 +549,9 @@
 
         <!-- Quote Block -->
         <div
-          class="w-full bg-[#E2D9C8] mt-8 p-10 md:p-16 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm reveal">
+          class="w-full bg-[#E6D2BA] mt-8 p-10 md:p-16 lg:px-20 lg:py-16 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm reveal">
           <h3
-            class="text-2xl md:text-3xl lg:text-4xl font-radley text-[#1B1B18] max-w-3xl leading-snug text-center md:text-left">
+            class="text-2xl md:text-3xl lg:text-4xl font-radley text-[#1B1B18] flex-1 leading-snug text-center md:text-left">
             "The right OS&E partner does not just supply a hotel —
             <br class="hidden lg:block" /><span class="italic">they help define what the guest experiences."</span>
           </h3>
