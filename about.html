@@ -202,15 +202,15 @@
       <!-- Born from the Kingdom Section -->
       <section class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-24 pb-12 reveal">
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-24 md:mb-32">
-          <!-- Left: Image -->
-          <div class="w-full lg:w-5/12">
-            <div class="w-full aspect-[3/4] overflow-hidden rounded-sm">
+          <!-- Left: Image (Sticky) -->
+          <div class="w-full lg:w-4/12 relative">
+            <div class="sticky top-32 w-full aspect-[3/4] overflow-hidden rounded-sm">
               <img src="/assets/img/about-2.png" alt="Arkan Craftsmanship" class="w-full h-full object-cover" />
             </div>
           </div>
 
           <!-- Right: Text Content -->
-          <div class="w-full lg:w-7/12 flex flex-col justify-center pt-8 lg:pt-0">
+          <div class="w-full lg:w-8/12 flex flex-col justify-center pt-8 lg:pt-0">
             <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] leading-[1.1] font-radley text-[#1B1B18] mb-16 md:mb-24">
               Born from the <br /><span class="italic">Kingdom</span>, built
               <br />for the <span class="italic">World.</span>
@@ -296,7 +296,7 @@
         </div>
 
         <!-- Bottom Part: Vision & Mission Section -->
-        <div class="flex flex-col items-center mt-24 md:mt-32 w-full max-w-5xl mx-auto reveal">
+        <div class="flex flex-col items-center mt-24 md:mt-32 w-full max-w-[1000px] mx-auto reveal">
           <!-- Heading -->
           <div class="text-center mb-12 md:mb-16">
             <span
@@ -309,38 +309,48 @@
           </div>
 
           <!-- Vision/Mission Card -->
-          <div class="w-full flex flex-col rounded-md shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden reveal">
+          <div class="w-full flex flex-col rounded-sm overflow-hidden reveal shadow-xl">
             <!-- Vision -->
-            <div class="w-full bg-[#0E3559] text-white p-10 md:p-16 lg:p-20 relative overflow-hidden">
+            <div class="w-full p-10 md:p-16 lg:px-20 lg:py-16 relative overflow-hidden bg-[#0A3258]">
+              <!-- Background Image -->
+              <div class="absolute inset-0 z-0 opacity-60 mix-blend-screen bg-cover bg-center"
+                style="background-image: url('/assets/img/smartboard.png')"></div>
+
               <!-- Decorative Icon (Star) -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] opacity-20 pointer-events-none">
-                <img src="/assets/img/ornament.svg" alt="" class="w-64 md:w-96 lg:w-[32rem] h-auto"
+              <div
+                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[15%] z-0 opacity-80 pointer-events-none mix-blend-overlay">
+                <img src="/assets/img/ornament.svg" alt="" class="w-64 md:w-96 lg:w-[36rem] h-auto"
                   style="filter: brightness(0) invert(1)" />
               </div>
 
-              <div class="relative z-10 max-w-2xl">
-                <h3 class="text-4xl md:text-5xl lg:text-6xl font-radley mb-6 md:mb-8 font-light">
-                  <span class="italic text-white">Our</span> Vision
+              <div class="relative z-10 max-w-[32rem]">
+                <h3
+                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley mb-6 md:mb-8 font-light text-white leading-none">
+                  <span class="italic">Our</span> Vision
                 </h3>
-                <p class="font-manrope text-[15px] md:text-lg leading-relaxed text-white/90">
-                  To set a new standard for Saudi-led luxury hospitality
-                  through
-                  <span class="italic font-medium">design, production, and quality.</span>
+                <p class="font-manrope text-[15px] md:text-base leading-relaxed text-white">
+                  To set a new standard for Saudi<br class="hidden md:block" />
+                  <span class="italic font-medium text-white/90">led luxury hospitality</span><br
+                    class="hidden md:block" />
+                  through <span class="italic font-medium text-white/90">design, production, and</span><br
+                    class="hidden md:block" />
+                  <span class="italic font-medium text-white/90">quality.</span>
                 </p>
               </div>
             </div>
 
             <!-- Mission -->
-            <div class="w-full bg-[#E2D9C8] text-[#5c4f3d] p-10 md:p-16 lg:p-20">
-              <div class="max-w-3xl">
-                <h3 class="text-4xl md:text-5xl lg:text-6xl font-radley mb-6 md:mb-8 font-light text-[#5c4f3d]/50">
+            <div class="w-full bg-[#E2D9C8] p-10 md:p-16 lg:px-20 lg:py-16">
+              <div class="max-w-4xl">
+                <h3
+                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley mb-6 md:mb-8 font-light text-[#A89F91] leading-none">
                   <span class="italic">Our</span> Mission
                 </h3>
-                <p class="font-manrope text-[15px] md:text-lg leading-relaxed text-[#5c4f3d]">
+                <p class="font-manrope text-[15px] md:text-base leading-relaxed text-[#5c4f3d] font-medium pr-4">
                   Unite world class production capabilities
-                  <span class="italic font-medium text-[#1B1B18]">with refined design expertise</span>
+                  <span class="italic font-bold text-[#1B1B18]">with refined design expertise</span>
                   to deliver
-                  <span class="italic font-medium text-[#1B1B18]">premium hospitality</span>
+                  <span class="italic font-bold text-[#1B1B18]">premium hospitality</span>
                   solutions defined by consistency, precision, and attention
                   to detail. Through a seamless process from concept to
                   execution, we elevate guest experiences across every
@@ -370,13 +380,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E5E0D8]">
           <!-- Item 1 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               I
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-lg">♦</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span class="text-lg transform group-hover:rotate-45 transition-transform duration-300">♦</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               Uncompromising <span class="italic">Quality Control</span>
@@ -391,13 +402,14 @@
 
           <!-- Item 2 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               II
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-sm">◇</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span class="text-sm transform group-hover:rotate-45 transition-transform duration-300">◇</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               Bespoke <span class="italic">Capability</span>
@@ -412,13 +424,14 @@
 
           <!-- Item 3 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               III
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-xs">●</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span class="text-xs transform group-hover:rotate-45 transition-transform duration-300">●</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               Design-to-Delivery <span class="italic">Integration</span>
@@ -433,13 +446,15 @@
 
           <!-- Item 4 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-1">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               IV
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-xl leading-none -mt-1">+</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span
+                class="text-xl leading-none -mt-1 transform group-hover:rotate-45 transition-transform duration-300">+</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               Saudi-Made, <span class="italic">Internationally Refined</span>
@@ -453,13 +468,15 @@
 
           <!-- Item 5 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-2">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               V
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-xs font-mono select-none border border-black p-0.5">◼</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span
+                class="text-xs font-mono select-none border border-black group-hover:border-[#D2BB9C] transition-colors p-0.5 transform group-hover:rotate-45 duration-300">◼</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               Reliability & Execution <span class="italic">Strength</span>
@@ -474,13 +491,14 @@
 
           <!-- Item 6 -->
           <div
-            class="border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
-            <div class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none">
+            class="group border-b border-r border-[#E5E0D8] p-8 md:p-12 relative flex flex-col h-full bg-[#FCFAF8] hover:bg-white transition-colors reveal reveal-delay-3">
+            <div
+              class="absolute top-8 right-8 text-[#E5E0D8] font-radley text-6xl opacity-30 select-none group-hover:opacity-50 transition-opacity">
               VI
             </div>
             <div
-              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18]">
-              <span class="text-sm">⚙</span>
+              class="w-10 h-10 border border-[#E5E0D8] flex items-center justify-center mb-8 bg-white text-[#1B1B18] group-hover:bg-[#1B1B18] group-hover:text-[#D2BB9C] transition-all duration-300">
+              <span class="text-sm transform group-hover:rotate-45 transition-transform duration-300">⚙</span>
             </div>
             <h3 class="text-lg md:text-xl font-radley text-[#1B1B18] mb-4">
               <span class="italic">A Partner,</span> Not a Vendor
@@ -503,28 +521,29 @@
             <br class="hidden lg:block" /><span class="italic">they help define what the guest experiences."</span>
           </h3>
           <a href="/contact"
-            class="flex-shrink-0 inline-block px-10 py-4 rounded-full border border-[#1B1B18] text-[#1B1B18] text-sm font-radley tracking-widest hover:bg-[#1B1B18] hover:text-[#E2D9C8] transition-colors duration-300">
-            Start a Conversation
+            class="flex-shrink-0 inline-block px-10 py-3 rounded-full border border-black/30 text-[#1B1B18] text-xs font-manrope font-medium tracking-[0.2em] uppercase hover:bg-[#1B1B18] hover:text-white transition-all duration-300">
+            Start A Conversation
           </a>
         </div>
       </section>
 
       <!-- Arkan At a Glance Section -->
       <section
-        class="w-full relative overflow-hidden text-white flex justify-center pb-24 mx-auto max-w-[1920px] glance-section reveal">
+        class="w-full relative overflow-hidden text-white flex justify-center pb-24 border-none glance-section reveal group/glance">
         <!-- Background Image -->
-        <div class="absolute inset-0 w-full h-full p-4 md:p-8 lg:p-12 xl:p-16 z-0">
-          <div class="w-full h-full relative overflow-hidden rounded-sm">
-            <img src="/assets/img/loading-bg.png" alt="Arkan Background"
-              class="absolute inset-0 w-full h-full object-cover rounded-sm" />
+        <div class="absolute inset-0 w-full h-full z-0">
+          <div class="w-full h-full relative overflow-hidden bg-[#0A3258]">
+            <div
+              class="absolute inset-0 w-full h-full bg-cover bg-center mix-blend-screen opacity-90 transition-transform duration-1000 group-hover/glance:scale-105"
+              style="background-image: url('/assets/img/smartboard.png')"></div>
             <!-- Dark Overlay for better contrast -->
-            <div class="absolute inset-0 bg-[#0E3559]/70 lg:bg-[#0E3559]/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-[#0E3559]/30"></div>
           </div>
         </div>
 
         <!-- Content -->
         <div
-          class="relative z-10 w-full max-w-5xl mx-auto px-8 md:px-12 lg:px-16 py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center">
+          class="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center">
           <div class="text-center mb-16 md:mb-24">
             <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-white/70 uppercase mb-4 block">Arkan
               at a Glance</span>
@@ -533,64 +552,77 @@
             </h2>
           </div>
 
-          <!-- Stats Grid Overlay -->
+          <!-- Stats Grid -->
           <div
-            class="w-full grid grid-cols-1 md:grid-cols-4 shadow-2xl bg-white/10 backdrop-blur-sm border border-white/10 rounded-sm">
-            <!-- Stat 1 -->
+            class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 shadow-2xl bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm">
+            <!-- Stat 1 (Active/Hover by Default) -->
             <div
-              class="bg-[#FCFAF8] text-[#1B1B18] p-10 md:p-12 flex flex-col justify-center items-center text-center row-[span_2] md:col-[span_1]">
-              <h3 class="text-6xl md:text-[5rem] lg:text-[6rem] font-manrope font-light tracking-tighter mb-4">
+              class="group hover:bg-[#FCFAF8] flex flex-col justify-center items-center text-center px-6 py-12 md:p-12 border-t md:border-t-0 md:border-l lg:border-l-0 border-white/10 transition-colors duration-300 cursor-default">
+              <h3
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white group-hover:text-[#1B1B18] transition-colors">
                 <span class="counter" data-target="500">0</span><span
-                  class="text-3xl text-[#D2BB9C] italic font-radley ml-1">+</span>
+                  class="text-3xl text-[#D2BB9C] font-radley ml-1">+</span>
               </h3>
-              <p class="font-manrope text-xs font-bold text-[#1B1B18] mb-2">
+              <p
+                class="font-manrope text-[11px] md:text-xs font-bold text-white group-hover:text-[#1B1B18] mb-3 transition-colors">
                 Properties Supplied
               </p>
-              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-[#8a8174] uppercase max-w-[150px]">
+              <p
+                class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 group-hover:text-[#8a8174] uppercase max-w-[150px] leading-relaxed transition-colors">
                 Across Luxury & Lifestyle Brands
               </p>
             </div>
 
             <!-- Stat 2 -->
             <div
-              class="p-10 md:p-12 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/10">
+              class="group hover:bg-[#FCFAF8] flex flex-col justify-center items-center text-center px-6 py-12 md:p-12 border-t md:border-t-0 md:border-l lg:border-l-0 border-white/10 transition-colors duration-300 cursor-default">
               <h3
-                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white group-hover:text-[#1B1B18] transition-colors">
                 <span class="counter" data-target="40">0</span><span
-                  class="text-2xl text-white/50 italic font-radley ml-1">+</span>
+                  class="text-2xl text-white/50 group-hover:text-[#D2BB9C] font-radley ml-1 transition-colors">+</span>
               </h3>
-              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[120px]">
-                Global Markets Reached
+              <p
+                class="font-manrope text-[11px] md:text-xs font-bold text-white group-hover:text-[#1B1B18] mb-3 transition-colors">
+                Countries Served
+              </p>
+              <p
+                class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 group-hover:text-[#8a8174] uppercase max-w-[150px] leading-relaxed transition-colors">
+                Active Global Supply Network
               </p>
             </div>
 
             <!-- Stat 3 -->
             <div
-              class="p-10 md:p-12 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-white/10">
+              class="group hover:bg-[#FCFAF8] flex flex-col justify-center items-center text-center px-6 py-12 md:p-12 border-t lg:border-t-0 md:border-r lg:border-r border-white/10 transition-colors duration-300 cursor-default">
               <h3
-                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white group-hover:text-[#1B1B18] transition-colors">
                 <span class="counter" data-target="98">0</span><span
-                  class="text-3xl text-white/50 font-radley ml-1">%</span>
+                  class="text-3xl text-white/50 group-hover:text-[#D2BB9C] font-radley ml-1 transition-colors">%</span>
               </h3>
-              <p class="font-manrope text-xs font-bold text-white mb-2">
+              <p
+                class="font-manrope text-[11px] md:text-xs font-bold text-white group-hover:text-[#1B1B18] mb-3 transition-colors">
                 On-Time Delivery Rate
               </p>
-              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 uppercase max-w-[120px]">
+              <p
+                class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 group-hover:text-[#8a8174] uppercase max-w-[150px] leading-relaxed transition-colors">
                 Verified Across All Projects
               </p>
             </div>
 
             <!-- Stat 4 -->
-            <div class="p-10 md:p-12 flex flex-col justify-center items-center text-center">
+            <div
+              class="group hover:bg-[#FCFAF8] flex flex-col justify-center items-center text-center px-6 py-12 md:p-12 border-t lg:border-t-0 border-white/10 transition-colors duration-300 cursor-default">
               <h3
-                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white">
+                class="text-5xl md:text-6xl lg:text-[5.5rem] font-manrope font-light tracking-tighter mb-4 text-white group-hover:text-[#1B1B18] transition-colors">
                 <span class="counter" data-target="5">0</span><span
-                  class="text-2xl text-white/50 font-radley ml-1 uppercase">pl</span>
+                  class="text-2xl text-white/50 group-hover:text-[#D2BB9C] font-radley ml-1 uppercase transition-colors">pl</span>
               </h3>
-              <p class="font-manrope text-xs font-bold text-white mb-2">
+              <p
+                class="font-manrope text-[11px] md:text-xs font-bold text-white group-hover:text-[#1B1B18] mb-3 transition-colors">
                 Integrated Platform Layers
               </p>
-              <p class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 uppercase max-w-[120px]">
+              <p
+                class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/50 group-hover:text-[#8a8174] uppercase max-w-[150px] leading-relaxed transition-colors">
                 Design Through Fulfillment
               </p>
             </div>
@@ -645,11 +677,11 @@
       <!-- FAQ Section -->
       <section class="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-32 reveal">
         <!-- Background Ornament - Adjusted for Figma Positioning (Top Overlap, Hidden on Mobile) -->
-        <div
+        <!-- <div
           class="hidden md:block absolute top-0 right-0 z-0 pointer-events-none translate-x-[15%] lg:translate-x-[25%] -translate-y-[45%] lg:-translate-y-[35%] opacity-100">
           <img src="/assets/img/ornament.svg" alt="" class="h-[700px] md:h-[900px] lg:h-[1300px] w-auto max-w-none"
             style="opacity: 0.15" />
-        </div>
+        </div> -->
 
         <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
           <!-- Left Column: Title & Image -->

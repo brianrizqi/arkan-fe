@@ -1,1003 +1,893 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ARKAN - Portfolio</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+  <title>ARKAN - Portfolio</title>
 
-    <!-- Styles / Scripts -->
-    <script type="module" src="/resources/js/app.js"></script>
-    <link rel="stylesheet" href="/resources/css/app.css" />
-    <style>
-      /* Portfolio Hover Effects */
-      .portfolio-item h3 {
-        transform: translateY(20px);
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
+    rel="stylesheet" />
 
-      .portfolio-item span {
-        transform: translateY(10px);
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
-      }
+  <!-- Styles / Scripts -->
+  <script type="module" src="/resources/js/app.js"></script>
+  <link rel="stylesheet" href="/resources/css/app.css" />
+  <style>
+    /* Portfolio Hover Effects */
+    .portfolio-item h3 {
+      transform: translateY(20px);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-      .portfolio-item:hover h3,
-      .portfolio-item:hover span {
-        transform: translateY(0);
-      }
-    </style>
-  </head>
+    .portfolio-item span {
+      transform: translateY(10px);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    }
 
-  <!-- Light Theme Body -->
+    .portfolio-item:hover h3,
+    .portfolio-item:hover span {
+      transform: translateY(0);
+    }
+  </style>
+</head>
 
-  <body class="antialiased font-manrope bg-[#FCFAF8]">
-    <script>
-      history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-    </script>
-    <!-- Loader Component -->
-    <div
-      id="loader"
-      class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black"
-    >
-      <div
-        class="loader-bg absolute inset-0 bg-cover bg-[center_87%] bg-no-repeat opacity-100"
-        style="background-image: url(&quot;/assets/img/loading-bg.jpg&quot;)"
-      ></div>
-      <div class="relative z-10 flex flex-col items-center">
-        <img
-          src="/assets/img/loading-logo-2.svg"
-          id="loader-logo"
-          class="w-100 md:w-100 lg:w-200"
-          alt="Arkan Logo"
-        />
-      </div>
+<!-- Light Theme Body -->
+
+<body class="antialiased font-manrope bg-[#FCFAF8]">
+  <script>
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
+  <!-- Loader Component -->
+  <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
+    <div class="loader-bg absolute inset-0 bg-cover bg-[center_87%] bg-no-repeat opacity-100"
+      style="background-image: url(&quot;/assets/img/loading-bg.jpg&quot;)"></div>
+    <div class="relative z-10 flex flex-col items-center">
+      <img src="/assets/img/loading-logo-2.svg" id="loader-logo" class="w-100 md:w-100 lg:w-200" alt="Arkan Logo" />
     </div>
+  </div>
 
-    <div class="sections-wrapper relative overflow-x-hidden">
-      <!-- Navbar Component -->
-      <header
-        id="global-navbar"
-        class="navbar-light-theme fixed top-0 left-0 right-0 z-[100] transition-all duration-500"
-      >
-        <div
-          class="w-full px-6 md:px-12 py-6 md:py-8 flex justify-between items-center text-[#111111] transition-colors duration-500"
-          id="navbar-container"
-        >
-          <!-- Logo -->
-          <div class="nav-item">
-            <a href="/" class="block hover:opacity-70 transition-opacity">
-              <img
-                src="/assets/img/logo-arkan.svg"
-                alt="ARKAN"
-                class="navbar-logo h-4 md:h-5 w-auto object-contain brightness-0 transition-all duration-500"
-              />
-            </a>
-          </div>
+  <div class="sections-wrapper relative overflow-x-hidden">
+    <!-- Navbar Component -->
+    <header id="global-navbar"
+      class="navbar-light-theme fixed top-0 left-0 right-0 z-[100] transition-all duration-500">
+      <div
+        class="w-full px-6 md:px-12 py-6 md:py-8 flex justify-between items-center text-[#111111] transition-colors duration-500"
+        id="navbar-container">
+        <!-- Logo -->
+        <div class="nav-item">
+          <a href="/" class="block hover:opacity-70 transition-opacity">
+            <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+              class="navbar-logo h-4 md:h-5 w-auto object-contain brightness-0 transition-all duration-500" />
+          </a>
+        </div>
 
-          <!-- Desktop Navigation -->
-          <nav
-            class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex"
-          >
-            <a
-              href="/about"
-              class="nav-item hover:text-[#111111]/70 transition-colors"
-              >About</a
-            >
-            <a
-              href="/portfolio"
-              class="nav-item hover:text-[#111111]/70 transition-colors"
-              >Works</a
-            >
-            <a
-              href="/journal"
-              class="nav-item hover:text-[#111111]/70 transition-colors"
-              >Archive</a
-            >
-          </nav>
+        <!-- Desktop Navigation -->
+        <nav
+          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
+          <a href="/about" class="nav-item hover:text-[#111111]/70 transition-colors">About</a>
+          <a href="/portfolio" class="nav-item hover:text-[#111111]/70 transition-colors">Works</a>
+          <a href="/journal" class="nav-item hover:text-[#111111]/70 transition-colors">Archive</a>
+        </nav>
 
-          <!-- Tablet Navigation (Contact Us Centered) -->
-          <div
-            class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden"
-          >
-            <a
-              href="/contact"
-              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300"
-            >
+        <!-- Tablet Navigation (Contact Us Centered) -->
+        <div class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden">
+          <a href="/contact"
+            class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Right Side: Contact & Hamburger -->
+        <div class="flex items-center space-x-6 md:space-x-8">
+          <div class="nav-item hidden xl:block">
+            <a href="/contact"
+              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
               Contact Us
             </a>
           </div>
 
-          <!-- Right Side: Contact & Hamburger -->
-          <div class="flex items-center space-x-6 md:space-x-8">
-            <div class="nav-item hidden xl:block">
-              <a
-                href="/contact"
-                class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300"
-              >
-                Contact Us
-              </a>
+          <button id="mobile-menu-trigger" class="nav-item block xl:hidden focus:outline-none relative z-[120]">
+            <div class="hamburger-box w-6 h-4 relative">
+              <span
+                class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"></span>
+              <span
+                class="hamburger-inner-mid absolute w-4 h-[1px] bg-current top-1/2 left-0 -translate-y-1/2 transition-all duration-300"></span>
+              <span
+                class="hamburger-inner absolute w-6 h-[1px] bg-current bottom-0 left-0 transition-all duration-300"></span>
             </div>
+          </button>
+        </div>
+      </div>
 
-            <button
-              id="mobile-menu-trigger"
-              class="nav-item block xl:hidden focus:outline-none relative z-[120]"
-            >
-              <div class="hamburger-box w-6 h-4 relative">
-                <span
-                  class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"
-                ></span>
-                <span
-                  class="hamburger-inner-mid absolute w-4 h-[1px] bg-current top-1/2 left-0 -translate-y-1/2 transition-all duration-300"
-                ></span>
-                <span
-                  class="hamburger-inner absolute w-6 h-[1px] bg-current bottom-0 left-0 transition-all duration-300"
-                ></span>
-              </div>
-            </button>
-          </div>
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center text-[#111111]">
+        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase">
+          <a href="/about" class="mobile-nav-link opacity-0">About</a>
+          <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
+          <a href="/journal" class="mobile-nav-link opacity-0">Archive</a>
+          <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
+        </nav>
+
+        <div class="mt-20 mobile-nav-footer opacity-0">
+          <img src="/assets/img/logo-arkan.svg" alt="ARKAN" class="h-6 w-auto mx-auto brightness-0 mb-4 opacity-30" />
+          <p class="text-[10px] uppercase tracking-widest text-[#1B1B18]/40">
+            ARKAN Standard © 2026
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full pt-24 lg:pt-24 pb-24 overflow-x-hidden">
+      <!-- Portfolio Header & Intro -->
+      <section class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-12 md:pt-24 pb-12">
+        <!-- Title area -->
+        <div class="w-full mb-8 md:mb-12 text-center flex flex-col items-center">
+          <span
+            class="font-radley text-[#6b5c49] text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-6 block">Portfolio</span>
+          <h1
+            class="text-[#333333] text-4xl md:text-[4rem] lg:text-[5.5rem] leading-[1.1] font-radley tracking-tight max-w-2xl">
+            Our Works
+          </h1>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div
-          id="mobile-menu-overlay"
-          class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center text-[#111111]"
-        >
-          <nav
-            class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase"
-          >
-            <a href="/about" class="mobile-nav-link opacity-0">About</a>
-            <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
-            <a href="/journal" class="mobile-nav-link opacity-0">Archive</a>
-            <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
-          </nav>
-
-          <div class="mt-20 mobile-nav-footer opacity-0">
-            <img
-              src="/assets/img/logo-arkan.svg"
-              alt="ARKAN"
-              class="h-6 w-auto mx-auto brightness-0 mb-4 opacity-30"
-            />
-            <p class="text-[10px] uppercase tracking-widest text-[#1B1B18]/40">
-              ARKAN Standard © 2026
+        <!-- Intro Paragraph -->
+        <div class="flex flex-col items-center justify-center w-full mt-4 md:mt-8">
+          <div class="w-full md:max-w-4xl text-center">
+            <p class="font-manrope text-[#8a8174] text-[15px] md:text-lg leading-relaxed">
+              We partner with luxury brands to create iconic product
+              collaborations across the travel industry – from luxury
+              amenities and skincare to serviceware, textiles, and children's
+              products.
             </p>
           </div>
-        </div>
-      </header>
-
-      <main class="w-full pt-24 lg:pt-24 pb-24 overflow-x-hidden">
-        <!-- Portfolio Header & Intro -->
-        <section
-          class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-12 md:pt-24 pb-12"
-        >
-          <!-- Title area -->
-          <div
-            class="w-full mb-8 md:mb-12 text-center flex flex-col items-center"
-          >
-            <span
-              class="font-radley text-[#6b5c49] text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-6 block"
-              >Portfolio</span
-            >
-            <h1
-              class="text-[#333333] text-4xl md:text-[4rem] lg:text-[5.5rem] leading-[1.1] font-radley tracking-tight max-w-2xl"
-            >
-              Our Works
-            </h1>
-          </div>
-
-          <!-- Intro Paragraph -->
-          <div
-            class="flex flex-col items-center justify-center w-full mt-4 md:mt-8"
-          >
-            <div class="w-full md:max-w-4xl text-center">
-              <p
-                class="font-manrope text-[#8a8174] text-[15px] md:text-lg leading-relaxed"
-              >
-                We partner with luxury brands to create iconic product
-                collaborations across the travel industry – from luxury
-                amenities and skincare to serviceware, textiles, and children's
-                products.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- 5PL Hospitality OS&E Platform Section -->
-        <section
-          class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-32 pb-16 md:pb-24"
-        >
-          <!-- Section Header -->
-          <div class="flex flex-col items-center text-center mb-16 md:mb-24">
-            <h2
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-manrope font-normal text-[#1B1B18] tracking-tight mb-6"
-            >
-              <span class="font-semibold">5PL</span>
-              <span class="italic font-radley">Hospitality</span> OS&E Platform
-            </h2>
-            <p
-              class="font-manrope text-[#8a8174] text-sm md:text-base max-w-3xl leading-relaxed"
-            >
-              An integrated 5PL platform that manages hospitality OS&E from
-              concept to site ready delivery. ARKAN connects design, production,
-              digital control, global logistics, and fulfillment into one
-              seamless system, ensuring consistency, efficiency, and reliability
-              across every stage of operations.
-            </p>
-          </div>
-
-          <!-- Tabs Navigation -->
-          <div class="w-full border-b border-[#E5E0D8] mb-12 md:mb-20">
-            <ul
-              class="flex flex-wrap justify-center gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-4"
-              id="ose-tabs"
-            >
-              <li>
-                <button
-                  class="ose-tab-btn active font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-bold transition-all"
-                  data-target="ose-design"
-                >
-                  Design
-                  <span
-                    class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-100 transition-transform origin-left tab-indicator"
-                  ></span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
-                  data-target="ose-production"
-                >
-                  Production
-                  <span
-                    class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"
-                  ></span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
-                  data-target="ose-digitalization"
-                >
-                  Digitalization
-                  <span
-                    class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"
-                  ></span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
-                  data-target="ose-logistics"
-                >
-                  Logistics
-                  <span
-                    class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"
-                  ></span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
-                  data-target="ose-fulfillment"
-                >
-                  Fulfillment
-                  <span
-                    class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"
-                  ></span>
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Tabs Content Area -->
-          <div class="w-full max-w-6xl mx-auto relative min-h-[500px]">
-            <!-- Tab 1: Design -->
-            <div
-              id="ose-design"
-              class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-100 z-10"
-            >
-              <!-- Left: Image Box -->
-              <div
-                class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden"
-              >
-                <!-- Placeholder or specific image can go here -->
-              </div>
-              <!-- Right: Text Content -->
-              <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <h3
-                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4"
-                >
-                  Design
-                </h3>
-                <p
-                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6"
-                >
-                  Concept · Standards · Specification
-                </p>
-                <p
-                  class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12"
-                >
-                  Every exceptional hospitality space begins with meticulous
-                  design thinking. Our design team translates your brand vision
-                  into precise OS&E specifications — from material selection and
-                  colour palettes to ergonomic standards and custom production
-                  briefs — ensuring every touchpoint reflects your guests'
-                  expectations before a single item is produced.
-                </p>
-                <ul
-                  class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]"
-                >
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Brand-aligned concept development and mood boarding
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Custom
-                    OS&E specification packages per category
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Material
-                    and finish selection with sourcing recommendations
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Design
-                    review and approval workflows
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Tab 2: Production -->
-            <div
-              id="ose-production"
-              class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0"
-            >
-              <!-- Left: Image Box -->
-              <div
-                class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden"
-              ></div>
-              <!-- Right: Text Content -->
-              <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <h3
-                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4"
-                >
-                  Production
-                </h3>
-                <p
-                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6"
-                >
-                  Manufacturing · Quality Control · Sampling
-                </p>
-                <p
-                  class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12"
-                >
-                  We transform designs into tangible luxury. Partnering with a
-                  global network of vetted, premium manufacturers, we oversee
-                  every step of the production process. From rigorous
-                  prototyping to stringent localized quality assurance, we
-                  guarantee that the final OS&E products match the original
-                  specifications impeccably.
-                </p>
-                <ul
-                  class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]"
-                >
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Prototyping and pre-production sampling
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Manufacturing oversight and vendor management
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Strict
-                    Quality Control (QC) standards and inspections
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Ethical
-                    and sustainable sourcing practices
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Tab 3: Digitalization -->
-            <div
-              id="ose-digitalization"
-              class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0"
-            >
-              <!-- Left: Image Box -->
-              <div
-                class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden"
-              ></div>
-              <!-- Right: Text Content -->
-              <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <h3
-                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4"
-                >
-                  Digitalization
-                </h3>
-                <p
-                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6"
-                >
-                  Tracking · Tech Integration · Reporting
-                </p>
-                <p
-                  class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12"
-                >
-                  Visibility and transparency are paramount. Our proprietary 5PL
-                  platform provides real-time digital oversight of your entire
-                  OS&E pipeline. Track production milestones, monitor global
-                  freight movement, and access centralized documentation through
-                  intuitive dashboards tailored for hospitality procurement
-                  teams.
-                </p>
-                <ul
-                  class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]"
-                >
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Real-time end-to-end supply chain visibility
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Centralized documentation and compliance tracking
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Automated purchasing and inventory forecasting
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Custom
-                    analytics and financial reporting
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Tab 4: Logistics -->
-            <div
-              id="ose-logistics"
-              class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0"
-            >
-              <!-- Left: Image Box -->
-              <div
-                class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden"
-              ></div>
-              <!-- Right: Text Content -->
-              <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <h3
-                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4"
-                >
-                  Logistics
-                </h3>
-                <p
-                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6"
-                >
-                  Freight · Customs · Warehousing
-                </p>
-                <p
-                  class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12"
-                >
-                  Navigating global trade complexities with precision. We
-                  orchestrate the reliable movement of goods from international
-                  manufacturing hubs directly to your project destination. Our
-                  experts handle multi-modal freight forwarding, complex customs
-                  clearance, and strategic regional warehousing to prevent
-                  luxury hotel launch delays.
-                </p>
-                <ul
-                  class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]"
-                >
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Multi-modal global freight forwarding (Air, Sea, Land)
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Expert
-                    customs clearance and duty optimization
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Climate-controlled regional staging and warehousing
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Consolidation services for fragmented OS&E orders
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Tab 5: Fulfillment -->
-            <div
-              id="ose-fulfillment"
-              class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0"
-            >
-              <!-- Left: Image Box -->
-              <div
-                class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden"
-              ></div>
-              <!-- Right: Text Content -->
-              <div class="w-full md:w-1/2 flex flex-col justify-center">
-                <h3
-                  class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4"
-                >
-                  Fulfillment
-                </h3>
-                <p
-                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6"
-                >
-                  Site Delivery · White-glove setup · Handover
-                </p>
-                <p
-                  class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12"
-                >
-                  The critical final mile. Our fulfillment teams ensure that
-                  every piece of OS&E arrives at the property exactly when the
-                  construction and operational teams are ready. From
-                  synchronized room-by-room staging to white-glove installation
-                  and final debris removal, we ensure a pristine, site-ready
-                  handover for your grand opening.
-                </p>
-                <ul
-                  class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]"
-                >
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Synchronized Just-in-Time (JIT) site deliveries
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Room-in-a-box packing and sequential unpacking
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    White-glove interior placement and setup services
-                  </li>
-                  <li class="flex items-start">
-                    <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
-                    Comprehensive final handover and project sign-off
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- OS&E Tabs Script -->
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const tabs = document.querySelectorAll(".ose-tab-btn");
-            const contents = document.querySelectorAll(".ose-tab-content");
-
-            tabs.forEach((tab) => {
-              tab.addEventListener("click", () => {
-                // Remove active styles from all tabs
-                tabs.forEach((t) => {
-                  t.classList.remove("active", "text-[#1B1B18]", "font-bold");
-                  t.classList.add("text-[#8a8174]");
-                  t.querySelector(".tab-indicator").classList.remove(
-                    "scale-x-100",
-                  );
-                  t.querySelector(".tab-indicator").classList.add("scale-x-0");
-                });
-
-                // Add active style to clicked tab
-                tab.classList.remove("text-[#8a8174]");
-                tab.classList.add("active", "text-[#1B1B18]", "font-bold");
-                tab
-                  .querySelector(".tab-indicator")
-                  .classList.remove("scale-x-0");
-                tab
-                  .querySelector(".tab-indicator")
-                  .classList.add("scale-x-100");
-
-                // Hide all contents
-                contents.forEach((c) => {
-                  c.classList.remove("opacity-100", "z-10");
-                  c.classList.add("opacity-0", "pointer-events-none", "z-0");
-                });
-
-                // Show target content
-                const targetId = tab.getAttribute("data-target");
-                const targetContent = document.getElementById(targetId);
-                if (targetContent) {
-                  targetContent.classList.remove(
-                    "opacity-0",
-                    "pointer-events-none",
-                    "z-0",
-                  );
-                  targetContent.classList.add("opacity-100", "z-10");
-                }
-              });
-            });
-          });
-        </script>
-
-        <!-- Trusted By Section -->
-        <section
-          class="w-full max-w-5xl mx-auto px-4 md:px-8 mt-16 md:mt-24 mb-12"
-        >
-          <h2
-            class="text-center font-manrope font-medium text-lg md:text-xl text-[#5c4f3d] mb-10 md:mb-16"
-          >
-            Trusted
-            <span
-              class="font-radley italic font-normal text-[1.1em] lowercase mx-px"
-              >by</span
-            >
-            Our Hospitality Clients
-          </h2>
-
-          <!-- Logos Container -->
-          <div
-            class="flex flex-wrap justify-center items-center gap-x-8 gap-y-10 md:gap-x-14 md:gap-y-14"
-          >
-            <!-- Loop 14 logos -->
-            <img
-              src="/assets/img/trusted/1.png"
-              alt="Client Marriott"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/2.png"
-              alt="Client JW Marriott"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/3.png"
-              alt="Client Westin"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/4.png"
-              alt="Client Six Senses"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/5.png"
-              alt="Client Autograph Collection"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/6.png"
-              alt="Client Hyatt Regency"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-
-            <img
-              src="/assets/img/trusted/7.png"
-              alt="Client Intercontinental"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/8.png"
-              alt="Client Melia"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/9.png"
-              alt="Client Fairmont"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/10.png"
-              alt="Client Mandarin Oriental"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/11.png"
-              alt="Client Anantara"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-
-            <img
-              src="/assets/img/trusted/12.png"
-              alt="Client Rosewood"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/13.png"
-              alt="Client Hilton"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-            <img
-              src="/assets/img/trusted/14.png"
-              alt="Client St Regis"
-              class="h-7 md:h-10 lg:h-12 w-auto object-contain mix-blend-multiply transition-opacity hover:opacity-100 opacity-80"
-            />
-          </div>
-        </section>
-
-        <!-- (FAQ Section removed) -->
-      </main>
-
-      <!-- Call to Action Section -->
-      <section
-        class="relative w-full h-[60vh] md:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden"
-      >
-        <!-- Background Image -->
-        <img
-          src="/assets/img/our-jurnal-1.png"
-          alt="Contact Arkan background"
-          class="absolute inset-0 w-full h-full object-cover z-0"
-        />
-
-        <!-- Dark Overlay Overlay -->
-        <div class="absolute inset-0 bg-black/40 xl:bg-black/30 z-0"></div>
-
-        <!-- Content -->
-        <div
-          class="relative z-10 flex flex-col items-center justify-center text-center"
-        >
-          <h2
-            class="text-white font-manrope font-medium text-2xl md:text-3xl lg:text-4xl leading-snug md:leading-normal mb-8 md:mb-12"
-          >
-            We craft premium amenities with a focus on quality, precision,
-            and<br class="hidden md:block" />
-            international standards, supported by some of the strongest.
-          </h2>
-          <a
-            href="/contact"
-            class="inline-block px-8 py-3 rounded-full border border-white text-white text-xs md:text-sm font-radley tracking-widest hover:bg-white hover:text-black transition-colors duration-300 pointer-events-auto"
-          >
-            Contact Us
-          </a>
         </div>
       </section>
 
-      <!-- No FAQ Script needed here -->
+      <!-- 5PL Hospitality OS&E Platform Section -->
+      <section class="w-full max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pt-16 md:pt-32 pb-16 md:pb-24">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center mb-16 md:mb-24">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-manrope font-normal text-[#1B1B18] tracking-tight mb-6">
+            <span class="font-semibold">5PL</span>
+            <span class="italic font-radley">Hospitality</span> OS&E Platform
+          </h2>
+          <p class="font-manrope text-[#8a8174] text-sm md:text-base max-w-3xl leading-relaxed">
+            An integrated 5PL platform that manages hospitality OS&E from
+            concept to site ready delivery. ARKAN connects design, production,
+            digital control, global logistics, and fulfillment into one
+            seamless system, ensuring consistency, efficiency, and reliability
+            across every stage of operations.
+          </p>
+        </div>
 
-      <!-- Mobile Menu Script -->
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const trigger = document.getElementById("mobile-menu-trigger");
-          const overlay = document.getElementById("mobile-menu-overlay");
-          const navbar = document.getElementById("global-navbar");
-          const links = document.querySelectorAll(".mobile-nav-link");
-          let isMenuOpen = false;
+        <!-- Tabs Navigation -->
+        <div class="w-full border-b border-[#E5E0D8] mb-12 md:mb-20">
+          <ul class="flex flex-wrap justify-center gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-4" id="ose-tabs">
+            <li>
+              <button
+                class="ose-tab-btn active font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-bold transition-all"
+                data-target="ose-design">
+                Design
+                <span
+                  class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-100 transition-transform origin-left tab-indicator"></span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                data-target="ose-production">
+                Production
+                <span
+                  class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                data-target="ose-digitalization">
+                Digitalization
+                <span
+                  class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                data-target="ose-logistics">
+                Logistics
+                <span
+                  class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                data-target="ose-fulfillment">
+                Fulfillment
+                <span
+                  class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
 
-          window.toggleMenu = () => {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-              navbar.classList.add("menu-open");
-              overlay.classList.remove("pointer-events-none");
-              gsap.to(overlay, {
-                opacity: 1,
-                duration: 0.5,
-                ease: "power2.inOut",
-              });
-              gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
-              gsap.to(".hamburger-inner:first-child", {
-                y: 8,
-                rotate: 45,
-                duration: 0.3,
-              });
-              gsap.to(".hamburger-inner:last-child", {
-                y: -8,
-                rotate: -45,
-                duration: 0.3,
-              });
-              // Fix icon color for mobile overlay vs light navbar
-              gsap.to(".hamburger-inner", {
-                backgroundColor: "#111111",
-                duration: 0.3,
-              });
-
-              gsap.to(links, {
-                opacity: 1,
-                y: 0,
-                startAt: { y: 20 },
-                stagger: 0.1,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2,
-              });
-              gsap.to(".mobile-nav-footer", {
-                opacity: 1,
-                duration: 1,
-                delay: 0.6,
-              });
-            } else {
-              navbar.classList.remove("menu-open");
-              overlay.classList.add("pointer-events-none");
-              gsap.to(overlay, {
-                opacity: 0,
-                duration: 0.5,
-                ease: "power2.inOut",
-              });
-              gsap.to(".hamburger-inner-mid", {
-                opacity: 1,
-                duration: 0.2,
-                delay: 0.1,
-              });
-              gsap.to(".hamburger-inner:first-child", {
-                y: 0,
-                rotate: 0,
-                duration: 0.3,
-              });
-              gsap.to(".hamburger-inner:last-child", {
-                y: 0,
-                rotate: 0,
-                duration: 0.3,
-              });
-              // Restore original icon color
-              gsap.to(".hamburger-inner", {
-                clearProps: "backgroundColor",
-                duration: 0.3,
-              });
-
-              gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
-              gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
-            }
-          };
-
-          if (trigger) {
-            trigger.addEventListener("click", window.toggleMenu);
-          }
-          links.forEach((link) =>
-            link.addEventListener("click", () => {
-              if (isMenuOpen) window.toggleMenu();
-            }),
-          );
-
-          // Portfolio Grid Animations
-          gsap.to(".portfolio-item", {
-            opacity: 1,
-            y: 0,
-            startAt: { y: 40, opacity: 0 },
-            duration: 1.2,
-            stagger: 0.15,
-            ease: "expo.out",
-            scrollTrigger: {
-              trigger: ".grid",
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
-          });
-        });
-      </script>
-
-      <!-- Footer -->
-      <footer
-        class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20"
-      >
-        <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
-          <!-- Top Half: Careers Integrated -->
-          <div class="flex flex-col md:flex-row w-full mb-12 md:mb-16">
-            <!-- Left: Image -->
-            <div class="w-1/2 md:w-[15%] lg:w-[12%] md:mb-0">
-              <div
-                class="relative w-full aspect-[4/5] bg-white/5 overflow-hidden"
-              >
-                <img
-                  src="/assets/img/about-2.png"
-                  alt="Careers"
-                  class="w-full h-full object-cover"
-                />
-              </div>
+        <!-- Tabs Content Area -->
+        <div class="w-full max-w-6xl mx-auto relative min-h-[500px]">
+          <!-- Tab 1: Design -->
+          <div id="ose-design"
+            class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-100 z-10">
+            <!-- Left: Image Box -->
+            <div class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden">
+              <!-- Placeholder or specific image can go here -->
             </div>
-
             <!-- Right: Text Content -->
-            <div
-              class="w-1/2 md:w-[85%] lg:w-[88%] pl-6 md:pl-8 lg:pl-10 flex flex-col justify-center"
-            >
-              <h2
-                class="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-radley text-white mb-6 md:mb-8 font-normal tracking-tight"
-              >
-                Careers
-              </h2>
-              <div class="max-w-md">
-                <p
-                  class="text-xs md:text-sm font-manrope text-white/90 leading-[1.6] mb-6 md:mb-8"
-                >
-                  Join <span class="font-bold">ARKAN</span> and become part of a
-                  team leading<br class="hidden sm:block" />
-                  the Saudi ultra-luxury hospitality scene
-                </p>
-                <a
-                  href="mailto:info@arkan365.com"
-                  class="text-xs md:text-sm font-manrope text-white border-b border-white pb-1 hover:text-white/70 hover:border-white/70 transition-all"
-                >
-                  info@arkan365.com
-                </a>
-              </div>
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">
+                Design
+              </h3>
+              <p
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                Concept · Standards · Specification
+              </p>
+              <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                Every exceptional hospitality space begins with meticulous
+                design thinking. Our design team translates your brand vision
+                into precise OS&E specifications — from material selection and
+                colour palettes to ergonomic standards and custom production
+                briefs — ensuring every touchpoint reflects your guests'
+                expectations before a single item is produced.
+              </p>
+              <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Brand-aligned concept development and mood boarding
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Custom
+                  OS&E specification packages per category
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Material
+                  and finish selection with sourcing recommendations
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Design
+                  review and approval workflows
+                </li>
+              </ul>
             </div>
           </div>
 
-          <!-- Bottom Half: Links & Copyright -->
-          <div
-            class="flex flex-col md:flex-row items-end justify-between w-full mt-auto"
-          >
-            <!-- Left: Logo & Copyright -->
-            <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
-              <img
-                src="/assets/img/logo-arkan.svg"
-                alt="ARKAN"
-                class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90"
-              />
-              <p
-                class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide"
-              >
-                © 2026 ARKAN Technologies. All rights reserved.
-              </p>
+          <!-- Tab 2: Production -->
+          <div id="ose-production"
+            class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0">
+            <!-- Left: Image Box -->
+            <div class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden">
             </div>
+            <!-- Right: Text Content -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">
+                Production
+              </h3>
+              <p
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                Manufacturing · Quality Control · Sampling
+              </p>
+              <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                We transform designs into tangible luxury. Partnering with a
+                global network of vetted, premium manufacturers, we oversee
+                every step of the production process. From rigorous
+                prototyping to stringent localized quality assurance, we
+                guarantee that the final OS&E products match the original
+                specifications impeccably.
+              </p>
+              <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Prototyping and pre-production sampling
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Manufacturing oversight and vendor management
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Strict
+                  Quality Control (QC) standards and inspections
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Ethical
+                  and sustainable sourcing practices
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Right: Buttons & Links -->
-            <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
-              <!-- Contact & Socials -->
-              <div class="flex items-center gap-4 mb-6 md:mb-8">
-                <a
-                  href="/contact"
-                  class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300"
-                >
-                  Contact Us
-                </a>
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300"
-                >
-                  <svg
-                    class="w-4 h-4 md:w-5 md:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  aria-label="LinkedIn"
-                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300"
-                >
-                  <svg
-                    class="w-4 h-4 md:w-5 md:h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                    />
-                  </svg>
-                </a>
-              </div>
+          <!-- Tab 3: Digitalization -->
+          <div id="ose-digitalization"
+            class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0">
+            <!-- Left: Image Box -->
+            <div class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden">
+            </div>
+            <!-- Right: Text Content -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">
+                Digitalization
+              </h3>
+              <p
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                Tracking · Tech Integration · Reporting
+              </p>
+              <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                Visibility and transparency are paramount. Our proprietary 5PL
+                platform provides real-time digital oversight of your entire
+                OS&E pipeline. Track production milestones, monitor global
+                freight movement, and access centralized documentation through
+                intuitive dashboards tailored for hospitality procurement
+                teams.
+              </p>
+              <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Real-time end-to-end supply chain visibility
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Centralized documentation and compliance tracking
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Automated purchasing and inventory forecasting
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Custom
+                  analytics and financial reporting
+                </li>
+              </ul>
+            </div>
+          </div>
 
-              <!-- Footer Links -->
-              <div
-                class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90"
-              >
-                <a href="#" class="hover:text-white transition-colors"
-                  >Help & Support</a
-                >
-                <span class="text-white/30 hidden sm:inline-block">|</span>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Terms & Conditions</a
-                >
-                <span class="text-white/30 hidden sm:inline-block">|</span>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Privacy Policy</a
-                >
-              </div>
+          <!-- Tab 4: Logistics -->
+          <div id="ose-logistics"
+            class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0">
+            <!-- Left: Image Box -->
+            <div class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden">
+            </div>
+            <!-- Right: Text Content -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">
+                Logistics
+              </h3>
+              <p
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                Freight · Customs · Warehousing
+              </p>
+              <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                Navigating global trade complexities with precision. We
+                orchestrate the reliable movement of goods from international
+                manufacturing hubs directly to your project destination. Our
+                experts handle multi-modal freight forwarding, complex customs
+                clearance, and strategic regional warehousing to prevent
+                luxury hotel launch delays.
+              </p>
+              <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Multi-modal global freight forwarding (Air, Sea, Land)
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Expert
+                  customs clearance and duty optimization
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Climate-controlled regional staging and warehousing
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Consolidation services for fragmented OS&E orders
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 5: Fulfillment -->
+          <div id="ose-fulfillment"
+            class="ose-tab-content absolute inset-0 w-full flex flex-col md:flex-row gap-12 md:gap-20 transition-opacity duration-500 opacity-0 pointer-events-none z-0">
+            <!-- Left: Image Box -->
+            <div class="w-full md:w-1/2 aspect-[4/3] bg-[#E2D9C8] flex items-center justify-center overflow-hidden">
+            </div>
+            <!-- Right: Text Content -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">
+                Fulfillment
+              </h3>
+              <p
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                Site Delivery · White-glove setup · Handover
+              </p>
+              <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                The critical final mile. Our fulfillment teams ensure that
+                every piece of OS&E arrives at the property exactly when the
+                construction and operational teams are ready. From
+                synchronized room-by-room staging to white-glove installation
+                and final debris removal, we ensure a pristine, site-ready
+                handover for your grand opening.
+              </p>
+              <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Synchronized Just-in-Time (JIT) site deliveries
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Room-in-a-box packing and sequential unpacking
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  White-glove interior placement and setup services
+                </li>
+                <li class="flex items-start">
+                  <span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span>
+                  Comprehensive final handover and project sign-off
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-  </body>
+      </section>
+
+      <!-- Portfolio Grid Section -->
+      <section class="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 pb-16 md:pb-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--space-2)] md:gap-[var(--space-3)]">
+          <!-- Item 1 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-1.png" alt="Featured Project 1"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Hospitality
+                Manufacturing</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">The Art of Precision in
+                Luxury Hospitality Production</h3>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-bg-2.png" alt="Featured Project 2"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Design
+                Excellence</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Crafting bespoke
+                architectural details</h3>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-3.png" alt="Featured Project 3"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Material
+                Innovation</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Refined textures for
+                premium interiors</h3>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-4.png" alt="Featured Project 4"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Global
+                Standards</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">International quality,
+                local soul</h3>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-5.png" alt="Featured Project 5"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Curation</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Bespoke amenity kits for
+                elite travel</h3>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-6.png" alt="Featured Project 6"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Wellness</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Soothing scents and organic
+                care</h3>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-7.png" alt="Featured Project 7"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Atmosphere</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Elevating guest experiences
+                with aroma</h3>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/about-8.png" alt="Featured Project 8"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Hospitality
+                OS&E</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Complete solutions from
+                design to site</h3>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="portfolio-item opacity-0 group cursor-pointer overflow-hidden relative">
+            <div class="aspect-square overflow-hidden">
+              <img src="/assets/img/our-jurnal-1.png" alt="Featured Project 9"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            </div>
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span
+                class="text-[10px] md:text-xs font-manrope font-bold tracking-[0.3em] text-white/70 uppercase mb-2">Legacy</span>
+              <h3 class="text-lg md:text-2xl font-radley text-white uppercase leading-tight">Establishing the ARKAN
+                standard</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OS&E Tabs Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const tabs = document.querySelectorAll(".ose-tab-btn");
+          const contents = document.querySelectorAll(".ose-tab-content");
+          let currentTabIndex = 0;
+          let tabInterval;
+          const intervalTime = 1500; // 1.5 seconds
+
+          function switchTab(index) {
+            const tab = tabs[index];
+
+            // Remove active styles from all tabs
+            tabs.forEach((t) => {
+              t.classList.remove("active", "text-[#1B1B18]", "font-bold");
+              t.classList.add("text-[#8a8174]");
+              t.querySelector(".tab-indicator").classList.remove(
+                "scale-x-100",
+              );
+              t.querySelector(".tab-indicator").classList.add("scale-x-0");
+            });
+
+            // Add active style to target tab
+            tab.classList.remove("text-[#8a8174]");
+            tab.classList.add("active", "text-[#1B1B18]", "font-bold");
+            tab
+              .querySelector(".tab-indicator")
+              .classList.remove("scale-x-0");
+            tab
+              .querySelector(".tab-indicator")
+              .classList.add("scale-x-100");
+
+            // Hide all contents
+            contents.forEach((c) => {
+              c.classList.remove("opacity-100", "z-10");
+              c.classList.add("opacity-0", "pointer-events-none", "z-0");
+            });
+
+            // Show target content
+            const targetId = tab.getAttribute("data-target");
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+              targetContent.classList.remove(
+                "opacity-0",
+                "pointer-events-none",
+                "z-0",
+              );
+              targetContent.classList.add("opacity-100", "z-10");
+            }
+          }
+
+          function startAutoSwitch() {
+            tabInterval = setInterval(() => {
+              currentTabIndex = (currentTabIndex + 1) % tabs.length;
+              switchTab(currentTabIndex);
+            }, intervalTime);
+          }
+
+          function stopAutoSwitch() {
+            clearInterval(tabInterval);
+          }
+
+          // Initial setup
+          tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+              currentTabIndex = index;
+              switchTab(currentTabIndex);
+              stopAutoSwitch(); // Pause on interaction
+              startAutoSwitch(); // Resume timer
+            });
+          });
+
+          // Start interval
+          startAutoSwitch();
+        });
+      </script>
+
+
+      <!-- (FAQ Section removed) -->
+    </main>
+
+    <!-- Call to Action Section -->
+    <section
+      class="relative w-full h-[60vh] md:h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <img src="/assets/img/our-jurnal-1.png" alt="Contact Arkan background"
+        class="absolute inset-0 w-full h-full object-cover z-0" />
+
+      <!-- Dark Overlay Overlay -->
+      <div class="absolute inset-0 bg-black/40 xl:bg-black/30 z-0"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 flex flex-col items-center justify-center text-center">
+        <h2
+          class="text-white font-manrope font-medium text-2xl md:text-3xl lg:text-4xl leading-snug md:leading-normal mb-8 md:mb-12">
+          We craft premium amenities with a focus on quality, precision,
+          and<br class="hidden md:block" />
+          international standards, supported by some of the strongest.
+        </h2>
+        <a href="/contact"
+          class="inline-block px-8 py-3 rounded-full border border-white text-white text-xs md:text-sm font-radley tracking-widest hover:bg-white hover:text-black transition-colors duration-300 pointer-events-auto">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- No FAQ Script needed here -->
+
+    <!-- Mobile Menu Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const trigger = document.getElementById("mobile-menu-trigger");
+        const overlay = document.getElementById("mobile-menu-overlay");
+        const navbar = document.getElementById("global-navbar");
+        const links = document.querySelectorAll(".mobile-nav-link");
+        let isMenuOpen = false;
+
+        window.toggleMenu = () => {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            navbar.classList.add("menu-open");
+            overlay.classList.remove("pointer-events-none");
+            gsap.to(overlay, {
+              opacity: 1,
+              duration: 0.5,
+              ease: "power2.inOut",
+            });
+            gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
+            gsap.to(".hamburger-inner:first-child", {
+              y: 8,
+              rotate: 45,
+              duration: 0.3,
+            });
+            gsap.to(".hamburger-inner:last-child", {
+              y: -8,
+              rotate: -45,
+              duration: 0.3,
+            });
+            // Fix icon color for mobile overlay vs light navbar
+            gsap.to(".hamburger-inner", {
+              backgroundColor: "#111111",
+              duration: 0.3,
+            });
+
+            gsap.to(links, {
+              opacity: 1,
+              y: 0,
+              startAt: { y: 20 },
+              stagger: 0.1,
+              duration: 0.8,
+              ease: "power3.out",
+              delay: 0.2,
+            });
+            gsap.to(".mobile-nav-footer", {
+              opacity: 1,
+              duration: 1,
+              delay: 0.6,
+            });
+          } else {
+            navbar.classList.remove("menu-open");
+            overlay.classList.add("pointer-events-none");
+            gsap.to(overlay, {
+              opacity: 0,
+              duration: 0.5,
+              ease: "power2.inOut",
+            });
+            gsap.to(".hamburger-inner-mid", {
+              opacity: 1,
+              duration: 0.2,
+              delay: 0.1,
+            });
+            gsap.to(".hamburger-inner:first-child", {
+              y: 0,
+              rotate: 0,
+              duration: 0.3,
+            });
+            gsap.to(".hamburger-inner:last-child", {
+              y: 0,
+              rotate: 0,
+              duration: 0.3,
+            });
+            // Restore original icon color
+            gsap.to(".hamburger-inner", {
+              clearProps: "backgroundColor",
+              duration: 0.3,
+            });
+
+            gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
+            gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
+          }
+        };
+
+        if (trigger) {
+          trigger.addEventListener("click", window.toggleMenu);
+        }
+        links.forEach((link) =>
+          link.addEventListener("click", () => {
+            if (isMenuOpen) window.toggleMenu();
+          }),
+        );
+
+        // Portfolio Grid Animations
+        gsap.to(".portfolio-item", {
+          opacity: 1,
+          y: 0,
+          startAt: { y: 40, opacity: 0 },
+          duration: 1.2,
+          stagger: 0.15,
+          ease: "expo.out",
+          scrollTrigger: {
+            trigger: ".grid",
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20">
+      <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
+        <!-- Top Half: Careers Integrated -->
+        <div class="flex flex-col md:flex-row w-full mb-12 md:mb-16">
+          <!-- Left: Image -->
+          <div class="w-1/2 md:w-[15%] lg:w-[12%] md:mb-0">
+            <div class="relative w-full aspect-[4/5] bg-white/5 overflow-hidden">
+              <img src="/assets/img/about-2.png" alt="Careers" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Right: Text Content -->
+          <div class="w-1/2 md:w-[85%] lg:w-[88%] pl-6 md:pl-8 lg:pl-10 flex flex-col justify-center">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-radley text-white mb-6 md:mb-8 font-normal tracking-tight">
+              Careers
+            </h2>
+            <div class="max-w-md">
+              <p class="text-xs md:text-sm font-manrope text-white/90 leading-[1.6] mb-6 md:mb-8">
+                Join <span class="font-bold">ARKAN</span> and become part of a
+                team leading<br class="hidden sm:block" />
+                the Saudi ultra-luxury hospitality scene
+              </p>
+              <a href="mailto:info@arkan365.com"
+                class="text-xs md:text-sm font-manrope text-white border-b border-white pb-1 hover:text-white/70 hover:border-white/70 transition-all">
+                info@arkan365.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Half: Links & Copyright -->
+        <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
+          <!-- Left: Logo & Copyright -->
+          <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+              class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
+            <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
+              © 2026 ARKAN Technologies. All rights reserved.
+            </p>
+          </div>
+
+          <!-- Right: Buttons & Links -->
+          <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
+            <!-- Contact & Socials -->
+            <div class="flex items-center gap-4 mb-6 md:mb-8">
+              <a href="/contact"
+                class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
+                Contact Us
+              </a>
+              <a href="#" aria-label="Instagram"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn"
+                class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
+              <a href="#" class="hover:text-white transition-colors">Help & Support</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
