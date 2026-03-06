@@ -17,6 +17,7 @@ export default defineConfig({
                 portfolio: resolve(__dirname, 'portfolio.html'),
                 'journal-detail': resolve(__dirname, 'journal-detail.html'),
                 'portfolio-detail': resolve(__dirname, 'portfolio-detail.html'),
+            'sustainability': resolve(__dirname, 'sustainability.html'),
             }
         }
     },
