@@ -170,7 +170,7 @@ if (loader && loaderLogo) {
         const tl = gsap.timeline();
 
         // Target the hero section for a smooth reveal
-        const heroSection = document.getElementById('hero-section');
+        const heroSection = document.getElementById('hero-section') || document.getElementById('careers-hero');
 
         tl.to(loaderLogo, {
             opacity: 0,
@@ -219,11 +219,15 @@ if (loader && loaderLogo) {
 
     // Internal Link Interception
     document.addEventListener('click', (e) => {
+        // If the event has already been handled (e.g. by an onclick attribute), don't intercept
+        if (e.defaultPrevented) return;
+
         const link = e.target.closest('a');
         if (!link) return;
 
         const href = link.getAttribute('href');
-        if (!href || href.startsWith('#') || link.target === '_blank') return;
+        // Ignore hashes, blanks, or javascript: protocols
+        if (!href || href.startsWith('#') || href.startsWith('javascript:') || link.target === '_blank') return;
 
         try {
             const url = new URL(link.href, window.location.origin);

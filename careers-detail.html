@@ -64,6 +64,7 @@
       color: #d2bb9c;
     }
   </style>
+
 </head>
 
 <!-- Light Theme Body -->
@@ -101,7 +102,7 @@
           class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
           <a href="/about" class="nav-item hover:text-white transition-colors">About</a>
           <a href="/portfolio" class="nav-item hover:text-white transition-colors">Works</a>
-          <a href="/journal" class="nav-item hover:text-white transition-colors">Archive</a>
+          <a href="/sustainability" class="nav-item hover:text-white transition-colors">Sustainability</a>
         </nav>
 
         <!-- Tablet Navigation (Contact Us Centered) -->
@@ -140,7 +141,7 @@
         <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase">
           <a href="/about" class="mobile-nav-link opacity-0">About</a>
           <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
-          <a href="/journal" class="mobile-nav-link opacity-0">Archive</a>
+          <a href="/sustainability" class="mobile-nav-link opacity-0">Sustainability</a>
           <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
         </nav>
 
@@ -157,10 +158,13 @@
       <!-- ══════════════════════════════════════════
            JOB HERO SECTION
       ══════════════════════════════════════════ -->
-      <section id="hero-section" class="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center" style="background: linear-gradient(180deg, #062040 0%, #0A3060 25%, #1460AA 50%, #3282CC 75%, #B0CCE0 100%);">
-        
-        <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24 flex flex-col justify-center mt-20">
-          
+      <section id="careers-hero"
+        class="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center"
+        style="background: linear-gradient(180deg, #062040 0%, #0A3060 25%, #1460AA 50%, #3282CC 75%, #B0CCE0 100%);">
+
+        <div
+          class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24 flex flex-col justify-center mt-20">
+
           <!-- Tags -->
           <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
             <span
@@ -203,8 +207,8 @@
               class="px-8 py-3.5 bg-[#D2BB9C] text-[#1B1B18] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold rounded-[2px] hover:bg-[#c3aa8a] transition-colors inline-block text-center">
               ← BACK TO ALL ROLES
             </a>
-            <a href="#apply"
-              class="apply-btn px-8 py-3.5 bg-[#FCFAF8] text-[#1B1B18] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold rounded-[2px] hover:bg-white transition-colors inline-block text-center shadow-lg">
+            <a href="#apply-form"
+              class="apply-btn-trigger cursor-pointer px-8 py-3.5 bg-[#FCFAF8] text-[#1B1B18] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold rounded-[2px] hover:bg-white transition-colors inline-block text-center shadow-lg">
               APPLY FOR THIS ROLE
             </a>
           </div>
@@ -506,14 +510,14 @@
                   </p>
 
                   <div class="flex flex-col gap-3">
-                    <button
-                      class="apply-btn w-full py-3.5 bg-[#4A433A] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#322c26] transition-colors rounded-[2px]">
+                    <a href="#apply-form"
+                      class="apply-btn-trigger cursor-pointer w-full py-3.5 bg-[#4A433A] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#322c26] transition-colors rounded-[2px] text-center">
                       APPLY FOR THIS ROLE
-                    </button>
-                    <button
-                      class="w-full py-3.5 bg-transparent border border-[#4A433A]/20 text-[#4A433A] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#4A433A]/5 transition-colors rounded-[2px]">
+                    </a>
+                    <a href="javascript:void(0)"
+                      class="cursor-pointer w-full py-3.5 bg-transparent border border-[#4A433A]/20 text-[#4A433A] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#4A433A]/5 transition-colors rounded-[2px] text-center">
                       REFER A COLLEAGUE
-                    </button>
+                    </a>
                   </div>
 
                   <!-- Share Buttons -->
@@ -656,171 +660,9 @@
       </section>
       <!-- / MORE OPEN ROLES -->
 
-      <!-- ══════════════════════════════════════════
-           APPLICATION MODAL
-      ══════════════════════════════════════════ -->
-      <div id="application-modal"
-        class="fixed inset-0 z-[200] pointer-events-none opacity-0 transition-opacity duration-300" data-lenis-prevent>
-        <!-- Overlay -->
-        <div class="fixed inset-0 bg-[#4A433A]/60 backdrop-blur-sm transition-opacity" id="modal-overlay"></div>
 
-        <!-- Scrollable Wrapper -->
-        <div class="fixed inset-0 z-10 overflow-y-auto" id="modal-scroll-wrapper" data-lenis-prevent>
-          <div class="flex min-h-full items-start justify-center p-4 text-center sm:p-0 py-12 md:py-24">
 
-            <!-- Modal Content -->
-            <div
-              class="relative transform bg-[#F2F0E9] text-left shadow-xl transition-all sm:my-8 w-full max-w-[640px] flex flex-col translate-y-8 duration-300 pointer-events-auto"
-              id="modal-content">
 
-              <!-- Modal Header -->
-              <div
-                class="px-8 md:px-12 py-8 border-b border-[#D2BB9C]/20 flex items-start justify-between bg-[#F2F0E9]">
-                <div>
-                  <span
-                    class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-3 block">DESIGN</span>
-                  <h3 class="font-radley text-3xl md:text-[34px] text-[#4A433A] tracking-tight">Senior <span
-                      class="italic">Product Designer</span></h3>
-                </div>
-                <button id="close-modal-btn"
-                  class="text-[#8a8174] hover:text-[#4A433A] transition-colors p-2 -mr-4 -mt-4">
-                  <svg class="w-5 h-5 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                  </svg>
-                </button>
-              </div>
-
-              <!-- Modal Body (Form) -->
-              <div class="px-8 md:px-12 py-8 md:py-10">
-                <form class="space-y-6">
-
-                  <div class="flex flex-col md:flex-row gap-6">
-                    <div class="flex flex-col w-full">
-                      <label
-                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">First
-                        Name</label>
-                      <input type="text" placeholder="John"
-                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <label
-                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Last
-                        Name</label>
-                      <input type="text" placeholder="Doe"
-                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <label
-                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Email
-                      Address</label>
-                    <input type="email" placeholder="your@email.com"
-                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                  </div>
-
-                  <div class="flex flex-col md:flex-row gap-6">
-                    <div class="flex flex-col w-full">
-                      <label
-                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Phone</label>
-                      <input type="tel" placeholder="+966 5X XXX XXXX"
-                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                    </div>
-                    <div class="flex flex-col w-full">
-                      <label
-                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">LinkedIn
-                        Profile</label>
-                      <input type="url" placeholder="linkedin.com/in/yourname"
-                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <label
-                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Portfolio
-                      / Website</label>
-                    <input type="url" placeholder="yourportfolio.com"
-                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
-                  </div>
-
-                  <div class="flex flex-col">
-                    <label
-                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Cover
-                      Letter</label>
-                    <textarea rows="5" placeholder="Tell us about yourself and why you'd like to join ARKAN..."
-                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors resize-none"></textarea>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <label
-                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Upload CV
-                      (PDF or DOCX)</label>
-                    <div
-                      class="w-full bg-white px-5 py-5 flex items-center justify-between text-[#8a8174]/60 font-manrope text-[11px] cursor-pointer hover:bg-white transition-colors relative">
-                      <span>Choose file or drag & drop</span>
-                      <span>↑</span>
-                      <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                        accept=".pdf,.doc,.docx" />
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col mt-8 pt-8 border-t border-[#D2BB9C]/20">
-                    <button type="submit"
-                      class="w-full py-4 bg-[#4A433A] hover:bg-[#322c26] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors">
-                      SUBMIT APPLICATION
-                    </button>
-
-                    <p class="text-[9px] text-[#8a8174]/60 text-center font-manrope mt-5">By submitting, you agree to
-                      ARKAN storing your data for recruitment purposes.</p>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- / APPLICATION MODAL -->
-
-      <!-- Job Application Modal Script -->
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const modal = document.getElementById('application-modal');
-          const modalContent = document.getElementById('modal-content');
-          const overlay = document.getElementById('modal-overlay');
-          const scrollWrapper = document.getElementById('modal-scroll-wrapper');
-          const closeBtn = document.getElementById('close-modal-btn');
-          const applyBtns = document.querySelectorAll('.apply-btn');
-
-          function openModal(e) {
-            if (e) e.preventDefault();
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            modalContent.classList.remove('translate-y-8');
-            scrollWrapper.classList.add('pointer-events-auto');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            if (window.lenis) window.lenis.stop(); // Stop global smooth scrolling
-          }
-
-          function closeModal() {
-            modal.classList.add('pointer-events-none', 'opacity-0');
-            modalContent.classList.add('translate-y-8');
-            scrollWrapper.classList.remove('pointer-events-auto');
-            document.body.style.overflow = ''; // Restore scrolling
-            if (window.lenis) window.lenis.start(); // Resume global smooth scrolling
-          }
-
-          applyBtns.forEach(btn => btn.addEventListener('click', openModal));
-          closeBtn.addEventListener('click', closeModal);
-          overlay.addEventListener('click', closeModal);
-
-          // Close on Escape key
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
-              closeModal();
-            }
-          });
-        });
-      </script>
 
       <!-- Job Filter Script -->
       <script>
@@ -1011,9 +853,173 @@
         </div>
       </footer>
   </div>
+
+  <!-- ══════════════════════════════════════════
+       APPLICATION MODAL (CONSOLIDATED)
+  ══════════════════════════════════════════ -->
+  <div id="application-modal" style="display: none;"
+    class="fixed inset-0 z-[1000] transition-opacity duration-500" data-lenis-prevent>
+    <!-- Overlay -->
+    <div class="fixed inset-0 bg-[#4A433A]/80 backdrop-blur-sm" id="modal-overlay"></div>
+
+    <!-- Scrollable Wrapper -->
+    <div class="fixed inset-0 z-[1001] overflow-y-auto" id="modal-scroll-wrapper" data-lenis-prevent>
+      <div class="flex min-h-full items-start justify-center p-4 text-center sm:p-0 py-12 md:py-24 pointer-events-none">
+
+        <!-- Modal Content -->
+        <div
+          class="relative transform bg-[#F2F0E9] text-left shadow-2xl transition-all sm:my-8 w-full max-w-[640px] flex flex-col translate-y-12 duration-500 pointer-events-auto"
+          id="modal-content">
+
+          <!-- Modal Header -->
+          <div class="px-8 md:px-12 py-8 border-b border-[#D2BB9C]/20 flex items-start justify-between bg-[#F2F0E9]">
+            <div>
+              <span
+                class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-3 block">DESIGN</span>
+              <h3 class="font-radley text-3xl md:text-[34px] text-[#4A433A] tracking-tight">Senior <span
+                  class="italic">Product Designer</span></h3>
+            </div>
+            <button id="close-modal-btn" class="text-[#8a8174] hover:text-[#4A433A] transition-colors p-2 -mr-4 -mt-4">
+              <svg class="w-5 h-5 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
+                </path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Modal Body (Form) -->
+          <div class="px-8 md:px-12 py-8 md:py-10">
+            <form class="space-y-6" id="apply-form">
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex flex-col w-full">
+                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">First Name</label>
+                  <input type="text" placeholder="John"
+                    class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Last Name</label>
+                  <input type="text" placeholder="Doe"
+                    class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                </div>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Email Address</label>
+                <input type="email" placeholder="your@email.com"
+                  class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+              </div>
+
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex flex-col w-full">
+                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Phone</label>
+                  <input type="tel" placeholder="+966 5X XXX XXXX"
+                    class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">LinkedIn Profile</label>
+                  <input type="url" placeholder="linkedin.com/in/yourname"
+                    class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                </div>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Portfolio / Website</label>
+                <input type="url" placeholder="yourportfolio.com"
+                  class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Cover Letter</label>
+                <textarea rows="5" placeholder="Tell us about yourself and why you'd like to join ARKAN..."
+                  class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors resize-none"></textarea>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Upload CV (PDF or DOCX)</label>
+                <div class="w-full bg-white px-5 py-5 flex items-center justify-between text-[#8a8174]/60 font-manrope text-[11px] cursor-pointer hover:bg-white transition-colors relative">
+                  <span>Choose file or drag & drop</span>
+                  <span>↑</span>
+                  <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept=".pdf,.doc,.docx" />
+                </div>
+              </div>
+
+              <div class="flex flex-col mt-8 pt-8 border-t border-[#D2BB9C]/20">
+                <button type="submit"
+                  class="w-full py-4 bg-[#4A433A] hover:bg-[#322c26] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors">
+                  SUBMIT APPLICATION
+                </button>
+                <p class="text-[9px] text-[#8a8174]/60 text-center font-manrope mt-5">By submitting, you agree to ARKAN storing your data for recruitment purposes.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const modal = document.getElementById('application-modal');
+      const content = document.getElementById('modal-content');
+      const wrapper = document.getElementById('modal-scroll-wrapper');
+      const overlay = document.getElementById('modal-overlay');
+      const closeBtn = document.getElementById('close-modal-btn');
+
+      function openModal(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        
+        modal.style.display = 'block';
+        setTimeout(() => {
+          modal.style.opacity = '1';
+          content.classList.remove('translate-y-12');
+        }, 10);
+        
+        wrapper.scrollTo(0, 0);
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      }
+
+      function closeModal() {
+        modal.style.opacity = '0';
+        content.classList.add('translate-y-12');
+        
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 500);
+        
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+
+      // GLOBAL CLICK LISTENER
+      document.addEventListener('click', function(e) {
+        const trigger = e.target.closest('.apply-btn-trigger');
+        if (trigger) {
+          openModal(e);
+          return false;
+        }
+
+        if (e.target === overlay || e.target.closest('#close-modal-btn')) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      // Expose to window as absolute backup
+      window.openApplicationModal = openModal;
+      window.closeApplicationModal = closeModal;
+    })();
+  </script>
+
   <script>
     /* ─── SCROLL REVEAL ─── */
-      const revealObserver = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -1021,12 +1027,10 @@
           }
         });
       },
-      { threshold: 0.01 }, // Lowered from 0.1 to trigger earlier
+      { threshold: 0.01 },
     );
 
-    document
-      .querySelectorAll(".reveal")
-      .forEach((el) => revealObserver.observe(el));
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
     /* ─── ANIMATED COUNTERS ─── */
     function animateCounter(el) {
@@ -1077,7 +1081,6 @@
 
       const isOpen = content.classList.contains("opacity-100");
 
-      // Close all
       allFaqs.forEach((f) => {
         f.style.maxHeight = "0";
         f.classList.remove("opacity-100");
