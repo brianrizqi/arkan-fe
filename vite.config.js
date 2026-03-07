@@ -19,6 +19,7 @@ export default defineConfig({
                 'portfolio-detail': resolve(__dirname, 'portfolio-detail.html'),
                 'sustainability': resolve(__dirname, 'sustainability.html'),
                 'careers': resolve(__dirname, 'careers.html'),
+                'careers-detail': resolve(__dirname, 'careers-detail.html'),
             }
         }
     },

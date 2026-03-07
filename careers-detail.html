@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ARKAN - Careers</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles / Scripts -->
+  <script type="module" src="/resources/js/app.js"></script>
+  <link rel="stylesheet" href="/resources/css/app.css" />
+  <style>
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .faq-item h3.active {
+      color: #d2bb9c;
+    }
+  </style>
+</head>
+
+<!-- Light Theme Body -->
+
+<body class="antialiased font-manrope">
+  <script>
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
+  <!-- Loader Component -->
+  <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
+    <div class="loader-bg absolute inset-0 bg-cover bg-[center_87%] bg-no-repeat opacity-100"
+      style="background-image: url(&quot;/assets/img/loading-bg.jpg&quot;)"></div>
+    <div class="relative z-10 flex flex-col items-center">
+      <img src="/assets/img/loading-logo-2.svg" id="loader-logo" class="w-70 md:w-100 lg:w-200" alt="Arkan Logo" />
+    </div>
+  </div>
+
+  <div class="sections-wrapper relative overflow-x-clip">
+    <!-- Navbar Component -->
+    <header id="global-navbar" class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500">
+      <div
+        class="w-full px-6 md:px-12 py-6 md:py-8 flex justify-between items-center text-white/90 transition-colors duration-500"
+        id="navbar-container">
+        <!-- Logo -->
+        <div class="nav-item">
+          <a href="/" class="block hover:opacity-70 transition-opacity">
+            <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+              class="navbar-logo h-4 md:h-5 w-auto object-contain brightness-0 invert transition-all duration-500" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
+          <a href="/about" class="nav-item hover:text-white transition-colors">About</a>
+          <a href="/portfolio" class="nav-item hover:text-white transition-colors">Works</a>
+          <a href="/journal" class="nav-item hover:text-white transition-colors">Archive</a>
+        </nav>
+
+        <!-- Tablet Navigation (Contact Us Centered) -->
+        <div class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden">
+          <a href="/contact"
+            class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- Right Side: Contact & Hamburger -->
+        <div class="flex items-center space-x-6 md:space-x-8">
+          <div class="nav-item hidden xl:block">
+            <a href="/contact"
+              class="inline-block px-8 py-2.5 rounded-full border border-white/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-white hover:text-[#1B1B18] transition-all duration-300">
+              Contact Us
+            </a>
+          </div>
+
+          <button id="mobile-menu-trigger" class="nav-item block xl:hidden focus:outline-none relative z-[120]">
+            <div class="hamburger-box w-6 h-4 relative">
+              <span
+                class="hamburger-inner absolute w-6 h-[1px] bg-current top-0 left-0 transition-all duration-300"></span>
+              <span
+                class="hamburger-inner-mid absolute w-4 h-[1px] bg-current top-1/2 left-0 -translate-y-1/2 transition-all duration-300"></span>
+              <span
+                class="hamburger-inner absolute w-6 h-[1px] bg-current bottom-0 left-0 transition-all duration-300"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center text-[#111111]">
+        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase">
+          <a href="/about" class="mobile-nav-link opacity-0">About</a>
+          <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
+          <a href="/journal" class="mobile-nav-link opacity-0">Archive</a>
+          <a href="/contact" class="mobile-nav-link opacity-0">Contact Us</a>
+        </nav>
+
+        <div class="mt-20 mobile-nav-footer opacity-0">
+          <img src="/assets/img/logo-arkan.svg" alt="ARKAN" class="h-6 w-auto mx-auto brightness-0 mb-4 opacity-30" />
+          <p class="text-[10px] uppercase tracking-widest text-[#1B1B18]/40">
+            ARKAN Standard © 2026
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full">
+      <!-- ══════════════════════════════════════════
+           JOB HERO SECTION
+      ══════════════════════════════════════════ -->
+      <section id="hero-section" class="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center" style="background: linear-gradient(180deg, #062040 0%, #0A3060 25%, #1460AA 50%, #3282CC 75%, #B0CCE0 100%);">
+        
+        <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24 flex flex-col justify-center mt-20">
+          
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mb-6 md:mb-8">
+            <span
+              class="px-4 py-1.5 rounded-[2px] border border-white/20 text-white/80 font-manrope text-[10px] uppercase tracking-wider">DESIGN</span>
+            <span
+              class="px-4 py-1.5 rounded-[2px] border border-white/20 text-white/80 font-manrope text-[10px] uppercase tracking-wider">FULL-TIME</span>
+            <span
+              class="px-4 py-1.5 rounded-[2px] border border-white/20 text-white/80 font-manrope text-[10px] uppercase tracking-wider">SENIOR
+              LEVEL</span>
+            <span
+              class="px-4 py-1.5 rounded-[2px] border border-white/20 text-white/80 font-manrope text-[10px] uppercase tracking-wider">ON-SITE</span>
+          </div>
+
+          <!-- Job Title -->
+          <h1 class="font-radley text-5xl md:text-7xl lg:text-[5.5rem] text-white leading-[1.1] tracking-tight mb-8">
+            Senior<br />
+            <span class="italic">Product Designer</span>
+          </h1>
+
+          <!-- Meta Info -->
+          <div
+            class="flex flex-wrap items-center gap-6 md:gap-10 font-manrope text-[11px] md:text-xs text-white/80 mb-12">
+            <div class="flex items-center gap-2">
+              <span class="opacity-60">📍</span> Riyadh, Saudi Arabia
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="opacity-60">🏢</span> Design & Product
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="opacity-60">📅</span> Posted March 2026
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="opacity-60">⏱</span> Closing April 30, 2026
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="/careers"
+              class="px-8 py-3.5 bg-[#D2BB9C] text-[#1B1B18] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold rounded-[2px] hover:bg-[#c3aa8a] transition-colors inline-block text-center">
+              ← BACK TO ALL ROLES
+            </a>
+            <a href="#apply"
+              class="apply-btn px-8 py-3.5 bg-[#FCFAF8] text-[#1B1B18] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold rounded-[2px] hover:bg-white transition-colors inline-block text-center shadow-lg">
+              APPLY FOR THIS ROLE
+            </a>
+          </div>
+
+        </div>
+      </section>
+      <!-- / JOB HERO -->
+
+      <!-- ══════════════════════════════════════════
+           JOB DETAILS SECTION
+      ══════════════════════════════════════════ -->
+      <section class="w-full bg-[#F2F0E9] py-20 md:py-32 xl:py-40 reveal">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24">
+          <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
+
+            <!-- Left Side: Main Content (Description & Responsibilities) -->
+            <div class="w-full lg:w-7/12 flex flex-col space-y-24">
+
+              <!-- Overview -->
+              <div>
+                <span
+                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold block">
+                  OVERVIEW
+                </span>
+
+                <h2
+                  class="font-radley text-4xl md:text-5xl lg:text-[52px] text-[#4A433A] leading-[1.1] tracking-tight mb-8">
+                  The <span class="text-[#C4A882] italic">Opportunity</span>
+                </h2>
+
+                <div class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] space-y-6 font-medium">
+                  <p>
+                    ARKAN is looking for a Senior Product Designer to lead the design of our hospitality OS&E platform —
+                    the digital infrastructure that connects design, production, logistics, and fulfillment for some of
+                    the world's finest hotel brands.
+                  </p>
+                  <p>
+                    This is not a UI maintenance role. We are building an ambitious product from a position of real
+                    industry knowledge, and we need a designer who can translate complex supply chain workflows into
+                    elegant, intuitive experiences. <strong class="text-[#4A433A] font-semibold">You will own design
+                      from brief to shipped — with the freedom to set the standard.</strong>
+                  </p>
+                  <p>
+                    You will work closely with our Operations, Technology, and Client teams to understand how luxury
+                    hospitality procurement actually works, and turn those insights into a platform our clients trust
+                    and rely on. We are a company that moves deliberately — and we want a designer who shares that
+                    instinct.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="w-full h-[1px] bg-[#D2BB9C]/30"></div>
+
+              <!-- Responsibilities -->
+              <div>
+                <span
+                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold block">
+                  RESPONSIBILITIES
+                </span>
+
+                <h2
+                  class="font-radley text-4xl md:text-5xl lg:text-[52px] text-[#4A433A] leading-[1.1] tracking-tight mb-10">
+                  What you will <span class="text-[#C4A882] italic">be doing</span>
+                </h2>
+
+                <ul
+                  class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] space-y-6 font-medium list-none">
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Lead end-to-end product design for ARKAN's OS&E management platform — from discovery and wireframes
+                    through to shipped, production-ready interfaces.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Translate complex supply chain and procurement workflows into experiences that feel intuitive, fast,
+                    and trustworthy for hotel operators and procurement teams.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Define and evolve ARKAN's design system — building consistent components, patterns, and
+                    documentation that scale across product and marketing surfaces.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Collaborate closely with engineers, operations specialists, and client success managers to ensure
+                    design decisions are grounded in real operational context.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Conduct user research, usability testing, and qualitative interviews with hotel clients to
+                    continuously validate and improve product decisions.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Contribute to the visual and communication design of ARKAN's brand — including presentations,
+                    client-facing materials, and marketing assets.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Mentor junior designers and help build a design culture within a growing team.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Set the visual and experiential standard for what a premium hospitality supply platform should feel
+                    like — you will define it, not inherit it.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider -->
+              <div class="w-full h-[1px] bg-[#D2BB9C]/30"></div>
+
+              <!-- Requirements -->
+              <div>
+                <span
+                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold block">
+                  REQUIREMENTS
+                </span>
+
+                <h2
+                  class="font-radley text-4xl md:text-5xl lg:text-[52px] text-[#4A433A] leading-[1.1] tracking-tight mb-8">
+                  Who we are <span class="text-[#C4A882] italic">looking for</span>
+                </h2>
+
+                <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] mb-8 font-medium">
+                  We care more about how you think than where you have been. That said, the following will be essential:
+                </p>
+
+                <ul
+                  class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] space-y-6 font-medium list-none">
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    5+ years of product design experience, with a portfolio demonstrating complex UX problems solved
+                    with elegance and clarity.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Mastery of Figma — component architecture, auto layout, prototyping, and design systems.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Experience designing for data-rich, workflow-driven interfaces — logistics, procurement, ERP, or
+                    similar operational tools preferred.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Strong grasp of interaction design principles, information architecture, and responsive design
+                    across web and mobile.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Fluent in working directly with engineers — you can write clear specs, participate in design
+                    reviews, and QA your own work.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Excellent communication skills — you can present design rationale clearly and influence decisions
+                    through well-articulated thinking.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Comfort with ambiguity — ARKAN is a growing company and not every problem has a defined brief. You
+                    thrive in that environment.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Genuine interest in the luxury hospitality industry — understanding what our clients care about will
+                    shape everything you design.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider -->
+              <div class="w-full h-[1px] bg-[#D2BB9C]/30"></div>
+
+              <!-- Bonus -->
+              <div>
+                <span
+                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold block">
+                  BONUS
+                </span>
+
+                <h2
+                  class="font-radley text-4xl md:text-5xl lg:text-[52px] text-[#4A433A] leading-[1.1] tracking-tight mb-8">
+                  Nice to <span class="text-[#C4A882] italic">have</span>
+                </h2>
+
+                <ul
+                  class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] space-y-6 font-medium list-none">
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Experience designing in Arabic / bilingual RTL interfaces.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Background in or strong understanding of interior design, hospitality, FF&E, or luxury product
+                    aesthetics.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Motion design or micro-interaction skills.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Experience working in or with Saudi companies or the GCC market.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Familiarity with supply chain, procurement, or inventory management systems.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Divider -->
+              <div class="w-full h-[1px] bg-[#D2BB9C]/30"></div>
+
+              <!-- Benefits -->
+              <div>
+                <span
+                  class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold block">
+                  BENEFITS
+                </span>
+
+                <h2
+                  class="font-radley text-4xl md:text-5xl lg:text-[52px] text-[#4A433A] leading-[1.1] tracking-tight mb-10">
+                  What ARKAN <span class="text-[#C4A882] italic">offers</span>
+                </h2>
+
+                <ul
+                  class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[2] space-y-6 font-medium list-none">
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Competitive salary benchmarked to international design market rates in the GCC.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Direct access to leadership and meaningful influence on product direction from day one.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    A role at the intersection of luxury, craft, and technology — a rare combination in the regional
+                    market.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Annual learning and development budget for courses, conferences, and tools.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Private health insurance.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    Flexible working hours with a strong culture of trust and output-focus.
+                  </li>
+                  <li
+                    class="relative pl-6 before:content-['●'] before:absolute before:left-0 before:top-0.5 before:text-[8px] before:text-[#D2BB9C]">
+                    The opportunity to build something genuinely significant in Saudi Arabia's fastest-growing industry.
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Right Side: Sidebar Cards (Sticky) -->
+            <div class="w-full lg:w-4/12 flex flex-col space-y-6 relative">
+              <div class="sticky top-32 space-y-6">
+                <!-- Recruiter Card -->
+                <div class="bg-[#EAE2D2] border border-[#D2BB9C]/30 p-8">
+                  <span
+                    class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-[#8a8174] uppercase mb-6 font-semibold block">YOUR
+                    RECRUITER</span>
+
+                  <div class="flex items-center gap-4 mb-6">
+                    <div
+                      class="w-12 h-12 rounded-full bg-[#1460AA] flex items-center justify-center text-white font-manrope text-sm font-semibold tracking-wider">
+                      S
+                    </div>
+                    <div>
+                      <h4 class="font-radley text-xl text-[#4A433A]">Sara Al-Qasim</h4>
+                      <p class="font-manrope text-[11px] text-[#8a8174]">Talent Acquisition, ARKAN</p>
+                    </div>
+                  </div>
+
+                  <p class="font-manrope text-[11px] text-[#8a8174] leading-[1.6]">
+                    Apply to careers@arkan365.com with subject <br />
+                    <span class="italic text-[#4A433A]">Sr Product Designer Application_YourName</span>
+                  </p>
+                </div>
+
+                <!-- Action Card -->
+                <div id="apply" class="bg-[#EAE2D2] border border-[#D2BB9C]/30 p-8">
+                  <h3 class="font-radley text-3xl md:text-4xl text-[#4A433A] mb-4">Ready to <span
+                      class="italic text-[#C4A882]">apply?</span></h3>
+                  <p class="font-manrope text-[12px] text-[#8a8174] leading-[1.6] mb-8 font-medium">
+                    Take the next step. Our team reviews every application personally and responds within 5 business
+                    days.
+                  </p>
+
+                  <div class="flex flex-col gap-3">
+                    <button
+                      class="apply-btn w-full py-3.5 bg-[#4A433A] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#322c26] transition-colors rounded-[2px]">
+                      APPLY FOR THIS ROLE
+                    </button>
+                    <button
+                      class="w-full py-3.5 bg-transparent border border-[#4A433A]/20 text-[#4A433A] font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-[#4A433A]/5 transition-colors rounded-[2px]">
+                      REFER A COLLEAGUE
+                    </button>
+                  </div>
+
+                  <!-- Share Buttons -->
+                  <div class="mt-8 pt-6 border-t border-[#D2BB9C]/30 flex flex-col">
+                    <span
+                      class="font-manrope text-[9px] tracking-[0.2em] text-[#8a8174] uppercase mb-4 font-semibold">SHARE
+                      THIS ROLE</span>
+                    <div class="flex gap-2">
+                      <button
+                        class="flex-1 py-2 border border-[#D2BB9C]/50 text-[#8a8174] text-[10px] font-manrope hover:bg-white hover:text-[#4A433A] transition-colors rounded-[2px]">Copy
+                        Link</button>
+                      <button
+                        class="flex-1 py-2 border border-[#D2BB9C]/50 text-[#8a8174] text-[10px] font-manrope hover:bg-white hover:text-[#4A433A] transition-colors rounded-[2px]">In
+                        LinkedIn</button>
+                      <button
+                        class="flex-1 py-2 border border-[#D2BB9C]/50 text-[#8a8174] text-[10px] font-manrope hover:bg-white hover:text-[#4A433A] transition-colors rounded-[2px]">Email</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Snapshot Card -->
+                <div class="border border-[#D2BB9C]/30 bg-[#FCFAF8] p-8">
+                  <span
+                    class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-[#8a8174] uppercase mb-6 font-semibold block border-b border-[#D2BB9C]/30 pb-4">ROLE
+                    SNAPSHOT</span>
+
+                  <ul
+                    class="font-manrope text-[12px] text-[#4A433A] space-y-4 font-medium divide-y divide-[#D2BB9C]/10">
+                    <li class="flex justify-between pt-3 first:pt-0">
+                      <span class="text-[#8a8174]">Department</span>
+                      <span class="text-right font-semibold">Design</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Level</span>
+                      <span class="text-right font-semibold">Senior</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Type</span>
+                      <span class="text-right font-semibold">Full-time</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Location</span>
+                      <span class="text-right font-semibold">Riyadh, KSA</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Work Mode</span>
+                      <span class="text-right font-semibold">On-site</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Reports to</span>
+                      <span class="text-right font-semibold">Head of Product</span>
+                    </li>
+                    <li class="flex justify-between pt-3">
+                      <span class="text-[#8a8174]">Closing Date</span>
+                      <span class="text-right font-semibold">30 April 2026</span>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- / JOB DETAILS -->
+
+      <!-- ══════════════════════════════════════════
+           MORE OPEN ROLES
+      ══════════════════════════════════════════ -->
+      <section class="w-full bg-[#EAE2D2] py-20 reveal border-t border-[#D2BB9C]/20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24">
+
+          <div class="flex items-end justify-between mb-12 border-b border-[#D2BB9C]/30 pb-4">
+            <h2 class="font-radley text-4xl text-[#4A433A]">
+              More <span class="italic text-[#C4A882]">open roles</span>
+            </h2>
+            <a href="/careers.html#positions"
+              class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold hover:text-[#4A433A] transition-colors flex items-center gap-2">
+              VIEW ALL POSITIONS →
+            </a>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#D2BB9C]/30 -mx-6 px-6 md:mx-0 md:px-0">
+
+            <!-- Role 1 -->
+            <a href="#" class="group py-6 md:py-8 md:pr-10 hover:bg-[#D2BB9C]/5 transition-colors duration-300 block">
+              <span class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#D2BB9C] block mb-3">DESIGN</span>
+              <h3 class="font-radley text-2xl text-[#4A433A] mb-4 group-hover:text-[#C4A882] transition-colors">
+                Hospitality <span class="italic">Amenity Designer</span></h3>
+              <div class="flex gap-2 mb-6">
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Full-time</span>
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Mid-level</span>
+              </div>
+              <div class="flex items-center gap-2 text-[#8a8174] font-manrope text-[10px] uppercase tracking-wider">
+                <span class="text-[#D2BB9C]">→</span> Riyadh, KSA
+              </div>
+            </a>
+
+            <!-- Role 2 -->
+            <a href="#" class="group py-6 md:py-8 md:px-10 hover:bg-[#D2BB9C]/5 transition-colors duration-300 block">
+              <span class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#D2BB9C] block mb-3">SUPPLY
+                CHAIN</span>
+              <h3 class="font-radley text-2xl text-[#4A433A] mb-4 group-hover:text-[#C4A882] transition-colors">Head of
+                <span class="italic">Procurement & Sourcing</span>
+              </h3>
+              <div class="flex gap-2 mb-6">
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Full-time</span>
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Leadership</span>
+              </div>
+              <div class="flex items-center gap-2 text-[#8a8174] font-manrope text-[10px] uppercase tracking-wider">
+                <span class="text-[#D2BB9C]">→</span> Riyadh, KSA
+              </div>
+            </a>
+
+            <!-- Role 3 -->
+            <a href="#" class="group py-6 md:py-8 md:pl-10 hover:bg-[#D2BB9C]/5 transition-colors duration-300 block">
+              <span
+                class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#D2BB9C] block mb-3">TECHNOLOGY</span>
+              <h3 class="font-radley text-2xl text-[#4A433A] mb-4 group-hover:text-[#C4A882] transition-colors">Full
+                Stack <span class="italic">Developer</span></h3>
+              <div class="flex gap-2 mb-6">
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Full-time</span>
+                <span
+                  class="px-3 py-1 border border-[#D2BB9C]/30 rounded-[2px] text-[#8a8174] text-[9px] font-manrope uppercase tracking-wider">Mid-level</span>
+              </div>
+              <div class="flex items-center gap-2 text-[#8a8174] font-manrope text-[10px] uppercase tracking-wider">
+                <span class="text-[#D2BB9C]">→</span> Riyadh, KSA
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+      <!-- / MORE OPEN ROLES -->
+
+      <!-- ══════════════════════════════════════════
+           APPLICATION MODAL
+      ══════════════════════════════════════════ -->
+      <div id="application-modal"
+        class="fixed inset-0 z-[200] pointer-events-none opacity-0 transition-opacity duration-300" data-lenis-prevent>
+        <!-- Overlay -->
+        <div class="fixed inset-0 bg-[#4A433A]/60 backdrop-blur-sm transition-opacity" id="modal-overlay"></div>
+
+        <!-- Scrollable Wrapper -->
+        <div class="fixed inset-0 z-10 overflow-y-auto" id="modal-scroll-wrapper" data-lenis-prevent>
+          <div class="flex min-h-full items-start justify-center p-4 text-center sm:p-0 py-12 md:py-24">
+
+            <!-- Modal Content -->
+            <div
+              class="relative transform bg-[#F2F0E9] text-left shadow-xl transition-all sm:my-8 w-full max-w-[640px] flex flex-col translate-y-8 duration-300 pointer-events-auto"
+              id="modal-content">
+
+              <!-- Modal Header -->
+              <div
+                class="px-8 md:px-12 py-8 border-b border-[#D2BB9C]/20 flex items-start justify-between bg-[#F2F0E9]">
+                <div>
+                  <span
+                    class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-3 block">DESIGN</span>
+                  <h3 class="font-radley text-3xl md:text-[34px] text-[#4A433A] tracking-tight">Senior <span
+                      class="italic">Product Designer</span></h3>
+                </div>
+                <button id="close-modal-btn"
+                  class="text-[#8a8174] hover:text-[#4A433A] transition-colors p-2 -mr-4 -mt-4">
+                  <svg class="w-5 h-5 font-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body (Form) -->
+              <div class="px-8 md:px-12 py-8 md:py-10">
+                <form class="space-y-6">
+
+                  <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex flex-col w-full">
+                      <label
+                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">First
+                        Name</label>
+                      <input type="text" placeholder="John"
+                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                    </div>
+                    <div class="flex flex-col w-full">
+                      <label
+                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Last
+                        Name</label>
+                      <input type="text" placeholder="Doe"
+                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Email
+                      Address</label>
+                    <input type="email" placeholder="your@email.com"
+                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                  </div>
+
+                  <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex flex-col w-full">
+                      <label
+                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Phone</label>
+                      <input type="tel" placeholder="+966 5X XXX XXXX"
+                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                    </div>
+                    <div class="flex flex-col w-full">
+                      <label
+                        class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">LinkedIn
+                        Profile</label>
+                      <input type="url" placeholder="linkedin.com/in/yourname"
+                        class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Portfolio
+                      / Website</label>
+                    <input type="url" placeholder="yourportfolio.com"
+                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors" />
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Cover
+                      Letter</label>
+                    <textarea rows="5" placeholder="Tell us about yourself and why you'd like to join ARKAN..."
+                      class="w-full bg-white px-5 py-4 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-[13px] focus:outline-none focus:ring-1 focus:ring-[#C4A882] transition-colors resize-none"></textarea>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-bold mb-3">Upload CV
+                      (PDF or DOCX)</label>
+                    <div
+                      class="w-full bg-white px-5 py-5 flex items-center justify-between text-[#8a8174]/60 font-manrope text-[11px] cursor-pointer hover:bg-white transition-colors relative">
+                      <span>Choose file or drag & drop</span>
+                      <span>↑</span>
+                      <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                        accept=".pdf,.doc,.docx" />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col mt-8 pt-8 border-t border-[#D2BB9C]/20">
+                    <button type="submit"
+                      class="w-full py-4 bg-[#4A433A] hover:bg-[#322c26] text-white font-manrope text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors">
+                      SUBMIT APPLICATION
+                    </button>
+
+                    <p class="text-[9px] text-[#8a8174]/60 text-center font-manrope mt-5">By submitting, you agree to
+                      ARKAN storing your data for recruitment purposes.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / APPLICATION MODAL -->
+
+      <!-- Job Application Modal Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const modal = document.getElementById('application-modal');
+          const modalContent = document.getElementById('modal-content');
+          const overlay = document.getElementById('modal-overlay');
+          const scrollWrapper = document.getElementById('modal-scroll-wrapper');
+          const closeBtn = document.getElementById('close-modal-btn');
+          const applyBtns = document.querySelectorAll('.apply-btn');
+
+          function openModal(e) {
+            if (e) e.preventDefault();
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modalContent.classList.remove('translate-y-8');
+            scrollWrapper.classList.add('pointer-events-auto');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            if (window.lenis) window.lenis.stop(); // Stop global smooth scrolling
+          }
+
+          function closeModal() {
+            modal.classList.add('pointer-events-none', 'opacity-0');
+            modalContent.classList.add('translate-y-8');
+            scrollWrapper.classList.remove('pointer-events-auto');
+            document.body.style.overflow = ''; // Restore scrolling
+            if (window.lenis) window.lenis.start(); // Resume global smooth scrolling
+          }
+
+          applyBtns.forEach(btn => btn.addEventListener('click', openModal));
+          closeBtn.addEventListener('click', closeModal);
+          overlay.addEventListener('click', closeModal);
+
+          // Close on Escape key
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('opacity-0')) {
+              closeModal();
+            }
+          });
+        });
+      </script>
+
+      <!-- Job Filter Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const filterBtns = document.querySelectorAll('.filter-btn');
+          const jobItems = document.querySelectorAll('.job-item');
+
+          filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              // Get selected category
+              const category = btn.getAttribute('data-filter');
+
+              // Remove active styles from all buttons
+              filterBtns.forEach(b => {
+                b.classList.remove('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
+                b.classList.add('border-white/20', 'text-white/70');
+              });
+
+              // Add active style to clicked button
+              btn.classList.add('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
+              btn.classList.remove('border-white/20', 'text-white/70');
+
+              // Filter jobs
+              jobItems.forEach(job => {
+                const jobCategory = job.getAttribute('data-category');
+
+                // Show if "all" or category matches. (Business button should also match business development)
+                if (category === 'all' || jobCategory === category || (category === 'business' && jobCategory.includes('business'))) {
+                  job.style.display = 'flex';
+                } else {
+                  job.style.display = 'none';
+                }
+              });
+            });
+          });
+        });
+      </script>
+
+      <!-- Mobile Menu Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const trigger = document.getElementById("mobile-menu-trigger");
+          const overlay = document.getElementById("mobile-menu-overlay");
+          const navbar = document.getElementById("global-navbar");
+          const links = document.querySelectorAll(".mobile-nav-link");
+          let isMenuOpen = false;
+
+          window.toggleMenu = () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+              navbar.classList.add("menu-open");
+              overlay.classList.remove("pointer-events-none");
+              gsap.to(overlay, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.inOut",
+              });
+              gsap.to(".hamburger-inner-mid", { opacity: 0, duration: 0.2 });
+              gsap.to(".hamburger-inner:first-child", {
+                y: 8,
+                rotate: 45,
+                duration: 0.3,
+              });
+              gsap.to(".hamburger-inner:last-child", {
+                y: -8,
+                rotate: -45,
+                duration: 0.3,
+              });
+              // Fix icon color for mobile overlay vs light navbar
+              gsap.to(".hamburger-inner", {
+                backgroundColor: "#111111",
+                duration: 0.3,
+              });
+
+              gsap.to(links, {
+                opacity: 1,
+                y: 0,
+                startAt: { y: 20 },
+                stagger: 0.1,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2,
+              });
+              gsap.to(".mobile-nav-footer", {
+                opacity: 1,
+                duration: 1,
+                delay: 0.6,
+              });
+            } else {
+              navbar.classList.remove("menu-open");
+              overlay.classList.add("pointer-events-none");
+              gsap.to(overlay, {
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.inOut",
+              });
+              gsap.to(".hamburger-inner-mid", {
+                opacity: 1,
+                duration: 0.2,
+                delay: 0.1,
+              });
+              gsap.to(".hamburger-inner:first-child", {
+                y: 0,
+                rotate: 0,
+                duration: 0.3,
+              });
+              gsap.to(".hamburger-inner:last-child", {
+                y: 0,
+                rotate: 0,
+                duration: 0.3,
+              });
+              // Restore original icon color
+              gsap.to(".hamburger-inner", {
+                clearProps: "backgroundColor",
+                duration: 0.3,
+              });
+
+              gsap.to(links, { opacity: 0, y: 10, duration: 0.3 });
+              gsap.to(".mobile-nav-footer", { opacity: 0, duration: 0.3 });
+            }
+          };
+
+          if (trigger) {
+            trigger.addEventListener("click", window.toggleMenu);
+          }
+          links.forEach((link) =>
+            link.addEventListener("click", () => {
+              if (isMenuOpen) window.toggleMenu();
+            }),
+          );
+        });
+      </script>
+
+      <!-- Footer -->
+      <footer class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20">
+        <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
+
+          <!-- Bottom Half: Links & Copyright -->
+          <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
+            <!-- Left: Logo & Copyright -->
+            <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
+              <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+                class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
+              <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
+                © 2026 ARKAN Technologies. All rights reserved.
+              </p>
+            </div>
+
+            <!-- Right: Buttons & Links -->
+            <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
+              <!-- Contact & Socials -->
+              <div class="flex items-center gap-4 mb-6 md:mb-8">
+                <a href="/contact"
+                  class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
+                  Contact Us
+                </a>
+                <a href="mailto:info@arkan365.com"
+                  class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
+                  Careers
+                </a>
+                <a href="#" aria-label="Instagram"
+                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                  <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn"
+                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                  <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Footer Links -->
+              <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
+                <a href="#" class="hover:text-white transition-colors">Help & Support</a>
+                <span class="text-white/30 hidden sm:inline-block">|</span>
+                <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+                <span class="text-white/30 hidden sm:inline-block">|</span>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <script>
+    /* ─── SCROLL REVEAL ─── */
+      const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.01 }, // Lowered from 0.1 to trigger earlier
+    );
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach((el) => revealObserver.observe(el));
+
+    /* ─── ANIMATED COUNTERS ─── */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const duration = 2000;
+      const start = performance.now();
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.round(easeOut(progress) * target);
+        el.textContent = value.toLocaleString();
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toLocaleString();
+      }
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll(".counter");
+            counters.forEach((c) => {
+              if (!c.dataset.animated) {
+                c.dataset.animated = "true";
+                animateCounter(c);
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.25 },
+    );
+
+    const glanceSection = document.querySelector(".glance-section");
+    if (glanceSection) counterObserver.observe(glanceSection);
+
+    /* ─── FAQ TOGGLE (Smoother) ─── */
+    window.toggleFaq = function (element) {
+      const content = element.querySelector(".faq-content");
+      const icon = element.querySelector(".faq-icon");
+      const heading = element.querySelector("h3");
+      const allFaqs = document.querySelectorAll(".faq-content");
+      const allIcons = document.querySelectorAll(".faq-icon");
+      const allHeadings = document.querySelectorAll(".faq-item h3");
+
+      const isOpen = content.classList.contains("opacity-100");
+
+      // Close all
+      allFaqs.forEach((f) => {
+        f.style.maxHeight = "0";
+        f.classList.remove("opacity-100");
+        f.classList.add("opacity-0");
+      });
+      allIcons.forEach((i) => {
+        i.classList.remove("rotate-180");
+        i.textContent = "+";
+      });
+      allHeadings.forEach((h) => h.classList.remove("active"));
+
+      if (!isOpen) {
+        content.classList.remove("opacity-0");
+        content.classList.add("opacity-100");
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.classList.add("rotate-180");
+        icon.textContent = "-";
+        heading.classList.add("active");
+      }
+    };
+  </script>
+</body>
+
+</html>

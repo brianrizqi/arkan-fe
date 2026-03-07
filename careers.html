@@ -440,7 +440,7 @@
           </div>
 
           <!-- Job List -->
-          <div class="flex flex-col border-t border-white/10" id="job-list">
+          <div class="flex flex-col border-t border-white/10 job-list-container" id="job-list">
             
             <!-- Job 1 -->
             <a href="#" data-category="design" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
@@ -600,7 +600,7 @@
               </p>
 
               <!-- Application Form -->
-              <form class="space-y-6 max-w-lg mt-4">
+              <form class="space-y-6 max-w-lg mt-4 reveal">
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="flex flex-col w-full">
                     <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">First Name</label>
@@ -659,7 +659,7 @@
             </div>
 
             <!-- Right Side: Image/Visual -->
-            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end reveal reveal-delay-2">
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end reveal reveal-delay-3">
               <div class="w-full max-w-[500px] aspect-[4/5] relative bg-gradient-to-br from-[#0A3060] to-[#1460AA] flex items-end p-8 overflow-hidden shadow-xl">
                  <!-- The provided design features a solid blue/gradient block visually associated with this section. I am mapping the gradient from the previous section here, with a simple icon and quote overlay inside it -->
                  
@@ -715,31 +715,50 @@
         document.addEventListener("DOMContentLoaded", () => {
           const filterBtns = document.querySelectorAll('.filter-btn');
           const jobItems = document.querySelectorAll('.job-item');
+          const container = document.querySelector('.job-list-container');
           
           filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-              // Get selected category
               const category = btn.getAttribute('data-filter');
               
-              // Remove active styles from all buttons
+              // Update button UI
               filterBtns.forEach(b => {
                 b.classList.remove('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
                 b.classList.add('border-white/20', 'text-white/70');
               });
-              
-              // Add active style to clicked button
               btn.classList.add('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
               btn.classList.remove('border-white/20', 'text-white/70');
               
-              // Filter jobs
-              jobItems.forEach(job => {
-                const jobCategory = job.getAttribute('data-category');
-                
-                // Show if "all" or category matches. (Business button should also match business development)
-                if (category === 'all' || jobCategory === category || (category === 'business' && jobCategory.includes('business'))) {
-                  job.style.display = 'flex';
-                } else {
-                  job.style.display = 'none';
+              // Filter logic with GSAP
+              const tl = gsap.timeline();
+              
+              // 1. Fade out current items
+              tl.to(jobItems, {
+                opacity: 0,
+                y: 10,
+                duration: 0.3,
+                stagger: 0.02,
+                ease: "power2.in",
+                onComplete: () => {
+                  jobItems.forEach(job => {
+                    const jobCategory = job.getAttribute('data-category');
+                    const matches = category === 'all' || jobCategory === category || (category === 'business' && jobCategory.includes('business'));
+                    job.style.display = matches ? 'flex' : 'none';
+                  });
+                  
+                  // 2. Fade in matching items
+                  const visibleItems = Array.from(jobItems).filter(item => item.style.display !== 'none');
+                  gsap.fromTo(visibleItems, 
+                    { opacity: 0, y: 20 },
+                    { 
+                      opacity: 1, 
+                      y: 0, 
+                      duration: 0.5, 
+                      stagger: 0.08, 
+                      ease: "power3.out",
+                      clearProps: "all"
+                    }
+                  );
                 }
               });
             });

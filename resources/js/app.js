@@ -171,33 +171,22 @@ if (loader && loaderLogo) {
 
         // Target the hero section for a smooth reveal
         const heroSection = document.getElementById('hero-section');
-        if (heroSection) {
-            gsap.set(heroSection, { scale: 1.1, opacity: 0 });
-        }
 
         tl.to(loaderLogo, {
             opacity: 0,
             scale: 0.9,
-            duration: 0.5,
+            duration: 0.4,
             delay: 0.1,
             ease: "power2.inOut",
-            onStart: () => {
-                if (heroSection) {
-                    gsap.to(heroSection, { opacity: 1, duration: 1.2, ease: "power2.inOut" });
-                }
-            }
         })
             .to(loader, {
                 yPercent: -100, // Slide the loader UP and away
-                duration: 1.2,
+                duration: 0.8,
                 ease: "expo.inOut",
                 onStart: () => {
                     // Trigger Hero content entrance synchronized with loader slide
                     if (window.initHeroEntrance) {
                         window.initHeroEntrance();
-                    }
-                    if (heroSection) {
-                        gsap.to(heroSection, { scale: 1, duration: 2.5, ease: "power2.out" });
                     }
                 },
                 onComplete: () => {
