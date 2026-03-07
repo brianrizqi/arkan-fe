@@ -369,31 +369,42 @@
           </div>
 
           <!-- 3-Column Grid -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#D2BB9C]/30 border-t border-[#D2BB9C]/30">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-[#D2BB9C]">
 
             <!-- Column 1 -->
-            <div class="py-12 md:py-16 md:pr-12 lg:pr-16 reveal reveal-delay-1">
+            <div
+              class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#F2F0E9] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-1 cursor-default overflow-hidden">
+              <div
+                class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+              </div>
               <h3 class="font-radley text-2xl md:text-[28px] text-[#4A433A] mb-6">Precision Over Volume</h3>
-              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium">
+              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium mt-auto">
                 We move deliberately. Every decision, every product, every hire is made with intention. We do fewer
                 things — and we do them exceptionally well.
               </p>
             </div>
 
             <!-- Column 2 -->
-            <div class="py-12 md:py-16 md:px-12 lg:px-16 reveal reveal-delay-2">
+            <div
+              class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#F2F0E9] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-2 cursor-default overflow-hidden">
+              <div
+                class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+              </div>
               <h3 class="font-radley text-2xl md:text-[28px] text-[#4A433A] mb-6">Ownership Mindset</h3>
-              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium">
+              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium mt-auto">
                 At ARKAN, you are not a resource. You are a contributor. We give our people real responsibility and real
                 recognition — from day one.
               </p>
             </div>
 
             <!-- Column 3 -->
-            <div class="py-12 md:py-16 md:pl-12 lg:pl-16 reveal reveal-delay-3">
+            <div
+              class="group p-8 md:px-11 md:py-14 relative flex flex-col h-full bg-[#F2F0E9] hover:bg-[#F5EED8] transition-colors duration-500 reveal reveal-delay-3 cursor-default overflow-hidden">
+              <div
+                class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#D2BB9C] to-transparent scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100">
+              </div>
               <h3 class="font-radley text-2xl md:text-[28px] text-[#4A433A] mb-6">Saudi Pride, Global Standard</h3>
-              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium">
+              <p class="font-manrope text-[13.5px] md:text-[14px] text-[#8a8174] leading-[1.9] font-medium mt-auto">
                 Deeply rooted in the Kingdom, deeply connected to the world. We celebrate our Saudi identity while
                 holding ourselves to the highest international benchmarks.
               </p>
@@ -408,13 +419,15 @@
       <!-- ══════════════════════════════════════════
            OPEN POSITIONS SECTION
       ══════════════════════════════════════════ -->
-      <section id="positions" class="w-full py-20 md:py-32 xl:py-40 reveal relative z-10" style="background: linear-gradient(180deg, #062040 0%, #0A3060 25%, #1460AA 60%, #2878C8 100%);">
+      <section id="positions" class="w-full py-20 md:py-32 xl:py-40 reveal relative z-10"
+        style="background: linear-gradient(180deg, #062040 0%, #0A3060 25%, #1460AA 60%, #2878C8 100%);">
         <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-          
+
           <!-- Header -->
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
             <div>
-              <span class="font-manrope text-[10px] md:text-xs tracking-[0.3em] text-[#D2BB9C] uppercase mb-4 md:mb-6 font-semibold block">
+              <span
+                class="font-manrope text-[10px] md:text-xs tracking-[0.3em] text-[#D2BB9C] uppercase mb-4 md:mb-6 font-semibold block">
                 Open Positions
               </span>
               <h2 class="font-radley text-5xl md:text-6xl text-white leading-[1.05] tracking-tight">
@@ -422,149 +435,208 @@
                 <span class="text-[#D2BB9C] italic">place at ARKAN.</span>
               </h2>
             </div>
-            
+
             <div class="flex flex-col md:items-end gap-6">
               <span class="font-manrope text-[11px] tracking-[0.1em] text-white/50">
                 8 open roles
               </span>
-              
+
               <!-- Filter Chips -->
               <div class="flex flex-wrap gap-2" id="job-filters">
-                <button data-filter="all" class="filter-btn px-5 py-2 rounded-sm border border-[#D2BB9C] bg-[#D2BB9C]/10 text-[#D2BB9C] font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-[#D2BB9C]/20">ALL ROLES</button>
-                <button data-filter="design" class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">DESIGN</button>
-                <button data-filter="supply chain" class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">SUPPLY CHAIN</button>
-                <button data-filter="business" class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">BUSINESS</button>
-                <button data-filter="technology" class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">TECHNOLOGY</button>
+                <button data-filter="all"
+                  class="filter-btn px-5 py-2 rounded-sm border border-[#D2BB9C] bg-[#D2BB9C]/10 text-[#D2BB9C] font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-[#D2BB9C]/20">ALL
+                  ROLES</button>
+                <button data-filter="design"
+                  class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">DESIGN</button>
+                <button data-filter="supply chain"
+                  class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">SUPPLY
+                  CHAIN</button>
+                <button data-filter="business"
+                  class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">BUSINESS</button>
+                <button data-filter="technology"
+                  class="filter-btn px-5 py-2 rounded-sm border border-white/20 text-white/70 font-manrope text-[10px] uppercase tracking-[0.2em] transition-colors hover:bg-white/10 hover:text-white">TECHNOLOGY</button>
               </div>
             </div>
           </div>
 
           <!-- Job List -->
           <div class="flex flex-col border-t border-white/10 job-list-container" id="job-list">
-            
+
             <!-- Job 1 -->
-            <a href="#" data-category="design" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
+            <a href="careers-detail.html" data-category="design"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
                 <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Design</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Senior <span class="italic">Product Designer</span></h3>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Senior <span class="italic">Product Designer</span></h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 2 -->
-            <a href="#" data-category="design" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
+            <a href="careers-detail.html" data-category="design"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
                 <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Design</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Hospitality <span class="italic">Amenity Designer</span></h3>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Hospitality <span class="italic">Amenity Designer</span></h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 3 -->
-            <a href="#" data-category="supply chain" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-3">
+            <a href="careers-detail.html" data-category="supply chain"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-3">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
-                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply Chain</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Head of <span class="italic">Procurement & Sourcing</span></h3>
+                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply
+                  Chain</span>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Head of <span class="italic">Procurement & Sourcing</span></h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Leadership</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Leadership</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 4 -->
-            <a href="#" data-category="supply chain" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
+            <a href="careers-detail.html" data-category="supply chain"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
-                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply Chain</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Logistics <span class="italic">Coordinator</span></h3>
+                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply
+                  Chain</span>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Logistics <span class="italic">Coordinator</span></h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 5 -->
-            <a href="#" data-category="supply chain" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
+            <a href="careers-detail.html" data-category="supply chain"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
-                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply Chain</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Quality <span class="italic">Assurance Manager</span></h3>
+                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Supply
+                  Chain</span>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Quality <span class="italic">Assurance Manager</span></h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 6 -->
-            <a href="#" data-category="business development" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-3">
+            <a href="careers-detail.html" data-category="business development"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-3">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
-                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Business Development</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Senior <span class="italic">Account Manager — </span>Hospitality</h3>
+                <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Business
+                  Development</span>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Senior <span class="italic">Account Manager — </span>Hospitality</h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Senior</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 7 -->
-            <a href="#" data-category="technology" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
+            <a href="careers-detail.html" data-category="technology"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-white/10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-1">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
                 <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Technology</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Full Stack <span class="italic">Developer — </span>Platform</h3>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Full Stack <span class="italic">Developer — </span>Platform</h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
             </a>
 
             <!-- Job 8 -->
-            <a href="#" data-category="business" class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
+            <a href="careers-detail.html" data-category="business"
+              class="job-item group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 hover:bg-white/5 transition-colors px-4 -mx-4 reveal reveal-delay-2">
               <div class="flex flex-col md:w-1/2 mb-4 md:mb-0">
                 <span class="font-manrope text-[9px] tracking-[0.25em] text-[#D2BB9C] uppercase mb-2">Business</span>
-                <h3 class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">Project <span class="italic">Manager — </span>Pre-Opening Programs</h3>
+                <h3
+                  class="font-radley text-2xl md:text-[28px] text-white mb-3 group-hover:text-[#D2BB9C] transition-colors">
+                  Project <span class="italic">Manager — </span>Pre-Opening Programs</h3>
                 <div class="flex gap-2">
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
-                  <span class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Full-time</span>
+                  <span
+                    class="px-3 py-1 rounded-[2px] border border-white/20 text-white/70 font-manrope text-[9px] uppercase tracking-wider">Mid-level</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
+              <div
+                class="flex items-center justify-between md:justify-end md:w-1/2 gap-8 text-white/50 font-manrope text-xs">
                 <span>Riyadh, KSA</span>
                 <span class="group-hover:translate-x-2 group-hover:text-white transition-all duration-300">→</span>
               </div>
@@ -581,50 +653,67 @@
       <section class="w-full bg-[#EAE2D2] py-20 md:py-32 xl:py-40 reveal">
         <div class="max-w-[1400px] mx-auto px-6 md:px-12 xl:px-24">
           <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-            
+
             <!-- Left Side: Form Content -->
             <div class="w-full lg:w-1/2 flex flex-col">
-              <span class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold">
+              <span
+                class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#8a8174] uppercase mb-6 md:mb-8 font-semibold">
                 Join the Team
               </span>
-              
+
               <h2 class="font-radley text-5xl md:text-6xl text-[#4A433A] leading-[1.05] tracking-tight mb-8">
                 Don't see your<br />
                 role? <span class="text-[#C4A882] italic">Write to us.</span>
               </h2>
-              
+
               <p class="font-manrope text-[13px] text-[#8a8174] leading-[1.8] font-medium max-w-md mb-8">
-                ARKAN is always on the lookout for exceptional people — even when there is no open listing that matches your profile exactly. 
+                ARKAN is always on the lookout for exceptional people — even when there is no open listing that matches
+                your profile exactly.
                 <br /><br />
-                <strong class="text-[#4A433A]">Send us your CV and tell us who you are.</strong> If there is a place for you at ARKAN, we will find it.
+                <strong class="text-[#4A433A]">Send us your CV and tell us who you are.</strong> If there is a place for
+                you at ARKAN, we will find it.
               </p>
 
               <!-- Application Form -->
               <form class="space-y-6 max-w-lg mt-4 reveal">
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="flex flex-col w-full">
-                    <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">First Name</label>
-                    <input type="text" placeholder="John" class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">First
+                      Name</label>
+                    <input type="text" placeholder="John"
+                      class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
                   </div>
                   <div class="flex flex-col w-full">
-                    <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Last Name</label>
-                    <input type="text" placeholder="Doe" class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Last
+                      Name</label>
+                    <input type="text" placeholder="Doe"
+                      class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
                   </div>
                 </div>
 
                 <div class="flex flex-col">
-                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Email Address</label>
-                  <input type="email" placeholder="your@email.com" class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
+                  <label
+                    class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Email
+                    Address</label>
+                  <input type="email" placeholder="your@email.com"
+                    class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
                 </div>
 
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="flex flex-col w-full">
-                    <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Phone</label>
-                    <input type="tel" placeholder="+966 5X XXX XXXX" class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Phone</label>
+                    <input type="tel" placeholder="+966 5X XXX XXXX"
+                      class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm" />
                   </div>
                   <div class="flex flex-col w-full relative">
-                    <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Area of Interest</label>
-                    <select class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm appearance-none cursor-pointer">
+                    <label
+                      class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Area
+                      of Interest</label>
+                    <select
+                      class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm appearance-none cursor-pointer">
                       <option value="" disabled selected class="text-[#8a8174]/40">Type department</option>
                       <option value="design">Design</option>
                       <option value="supply-chain">Supply Chain</option>
@@ -632,46 +721,62 @@
                       <option value="technology">Technology</option>
                     </select>
                     <div class="absolute right-4 bottom-4 pointer-events-none text-[#8a8174]">
-                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
                     </div>
                   </div>
                 </div>
 
                 <div class="flex flex-col">
-                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Cover Note</label>
-                  <textarea rows="4" placeholder="Tell us briefly who you are and what you bring to ARKAN..." class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm resize-none"></textarea>
+                  <label
+                    class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Cover
+                    Note</label>
+                  <textarea rows="4" placeholder="Tell us briefly who you are and what you bring to ARKAN..."
+                    class="w-full bg-[#FCFAF8] border border-[#D2BB9C]/30 px-4 py-3 placeholder:text-[#8a8174]/40 text-[#4A433A] font-manrope text-sm focus:outline-none focus:border-[#C4A882] transition-colors rounded-sm resize-none"></textarea>
                 </div>
 
                 <div class="flex flex-col">
-                  <label class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Upload CV (PDF or DOCX)</label>
-                  <div class="w-full bg-[#FCFAF8] border border-dashed border-[#D2BB9C]/50 px-4 py-4 flex items-center justify-between text-[#8a8174]/60 font-manrope text-[11px] rounded-sm cursor-pointer hover:bg-white transition-colors relative">
+                  <label
+                    class="font-manrope text-[9px] uppercase tracking-[0.2em] text-[#8a8174] font-semibold mb-2">Upload
+                    CV (PDF or DOCX)</label>
+                  <div
+                    class="w-full bg-[#FCFAF8] border border-dashed border-[#D2BB9C]/50 px-4 py-4 flex items-center justify-between text-[#8a8174]/60 font-manrope text-[11px] rounded-sm cursor-pointer hover:bg-white transition-colors relative">
                     <span>Choose file or drag & drop</span>
                     <span>↑</span>
-                    <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept=".pdf,.doc,.docx" />
+                    <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                      accept=".pdf,.doc,.docx" />
                   </div>
                 </div>
 
-                <button type="submit" class="w-full py-4 bg-[#236b8e] hover:bg-[#1c5571] text-white font-manrope text-[9px] uppercase tracking-[0.2em] font-semibold transition-colors rounded-sm mt-4">
+                <button type="submit"
+                  class="w-full py-4 bg-[#236b8e] hover:bg-[#1c5571] text-white font-manrope text-[9px] uppercase tracking-[0.2em] font-semibold transition-colors rounded-sm mt-4">
                   SUBMIT APPLICATION
                 </button>
-                <p class="text-[9px] text-[#8a8174]/60 text-center font-manrope">By submitting, you consent to ARKAN storing your information for recruitment purposes.</p>
+                <p class="text-[9px] text-[#8a8174]/60 text-center font-manrope">By submitting, you consent to ARKAN
+                  storing your information for recruitment purposes.</p>
               </form>
             </div>
 
             <!-- Right Side: Image/Visual -->
             <div class="w-full lg:w-1/2 flex justify-center lg:justify-end reveal reveal-delay-3">
-              <div class="w-full max-w-[500px] aspect-[4/5] relative bg-gradient-to-br from-[#0A3060] to-[#1460AA] flex items-end p-8 overflow-hidden shadow-xl">
-                 <!-- The provided design features a solid blue/gradient block visually associated with this section. I am mapping the gradient from the previous section here, with a simple icon and quote overlay inside it -->
-                 
-                 <!-- Simple decorative shadow figure based on screenshot -->
-                 <div class="absolute inset-0 flex items-center justify-center opacity-10">
-                   <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                 </div>
-                 
-                 <div class="relative z-10 w-full">
-                    <p class="font-radley text-white text-xl italic mb-3">"Join the start of something big."</p>
-                    <p class="font-manrope text-white/50 text-[10px] tracking-wider uppercase flex items-center gap-2">ARKAN <span class="w-2 h-[1px] bg-white/30"></span> Riyadh, Saudi Arabia</p>
-                 </div>
+              <div
+                class="w-full max-w-[500px] aspect-[4/5] relative bg-gradient-to-br from-[#0A3060] to-[#1460AA] flex items-end p-8 overflow-hidden shadow-xl">
+                <!-- The provided design features a solid blue/gradient block visually associated with this section. I am mapping the gradient from the previous section here, with a simple icon and quote overlay inside it -->
+
+                <!-- Simple decorative shadow figure based on screenshot -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                  <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+
+                <div class="relative z-10 w-full">
+                  <p class="font-radley text-white text-xl italic mb-3">"Join the start of something big."</p>
+                  <p class="font-manrope text-white/50 text-[10px] tracking-wider uppercase flex items-center gap-2">
+                    ARKAN <span class="w-2 h-[1px] bg-white/30"></span> Riyadh, Saudi Arabia</p>
+                </div>
               </div>
             </div>
 
@@ -683,29 +788,31 @@
       <!-- ══════════════════════════════════════════
            QUESTIONS SECTION
       ══════════════════════════════════════════ -->
-      <section class="w-full bg-[#F2F0E9] py-24 md:py-32 xl:py-40 reveal text-center border-t border-[#D2BB9C]/20 relative">
+      <section
+        class="w-full bg-[#F2F0E9] py-24 md:py-32 xl:py-40 reveal text-center border-t border-[#D2BB9C]/20 relative">
         <div class="max-w-2xl mx-auto px-6">
-          
+
           <!-- Decorative Cross Top -->
           <div class="absolute top-12 left-1/2 -translate-x-1/2 text-[#D2BB9C]/50 text-xl font-light">+</div>
-          
+
           <h2 class="font-radley text-5xl md:text-6xl text-[#4A433A] leading-[1.1] tracking-tight mb-16">
             Questions?<br />
             We'd <span class="text-[#C4A882] italic">love to hear</span> from<br />
             you.
           </h2>
-          
+
           <!-- Decorative Line Middle -->
           <div class="w-[1px] h-8 bg-[#D2BB9C]/40 mx-auto mb-16"></div>
 
           <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] font-medium mb-6">
             For general career enquiries, reach out directly. We read every message.
           </p>
-          
-          <a href="mailto:careers@arkan365.com" class="inline-block font-radley italic text-[#C4A882] hover:text-[#4A433A] text-lg transition-colors border-b border-[#C4A882]/30 hover:border-[#4A433A] pb-1">
+
+          <a href="mailto:careers@arkan365.com"
+            class="inline-block font-radley italic text-[#C4A882] hover:text-[#4A433A] text-lg transition-colors border-b border-[#C4A882]/30 hover:border-[#4A433A] pb-1">
             careers@arkan365.com
           </a>
-          
+
         </div>
       </section>
       <!-- / QUESTIONS -->
@@ -716,11 +823,11 @@
           const filterBtns = document.querySelectorAll('.filter-btn');
           const jobItems = document.querySelectorAll('.job-item');
           const container = document.querySelector('.job-list-container');
-          
+
           filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
               const category = btn.getAttribute('data-filter');
-              
+
               // Update button UI
               filterBtns.forEach(b => {
                 b.classList.remove('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
@@ -728,10 +835,10 @@
               });
               btn.classList.add('border-[#D2BB9C]', 'bg-[#D2BB9C]/10', 'text-[#D2BB9C]');
               btn.classList.remove('border-white/20', 'text-white/70');
-              
+
               // Filter logic with GSAP
               const tl = gsap.timeline();
-              
+
               // 1. Fade out current items
               tl.to(jobItems, {
                 opacity: 0,
@@ -745,16 +852,16 @@
                     const matches = category === 'all' || jobCategory === category || (category === 'business' && jobCategory.includes('business'));
                     job.style.display = matches ? 'flex' : 'none';
                   });
-                  
+
                   // 2. Fade in matching items
                   const visibleItems = Array.from(jobItems).filter(item => item.style.display !== 'none');
-                  gsap.fromTo(visibleItems, 
+                  gsap.fromTo(visibleItems,
                     { opacity: 0, y: 20 },
-                    { 
-                      opacity: 1, 
-                      y: 0, 
-                      duration: 0.5, 
-                      stagger: 0.08, 
+                    {
+                      opacity: 1,
+                      y: 0,
+                      duration: 0.5,
+                      stagger: 0.08,
                       ease: "power3.out",
                       clearProps: "all"
                     }
@@ -863,60 +970,61 @@
 
       <!-- Footer -->
       <footer class="bg-[#111111] pt-16 md:pt-24 pb-8 px-6 md:px-12 relative z-20">
-        <div class="max-w-[1920px] mx-auto flex flex-col h-full relative">
+        <!-- Bottom Half: Links & Copyright -->
+        <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
 
-          <!-- Bottom Half: Links & Copyright -->
-          <div class="flex flex-col md:flex-row items-end justify-between w-full mt-auto">
-            <!-- Left: Logo & Copyright -->
-            <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
-              <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
-                class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
-              <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
-                © 2026 ARKAN Technologies. All rights reserved.
-              </p>
+          <!-- Left: Logo & Copyright -->
+          <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
+              class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
+            <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
+              © 2026 ARKAN Technologies. All rights reserved.
+            </p>
+          </div>
+
+          <!-- Right: Buttons & Links -->
+          <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
+
+            <!-- Contact & Socials -->
+            <div class="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
+              <a href="/contact"
+                class="font-manrope text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
+                Contact Us
+              </a>
+              <a href="/careers"
+                class="font-manrope text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
+                Careers
+              </a>
+              <a href="#" aria-label="Instagram"
+                class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-3.5 h-3.5 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn"
+                class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
+                <svg class="w-3.5 h-3.5 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
             </div>
 
-            <!-- Right: Buttons & Links -->
-            <div class="flex flex-col items-start md:items-end w-full md:w-1/2">
-              <!-- Contact & Socials -->
-              <div class="flex items-center gap-4 mb-6 md:mb-8">
-                <a href="/contact"
-                  class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
-                  Contact Us
-                </a>
-                <a href="mailto:info@arkan365.com"
-                  class="font-manrope text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300">
-                  Careers
-                </a>
-                <a href="#" aria-label="Instagram"
-                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
-                  <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35-.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn"
-                  class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:bg-white hover:text-[#111] transition-all duration-300">
-                  <svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                </a>
-              </div>
-
-              <!-- Footer Links -->
-              <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
-                <a href="#" class="hover:text-white transition-colors">Help & Support</a>
-                <span class="text-white/30 hidden sm:inline-block">|</span>
-                <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
-                <span class="text-white/30 hidden sm:inline-block">|</span>
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-              </div>
+            <!-- Footer Links -->
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
+              <a href="#" class="hover:text-white transition-colors">Help & Support</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+              <span class="text-white/30 hidden sm:inline-block">|</span>
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
             </div>
+
           </div>
         </div>
-      </footer>
+  </div>
+  </footer>
   </div>
   <script>
     /* ─── SCROLL REVEAL ─── */
