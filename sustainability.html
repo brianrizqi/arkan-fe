@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=Radley:ital@0;1&display=swap"
     rel="stylesheet" />
 
   <!-- Styles / Scripts -->
@@ -66,14 +66,14 @@
 
     /* "purpose." uses DM Serif Display italic for the script feel */
     .purpose-word {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Radley', serif;
       font-style: italic;
       color: #C4A882;
     }
   </style>
 </head>
 
-<body class="antialiased font-manrope bg-[#FCFAF8]">
+<body class="antialiased font-sans bg-[#FCFAF8]">
   <script>
     history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
@@ -105,7 +105,7 @@
         </div>
 
         <nav
-          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
+          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-sans uppercase hidden xl:flex">
           <a href="/about" class="nav-item hover:text-[#111111]/70 transition-colors">About</a>
           <a href="/portfolio" class="nav-item hover:text-[#111111]/70 transition-colors">Works</a>
           <a href="/sustainability" class="nav-item hover:text-[#111111]/70 transition-colors">Sustainability</a>
@@ -113,7 +113,7 @@
 
         <div class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden">
           <a href="/contact"
-            class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
+            class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-sans uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
             Contact Us
           </a>
         </div>
@@ -121,7 +121,7 @@
         <div class="flex items-center space-x-6 md:space-x-8">
           <div class="nav-item hidden xl:block">
             <a href="/contact"
-              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
+              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-sans uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
               Contact Us
             </a>
           </div>
@@ -141,7 +141,7 @@
       <!-- Mobile Menu Overlay -->
       <div id="mobile-menu-overlay"
         class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center text-[#111111]">
-        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase">
+        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-sans uppercase">
           <a href="/about" class="mobile-nav-link opacity-0">About</a>
           <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
           <a href="/sustainability" class="mobile-nav-link opacity-0">Sustainability</a>
@@ -165,13 +165,12 @@
 
         <!-- Star ornament -->
         <div class="reveal mb-6">
-          <img src="/assets/img/ornament.svg" alt="Star Ornament" class="h-14 md:h-[4rem] w-auto mx-auto"
-            style="filter: invert(45%) sepia(13%) saturate(927%) hue-rotate(345deg) brightness(93%) contrast(85%);" />
+          <img src="/assets/img/new ARKAN STAR.svg" alt="Star Ornament" class="h-14 md:h-[4rem] w-auto mx-auto" />
         </div>
 
         <!-- Eyebrow label -->
         <p
-          class="reveal reveal-delay-1 font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-[#B99668] uppercase mb-6 md:mb-8">
+          class="reveal reveal-delay-1 font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-[#B99668] uppercase mb-6 md:mb-8">
           Sustainability &nbsp;—&nbsp; ARKAN Standard
         </p>
 
@@ -181,7 +180,7 @@
           Crafted with
         </h1>
         <h1
-          class="reveal reveal-delay-2 purpose-word text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] leading-[1.1] tracking-tight mb-0"
+          class="reveal reveal-delay-2 purpose-word text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] leading-[1.1] tracking-tight mb-0 font-radley"
           style="font-style:italic;">
           purpose.
         </h1>
@@ -191,7 +190,7 @@
 
         <!-- Body text -->
         <p
-          class="reveal reveal-delay-3 font-manrope text-xs md:text-sm text-[#8a8174] max-w-sm md:max-w-md leading-relaxed mb-10 md:mb-12">
+          class="reveal reveal-delay-3 font-sans text-xs md:text-sm text-[#8a8174] max-w-sm md:max-w-md leading-relaxed mb-10 md:mb-12">
           The Saudi hospitality industry is at an inflection point. ARKAN's commitment is to
           reshape it — and the world beyond — through supply practices that are as refined in
           their environmental intent as they are in their craft.
@@ -200,11 +199,11 @@
         <!-- Buttons -->
         <div class="reveal reveal-delay-3 flex flex-wrap justify-center gap-4">
           <a href="/about"
-            class="inline-block px-8 py-3 bg-[#C4A882] text-white text-[10px] tracking-[0.25em] font-manrope uppercase hover:bg-[#b0956e] transition-colors duration-300">
+            class="inline-block px-8 py-3 bg-[#C4A882] text-white text-[10px] tracking-[0.25em] font-sans uppercase hover:bg-[#b0956e] transition-colors duration-300">
             About Us
           </a>
           <a href="/careers"
-            class="inline-block px-8 py-3 border border-[#1B1B18]/30 text-[#1B1B18] text-[10px] tracking-[0.25em] font-manrope uppercase hover:bg-[#1B1B18] hover:text-white transition-all duration-300">
+            class="inline-block px-8 py-3 border border-[#1B1B18]/30 text-[#1B1B18] text-[10px] tracking-[0.25em] font-sans uppercase hover:bg-[#1B1B18] hover:text-white transition-all duration-300">
             Careers
           </a>
         </div>
@@ -225,7 +224,7 @@
 
         <!-- Quote -->
         <div class="relative z-10 max-w-3xl mx-auto px-6 md:px-12 text-center py-20 md:py-28 reveal">
-          <p class="font-manrope text-xl md:text-2xl lg:text-3xl text-white font-normal leading-[1.6]">
+          <p class="font-sans text-xl md:text-2xl lg:text-3xl text-white font-normal leading-[1.6]">
             "The Kingdom is rewriting the story of luxury
             hospitality. At ARKAN, we believe the next
             chapter must be written with
@@ -234,7 +233,7 @@
             — and that the supply chain is where that
             <span style="color:#C4A882">change begins.</span>"
           </p>
-          <p class="mt-8 font-manrope text-[10px] tracking-[0.3em] text-white/30 uppercase">
+          <p class="mt-8 font-sans text-[10px] tracking-[0.3em] text-white/30 uppercase">
             ARKAN · Riyadh, Saudi Arabia
           </p>
         </div>
@@ -253,7 +252,7 @@
             <!-- Eyebrow -->
             <div class="flex items-center gap-4 mb-8">
               <div class="h-[1px] w-8 bg-[#8a8174]/40"></div>
-              <span class="font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
+              <span class="font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
                 Our Commitment
               </span>
             </div>
@@ -263,11 +262,11 @@
               class="font-radley text-4xl md:text-5xl lg:text-6xl text-[#1B1B18] font-normal leading-[1.1] mb-8 md:mb-10">
               Luxury and<br />
               sustainability<br />
-              are not <span class="purpose-word" style="font-style:italic;">opposites.</span>
+              are not <span class="font-radley" style="font-style:italic; color: #C4A882;">opposites.</span>
             </h2>
 
             <!-- Paragraph 1 -->
-            <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-10 max-w-lg">
+            <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-10 max-w-lg">
               For too long, the hospitality supply chain has operated on a logic of volume and cost
               — a logic that leaves a measurable environmental footprint behind every hotel
               opening, every room restock, every amenity discarded. <strong class="font-medium text-[#1B1B18]">ARKAN is
@@ -285,14 +284,14 @@
             </div>
 
             <!-- Paragraph 2 -->
-            <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-6 max-w-lg">
+            <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-6 max-w-lg">
               Saudi Arabia's Vision 2030 has placed environmental leadership at the heart of the
               Kingdom's transformation. The Saudi Green Initiative has activated over 77
               sustainability programmes with investment exceeding US$186 billion.
             </p>
 
             <!-- Paragraph 3 -->
-            <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+            <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
               <strong class="font-medium text-[#1B1B18]">ARKAN's commitment is to be part of that
                 transformation</strong> — in the way we source,
               produce, consolidate, and deliver. Not as compliance. As character.
@@ -322,7 +321,7 @@
             <div class="max-w-2xl">
               <div class="flex items-center gap-4 mb-6">
                 <div class="h-[1px] w-8 bg-[#8a8174]/40"></div>
-                <span class="font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
+                <span class="font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
                   Our Sustainability Pillars
                 </span>
               </div>
@@ -332,7 +331,7 @@
               </h2>
             </div>
             <div class="max-w-xs md:text-right">
-              <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2]">
+              <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2]">
                 Six actionable commitments — woven into every
                 sourcing decision, production brief, and delivery
                 we make.
@@ -354,7 +353,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   We qualify suppliers not only on quality and compliance, but on environmental
                   practice. From raw material traceability to factory energy audits, our supplier
                   onboarding integrates sustainability benchmarks as a non-negotiable standard —
@@ -374,7 +373,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   We are transitioning our amenity and OS&amp;E specifications toward materials that
                   are recyclable, biodegradable, or sustainably certified — without compromising
                   the sensory or aesthetic standards our hotel clients demand. Luxury and
@@ -394,7 +393,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   Single-use plastics have no place in the future we are building. ARKAN is
                   systematically eliminating unnecessary packaging from our product lines —
                   replacing it with recycled, plant-based, or minimal-material alternatives that
@@ -414,7 +413,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   Our 5PL model was built for efficiency — and efficiency is inherently green.
                   Consolidated shipments, optimised routing, and digital inventory management
                   reduce unnecessary freight movement and the carbon footprint associated with
@@ -434,7 +433,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   We help our hospitality clients meet their own ESG commitments. Sustainability-graded
                   product options, green certification support, and environmental impact
                   reporting at the project level — ARKAN becomes the partner that makes a hotel's
@@ -454,7 +453,7 @@
                 </h3>
               </div>
               <div class="w-full md:w-[50%]">
-                <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+                <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
                   Our sustainability programme is built in the Kingdom, aligned with the Saudi
                   Green Initiative, and calibrated to international standards. We intend for ARKAN's
                   approach to become a reference — demonstrating that a Saudi supply partner
@@ -482,7 +481,7 @@
           <!-- Eyebrow -->
           <div class="flex items-center justify-center gap-4 mb-8">
             <div class="h-[1px] w-8 bg-white/30"></div>
-            <span class="font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-white/60 uppercase">
+            <span class="font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-white/60 uppercase">
               The Scale of Impact
             </span>
             <div class="h-[1px] w-8 bg-white/30"></div>
@@ -506,11 +505,11 @@
               </div>
               <div class="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                 <h3
-                  class="font-radley text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
+                  class="font-sans text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
                   <span class="counter" data-target="500">0</span><span class="text-3xl">+</span>
                 </h3>
                 <p
-                  class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
+                  class="font-sans text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
                   Properties<br />Supplied Globally
                 </p>
               </div>
@@ -525,11 +524,11 @@
               </div>
               <div class="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                 <h3
-                  class="font-radley text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
+                  class="font-sans text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
                   <span class="counter" data-target="30">0</span><span class="text-3xl">%</span>
                 </h3>
                 <p
-                  class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
+                  class="font-sans text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
                   Packaging Reduction<br />Target by 2026
                 </p>
               </div>
@@ -544,11 +543,11 @@
               </div>
               <div class="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                 <h3
-                  class="font-radley text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
+                  class="font-sans text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
                   <span class="counter" data-target="77">0</span><span class="text-3xl">+</span>
                 </h3>
                 <p
-                  class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
+                  class="font-sans text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
                   Saudi Green Initiative<br />Active Programmes
                 </p>
               </div>
@@ -563,11 +562,11 @@
               </div>
               <div class="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                 <h3
-                  class="font-radley text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
+                  class="font-sans text-5xl md:text-6xl text-[#E5E0D8] group-hover:text-[#C4A882] transition-colors duration-500 mb-4">
                   <span class="counter" data-target="2060">0</span>
                 </h3>
                 <p
-                  class="font-manrope text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
+                  class="font-sans text-[9px] md:text-[10px] tracking-[0.2em] text-white/70 uppercase max-w-[140px] leading-[1.8] group-hover:text-white transition-colors duration-500">
                   Saudi Arabia<br />Net Zero Target
                 </p>
               </div>
@@ -591,7 +590,7 @@
               <!-- Eyebrow -->
               <div class="flex items-center gap-4 mb-6">
                 <div class="h-[1px] w-8 bg-[#8a8174]/40"></div>
-                <span class="font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
+                <span class="font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
                   How We Operate
                 </span>
               </div>
@@ -604,7 +603,7 @@
               </h2>
 
               <!-- Paragraph -->
-              <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-sm">
+              <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-sm">
                 Our 5PL model gives us a unique advantage: we touch every stage of the
                 supply chain. That means every stage is an opportunity to embed
                 responsible practice — not as an afterthought, but as standard.
@@ -624,7 +623,7 @@
                 <h3 class="font-radley text-lg md:text-xl text-[#1B1B18] leading-[1.3] mb-4">
                   <span style="font-style:italic;">Design</span> with Intention
                 </h3>
-                <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+                <p class="font-sans text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
                   Sustainability starts at the specification stage. We integrate material sustainability
                   criteria into every brief — evaluating recyclability, traceability, and environmental
                   certifications before a single sample is produced.
@@ -641,7 +640,7 @@
                 <h3 class="font-radley text-lg md:text-xl text-[#1B1B18] leading-[1.3] mb-4">
                   <span style="font-style:italic;">Qualify</span> Responsibly
                 </h3>
-                <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+                <p class="font-sans text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
                   Our supplier qualification process includes environmental audits alongside quality
                   assessments. We prioritise manufacturers who invest in cleaner production,
                   renewable energy, and fair labour standards.
@@ -658,7 +657,7 @@
                 <h3 class="font-radley text-lg md:text-xl text-[#1B1B18] leading-[1.3] mb-4">
                   <span style="font-style:italic;">Consolidate</span> Intelligently
                 </h3>
-                <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+                <p class="font-sans text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
                   Grouped shipments. Optimised routes. Reduced air freight dependency. Fewer
                   movements means less carbon — and stronger margins for our clients. Smart
                   logistics is sustainable logistics.
@@ -675,7 +674,7 @@
                 <h3 class="font-radley text-lg md:text-xl text-[#1B1B18] leading-[1.3] mb-4">
                   <span style="font-style:italic;">Deliver</span> Precisely
                 </h3>
-                <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+                <p class="font-sans text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
                   Room-ready delivery with zero over-ordering. Right quantities, right-sized packaging,
                   data-driven PAR management. Less waste at the property level. More confidence for
                   the procurement team.
@@ -692,7 +691,7 @@
                 <h3 class="font-radley text-lg md:text-xl text-[#1B1B18] leading-[1.3] mb-4">
                   <span style="font-style:italic;">Report</span> Transparently
                 </h3>
-                <p class="font-manrope text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
+                <p class="font-sans text-[11px] md:text-xs text-[#8a8174] leading-[1.8] md:leading-[2] max-w-lg">
                   We are building environmental impact reporting at the project level — giving our
                   clients the data they need to fulfil ESG obligations and demonstrate sustainability
                   leadership to their guests and investors.
@@ -715,7 +714,7 @@
           <div class="w-full lg:w-1/2 flex flex-col reveal">
             <!-- Eyebrow -->
             <div class="flex items-center gap-4 mb-8">
-              <span class="font-manrope text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
+              <span class="font-sans text-[10px] md:text-[11px] tracking-[0.3em] text-[#8a8174] uppercase">
                 Vision 2030 Alignment
               </span>
             </div>
@@ -728,7 +727,7 @@
             </h2>
 
             <!-- Paragraph 1 -->
-            <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-6 max-w-lg">
+            <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-6 max-w-lg">
               Saudi Arabia's Green Initiative — launched by HRH Crown Prince Mohammed bin
               Salman — represents one of the most ambitious environmental programmes in the
               region's history. With over 77 active sustainability initiatives and investment
@@ -737,14 +736,14 @@
             </p>
 
             <!-- Paragraph 2 -->
-            <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-10 max-w-lg">
+            <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] mb-10 max-w-lg">
               ARKAN occupies a position of real influence — over the materials, packaging, and
               logistics choices that define the environmental footprint of thousands of hotel
               rooms across the Kingdom and beyond. We intend to use that position well.
             </p>
 
             <!-- Custom Bullet Points -->
-            <ul class="flex flex-col gap-4 font-manrope text-xs md:text-[13.5px] text-[#8a8174]">
+            <ul class="flex flex-col gap-4 font-sans text-xs md:text-[13.5px] text-[#8a8174]">
               <li class="flex items-start gap-4">
                 <span class="text-[#C4A882] text-[10px] mt-1">✦</span>
                 <span class="leading-[1.8] md:leading-[2]">Aligned with the Saudi Green Initiative and Vision 2030 ESG
@@ -773,44 +772,40 @@
 
             <!-- Stat 1 -->
             <div class="flex flex-col">
-              <h3 class="font-radley text-5xl md:text-6xl text-[#1B1B18] mb-4">
+              <h3 class="font-sans text-5xl md:text-6xl text-[#1B1B18] mb-4">
                 US$186<span class="text-[#C4A882]">B</span>
               </h3>
-              <p
-                class="font-manrope text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
+              <p class="font-sans text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
                 Invested in Saudi Green Initiative sustainability programmes
               </p>
             </div>
 
             <!-- Stat 2 -->
             <div class="flex flex-col">
-              <h3 class="font-radley text-5xl md:text-6xl text-[#1B1B18] mb-4">
+              <h3 class="font-sans text-5xl md:text-6xl text-[#1B1B18] mb-4">
                 85<span class="text-4xl text-[#C4A882]">%</span>
               </h3>
-              <p
-                class="font-manrope text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
+              <p class="font-sans text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
                 Of LEED certified hotels in MENA are in Saudi Arabia (2023)
               </p>
             </div>
 
             <!-- Stat 3 -->
             <div class="flex flex-col">
-              <h3 class="font-radley text-5xl md:text-6xl text-[#1B1B18] mb-4">
+              <h3 class="font-sans text-5xl md:text-6xl text-[#1B1B18] mb-4">
                 73<span class="text-4xl text-[#C4A882]">%</span>
               </h3>
-              <p
-                class="font-manrope text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
+              <p class="font-sans text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
                 Of global travellers prefer sustainable accommodation options
               </p>
             </div>
 
             <!-- Stat 4 -->
             <div class="flex flex-col">
-              <h3 class="font-radley text-5xl md:text-6xl text-[#1B1B18] mb-4">
+              <h3 class="font-sans text-5xl md:text-6xl text-[#1B1B18] mb-4">
                 77<span class="text-3xl text-[#C4A882]">+</span>
               </h3>
-              <p
-                class="font-manrope text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
+              <p class="font-sans text-[9px] md:text-[10px] text-[#8a8174] uppercase tracking-[0.05em] leading-[1.6]">
                 Active initiatives under the Saudi Green Initiative
               </p>
             </div>
@@ -844,7 +839,7 @@
         <div class="h-10 w-[1px] bg-[#8a8174]/30 mb-12 md:mb-16"></div>
 
         <!-- Details -->
-        <p class="font-manrope text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
+        <p class="font-sans text-xs md:text-[13.5px] text-[#8a8174] leading-[1.8] md:leading-[2] max-w-xl">
           Whether you are planning a new opening, refreshing a property, or building a<br class="hidden md:block" />
           long-term procurement programme — ARKAN is ready to be the sustainable<br class="hidden md:block" />
           supply partner your project deserves.
@@ -922,13 +917,13 @@
               Careers
             </h2>
             <div class="max-w-md">
-              <p class="text-xs md:text-sm font-manrope text-white/90 leading-[1.6] mb-6 md:mb-8">
+              <p class="text-xs md:text-sm font-sans text-white/90 leading-[1.6] mb-6 md:mb-8">
                 Join <span class="font-bold">ARKAN</span> and become part of a team leading<br
                   class="hidden sm:block" />
                 the Saudi ultra-luxury hospitality scene
               </p>
               <a href="/careers"
-                class="text-xs md:text-sm font-manrope text-white border-b border-white pb-1 hover:text-white/70 hover:border-white/70 transition-all">
+                class="text-xs md:text-sm font-sans text-white border-b border-white pb-1 hover:text-white/70 hover:border-white/70 transition-all">
                 Explore Careers
               </a>
             </div>
@@ -943,8 +938,8 @@
           <div class="flex flex-col items-start w-full md:w-1/2 mb-8 md:mb-0">
             <img src="/assets/img/logo-arkan.svg" alt="ARKAN"
               class="h-6 md:h-8 w-auto object-contain text-[#D2BB9C] mb-1 opacity-90" />
-            <p class="text-white/80 font-manrope text-[11px] md:text-sm tracking-wide">
-              © 2026 ARKAN Technologies. All rights reserved.
+            <p class="text-white/80 font-sans text-[11px] md:text-sm tracking-wide">
+              © 2026 ARKAN Hospitality ; recent technologies. All rights reserved.
             </p>
           </div>
 
@@ -954,11 +949,11 @@
             <!-- Contact & Socials -->
             <div class="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
               <a href="/contact"
-                class="font-manrope text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
+                class="font-sans text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
                 Contact Us
               </a>
               <a href="/careers"
-                class="font-manrope text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
+                class="font-sans text-[9px] md:text-[11px] uppercase tracking-[0.15em] text-white border border-white/30 px-4 py-2 md:px-6 md:py-2.5 rounded-full hover:bg-white hover:text-[#111] transition-all duration-300 whitespace-nowrap">
                 Careers
               </a>
               <a href="#" aria-label="Instagram"
@@ -979,7 +974,7 @@
             </div>
 
             <!-- Footer Links -->
-            <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-manrope text-[11px] md:text-sm text-white/90">
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-sans text-[11px] md:text-sm text-white/90">
               <a href="#" class="hover:text-white transition-colors">Help & Support</a>
               <span class="text-white/30 hidden sm:inline-block">|</span>
               <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>

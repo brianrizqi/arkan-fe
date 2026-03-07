@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Radley:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&family=Radley:ital@0;1&display=swap"
     rel="stylesheet" />
 
   <!-- Styles / Scripts -->
@@ -38,7 +38,7 @@
 
 <!-- Light Theme Body -->
 
-<body class="antialiased font-manrope bg-[#FCFAF8]">
+<body class="antialiased font-sans bg-[#FCFAF8]">
   <script>history.scrollRestoration = 'manual'; window.scrollTo(0, 0);</script>
   <!-- Loader Component -->
   <div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black">
@@ -66,7 +66,7 @@
 
         <!-- Desktop Navigation -->
         <nav
-          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-manrope uppercase hidden xl:flex">
+          class="absolute left-1/2 -translate-x-1/2 space-x-8 text-xs tracking-[0.2em] font-sans uppercase hidden xl:flex">
           <a href="/about" class="nav-item hover:text-[#111111]/70 transition-colors">About</a>
           <a href="/portfolio" class="nav-item hover:text-[#111111]/70 transition-colors">Works</a>
           <a href="/sustainability" class="nav-item hover:text-[#111111]/70 transition-colors">Sustainability</a>
@@ -75,7 +75,7 @@
         <!-- Tablet Navigation (Contact Us Centered) -->
         <div class="nav-item absolute left-1/2 -translate-x-1/2 hidden md:block xl:hidden">
           <a href="/contact"
-            class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
+            class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-sans uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
             Contact Us
           </a>
         </div>
@@ -84,7 +84,7 @@
         <div class="flex items-center space-x-6 md:space-x-8">
           <div class="nav-item hidden xl:block">
             <a href="/contact"
-              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-manrope uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
+              class="inline-block px-8 py-2.5 rounded-full border border-[#111111]/30 text-[10px] tracking-[0.3em] font-sans uppercase hover:bg-[#111111] hover:text-white transition-all duration-300">
               Contact Us
             </a>
           </div>
@@ -105,7 +105,7 @@
       <!-- Mobile Menu Overlay -->
       <div id="mobile-menu-overlay"
         class="fixed inset-0 bg-[#F5F1E8] z-[105] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-12 text-center text-[#111111]">
-        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-manrope uppercase">
+        <nav class="flex flex-col space-y-8 text-2xl tracking-[0.2em] font-sans uppercase">
           <a href="/about" class="mobile-nav-link opacity-0">About</a>
           <a href="/portfolio" class="mobile-nav-link opacity-0">Works</a>
           <a href="/sustainability" class="mobile-nav-link opacity-0">Sustainability</a>
@@ -137,7 +137,7 @@
           <!-- Intro Paragraph -->
           <div class="flex flex-col items-center justify-center w-full mt-4 md:mt-8">
             <div class="w-full md:max-w-4xl text-center">
-              <p class="font-manrope text-[#8a8174] text-[15px] md:text-lg leading-relaxed">
+              <p class="font-sans text-[#8a8174] text-[15px] md:text-lg leading-relaxed">
                 We partner with luxury brands to create iconic product collaborations across the travel industry – from
                 luxury amenities and skincare to serviceware, textiles, and children's products.
               </p>
@@ -149,10 +149,10 @@
         
         <!-- Section Header -->
         <div class="flex flex-col items-center text-center mb-16 md:mb-24">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-manrope font-normal text-[#1B1B18] tracking-tight mb-6">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-sans font-normal text-[#1B1B18] tracking-tight mb-6">
                 <span class="font-semibold">5PL</span> <span class="italic font-radley">Hospitality</span> OS&E Platform
             </h2>
-            <p class="font-manrope text-[#8a8174] text-sm md:text-base max-w-3xl leading-relaxed">
+            <p class="font-sans text-[#8a8174] text-sm md:text-base max-w-3xl leading-relaxed">
                 An integrated 5PL platform that manages hospitality OS&E from concept to site ready delivery. ARKAN connects design, production, digital control, global logistics, and fulfillment into one seamless system, ensuring consistency, efficiency, and reliability across every stage of operations.
             </p>
         </div>
@@ -161,31 +161,31 @@
         <div class="w-full border-b border-[#E5E0D8] mb-12 md:mb-20">
             <ul class="flex flex-wrap justify-center gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-4" id="ose-tabs">
                 <li>
-                    <button class="ose-tab-btn active font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-bold transition-all" data-target="ose-design">
+                    <button class="ose-tab-btn active font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-bold transition-all" data-target="ose-design">
                          Design
                          <span class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-100 transition-transform origin-left tab-indicator"></span>
                     </button>
                 </li>
                 <li>
-                    <button class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-production">
+                    <button class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-production">
                          Production
                          <span class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
                     </button>
                 </li>
                 <li>
-                    <button class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-digitalization">
+                    <button class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-digitalization">
                          Digitalization
                          <span class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
                     </button>
                 </li>
                 <li>
-                    <button class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-logistics">
+                    <button class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-logistics">
                          Logistics
                          <span class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
                     </button>
                 </li>
                 <li>
-                    <button class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-fulfillment">
+                    <button class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all" data-target="ose-fulfillment">
                          Fulfillment
                          <span class="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#D2BB9C] scale-x-0 transition-transform origin-left tab-indicator"></span>
                     </button>
@@ -205,13 +205,13 @@
                 <!-- Right: Text Content -->
                 <div class="w-full md:w-1/2 flex flex-col justify-center">
                     <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">Design</h3>
-                    <p class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                    <p class="font-sans text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
                         Concept · Standards · Specification
                     </p>
-                    <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                    <p class="font-sans text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
                         Every exceptional hospitality space begins with meticulous design thinking. Our design team translates your brand vision into precise OS&E specifications — from material selection and colour palettes to ergonomic standards and custom production briefs — ensuring every touchpoint reflects your guests' expectations before a single item is produced.
                     </p>
-                    <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                    <ul class="space-y-3 font-sans text-xs md:text-sm text-[#8a8174]">
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Brand-aligned concept development and mood boarding</li>
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Custom OS&E specification packages per category</li>
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Material and finish selection with sourcing recommendations</li>
@@ -227,13 +227,13 @@
                 <!-- Right: Text Content -->
                 <div class="w-full md:w-1/2 flex flex-col justify-center">
                     <h3 class="text-4xl md:text-5xl lg:text-[4rem] font-radley text-[#1B1B18] mb-4">Production</h3>
-                    <p class="font-manrope text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
+                    <p class="font-sans text-[10px] md:text-xs tracking-[0.2em] text-[#D2BB9C] uppercase mb-8 md:mb-12 border-b border-[#E5E0D8] inline-block pb-6">
                         Manufacturing · Quality Control · Sampling
                     </p>
-                    <p class="font-manrope text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
+                    <p class="font-sans text-sm md:text-[15px] text-[#8a8174] leading-relaxed mb-8 md:mb-12">
                         We transform designs into tangible luxury. Partnering with a global network of vetted, premium manufacturers, we oversee every step of the production process. From rigorous prototyping to stringent localized quality assurance, we guarantee that the final OS&E products match the original specifications impeccably.
                     </p>
-                    <ul class="space-y-3 font-manrope text-xs md:text-sm text-[#8a8174]">
+                    <ul class="space-y-3 font-sans text-xs md:text-sm text-[#8a8174]">
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Prototyping and pre-production sampling</li>
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Manufacturing oversight and vendor management</li>
                         <li class="flex items-start"><span class="mr-3 text-[#D2BB9C] mt-[2px]">•</span> Strict Quality Control (QC) standards and inspections</li>
