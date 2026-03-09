@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400&family=Cinzel:wght@400;700&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&family=Radley:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Radley:ital,wght@0,400;1,400&display=swap"
     rel="stylesheet" />
 
   <!-- Styles / Scripts -->
@@ -131,9 +131,8 @@
         <!-- Section Header -->
         <div class="flex flex-col items-center text-center mb-16 md:mb-24">
           <h2
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-sans font-normal text-[#1B1B18] tracking-tight mb-6">
-            <span class="font-semibold">5PL</span>
-            <span class="italic font-sans">Hospitality</span> OS&E Platform
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-manrope font-normal text-[#1B1B18] tracking-tight mb-6">
+            5PL Hospitality OS&E Platform
           </h2>
           <p class="font-sans text-[#8a8174] text-sm md:text-base max-w-3xl leading-relaxed">
             An integrated 5PL platform that manages hospitality OS&E from
@@ -149,7 +148,7 @@
           <ul class="flex flex-wrap justify-center gap-x-8 md:gap-x-16 lg:gap-x-24 gap-y-4" id="ose-tabs">
             <li>
               <button
-                class="ose-tab-btn active font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-bold transition-all"
+                class="ose-tab-btn active font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#1B1B18] font-semibold transition-all"
                 data-target="ose-digitalization">
                 Digitalization
                 <span
@@ -158,7 +157,7 @@
             </li>
             <li>
               <button
-                class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] font-semibold transition-all"
                 data-target="ose-design">
                 Design
                 <span
@@ -167,7 +166,7 @@
             </li>
             <li>
               <button
-                class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] font-semibold transition-all"
                 data-target="ose-production">
                 Production
                 <span
@@ -176,7 +175,7 @@
             </li>
             <li>
               <button
-                class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] font-semibold transition-all"
                 data-target="ose-logistics">
                 Logistics
                 <span
@@ -185,7 +184,7 @@
             </li>
             <li>
               <button
-                class="ose-tab-btn font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] transition-all"
+                class="ose-tab-btn font-manrope text-[10px] md:text-xs tracking-[0.2em] uppercase pb-4 md:pb-6 relative text-[#8a8174] hover:text-[#1B1B18] font-semibold transition-all"
                 data-target="ose-fulfillment">
                 Fulfillment
                 <span
@@ -578,7 +577,7 @@
 
             // Remove active styles from all tabs
             tabs.forEach((t) => {
-              t.classList.remove("active", "text-[#1B1B18]", "font-bold");
+              t.classList.remove("active", "text-[#1B1B18]");
               t.classList.add("text-[#8a8174]");
               t.querySelector(".tab-indicator").classList.remove(
                 "scale-x-100",
@@ -588,7 +587,7 @@
 
             // Add active style to target tab
             tab.classList.remove("text-[#8a8174]");
-            tab.classList.add("active", "text-[#1B1B18]", "font-bold");
+            tab.classList.add("active", "text-[#1B1B18]");
             tab
               .querySelector(".tab-indicator")
               .classList.remove("scale-x-0");
