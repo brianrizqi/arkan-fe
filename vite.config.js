@@ -20,6 +20,9 @@ export default defineConfig({
                 'sustainability': resolve(__dirname, 'sustainability.html'),
                 'careers': resolve(__dirname, 'careers.html'),
                 'careers-detail': resolve(__dirname, 'careers-detail.html'),
+                'help-support': resolve(__dirname, 'help-support.html'),
+                'terms-conditions': resolve(__dirname, 'terms-conditions.html'),
+                'privacy-policy': resolve(__dirname, 'privacy-policy.html'),
             }
         }
     },

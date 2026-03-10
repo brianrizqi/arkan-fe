@@ -29,7 +29,10 @@ const filesToUpdate = [
     { name: 'arkan-about.html', type: 'full' },
     { name: 'contact.html', type: 'bottom' },
     { name: 'careers.html', type: 'bottom' },
-    { name: 'careers-detail.html', type: 'bottom' }
+    { name: 'careers-detail.html', type: 'bottom' },
+    { name: 'help-support.html', type: 'bottom' },
+    { name: 'terms-conditions.html', type: 'bottom' },
+    { name: 'privacy-policy.html', type: 'bottom' }
 ];
 
 filesToUpdate.forEach(fileObj => {
