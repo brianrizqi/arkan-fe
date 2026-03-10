@@ -50,12 +50,25 @@ filesToUpdate.forEach(fileObj => {
         const inner = match[2];
         let replacementInner = fileObj.type === 'full' ? templateFooterInner : bottomHalfInner;
         
-        // Special case for index.html: it has a <div> inside that needs to stay for the GSAP animation
+        // Special case for index.html: it has an outer container div with GSAP classes (opacity-0 translate-y-20) 
+        // that needs to stay. We should put the template's INNER content inside that existing div.
         if (file === 'index.html') {
-            const innerDivRegex = /(<div[^>]*max-w-\[1920px\][^>]*>)([\s\S]*?)(<\/div>)/;
+            const innerDivRegex = /(<div[^>]*max-w-\[1920px\][^>]*>)([\s\S]*?)(<\/div>[\s\S]*?$)/;
             const innerDivMatch = inner.match(innerDivRegex);
+            
             if (innerDivMatch) {
-                replacementInner = `${innerDivMatch[1]}\n${replacementInner}\n${innerDivMatch[3]}`;
+                // Get the content from the template, but REMOVE its own max-w-[1920px] wrapper.
+                // We'll use a safer approach: find the first div and last div.
+                let cleanTemplateInner = replacementInner.trim();
+                if (cleanTemplateInner.startsWith('<div') && cleanTemplateInner.endsWith('</div>')) {
+                    // Strip the first line and last line (the outer-most div)
+                    const lines = cleanTemplateInner.split('\n');
+                    if (lines.length > 2) {
+                        cleanTemplateInner = lines.slice(1, -1).join('\n');
+                    }
+                }
+                
+                replacementInner = `${innerDivMatch[1]}\n${cleanTemplateInner}\n${innerDivMatch[3]}`;
             }
         }
 
